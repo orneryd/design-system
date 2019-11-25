@@ -2,16 +2,23 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from 'styled-theming';
 
+import palette from '../../global/palette';
+
 
 const backgroundColor = theme('mode', {
   light: '#FFFFFF',
   dark: '#222'
 });
 
+const font = theme('fontBase', {
+  fontFamily: '14px Arial, Roboto, Helvetica, sans-serif',
+});
+
 
 // CSS for the layout of the page
 const Container = styled.div`
-  width: 80%;
+  font: ${font};
+  width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
   display: flex;
@@ -34,17 +41,20 @@ const Wrapper = styled.div`
 `
 
 const MainColorColumn = styled.div`
-  width: 100%;
+  /* width: 100%; */
   margin: 0 auto 20px;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid lightgray;
   padding: 10px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `
 
 const LeftBox = styled.div`
   width: 50%;
-  min-height: 165px;
+  /* min-height: 155px; */
   display: flex;
   flex-flow: wrap;
   /* align-items: flex-end; */
@@ -58,20 +68,27 @@ const Item = styled.div`
   display: block;
   min-width: 200px;
   margin-bottom: 5px;
+
+  & span {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
 `
 
 const RightBox = styled.div`
   width: 50%;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   @media (max-width: 768px) {
   width: 100%;
   }
 `
 
-const Circle = styled.div`
-  height: 20px;
-  width: 20px;
+const Square = styled.div`
+  height: 16px;
+  width: 16px;
   display: inline-block;
   background-color: ${ props => props.color };
   border-radius: 3px;
@@ -81,65 +98,33 @@ const Circle = styled.div`
 const Color = styled.div`
   /* display: block; */
   width: 60px;
-  height: 164px;
+  height: 135px;
   background-color: ${ props => props.color };
   border-radius: 8px;
   margin-right: 10px;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+  width: 100%;
+  height: 82px;
+  }
 `
 
-const palette = {
-     primary: [
-       {
-         key: 1,
-         name: 'blue',
-         hex: '#005A8C',
-         hexShaded60: '#002438',
-         nameShaded60: 'palette__brand_blueShaded60',
-         hexShaded40: '#003654',
-         nameShaded40: 'palette__brand_blueShaded40',
-         hexShaded20: '#004870',
-         nameShaded20: 'palette__brand_blueShaded20',
-         hexTint60: '#002438',
-         nameTint60: 'palette__brand_blueShaded60',
-         hexTint40: '#003654',
-         nameTint40: 'palette__brand_blueShaded40',
-         hexTint20: '#004870',
-         nameTint20: 'palette__brand_blueShaded20'
-       },
-       { key: 2,
-         name: 'orange',
-         hex: '#EF8200',
-         hexShaded60: 'darkorange',
-         nameShaded60: 'palette__brand_blueShaded60',
-         hexShaded40: '#003654',
-         nameShaded40: 'palette__brand_blueShaded40',
-         hexShaded20: '#004870',
-         nameShaded20: 'palette__brand_blueShaded20',
-         hexTint60: '#002438',
-         nameTint60: 'palette__brand_blueShaded60',
-         hexTint40: '#003654',
-         nameTint40: 'palette__brand_blueShaded40',
-         hexTint20: '#004870',
-         nameTint20: 'palette__brand_blueShaded20'
-      }
-    ]
-}
+
 
 const ListColors = ({colors}) => (
   colors.map(color => (
     <MainColorColumn key={color.key}>
       <LeftBox>
         <Color color={color.hex} />
-        <p><strong>hex:</strong> {color.hex} <br /> <strong>name:</strong> {color.name}</p>
+        <p><strong>HEX:</strong> {color.hex} <br /> <strong>name:</strong> {color.name}</p>
       </LeftBox>
       <RightBox>
-        <Item><span><Circle color={color.hexShaded20} /> Hex: {color.hexShaded20}</span></Item>
-        <Item><span><Circle color={color.hexShaded40} /> Hex: {color.hexShaded40}</span></Item>
-        <Item><span><Circle color={color.hexShaded60} /> Hex: {color.hexShaded60}</span></Item>
-        <Item><span><Circle color={color.hexTint20} /> Hex: {color.hexTint20}</span></Item>
-        <Item><span><Circle color={color.hexTint40} /> Hex: {color.hexTint40}</span></Item>
-        <Item><span><Circle color={color.hexTint60} /> Hex: {color.hexTint60}</span></Item>
+        <Item><span><Square color={color.hexShaded20} /> {color.hexShaded20}</span></Item>
+        <Item><span><Square color={color.hexShaded40} /> {color.hexShaded40}</span></Item>
+        <Item><span><Square color={color.hexShaded60} /> {color.hexShaded60}</span></Item>
+        <Item><span><Square color={color.hexTint20} /> {color.hexTint20}</span></Item>
+        <Item><span><Square color={color.hexTint40} /> {color.hexTint40}</span></Item>
+        <Item><span><Square color={color.hexTint60} /> {color.hexTint60}</span></Item>
       </RightBox>
     </MainColorColumn>
   ))
@@ -148,6 +133,7 @@ const ListColors = ({colors}) => (
 class Colors extends React.Component {
   render() {
     return (
+
       <ListColors colors={this.props.palette} />
     );
   }
@@ -157,9 +143,8 @@ class Colors extends React.Component {
 class PrimaryColors extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={{ mode: 'light' }}>
+      <ThemeProvider theme={{ theme: 'light', fontBase: 'fontFamily' }}>
       <Container>
-
           <h1>McKesson Palette</h1>
 
           <p>We use color as a visual way to communicate our brand. We have three
@@ -174,11 +159,9 @@ class PrimaryColors extends React.Component {
             <p>We include tints and shades in our color palette to help us better set apart or highlight information. The use of tints and shades also adds visual interest to information graphics, such as charts, graphs and illustrations.</p>
             <p>Only three tints and three shades in 60%, 40% and 20% increments of any given color are used.</p>
 
-
-          <Colors palette={palette.primary}/>
+            <Colors palette={palette.primary}/>
 
         </Wrapper>
-
       </Container>
       </ThemeProvider>
     );
