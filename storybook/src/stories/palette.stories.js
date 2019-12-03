@@ -11,10 +11,9 @@ const palette = {
     }
 }
 
-storiesOf("Brand | Palette/Colors", module)
+storiesOf("General | Palette", module)
   .add("Primary Colors", () => (
-    <PrimaryColors
-      color={palette}/>
+    <PrimaryColors />
   ))
   .add("Support Colors", () => (
     <SupportColors

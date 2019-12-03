@@ -1,23 +1,10 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'styled-components';
-import theme from 'styled-theming';
+import styled from 'styled-components';
 
 import palette from '../../global/palette';
 
-
-const backgroundColor = theme('mode', {
-  light: '#FFFFFF',
-  dark: '#222'
-});
-
-const font = theme('fontBase', {
-  fontFamily: '14px Arial, Roboto, Helvetica, sans-serif',
-});
-
-
 // CSS for the layout of the page
 const Container = styled.div`
-  font: ${font};
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
@@ -26,7 +13,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   align-content: flex-between;
-  background-color: ${backgroundColor};
   padding: 20px;
 `
 
@@ -109,8 +95,6 @@ const Color = styled.div`
   }
 `
 
-
-
 const ListColors = ({colors}) => (
   colors.map(color => (
     <MainColorColumn key={color.key}>
@@ -143,7 +127,7 @@ class Colors extends React.Component {
 class PrimaryColors extends React.Component {
   render() {
     return (
-      <ThemeProvider theme={{ theme: 'light', fontBase: 'fontFamily' }}>
+
       <Container>
           <h1>McKesson Palette</h1>
 
@@ -163,7 +147,7 @@ class PrimaryColors extends React.Component {
 
         </Wrapper>
       </Container>
-      </ThemeProvider>
+
     );
   }
 }
