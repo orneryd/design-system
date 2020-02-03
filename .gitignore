@@ -4,7 +4,7 @@
 /node_modules
 /node_modules/*
 node_modules/
-.out/
+build/
 /.pnp
 .pnp.js
 

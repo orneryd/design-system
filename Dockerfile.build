@@ -35,4 +35,4 @@ COPY . .
 
 WORKDIR /usr/app/storybook
 
-RUN yarn && CI=true yarn test && yarn build && yarn build-storybook
+RUN yarn && CI=true yarn test && yarn build-storybook
