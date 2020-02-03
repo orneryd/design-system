@@ -2,8 +2,8 @@ FROM registry.mckesson.com/er2niot/mcklabs-pipeline-base:prod
 
 ARG PCF_USER
 ARG PCF_PASSWORD
-ENV _PCF_USER=$PCF_USER
-ENV _PCF_PASSWORD=$PCF_PASSWORD
+ENV PCF_USER=$PCF_USER
+ENV PCF_PASSWORD=$PCF_PASSWORD
 ARG ARTIFACTORY_USER
 ARG ARTIFACTORY_API_KEY
 
@@ -35,4 +35,4 @@ COPY . .
 
 WORKDIR /usr/app/storybook
 
-RUN yarn && CI=true yarn test && yarn build
+RUN yarn && CI=true yarn test && yarn build && yarn build-storybook
