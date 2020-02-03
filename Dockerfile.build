@@ -1,0 +1,38 @@
+FROM registry.mckesson.com/er2niot/mcklabs-pipeline-base:prod
+
+ARG PCF_USER
+ARG PCF_PASSWORD
+ENV _PCF_USER=$PCF_USER
+ENV _PCF_PASSWORD=$PCF_PASSWORD
+ARG ARTIFACTORY_USER
+ARG ARTIFACTORY_API_KEY
+
+ENV PCF_DEV_API=api.sys.dev-west.paas.mckesson.com
+ENV PCF_PROD_API=api.sys.prod-west.paas.mckesson.com
+ENV ROOT_CERT mckesson.root.1.crt
+
+
+RUN apk --no-cache add bash yarn openjdk8\
+    && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
+    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk \
+    && apk add glibc-2.29-r0.apk \
+    && curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx \
+    && chmod +x cf \
+    && mv cf /usr/local/bin
+
+ADD .pipeline/*.crt /usr/local/share/ca-certificates/
+
+RUN mkdir /src \
+  && apk update \
+  && apk add curl nodejs git \
+  && sed -i 's|http\://dl-cdn.alpinelinux.org|https\://alpine.global.ssl.fastly.net|g' /etc/apk/repositories \
+  && update-ca-certificates
+
+
+WORKDIR /usr/app
+
+COPY . .
+
+WORKDIR /usr/app/storybook
+
+RUN yarn && CI=true yarn test && yarn build
