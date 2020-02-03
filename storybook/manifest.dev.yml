@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: dev-abba-ui
+  - name: dev-dsm
     memory: 128M
     instances: 1
     routes:
