@@ -1,0 +1,10 @@
+---
+applications:
+  - name: dev-abba-ui
+    memory: 128M
+    instances: 1
+    routes:
+      - route: dev-dsm.apps.internal
+      - route: dev-dsm.app.dev-west.paas.mckesson.com
+    buildpacks:
+      - staticfile_buildpack
