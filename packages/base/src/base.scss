@@ -1,3 +1,6 @@
 *[class*="mck-"] {
-   box-sizing: border-box;
-}
+    box-sizing: content-box;
+ }
+ :host {
+    display: block;
+  }

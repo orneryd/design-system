@@ -49,9 +49,9 @@ export default class MckTextInput extends HTMLElement {
   }
 
   render() {
-    this.inputId =
-      this.getAttribute('id') || `${Date.now()}${Math.floor(Math.random() * Math.floor(1000))}`
-    textInputTemplate(this).connect(this)
+    const uniqueId = this.getAttribute('id') 
+    this.inputId = uniqueId || `${Date.now()}${Math.floor(Math.random() * Math.floor(1000))}`
+    textInputTemplate(this).connect()
   }
 }
 

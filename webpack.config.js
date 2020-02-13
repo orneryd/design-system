@@ -17,9 +17,10 @@ module.exports = {
          */
         if (entry.indexOf('.test') === -1) {
             acc[entry] = path
+            acc['index'].push(path)
         }
         return acc
-    }, {}),
+    }, {'index': []}),
     output: {
         filename: '[name].js',
         path: __dirname + '/dist'
@@ -29,7 +30,7 @@ module.exports = {
         hints: false
     },
     optimization: {
-        usedExports: true
+        minimize: false,
     },
     resolve: {
         extensions: ['*', '.js']
