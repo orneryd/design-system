@@ -1,2 +1,2 @@
-# dsm-poc
-POC of a Design System using StoryBook
+# mckesson-ui
+Design System using StoryBook to showcase native web-components

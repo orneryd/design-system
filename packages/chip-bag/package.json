@@ -1,0 +1,12 @@
+{
+  "name": "@mckesson-ui/mck-chip-bag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mck-chip-bag.js",
+  "module": "mck-chip-bag.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

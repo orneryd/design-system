@@ -1,0 +1,32 @@
+module.exports = {
+  displayName: '@mckesson-ui/design-system',
+  roots: ['<rootDir>/packages'],
+  setupFiles: ['<rootDir>/test/polyfills.js'],
+  testEnvironment: 'jest-environment-happy-dom',
+  collectCoverageFrom: ['<rootDir>/packages/**/*.js'],
+  testMatch: [
+    '<rootDir>packages/**/*.{spec,test}.js'
+  ],
+  transform: {
+    '^.+\\.(js)$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
+    '^.+\\.html$': '@mcklabs/web-components/jestLoader'
+  },
+  transformIgnorePatterns: [
+    '[/\\\\]node_modules[/\\\\].+\\.(js)$',
+    '^.+\\.module\\.(css|sass|scss)$'
+  ],
+  modulePaths: ['<rootDir>/packages'],
+  moduleNameMapper: {
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
+  },
+  moduleFileExtensions: [
+    'web.js',
+    'js',
+    'web.ts',
+    'ts',
+    'json',
+    'node'
+  ],
+  watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname']
+}

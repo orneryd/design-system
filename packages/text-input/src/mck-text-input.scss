@@ -1,0 +1,36 @@
+@import '../../base/src/base.scss';
+
+.mck-text-input {
+    border-width: 0;
+    border-style: none;
+    border-image: none;
+    background-color: initial;
+    outline: initial;
+    font-size: 1rem;
+    height: 2rem;
+    width: 100%;
+    border-bottom: 5px rgba(0,0,0, 0.2);
+  }
+
+  .mck-text-input-label {
+    display: inline-block;
+    color: #333;
+    opacity: 0.7;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.4) translate(0.2rem,0.5rem);
+    transform-origin: top left;
+  }
+
+  .mck-text-input-wrapper.focus .mck-text-input-label {
+    transform: scale(1) translate(0,0);
+  }
+
+  .mck-text-input-bottom-border {
+    margin-top: -2px;
+    height: 2px;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  input:focus {
+    outline: none;
+  }

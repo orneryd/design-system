@@ -1,0 +1,41 @@
+@import '../../base/src/base.scss';
+
+.mck-accordion {
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.mck-accordion-header-wrapper {
+  display: flex;
+}
+.mck-accordion-header {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}
+.mck-accordion-content {
+    display: block;
+    height: 0;
+    transition: height 0.2s;
+    overflow: auto;
+}
+.mck-accordion-header-icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  /*transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;*/
+  flex-shrink: 0;
+  user-select: none;
+  transform: rotate(0deg);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+.mck-accordion-header-icon.open {
+  transform: rotate(180deg);
+}
+.mck-accordion-header-icon:hover {
+  background-color: rgba(0,0,0,.2);
+}
