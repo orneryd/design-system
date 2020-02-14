@@ -1,9 +1,8 @@
 {
-  "name": "@mckesson-ui/mck-text-input",
+  "name": "@mcklabs/mds-text-input",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/mck-text-input.js",
-  "module": "src/mck-text-input.js",
+  "main": "dist/mds-text-input.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

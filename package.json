@@ -1,17 +1,17 @@
 {
-  "name": "@mckesson-ui/design-system",
+  "name": "@mcklabs/mckesson-design-system",
   "version": "1.0.0",
   "description": "Design System using StoryBook",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mckesson/mckesson-ui.git"
+    "url": "git+https://github.com/mckesson/mckesson-design-system.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/mckesson/mckesson-ui#readme",
+  "homepage": "https://github.com/mckesson/mckesson-design-system#readme",
   "bugs": {
-    "url": "https://github.com/mckesson/mckesson-ui/issues"
+    "url": "https://github.com/mckesson/mckesson-design-system/issues"
   },
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"

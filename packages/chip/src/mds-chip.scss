@@ -1,6 +1,6 @@
 @import '../../base/src/base.scss';
 
-.mck-chip {
+.mds-chip {
     display: flex;
     align-items: center;
     background: #e0e0e0;
@@ -10,16 +10,16 @@
     font-size: 1rem;
   }
 
-  .mck-chip:hover {
+  .mds-chip:hover {
     background: #ccc;
   }
 
-  .mck-chip {
+  .mds-chip {
     height: 32px;
     line-height: 32px;
   }
 
-  .mck-chip-remove {
+  .mds-chip-remove {
     display: inline-block;
     justify-content: center;
     align-content: center;
@@ -34,15 +34,15 @@
     font-size: 1rem;
   }
 
-  .mck-chip-remove:after {
+  .mds-chip-remove:after {
     color: #e0e0e0;
   }
 
-  .mck-chip-remove:hover {
+  .mds-chip-remove:hover {
     background: #999;
   }
 
-  .mck-chip-remove:active {
+  .mds-chip-remove:active {
     background: #777;
   }
 
@@ -52,6 +52,6 @@
     box-sizing: border-box;
   }
 
-  .mck-chip-text {
+  .mds-chip-text {
      word-wrap: none;
   }

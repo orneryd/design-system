@@ -1,7 +1,7 @@
-import textInputTemplate from './mck-text-input.html'
+import textInputTemplate from './mds-text-input.html'
 import { generateId } from '../../base/src/base'
 
-export default class MckTextInput extends HTMLElement {
+export default class MdsTextInput extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
@@ -38,11 +38,11 @@ export default class MckTextInput extends HTMLElement {
   }
 
   focusInput() {
-    this.shadowRoot.querySelector('.mck-text-input').focus()
+    this.shadowRoot.querySelector('.mds-text-input').focus()
   }
 
   get inputWrapper() {
-    return this.shadowRoot.querySelector('.mck-text-input-wrapper')
+    return this.shadowRoot.querySelector('.mds-text-input-wrapper')
   }
 
   connectedCallback() {
@@ -56,4 +56,4 @@ export default class MckTextInput extends HTMLElement {
   }
 }
 
-customElements.define('mck-text-input', MckTextInput)
+customElements.define('mds-text-input', MdsTextInput)

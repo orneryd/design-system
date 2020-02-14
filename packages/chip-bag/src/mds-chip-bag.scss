@@ -1,6 +1,6 @@
 @import '../../base/src/base.scss';
 
-.mck-chip-bag {
+.mds-chip-bag {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -21,14 +21,14 @@
     min-height: 2.2rem;
   }
 
-  .mck-chip-bag mck-chip {
+  .mds-chip-bag mds-chip {
     display: flex;
     flex: 0;
     margin: 0 5px 3px 0;
   }
 
-  .mck-chip-bag-input,
-  .mck-chip-bag-input:focus {
+  .mds-chip-bag-input,
+  .mds-chip-bag-input:focus {
     flex: 1;
     border-width: 0;
     border-style: none;

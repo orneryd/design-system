@@ -1,9 +1,8 @@
 {
-  "name": "@mckesson-ui/mck-accordion",
+  "name": "@mcklabs/mds-accordion",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/mwc-accordion.js",
-  "module": "src/mwc-accordion.js",
+  "main": "dist/mds-accordion.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: '@mckesson-ui/design-system',
+  displayName: '@mcklabs/design-system',
   roots: ['<rootDir>/packages'],
   setupFiles: ['<rootDir>/test/polyfills.js'],
   testEnvironment: 'jest-environment-happy-dom',

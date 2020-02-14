@@ -1,6 +1,0 @@
-<link href="./mck-chip-bag.scss"/>
-<div class="mck-chip-bag">
-  ${this.chips.map((v) => `<mck-chip onclosechip="${this.removeChip}" chip-text="${v}"></mck-chip>`).join("")}
-  <input class="mck-chip-bag-input" onkeyup="${this.handleInputKeydown}" type="text">
-</div>
-<slot name="chip-bag-helper"></slot>

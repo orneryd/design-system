@@ -1,9 +1,8 @@
 {
-  "name": "@mckesson-ui/base",
+  "name": "@mcklabs/base",
   "version": "1.0.0",
   "description": "",
   "main": "dist/base.js",
-  "module": "src/base.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

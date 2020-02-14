@@ -1,9 +1,8 @@
 {
-  "name": "@mckesson-ui/mck-chip-bag",
+  "name": "@mcklabs/mds-chip-bag",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/mck-chip-bag.js",
-  "module": "src/mck-chip-bag.js",
+  "main": "dist/mds-chip-bag.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

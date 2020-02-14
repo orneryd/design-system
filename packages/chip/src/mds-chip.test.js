@@ -1,12 +1,12 @@
 /**
  * @jest-environment jest-environment-happy-dom
  */
-import './mck-chip'
+import './mds-chip'
 
 describe('MckChip', () => {
   let element
   beforeEach(() => {
-    element = document.createElement('mck-chip')
+    element = document.createElement('mds-chip')
     element.setAttribute('chip-text', 'fake-text')
     document.body.appendChild(element)
   })
@@ -63,19 +63,19 @@ describe('MckChip', () => {
     })
 
     it('should have a div element', () => {
-      const mckChipNodes = element.shadowRoot.querySelectorAll('.mck-chip')
+      const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-chip')
       expect(mckChipNodes.length).toBe(1)
       expect(mckChipNodes[0].tagName).toBe('DIV')
     })
 
     it('should have single label that is the chip text', () => {
-      const mckChipNodes = element.shadowRoot.querySelectorAll('.mck-chip-text')
+      const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-chip-text')
       expect(mckChipNodes.length).toBe(1)
       expect(mckChipNodes[0].innerHTML).toBe('fake-text')
     })
 
     it('should have a close button that is the &times; symbol', () => {
-      const mckChipButtons = element.shadowRoot.querySelectorAll('.mck-chip-remove')
+      const mckChipButtons = element.shadowRoot.querySelectorAll('.mds-chip-remove')
       expect(mckChipButtons.length).toBe(1)
       expect(mckChipButtons[0].innerHTML).toBe('&times')
     })
@@ -84,7 +84,7 @@ describe('MckChip', () => {
   describe('chip button click', () => {
     let mckChipButton
     beforeEach(() => {
-      mckChipButton = element.shadowRoot.querySelector('.mck-chip-remove')
+      mckChipButton = element.shadowRoot.querySelector('.mds-chip-remove')
     })
 
     it('should have an onclick attribute set to closeChip', () => {

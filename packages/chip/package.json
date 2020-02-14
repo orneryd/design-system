@@ -1,9 +1,8 @@
 {
-  "name": "@mckesson-ui/mck-chip",
+  "name": "@mcklabs/mds-chip",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/mck-chip.js",
-  "module": "src/mck-chip.js",
+  "main": "dist/mds-chip.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

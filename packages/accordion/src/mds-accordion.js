@@ -1,6 +1,6 @@
-import accordionTemplate from './mck-accordion.html'
+import accordionTemplate from './mds-accordion.html'
 
-export default class MckAccordion extends HTMLElement {
+export default class MdsAccordion extends HTMLElement {
   constructor(self) {
     super(self)
     self = this
@@ -15,12 +15,12 @@ export default class MckAccordion extends HTMLElement {
   }
 
   toggleCollapse(){
-    const contentSlot = this.shadowRoot.querySelector('.mck-accordion-content')
+    const contentSlot = this.shadowRoot.querySelector('.mds-accordion-content')
     const slotContents = this.querySelector('[slot=accordion-content]')
-    const headerIcon = this.shadowRoot.querySelector('.mck-accordion-header-icon')
+    const headerIcon = this.shadowRoot.querySelector('.mds-accordion-header-icon')
     const isOpen = this.getAttribute('state') === 'open'
     // val can be either false or number
-    const val = (isOpen && 0 || slotContents.scrollHeight)
+    const val = (isOpen && slotContents.scrollHeight)
     // if val is false, javascript evalues the next expression in the ternary 
     // and returns that value regardless of the truthyness.
     const newHeight = (val || 0)
@@ -41,4 +41,4 @@ export default class MckAccordion extends HTMLElement {
   }
 }
 
-customElements.define('mck-accordion', MckAccordion)
+customElements.define('mds-accordion', MdsAccordion)

@@ -1,6 +1,6 @@
-import renderChip from './mck-chip.html'
+import renderChip from './mds-chip.html'
 
-export default class MckChip extends HTMLElement {
+export default class MdsChip extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
@@ -20,4 +20,4 @@ export default class MckChip extends HTMLElement {
   }
 }
 
-customElements.define('mck-chip', MckChip)
+customElements.define('mds-chip', MdsChip)

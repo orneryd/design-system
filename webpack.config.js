@@ -17,7 +17,7 @@ module.exports = {
          */
         if (entry.indexOf('.test') === -1 && entry.indexOf('dist/') === -1) {
             acc[`/dist/${entry}`] = path
-            acc[`${path.replace(`src/${entry}.js`, '')}/dist/${entry}`] = path
+            acc[`${path.replace(`src/${entry}.js`, '')}dist/${entry}`] = path
             acc['/dist/index'].push(path)
         }
         return acc

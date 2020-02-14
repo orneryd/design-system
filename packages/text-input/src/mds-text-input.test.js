@@ -1,12 +1,12 @@
 /**
  * @jest-environment jest-environment-happy-dom
  */
-import './mck-text-input'
+import './mds-text-input'
 
 describe('McKTextInput', () => {
   let element
   beforeEach(() => {
-    element = document.createElement('mck-text-input')
+    element = document.createElement('mds-text-input')
     element.setAttribute('label', 'lorem ipsum')
     document.body.appendChild(element)
   })
@@ -56,11 +56,11 @@ describe('McKTextInput', () => {
   describe('focusInput', () => {
     let focusSpy
     beforeEach(() => {
-      focusSpy = spyOn(element.shadowRoot.querySelector('.mck-text-input'), 'focus')
+      focusSpy = spyOn(element.shadowRoot.querySelector('.mds-text-input'), 'focus')
       element.focusInput()
     })
 
-    it('calls focus on the mck-text-input element', () => {
+    it('calls focus on the mds-text-input element', () => {
       expect(focusSpy.calls.count()).toBe(1)
     })
   })
@@ -89,9 +89,9 @@ describe('McKTextInput', () => {
     let styleNodes, mckChipNodes, labelNodes, inputNode
     beforeEach(() => {
       styleNodes = element.shadowRoot.querySelectorAll('style')
-      mckChipNodes = element.shadowRoot.querySelectorAll('.mck-text-input-wrapper')
-      labelNodes = element.shadowRoot.querySelectorAll('.mck-text-input-label')
-      inputNode = element.shadowRoot.querySelectorAll('.mck-text-input')
+      mckChipNodes = element.shadowRoot.querySelectorAll('.mds-text-input-wrapper')
+      labelNodes = element.shadowRoot.querySelectorAll('.mds-text-input-label')
+      inputNode = element.shadowRoot.querySelectorAll('.mds-text-input')
     })
 
     it('should have a style element', () => {

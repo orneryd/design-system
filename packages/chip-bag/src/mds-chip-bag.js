@@ -1,9 +1,9 @@
-import chipBagTemplate from './mck-chip-bag.html'
+import chipBagTemplate from './mds-chip-bag.html'
 
 const ENTER_KEY_CODE = 13
 const BACKSPACE_KEY_CODE = 8
 
-export default class MckChipBag extends HTMLElement {
+export default class MdsChipBag extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
@@ -12,7 +12,7 @@ export default class MckChipBag extends HTMLElement {
   }
 
   get inputElement() {
-    return this.shadowRoot.querySelector('.mck-chip-bag-input')
+    return this.shadowRoot.querySelector('.mds-chip-bag-input')
   }
 
   get delimiter() {
@@ -85,4 +85,4 @@ export default class MckChipBag extends HTMLElement {
   }
 }
 
-customElements.define('mck-chip-bag', MckChipBag)
+customElements.define('mds-chip-bag', MdsChipBag)
