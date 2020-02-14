@@ -1,5 +1,5 @@
   {
-    "include": ["node_modules", "src", "test"],
+    "include": ["node_modules", "packages", "test"],
     "presets": ["@babel/preset-env"],
     "plugins": ["@babel/plugin-proposal-class-properties", "@babel/plugin-proposal-object-rest-spread"]
   }

@@ -1,4 +1,5 @@
 import textInputTemplate from './mck-text-input.html'
+import { generateId } from '../../base/src/base'
 
 export default class MckTextInput extends HTMLElement {
   constructor() {
@@ -50,7 +51,7 @@ export default class MckTextInput extends HTMLElement {
 
   render() {
     const uniqueId = this.getAttribute('id') 
-    this.inputId = uniqueId || `${Date.now()}${Math.floor(Math.random() * Math.floor(1000))}`
+    this.inputId = uniqueId || generateId()
     textInputTemplate(this).connect()
   }
 }

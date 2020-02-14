@@ -8,8 +8,8 @@ module.exports = {
     '<rootDir>packages/**/*.{spec,test}.js'
   ],
   transform: {
-    '^.+\\.(js)$': '<rootDir>/node_modules/babel-jest',
-    '^.+\\.css$': '<rootDir>/config/jest/cssTransform.js',
+    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.scss$': '<rootDir>/test/config/cssTransform.js',
     '^.+\\.html$': '@mcklabs/web-components/jestLoader'
   },
   transformIgnorePatterns: [
