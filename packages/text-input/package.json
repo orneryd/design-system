@@ -2,11 +2,14 @@
   "name": "@mckesson-ui/mck-text-input",
   "version": "1.0.0",
   "description": "",
-  "main": "mck-text-input.js",
-  "module": "mck-text-input.js",
+  "main": "dist/mck-text-input.js",
+  "module": "src/mck-text-input.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+  }
 }

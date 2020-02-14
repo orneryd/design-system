@@ -2,11 +2,14 @@
   "name": "@mckesson-ui/mck-chip",
   "version": "1.0.0",
   "description": "",
-  "main": "mck-chip.js",
-  "module": "mck-chip.js",
+  "main": "dist/mck-chip.js",
+  "module": "src/mck-chip.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+  }
 }

@@ -2,11 +2,14 @@
   "name": "@mckesson-ui/mck-accordion",
   "version": "1.0.0",
   "description": "",
-  "main": "mwc-accordion.js",
-  "module": "mwc-accordion.js",
+  "main": "dist/mwc-accordion.js",
+  "module": "src/mwc-accordion.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+  }
 }

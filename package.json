@@ -2,7 +2,7 @@
   "name": "@mckesson-ui/design-system",
   "version": "1.0.0",
   "description": "Design System using StoryBook",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mckesson/mckesson-ui.git"

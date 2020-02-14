@@ -15,15 +15,16 @@ module.exports = {
          * the previous line as a key and the entire path including the file name
          * as the value
          */
-        if (entry.indexOf('.test') === -1) {
-            acc[entry] = path
-            acc['index'].push(path)
+        if (entry.indexOf('.test') === -1 && entry.indexOf('dist/') === -1) {
+            acc[`/dist/${entry}`] = path
+            acc[`${path.replace(`src/${entry}.js`, '')}/dist/${entry}`] = path
+            acc['/dist/index'].push(path)
         }
         return acc
-    }, {'index': []}),
+    }, {'/dist/index': []}),
     output: {
         filename: '[name].js',
-        path: __dirname + '/dist'
+        path: __dirname
     },
     devtool: 'source-map',
     performance: {
