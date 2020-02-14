@@ -1,4 +1,5 @@
 @import '../../base/src/base.scss';
+
 :host(mck-accordion) {
   padding: 20px;
 }
@@ -34,10 +35,10 @@
   border-radius: 50%;
   cursor: pointer;
   transition: .2s ease-in-out;
-}
-.mck-accordion-header-icon.open {
-  transform: rotate(180deg);
-}
-.mck-accordion-header-icon:hover {
-  background-color: rgba(0,0,0,.2);
+  &.open {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: rgba(0,0,0,.2);
+  }
 }
