@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mckesson-design-system",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Design System using StoryBook",
   "main": "dist/index.js",
   "repository": {
