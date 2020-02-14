@@ -1,0 +1,14 @@
+# mckesson-design-system chip-bag
+A styled chip container that functions similar to a Chip Array
+
+## Installation
+
+### npm
+```bash
+npm i @mcklabs/mds-chip-bag --save
+```
+
+### yarn
+```bash
+yarn add @mcklabs/mds-chip-bag
+```
