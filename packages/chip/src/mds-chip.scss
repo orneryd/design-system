@@ -1,0 +1,57 @@
+@import '../../base/src/base.scss';
+
+.mds-chip {
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    padding: 0 12px;
+    margin-top: 3px;
+    border-radius: 32px;
+    font-size: 1rem;
+  }
+
+  .mds-chip:hover {
+    background: #ccc;
+  }
+
+  .mds-chip {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .mds-chip-remove {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    background: #aaa;
+    border: 0;
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 -4px 0 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .mds-chip-remove:after {
+    color: #e0e0e0;
+  }
+
+  .mds-chip-remove:hover {
+    background: #999;
+  }
+
+  .mds-chip-remove:active {
+    background: #777;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  .mds-chip-text {
+     word-wrap: none;
+  }

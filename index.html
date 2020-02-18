@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <title>McKesson UI</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color:rgba(0,0,0,0.1);
+    }
+    code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
+  </style>
+  <body style="margin:0; width:100%">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div>
+      <mds-accordion>
+        <h4 slot="accordion-header">I am a header</h4>
+        <p slot="accordion-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </p>
+      </mds-accordion>
+      <mds-accordion>
+        <h4 slot="accordion-header">I am a header</h4>
+        <div slot="accordion-content">
+          <mds-text-input label="Your Team Name"></mds-text-input>
+        </div>
+      </mds-accordion>
+      <mds-accordion>
+        <h4 slot="accordion-header">I am a header</h4>
+        <div slot="accordion-content">
+          <mds-chip-bag required type="email" delimiter="[\s,;]+">
+            <span slot="chip-bag-helper">Add chips to the list!</span>
+          </mds-chip-bag>
+        </div>
+      </mds-accordion>
+    </div>
+    <script src="dist/index.js"></script>
+  </body>
+</html>
