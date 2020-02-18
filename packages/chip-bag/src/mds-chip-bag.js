@@ -1,7 +1,7 @@
 import chipBagTemplate from './mds-chip-bag.html'
 
-const ENTER_KEY_CODE = 13
-const BACKSPACE_KEY_CODE = 8
+export const ENTER_KEY_CODE = 13
+export const BACKSPACE_KEY_CODE = 8
 
 export default class MdsChipBag extends HTMLElement {
   constructor() {
@@ -21,14 +21,14 @@ export default class MdsChipBag extends HTMLElement {
 
   handleInputKeydown({ keyCode }) {
     if (keyCode === ENTER_KEY_CODE) {
-      this.processInputText(this.inputElement.value)
+      this.addChips(this.inputElement.value)
       this.render()
     } else if (!this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
       this.removeChip({ detail: this.chips[this.chips.length - 1] })
     }
   }
 
-  processInputText(textVal) {
+  addChips(textVal) {
     textVal = (textVal && textVal.trim()) || ''
     if (this.getAttribute('delimiter')) {
       textVal = textVal.split(this.delimiter)
@@ -45,8 +45,11 @@ export default class MdsChipBag extends HTMLElement {
     this.setAttribute('chips-length', this.chips.length)
   }
 
+  get allowDups() {
+    return this.getAttribute('allow-duplicates') === 'true'
+  }
+
   connectedCallback() {
-    this.allowDups = this.getAttribute('allow-duplicates') === 'true'
     this.render()
     this.addEventListener('click', this.focusInput)
   }
@@ -70,16 +73,16 @@ export default class MdsChipBag extends HTMLElement {
     this.shadowRoot.innerHTML = ''
     const attrsToAdd = []
     Array.from(this.attributes).forEach(attr => {
-      if (attr.nodeName === 'value') {
-        this.removeAttributeNode(attr)
-        this.processInputText(attr.nodeValue)
-      } else if (attr.nodeName !== 'slot' && attr.nodeName !== 'class') {
+      if (attr.name === 'value') {
+        this.addChips(attr.value)
+        this.removeAttribute(attr.name)
+      } else if (attr.name !== 'slot' && attr.name !== 'class') {
         attrsToAdd.push(attr)
       }
     })
     chipBagTemplate(this).connect()
     attrsToAdd.forEach(attr => {
-      this.inputElement.setAttributeNode(attr.cloneNode())
+      this.inputElement.setAttribute(attr.name, attr.value)
     })
     this.focusInput()
   }
