@@ -5,12 +5,29 @@ export default class MdsAccordion extends HTMLElement {
     self = this
     this.attachShadow({ mode: 'open' })
   }
+  
+  static get observedAttributes(){ 
+    return ['elevation']
+  }
+  
+  attributeChangedCallback(){
+    const root = this.shadowRoot.querySelector('mds-paper')
+    if (root) {
+      root.setAttribute('elevation', this.elevation)
+    }
+  }
+
   onHeaderClick() {
     const isOpen = this.getAttribute('state') === 'open'
     const eventOptions = { detail: isOpen ? 'collapse' : 'open' }
     this.setAttribute('state', eventOptions.detail)
     this.dispatchEvent(new CustomEvent('accordion-state', eventOptions))
   }
+
+  get elevation(){
+    return this.getAttribute('elevation') || 3
+  }
+
   toggleCollapse() {
     const contentSlot = this.shadowRoot.querySelector('.mds-accordion-content')
     const slotContents = this.querySelector('[slot=accordion-content]')
