@@ -10,5 +10,8 @@
   "license": "ISC",
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+  },
+  "dependencies": {
+    "@mcklabs/mds-paper": "^0.0.1"
   }
 }
