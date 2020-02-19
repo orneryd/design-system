@@ -513,7 +513,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-const {bindEvents, setupConnect} = __webpack_require__(/*! @mcklabs/web-components/templates */ "./node_modules/@mcklabs/web-components/templates.js"); module.exports = (p = {})=> { const parsed = new DOMParser().parseFromString(function(props){return "<style>h1 {\n  text-align: center;\n  margin: 0 25% 1rem 25%;\n  padding-top: 1rem; }\n\np {\n  text-align: center;\n  margin: 0% 25% 0% 25%;\n  font-size: 0.65rem; }\n</style>\n<link href=\"./mds-banner.scss\"/> <div> <h1> <slot class=\"header\" name=\"header\"></slot> </h1> <p> <slot class=\"content\" name=\"content\"></slot> </p> </div> "}.call(p, p), 'text/html'); const elements = [...parsed.head.children, ...bindEvents(parsed.body, p).childNodes]; return setupConnect(elements, p)}
+const {bindEvents, setupConnect} = __webpack_require__(/*! @mcklabs/web-components/templates */ "./node_modules/@mcklabs/web-components/templates.js"); module.exports = (p = {})=> { const parsed = new DOMParser().parseFromString(function(props){return "<style>h1 {\n  text-align: center;\n  margin: 0 25% 1rem 25%;\n  padding-top: 1rem; }\n\np {\n  text-align: center;\n  margin: 0% 25% 0% 25%;\n  font-size: 0.7rem; }\n</style>\n<link href=\"./mds-banner.scss\"/> <div> <h1> <slot class=\"header\" name=\"header\"></slot> </h1> <p> <slot class=\"content\" name=\"content\"></slot> </p> </div> "}.call(p, p), 'text/html'); const elements = [...parsed.head.children, ...bindEvents(parsed.body, p).childNodes]; return setupConnect(elements, p)}
 
 /***/ }),
 
