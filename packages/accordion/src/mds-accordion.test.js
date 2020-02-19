@@ -2,6 +2,7 @@
  * @jest-environment jest-environment-happy-dom
  */
 import './mds-accordion'
+import MdsAccordion from './mds-accordion'
 
 describe('MdsAccordion', () => {
   let element
@@ -26,7 +27,6 @@ describe('MdsAccordion', () => {
     expect(element.shadowRoot).toBeDefined()
   })
 
-  // wrap header clicks in same describe maybe
   describe('onHeaderClick Open', () => {
     let dispatchSpy
     beforeEach(() => {
@@ -36,7 +36,6 @@ describe('MdsAccordion', () => {
       element.parentElement = {
         removeChild: jest.fn()
       }
-      // contentSlotSpy = spyOn(element.shadowRoot.querySelector('.mds-accordion-content'), 'scrollHeight')
       dispatchSpy = spyOn(element, 'dispatchEvent')
       element.onHeaderClick()
     })
@@ -68,7 +67,6 @@ describe('MdsAccordion', () => {
       element.parentElement = {
         removeChild: jest.fn()
       }
-      // contentSlotSpy = spyOn(element.shadowRoot.querySelector('.mds-accordion-content'), 'scrollHeight')
       dispatchSpy = spyOn(element, 'dispatchEvent')
       element.onHeaderClick()
     })
@@ -94,16 +92,17 @@ describe('MdsAccordion', () => {
     })
   })
   describe('connectedCallback', () => {
-    let onClickAttributeSpy
+    let onClickAttributeSpy, toggleCollapseSpy, mdsAccordionHeaderWrapper
     beforeEach(() => {
-      onClickAttributeSpy = spyOn(element, 'onHeaderClick')
-      element.setAttribute('state', 'collapse')
-      element.parentElement = {
-        removeChild: jest.fn()
-      }
-      // contentSlotSpy = spyOn(element.shadowRoot.querySelector('.mds-accordion-content'), 'scrollHeight')
-      // dispatchSpy = spyOn(element, 'dispatchEvent')
-      element.onHeaderClick()
+      mdsAccordionHeaderWrapper = element.shadowRoot.querySelector('.mds-accordion-header-wrapper')
+      onClickAttributeSpy = spyOn(element, 'onHeaderClick').and.callThrough()
+      toggleCollapseSpy = spyOn(element, 'toggleCollapse').and.callThrough()
+
+      element.setAttribute('test-attribute', 'false')
+    })
+
+    afterEach(() => {
+      jest.clearAllMocks()
     })
 
     it('should render a style element', () => {
@@ -119,13 +118,11 @@ describe('MdsAccordion', () => {
     })
     
     it('should render accordion header wrapper', () => {
-      let mdsAccordionHeaderWrapper = element.shadowRoot.querySelectorAll('.mds-accordion-header-wrapper')
-      expect(mdsAccordionHeaderWrapper.length).toBe(1)
-      expect(mdsAccordionHeaderWrapper[0].tagName).toBe('DIV')
+      expect(mdsAccordionHeaderWrapper.tagName).toBe('DIV')
     })
 
     it('should render accordion header wrapper onClick attribute', () => {
-      expect(onClickAttributeSpy.calls.count()).toBe(1)
+      expect(mdsAccordionHeaderWrapper.getAttribute('onclick')).toBe('this.onHeaderClick')
     })
 
     it('should render an accordion header slot', () => {
@@ -140,24 +137,20 @@ describe('MdsAccordion', () => {
       expect(mdsAccordionContent[0].tagName).toBe('SLOT')
     })
 
-    it('should render svg', () => {
-      
+    it('should render accordion header icon as svg', () => {
+      let mdsAccordionHeaderIcon = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon')
+      expect(mdsAccordionHeaderIcon.length).toBe(1)
+      expect(mdsAccordionHeaderIcon[0].tagName).toBe('SVG')
     })
 
     it('should render svg path', () => {
-      
+      let mdsAccordionHeaderIcon = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon')
+      expect(mdsAccordionHeaderIcon.length).toBe(1)
+      expect(mdsAccordionHeaderIcon[0].children[0].tagName).toBe('PATH')
     })
 
     it('should have a mutation observer', () => {
-      
-    })
-
-    it('should call toggleCollapse on mutation', () => {
-      
-    })
-
-    it('verify that observe was called with the correct arguments', () => {
-      
+      expect(toggleCollapseSpy.calls.count()).toBe(1)
     })
   })
   describe('toggleCollapse', () => {
