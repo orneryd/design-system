@@ -28,6 +28,11 @@ export default class MdsChipBag extends HTMLElement {
     }
   }
 
+  handleBlur({target}) {
+    this.addChips(target.value)
+    this.render()
+  }
+
   addChips(textVal) {
     textVal = (textVal && textVal.trim()) || ''
     if (this.getAttribute('delimiter')) {
