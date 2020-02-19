@@ -23,43 +23,14 @@
   <body style="margin:0; width:100%">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div>
-      <mds-accordion id="accordion-1" elevation="1">
-        <h4 slot="accordion-header">I am a header</h4>
-        <div slot="accordion-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-      </div>
-      </mds-accordion>
-      <mds-accordion>
-        <h4 slot="accordion-header">I am a header</h4>
-        <div slot="accordion-content">
-          <mds-text-input label="Your Team Name"></mds-text-input>
-        </div>
-      </mds-accordion>
-      <mds-accordion elevation="9">
-        <h4 slot="accordion-header">I am a header</h4>
-        <div slot="accordion-content">
-          <mds-chip-bag required type="email" delimiter="[\s,;]+">
-            <span slot="chip-bag-helper">Add chips to the list!</span>
-          </mds-chip-bag>
-        </div>
-      </mds-accordion>
+      <mds-paper>hello there</mds-paper>
+      <mds-banner>
+        <span slot="header">hello</span>
+        <span slot="content">there</span>
+      </mds-banner>
     </div>
     <script src="dist/index.js"></script>
     <script>
-      // let elevation = 1
-      // setInterval(()=> {
-      //   if (elevation < 10) {
-      //     elevation++ 
-      //   } else {
-      //     elevation = 1;
-      //   }
-      //   document.getElementById('accordion-1').setAttribute('elevation', elevation)
-      // },300)
     </script>
   </body>
 </html>
