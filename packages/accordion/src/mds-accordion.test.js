@@ -92,26 +92,31 @@ describe('MdsAccordion', () => {
     })
   })
   describe('connectedCallback', () => {
+    let mdsAccordion, styleNodes
     beforeEach(() => {
+      styleNodes = element.shadowRoot.querySelectorAll('style')
+      mdsAccordion = element.shadowRoot.querySelectorAll('.mds-accordion')
       element.setAttribute('state', 'collapse')
       element.parentElement = {
         removeChild: jest.fn()
       }
       // contentSlotSpy = spyOn(element.shadowRoot.querySelector('.mds-accordion-content'), 'scrollHeight')
-      dispatchSpy = spyOn(element, 'dispatchEvent')
+      // dispatchSpy = spyOn(element, 'dispatchEvent')
       element.onHeaderClick()
     })
 
     it('should render a style element', () => {
-      const styleNodes = element.shadowRoot.querySelectorAll('style')
       expect(styleNodes.length).toBe(1)
       expect(styleNodes[0].tagName).toBe('STYLE')
     })
 
     it('should render a div element', () => {
-      const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-accordion')
-      expect(mckChipNodes.length).toBe(1)
-      expect(mckChipNodes[0].tagName).toBe('DIV')
+      expect(mdsAccordion.length).toBe(1)
+      expect(mdsAccordion[0].tagName).toBe('DIV')
+    })
+    
+    it('should render accordion header wrapper', () => {
+      
     })
 
     it('should render an accordion header slot', () => {
@@ -127,10 +132,6 @@ describe('MdsAccordion', () => {
     })
 
     it('should render svg path', () => {
-      
-    })
-
-    it('should render accordion header wrapper', () => {
       
     })
 
