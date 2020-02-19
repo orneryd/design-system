@@ -914,8 +914,8 @@
 
 "@mcklabs/web-components@1.1.5":
   version "1.1.5"
-  resolved "https://tools.mckesson.com/artifactory/api/npm/mcklbs-release-repo/@mcklabs/web-components/-/@mcklabs/web-components-1.1.5.tgz#dc76b8d870d13165175f85a657292165f433c6d6"
-  integrity sha1-3Ha42HDRMWUXX4WmVykhZfQzxtY=
+  resolved "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/@mcklabs/web-components/-/@mcklabs/web-components-1.1.5.tgz#12f15325ae2e3389995b7bcb64a663c797f6dabb"
+  integrity sha1-EvFTJa4uM4mZW3vLZKZjx5f22rs=
   dependencies:
     es6-templates "^0.2.3"
     fastparse "^1.1.1"
