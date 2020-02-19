@@ -135,7 +135,9 @@ describe('MdsAccordion', () => {
     })
 
     it('should render an accordion content slot', () => {
-      
+      let mdsAccordionContent = element.shadowRoot.querySelectorAll('.mds-accordion-content')
+      expect(mdsAccordionContent.length).toBe(1)
+      expect(mdsAccordionContent[0].tagName).toBe('SLOT')
     })
 
     it('should render svg', () => {
