@@ -1,0 +1,41 @@
+@import '../../base/src/base.scss';
+
+:host {
+  display: inline-block;
+  margin: 1rem 0.5rem;
+}
+.button-content {
+  display: block;
+}
+.mds-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 2rem;
+
+  &.primary {
+    background-color: #777;
+      
+  &:hover {
+    background: #333;
+  }
+  }
+  &.secondary {
+    background-color: #6200ee;
+    &:hover {
+      background: #2300ee;
+    }
+  }
+  &.outlined {
+    background-color: transparent;
+    border: 2px #6200ee solid;
+    color: #6200ee;
+  }
+
+  .mds-button {
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+}
