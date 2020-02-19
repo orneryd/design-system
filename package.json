@@ -14,7 +14,7 @@
     "url": "https://github.com/mckesson/mckesson-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
   },
   "scripts": {
     "build": "webpack",

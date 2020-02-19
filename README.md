@@ -21,7 +21,7 @@ yarn add @mcklabs/mckesson-design-system
 
 # Building
 ```
-curl -uEID:PASSWORD "https://tools.mckesson.com/artifactory/api/npm/mcklbs-release-repo/auth/mcklabs" >> ~/.npmrc
+curl -uEID:PASSWORD "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/auth/mcklabs" >> ~/.npmrc
 git clone git@github.com:mckesson/mckesson-design-system.git
 cd mckesson-design-system
 yarn config set strict-ssl false

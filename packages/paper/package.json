@@ -9,7 +9,7 @@
     "author": "",
     "license": "ISC",
     "publishConfig": {
-      "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+      "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
     }
   }
   
