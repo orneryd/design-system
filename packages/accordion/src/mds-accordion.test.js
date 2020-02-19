@@ -24,6 +24,7 @@ describe('MdsAccordion', () => {
     expect(element.shadowRoot).toBeDefined()
   })
 
+  // wrap header clicks in same describe maybe
   describe('onHeaderClick Open', () => {
     let dispatchSpy
     beforeEach(() => {
@@ -91,6 +92,16 @@ describe('MdsAccordion', () => {
     })
   })
   describe('connectedCallback', () => {
+    beforeEach(() => {
+      element.setAttribute('state', 'collapse')
+      element.parentElement = {
+        removeChild: jest.fn()
+      }
+      // contentSlotSpy = spyOn(element.shadowRoot.querySelector('.mds-accordion-content'), 'scrollHeight')
+      dispatchSpy = spyOn(element, 'dispatchEvent')
+      element.onHeaderClick()
+    })
+
     it('should render a style element', () => {
       const styleNodes = element.shadowRoot.querySelectorAll('style')
       expect(styleNodes.length).toBe(1)
@@ -101,6 +112,71 @@ describe('MdsAccordion', () => {
       const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-accordion')
       expect(mckChipNodes.length).toBe(1)
       expect(mckChipNodes[0].tagName).toBe('DIV')
+    })
+
+    it('should render an accordion header slot', () => {
+      
+    })
+
+    it('should render an accordion content slot', () => {
+      
+    })
+
+    it('should render svg', () => {
+      
+    })
+
+    it('should render svg path', () => {
+      
+    })
+
+    it('should render accordion header wrapper', () => {
+      
+    })
+
+    it('should render accordion header wrapper onClick attribute', () => {
+      
+    })
+
+    it('should have a mutation observer', () => {
+      
+    })
+
+    it('should call toggleCollapse on mutation', () => {
+      
+    })
+
+    it('verify that observe was called with the correct arguments', () => {
+      
+    })
+  })
+  describe('toggleCollapse', () => {
+    it('calls query selector on mds accordion content', () => {
+      
+    })
+
+    it('calls query selector on accordion content', () => {
+      // grab content slot
+    })
+
+    it('calls query selector on accordion header icon', () => {
+      
+    })
+
+    it('adds the open css class when isOpen is true', () => {
+      
+    })
+
+    it('removes the open css class when isOpen is false', () => {
+      
+    })
+
+    it('sets the style height to 0 when collapsed', () => {
+      
+    })
+
+    it('sets the style height to > 0 when open', () => {
+      
     })
   })
 })
