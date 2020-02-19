@@ -8,11 +8,13 @@ describe('MdsAccordion', () => {
   beforeEach(() => {
     element = document.createElement('mds-accordion')
     element.innerHTML = `
-    <div slot="accordion-header">
-      test-text
-    </div>
-    <div slot="accordion-content">
-      test-text2
+    <div class="mds-accordion-header-wrapper"
+      <div slot="accordion-header">
+        test-text
+      </div>
+      <div slot="accordion-content">
+        test-text2
+      </div>
     </div>
     `
     document.body.appendChild(element)
@@ -92,10 +94,9 @@ describe('MdsAccordion', () => {
     })
   })
   describe('connectedCallback', () => {
-    let mdsAccordion, styleNodes
+    let onClickAttributeSpy
     beforeEach(() => {
-      styleNodes = element.shadowRoot.querySelectorAll('style')
-      mdsAccordion = element.shadowRoot.querySelectorAll('.mds-accordion')
+      onClickAttributeSpy = spyOn(element, 'onHeaderClick')
       element.setAttribute('state', 'collapse')
       element.parentElement = {
         removeChild: jest.fn()
@@ -106,21 +107,31 @@ describe('MdsAccordion', () => {
     })
 
     it('should render a style element', () => {
+      let styleNodes = element.shadowRoot.querySelectorAll('style')
       expect(styleNodes.length).toBe(1)
       expect(styleNodes[0].tagName).toBe('STYLE')
     })
 
     it('should render a div element', () => {
+      let mdsAccordion = element.shadowRoot.querySelectorAll('.mds-accordion')
       expect(mdsAccordion.length).toBe(1)
       expect(mdsAccordion[0].tagName).toBe('DIV')
     })
     
     it('should render accordion header wrapper', () => {
-      
+      let mdsAccordionHeaderWrapper = element.shadowRoot.querySelectorAll('.mds-accordion-header-wrapper')
+      expect(mdsAccordionHeaderWrapper.length).toBe(1)
+      expect(mdsAccordionHeaderWrapper[0].tagName).toBe('DIV')
+    })
+
+    it('should render accordion header wrapper onClick attribute', () => {
+      expect(onClickAttributeSpy.calls.count()).toBe(1)
     })
 
     it('should render an accordion header slot', () => {
-      
+      let mdsAccordionHeader = element.shadowRoot.querySelectorAll('.mds-accordion-header')
+      expect(mdsAccordionHeader.length).toBe(1)
+      expect(mdsAccordionHeader[0].tagName).toBe('SLOT')
     })
 
     it('should render an accordion content slot', () => {
@@ -132,10 +143,6 @@ describe('MdsAccordion', () => {
     })
 
     it('should render svg path', () => {
-      
-    })
-
-    it('should render accordion header wrapper onClick attribute', () => {
       
     })
 
