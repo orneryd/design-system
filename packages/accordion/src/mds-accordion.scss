@@ -1,5 +1,8 @@
 @import '../../base/src/base.scss';
 
+$mds-accordion-icon-color-hover: $mdsBlackLightest !default;
+$mds-accordion-icon-color: $mdsBlack !default;
+
 :host {
   padding: 20px;
 }
@@ -19,7 +22,7 @@
     overflow: auto;
 }
 .mds-accordion-header-icon {
-  fill: currentColor;
+  fill: $mds-accordion-icon-color;
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -34,6 +37,6 @@
     transform: rotate(180deg);
   }
   &:hover {
-    background-color: rgba(0,0,0,.2);
+    background-color: $mds-accordion-icon-color-hover;
   }
 }

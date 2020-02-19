@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import '../../../packages/paper/dist/mds-paper'
-import '../../../packages/chip-bag/dist/mds-chip-bag'
+import '../../../packages/paper'
+import '../../../packages/chip-bag'
 
 storiesOf('Web Components | Inputs', module).add('Chip Bag', () => (
   <mds-paper>
