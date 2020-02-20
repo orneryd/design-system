@@ -23,8 +23,10 @@ export default class MdsChipBag extends HTMLElement {
     if (keyCode === ENTER_KEY_CODE) {
       this.addChips(this.inputElement.value)
       this.render()
+      this.focusInput()
     } else if (!this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
       this.removeChip({ detail: this.chips[this.chips.length - 1] })
+      this.focusInput()
     }
   }
 
@@ -106,7 +108,6 @@ export default class MdsChipBag extends HTMLElement {
     attrsToAdd.forEach(attr => {
       this.inputElement.setAttribute(attr.name, attr.value)
     })
-    this.focusInput()
   }
 }
 
