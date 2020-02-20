@@ -15,6 +15,7 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
   display: block;
 }
 .mds-button {
+  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   color: #fff;

@@ -6,10 +6,6 @@ export default class MdsChip extends HTMLElement {
     this.attachShadow({ mode: 'open' })
   }
 
-  get chipText() {
-    return this.getAttribute('chip-text')
-  }
-
   closeChip() {
     this.dispatchEvent(new CustomEvent('closechip', { detail: this.getAttribute('chip-text') }))
     this.parentElement.removeChild(this)

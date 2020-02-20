@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "@mcklabs/mds-chip": "~0.0.1"
+  },
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
   }

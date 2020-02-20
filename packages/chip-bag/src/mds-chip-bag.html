@@ -1,6 +1,6 @@
 <link href="./mds-chip-bag.scss"/>
 <div class="mds-chip-bag">
-  ${this.chips.map((v) => `<mds-chip onclosechip="${this.removeChip}" chip-text="${v}"></mds-chip>`).join("")}
+  ${this.chipList}
   <input class="mds-chip-bag-input" onblur="${this.handleBlur}" onkeyup="${this.handleInputKeydown}" type="text">
 </div>
 <slot name="mds-chip-bag-helper"></slot>

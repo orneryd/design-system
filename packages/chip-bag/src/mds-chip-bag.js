@@ -11,6 +11,10 @@ export default class MdsChipBag extends HTMLElement {
     this.chips = []
   }
 
+  get observedAttributes(){
+    return ['chip-tag', 'chips-length']
+  }
+
   get inputElement() {
     return this.shadowRoot.querySelector('.mds-chip-bag-input')
   }
@@ -32,6 +36,10 @@ export default class MdsChipBag extends HTMLElement {
     this.addChips(target.value)
     this.render()
   }
+  
+  get chipList(){
+    return this.chips.map((v) => `<${this.chipTag} onclosechip="${this.removeChip}">${v}</${this.chipTag}>`).join("")
+  }
 
   addChips(textVal) {
     textVal = (textVal && textVal.trim()) || ''
@@ -52,6 +60,14 @@ export default class MdsChipBag extends HTMLElement {
 
   get allowDups() {
     return this.getAttribute('allow-duplicates') === 'true'
+  }
+
+  get chipTag(){
+    return this.getAttribute('chip-tag') || 'mds-chip'
+  }
+
+  attributeChangedCallback(){
+    this.render()
   }
 
   connectedCallback() {

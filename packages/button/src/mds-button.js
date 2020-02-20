@@ -22,7 +22,8 @@ export default class MdsButton extends HTMLElement {
     return this.hasAttribute('disabled') ? 'disabled': 'enabled'
   }
   get href(){
-    return this.getAttribute('href') || this.getAttribute('to') || '#'
+    const url = this.getAttribute('href') || this.getAttribute('to') || '';
+    return url && `href="${url}"`
   }
 
   connectedCallback() {

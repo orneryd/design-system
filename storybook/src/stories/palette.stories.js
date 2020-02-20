@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
 import PrimaryColors from '../components/palette/primaryColors';
 import SupportColors from '../components/palette/supportColors';
 
@@ -11,11 +10,9 @@ const palette = {
     }
 }
 
-storiesOf("General | Palette", module)
-  .add("Primary Colors", () => (
-    <PrimaryColors />
-  ))
-  .add("Support Colors", () => (
-    <SupportColors
-      color={palette}/>
-  ));
+export default {
+  title: 'General/Color Palette',
+};
+
+export const primaryColors = ()=> <PrimaryColors />
+export const supportColors = ()=> <SupportColors color={palette} />
