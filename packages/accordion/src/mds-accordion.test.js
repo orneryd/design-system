@@ -9,14 +9,10 @@ describe('MdsAccordion', () => {
   beforeEach(() => {
     element = document.createElement('mds-accordion')
     element.innerHTML = `
-    <div class="mds-accordion-header-wrapper"
       <div slot="accordion-header">
-        test-text
       </div>
       <div slot="accordion-content">
-        test-text2
       </div>
-    </div>
     `
     document.body.appendChild(element)
   })
@@ -152,27 +148,19 @@ describe('MdsAccordion', () => {
     })
   })
   describe('toggleCollapse', () => {
-    let headerIcon, contentSlot, openAccordion
+    let headerIcon, contentSlot, openAccordion, slotContents
     beforeEach(() => {
       contentSlot = element.shadowRoot.querySelector('.mds-accordion-content')
+      slotContents = element.querySelector('[slot=accordion-content]')
       contentSlot.style.height = -1
-      contentSlot.scrollHeight = 1
+      slotContents.scrollHeight = 1
       headerIcon = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon')
-      openAccordion = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon.open')
-    })
-
-    afterEach(() => {
-      jest.clearAllMocks()
-    })
-
-    afterAll(() => {
-      element.dispatchEvent.mockRestore()
+      element.setAttribute('state', 'open')
     })
 
     it('calls query selector on mds accordion content', () => {
       element.toggleCollapse()
-      expect(contentSlot.length).toBe(1)
-      expect(contentSlot[0].tagName).toBe('SLOT')
+      expect(contentSlot.tagName).toBe('SLOT')
     })
 
     it('calls query selector on accordion header icon', () => {
@@ -182,15 +170,15 @@ describe('MdsAccordion', () => {
     })
 
     it('adds the open css class when isOpen is true', () => {
-      element.setAttribute('state', 'open')
       element.toggleCollapse()
-      expect(openAccordion.length).toBe(1)
+      console.log(headerIcon[0]._attributesMap)
+      expect(headerIcon[0]._attributesMap.class).toBe('mds-accordion-header-icon open')
     })
 
     it('removes the open css class when isOpen is false', () => {
       element.setAttribute('state', 'collapse')
       element.toggleCollapse()
-      expect(openAccordion.length).toBe(0)
+      expect(headerIcon[0]._attributesMap.class).toBe('mds-accordion-header-icon')
     })
 
     it('sets the style height to 0 when collapsed', () => {
@@ -200,7 +188,6 @@ describe('MdsAccordion', () => {
     })
 
     it('sets the style height to > 0 when open', () => {
-      element.setAttribute('state', 'open')
       element.toggleCollapse()
       expect(contentSlot.style.height).toBe('1px')
     })
