@@ -61,7 +61,7 @@ describe('MdsAccordion', () => {
     })
   })
   describe('onHeaderClick Collapse', () => {
-    let dispatchSpy, contentSlotSpy
+    let dispatchSpy
     beforeEach(() => {
       element.setAttribute('state', 'collapse')
       element.parentElement = {
@@ -92,12 +92,10 @@ describe('MdsAccordion', () => {
     })
   })
   describe('connectedCallback', () => {
-    let onClickAttributeSpy, toggleCollapseSpy, mdsAccordionHeaderWrapper
+    let toggleCollapseSpy, mdsAccordionHeaderWrapper
     beforeEach(() => {
       mdsAccordionHeaderWrapper = element.shadowRoot.querySelector('.mds-accordion-header-wrapper')
-      onClickAttributeSpy = spyOn(element, 'onHeaderClick').and.callThrough()
       toggleCollapseSpy = spyOn(element, 'toggleCollapse').and.callThrough()
-
       element.setAttribute('test-attribute', 'false')
     })
 
@@ -154,32 +152,57 @@ describe('MdsAccordion', () => {
     })
   })
   describe('toggleCollapse', () => {
-    it('calls query selector on mds accordion content', () => {
-      
+    let headerIcon, contentSlot, openAccordion
+    beforeEach(() => {
+      contentSlot = element.shadowRoot.querySelector('.mds-accordion-content')
+      contentSlot.style.height = -1
+      contentSlot.scrollHeight = 1
+      headerIcon = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon')
+      openAccordion = element.shadowRoot.querySelectorAll('.mds-accordion-header-icon.open')
     })
 
-    it('calls query selector on accordion content', () => {
-      // grab content slot
+    afterEach(() => {
+      jest.clearAllMocks()
+    })
+
+    afterAll(() => {
+      element.dispatchEvent.mockRestore()
+    })
+
+    it('calls query selector on mds accordion content', () => {
+      element.toggleCollapse()
+      expect(contentSlot.length).toBe(1)
+      expect(contentSlot[0].tagName).toBe('SLOT')
     })
 
     it('calls query selector on accordion header icon', () => {
-      
+      element.toggleCollapse()
+      expect(headerIcon.length).toBe(1)
+      expect(headerIcon[0].tagName).toBe('SVG')
     })
 
     it('adds the open css class when isOpen is true', () => {
-      
+      element.setAttribute('state', 'open')
+      element.toggleCollapse()
+      expect(openAccordion.length).toBe(1)
     })
 
     it('removes the open css class when isOpen is false', () => {
-      
+      element.setAttribute('state', 'collapse')
+      element.toggleCollapse()
+      expect(openAccordion.length).toBe(0)
     })
 
     it('sets the style height to 0 when collapsed', () => {
-      
+      element.setAttribute('state', 'collapse')
+      element.toggleCollapse()
+      expect(contentSlot.style.height).toBe('0px')
     })
 
     it('sets the style height to > 0 when open', () => {
-      
+      element.setAttribute('state', 'open')
+      element.toggleCollapse()
+      expect(contentSlot.style.height).toBe('1px')
     })
   })
 })
