@@ -912,10 +912,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mcklabs/web-components@1.1.4":
-  version "1.1.4"
-  resolved "https://tools.mckesson.com/artifactory/api/npm/mcklbs-release-repo/@mcklabs/web-components/-/@mcklabs/web-components-1.1.4.tgz#24d68572bf036c3f2fb2db8fb4327826cf4b6b0f"
-  integrity sha1-JNaFcr8DbD8vstuPtDJ4Js9Law8=
+"@mcklabs/web-components@1.1.5":
+  version "1.1.5"
+  resolved "https://tools.mckesson.com/artifactory/api/npm/mcklbs-release-repo/@mcklabs/web-components/-/@mcklabs/web-components-1.1.5.tgz#dc76b8d870d13165175f85a657292165f433c6d6"
+  integrity sha1-3Ha42HDRMWUXX4WmVykhZfQzxtY=
   dependencies:
     es6-templates "^0.2.3"
     fastparse "^1.1.1"
