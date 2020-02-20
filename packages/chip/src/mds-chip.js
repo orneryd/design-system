@@ -7,8 +7,7 @@ export default class MdsChip extends HTMLElement {
   }
 
   closeChip() {
-    this.dispatchEvent(new CustomEvent('closechip', { detail: this.getAttribute('chip-text') }))
-    this.parentElement.removeChild(this)
+    this.dispatchEvent(new CustomEvent('closechip', { detail: this }))
   }
 
   connectedCallback() {

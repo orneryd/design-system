@@ -9,7 +9,6 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
 
 :host {
   display: inline-block;
-  margin: 1rem 0.5rem;
 }
 .button-content {
   display: block;
@@ -41,7 +40,7 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
   }
   &.outlined {
     background-color: transparent;
-    border: 2px $mds-button-outlined-color solid;
+    box-shadow: inset 0px 0px 0px 2px $mds-button-outlined-color;
     color: $mds-button-outlined-color;
     &:hover {
       background-color: $mds-button-outlined-color-hover;

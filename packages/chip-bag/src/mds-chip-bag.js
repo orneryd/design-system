@@ -11,7 +11,7 @@ export default class MdsChipBag extends HTMLElement {
     this.chips = []
   }
 
-  get observedAttributes(){
+  get observedAttributes() {
     return ['chip-tag', 'chips-length']
   }
 
@@ -36,10 +36,6 @@ export default class MdsChipBag extends HTMLElement {
     this.addChips(target.value)
     this.render()
   }
-  
-  get chipList(){
-    return this.chips.map((v) => `<${this.chipTag} onclosechip="${this.removeChip}">${v}</${this.chipTag}>`).join("")
-  }
 
   addChips(textVal) {
     textVal = (textVal && textVal.trim()) || ''
@@ -62,11 +58,19 @@ export default class MdsChipBag extends HTMLElement {
     return this.getAttribute('allow-duplicates') === 'true'
   }
 
-  get chipTag(){
+  get chipCloseTag() {
+    return `</${this.chipTag}>`
+  }
+
+  get chipStartTag() {
+    return `<${this.chipTag} class="mds-chip ${this.getAttribute('chip-class')}" onclick="this.clickChip" onclosechip="this.removeChip">`
+  }
+
+  get chipTag() {
     return this.getAttribute('chip-tag') || 'mds-chip'
   }
 
-  attributeChangedCallback(){
+  attributeChangedCallback() {
     this.render()
   }
 
@@ -83,9 +87,14 @@ export default class MdsChipBag extends HTMLElement {
     this.inputElement.focus()
   }
 
+  clickChip({ target }) {
+    console.log('clickChip', target)
+    this.dispatchEvent(new CustomEvent('chipclicked', { detail: target.innerHTML }))
+  }
+
   removeChip({ detail }) {
-    this.chips.splice(this.chips.indexOf(detail), 1)
-    this.dispatchEvent(new CustomEvent('updatechips', { detail: this.chips }))
+    this.chips.splice(this.chips.indexOf(detail.innerHTML), 1)
+    this.dispatchEvent(new CustomEvent('chipsupdate', { detail: this.chips }))
     this.setAttribute('chips-length', this.chips.length)
     this.render()
   }
