@@ -171,7 +171,6 @@ describe('MdsAccordion', () => {
 
     it('adds the open css class when isOpen is true', () => {
       element.toggleCollapse()
-      console.log(headerIcon[0]._attributesMap)
       expect(headerIcon[0]._attributesMap.class).toBe('mds-accordion-header-icon open')
     })
 

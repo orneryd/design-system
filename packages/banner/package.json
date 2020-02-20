@@ -1,8 +1,8 @@
 {
-  "name": "@mcklabs/mds-accordion",
+  "name": "@mcklabs/mds-banner",
   "version": "0.0.2",
   "description": "",
-  "main": "dist/mds-accordion.js",
+  "main": "dist/mds-banner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
