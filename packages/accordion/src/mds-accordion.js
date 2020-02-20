@@ -27,6 +27,10 @@ export default class MdsAccordion extends HTMLElement {
   }
   connectedCallback() {
     accordionTemplate(this).connect()
+    if (this.getAttribute('state') === 'open') {
+      this.getAttribute('state') === 'collapse'
+      this.toggleCollapse()
+    }
     this.mutationsObserver_ = new MutationObserver(() => this.toggleCollapse())
     this.mutationsObserver_.observe(this, {
       attributes: true,
