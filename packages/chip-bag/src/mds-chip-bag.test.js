@@ -72,10 +72,6 @@ describe('MckChipBag', () => {
       element.setAttribute('allow-duplicates', 'true')
     })
 
-    it('calls render()', () => {
-      expect(renderSpy.calls.count()).toBe(1)
-    })
-
     it('adds the click eventListener to the focusInput function', () => {
       expect(addEventListenerSpy.calls.count()).toBe(1)
       expect(addEventListenerSpy.calls.all()[0].args[0]).toBe('click')
@@ -110,9 +106,9 @@ describe('MckChipBag', () => {
       element.removeChip({ detail: 'hello' })
     })
 
-    it('dispatches an updatechips event', () => {
+    it('dispatches an chipsupdate event', () => {
       expect(dispatchEventSpy.calls.count()).toBe(1)
-      expect(dispatchEventSpy.calls.all()[0].args[0].type).toBe('updatechips')
+      expect(dispatchEventSpy.calls.all()[0].args[0].type).toBe('chipsupdate')
       expect(dispatchEventSpy.calls.all()[0].args[0].detail).toBe(element.chips)
     })
 
@@ -177,7 +173,7 @@ describe('MckChipBag', () => {
       })
 
       it('should have chip-text attribute set to the value', () => {
-        expect(chips[0].getAttribute('chip-text')).toBe('chip-text')
+        expect(chips[0].innerHTML).toBe('chip-text')
       })
     })
 

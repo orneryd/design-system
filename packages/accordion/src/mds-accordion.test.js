@@ -105,10 +105,10 @@ describe('MdsAccordion', () => {
       expect(styleNodes[0].tagName).toBe('STYLE')
     })
 
-    it('should render a div element', () => {
-      let mdsAccordion = element.shadowRoot.querySelectorAll('.mds-accordion')
+    it('should render an mds-paper element', () => {
+      let mdsAccordion = element.shadowRoot.querySelectorAll('mds-paper')
       expect(mdsAccordion.length).toBe(1)
-      expect(mdsAccordion[0].tagName).toBe('DIV')
+      expect(mdsAccordion[0].tagName).toBe('MDS-PAPER')
     })
     
     it('should render accordion header wrapper', () => {

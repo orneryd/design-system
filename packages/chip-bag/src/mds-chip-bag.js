@@ -11,10 +11,6 @@ export default class MdsChipBag extends HTMLElement {
     this.chips = []
   }
 
-  get observedAttributes() {
-    return ['chip-tag', 'chips-length']
-  }
-
   get inputElement() {
     return this.shadowRoot.querySelector('.mds-chip-bag-input')
   }
@@ -68,10 +64,6 @@ export default class MdsChipBag extends HTMLElement {
 
   get chipTag() {
     return this.getAttribute('chip-tag') || 'mds-chip'
-  }
-
-  attributeChangedCallback() {
-    this.render()
   }
 
   connectedCallback() {

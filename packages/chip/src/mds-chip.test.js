@@ -3,11 +3,10 @@
  */
 import './mds-chip'
 
-describe('MckChip', () => {
+describe('MdsChip', () => {
   let element
   beforeEach(() => {
     element = document.createElement('mds-chip')
-    element.setAttribute('chip-text', 'fake-text')
     document.body.appendChild(element)
   })
 
@@ -43,16 +42,8 @@ describe('MckChip', () => {
       expect(dispatchSpy.calls.mostRecent().args[0].type).toBe('closechip')
     })
 
-    it('should call dispatchEvent on the element with the detail being the chip-text value', () => {
-      expect(dispatchSpy.calls.mostRecent().args[0].detail).toBe('fake-text')
-    })
-
-    it('should call removeChild exactly 1 time', () => {
-      expect(element.parentElement.removeChild.mock.calls.length).toBe(1)
-    })
-
-    it('should call removeChild on the parentElement with itself as the argument', () => {
-      expect(element.parentElement.removeChild.mock.calls[0][0]).toBe(element)
+    it('should call dispatchEvent on the element with the detail being itself', () => {
+      expect(dispatchSpy.calls.mostRecent().args[0].detail).toBe(element)
     })
   })
   describe('connectedCallback', () => {
@@ -66,12 +57,6 @@ describe('MckChip', () => {
       const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-chip')
       expect(mckChipNodes.length).toBe(1)
       expect(mckChipNodes[0].tagName).toBe('DIV')
-    })
-
-    it('should have single label that is the chip text', () => {
-      const mckChipNodes = element.shadowRoot.querySelectorAll('.mds-chip-text')
-      expect(mckChipNodes.length).toBe(1)
-      expect(mckChipNodes[0].innerHTML).toBe('fake-text')
     })
 
     it('should have a close button that is the &times; symbol', () => {

@@ -8,7 +8,7 @@ describe('MdsChip', () => {
   beforeEach(() => {
   })
 
-  afterEach(() => document.body.removeChild(element))
+  afterEach(() => {})
 
   it('should have a shadow root', () => {
   })
