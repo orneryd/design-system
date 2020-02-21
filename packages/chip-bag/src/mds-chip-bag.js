@@ -24,15 +24,10 @@ export default class MdsChipBag extends HTMLElement {
       this.addChips(this.inputElement.value)
       this.render()
       this.focusInput()
-    } else if (!this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
+    } else if (this.chips.length && !this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
       this.removeChip({ detail: this.chips[this.chips.length - 1] })
       this.focusInput()
     }
-  }
-
-  handleBlur({target}) {
-    this.addChips(target.value)
-    this.render()
   }
 
   addChips(textVal) {
@@ -48,7 +43,7 @@ export default class MdsChipBag extends HTMLElement {
         this.chips.push(v)
       }
     })
-    this.dispatchEvent(new CustomEvent('updatechips', { detail: this.chips }))
+    this.notify()
     this.setAttribute('chips-length', this.chips.length)
   }
 
@@ -61,7 +56,7 @@ export default class MdsChipBag extends HTMLElement {
   }
 
   get chipStartTag() {
-    return `<${this.chipTag} class="mds-chip ${this.getAttribute('chip-class')}" onclick="this.clickChip" onclosechip="this.removeChip">`
+    return `<${this.chipTag} class="mds-chip" onclick="this.chipClick" onclosechip="this.removeChip">`
   }
 
   get chipTag() {
@@ -77,20 +72,34 @@ export default class MdsChipBag extends HTMLElement {
     this.removeEventListener('click', this.focusInput)
   }
 
+  handleBlur() {
+    if (this.inputElement.value) {
+      this.addChips(this.inputElement.value)
+      this.render()
+    }
+  }
+
   focusInput() {
     this.inputElement.focus()
   }
 
-  clickChip({ target }) {
-    console.log('clickChip', target)
-    this.dispatchEvent(new CustomEvent('chipclicked', { detail: target.innerHTML }))
+  chipClick({ target }) {
+    this.dispatchEvent(
+      new CustomEvent('chipclick', { detail: target, bubbles: true, composed: true })
+    )
   }
 
-  removeChip({ detail }) {
-    this.chips.splice(this.chips.indexOf(detail && detail.innerHTML), 1)
-    this.dispatchEvent(new CustomEvent('chipsupdate', { detail: this.chips }))
+  removeChip({ target }) {
+    this.chips.splice(this.chips.indexOf(target.innerHTML), 1)
     this.setAttribute('chips-length', this.chips.length)
+    this.notify()
     this.render()
+  }
+
+  notify() {
+    this.dispatchEvent(
+      new CustomEvent('chipsupdate', { detail: this.chips, bubbles: true, composed: true })
+    )
   }
 
   render() {

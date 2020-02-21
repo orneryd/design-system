@@ -7,7 +7,7 @@ export default class MdsChip extends HTMLElement {
   }
 
   closeChip() {
-    this.dispatchEvent(new CustomEvent('closechip', { detail: this }))
+    this.dispatchEvent(new Event('closechip', { bubbles: true, composed: true, cancelable: false }))
   }
 
   connectedCallback() {
