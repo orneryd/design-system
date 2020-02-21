@@ -87,7 +87,7 @@ export default class MdsChipBag extends HTMLElement {
   }
 
   removeChip({ detail }) {
-    this.chips.splice(this.chips.indexOf(detail.innerHTML), 1)
+    this.chips.splice(this.chips.indexOf(detail && detail.innerHTML), 1)
     this.dispatchEvent(new CustomEvent('chipsupdate', { detail: this.chips }))
     this.setAttribute('chips-length', this.chips.length)
     this.render()
