@@ -11,7 +11,15 @@ export default class MdsTextInput extends HTMLElement {
     this.setAttribute('value', newValue)
   }
 
-  get type(){
+  get required() {
+    return this.hasAttribute('required') ? 'required' : ''
+  }
+
+  get pattern() {
+    return this.getAttribute('pattern') || ''
+  }
+
+  get type() {
     return this.getAttribute('type') || 'text'
   }
 
@@ -24,7 +32,11 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   get inputElement() {
-    return this.shadowRoot.querySelector('input')
+    return this.shadowRoot.querySelector('.mds-text-input')
+  }
+
+  get inputWrapper() {
+    return this.shadowRoot.querySelector('.mds-text-input-wrapper')
   }
 
   handleInputChange({ target: { value } }) {
@@ -34,7 +46,17 @@ export default class MdsTextInput extends HTMLElement {
   handleBlur() {
     if (!this.value) {
       this.inputWrapper.classList.remove('focus')
+    } else if (this.required) {
+      if (!this.value.match(this.pattern)) {
+        this.setAttribute('valid', 'false')
+        this.classList.add('invalid')
+        this.inputElement.classList.add('invalid')
+        return;
+      } 
     }
+    this.setAttribute('valid', 'true')
+    this.classList.remove('invalid')
+    this.inputElement.classList.remove('invalid')
   }
 
   handleFocus() {
@@ -45,16 +67,12 @@ export default class MdsTextInput extends HTMLElement {
     this.shadowRoot.querySelector('.mds-text-input').focus()
   }
 
-  get inputWrapper() {
-    return this.shadowRoot.querySelector('.mds-text-input-wrapper')
-  }
-
   connectedCallback() {
     this.render()
   }
 
   render() {
-    const uniqueId = this.getAttribute('id') 
+    const uniqueId = this.getAttribute('id')
     this.inputId = uniqueId || generateId()
     textInputTemplate(this).connect()
   }

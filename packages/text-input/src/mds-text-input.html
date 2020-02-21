@@ -1,6 +1,15 @@
 <link href="./mds-text-input.scss" />
 <div class="mds-text-input-wrapper ${this.value ? 'focus': ''}" onclick="${this.focusInput}">
   <label class="mds-text-input-label" for="${this.inputId}">${this.label}</label>
-  <input id="${this.inputId}" class="mds-text-input" onkeyup="${this.handleInputChange}" onfocus="${this.handleFocus}" onblur="${this.handleBlur}" type="${this.type}" value=${this.value}></input>
+  <input 
+    id="${this.inputId}" 
+    class="mds-text-input" 
+    onkeyup="${this.handleInputChange}" 
+    onfocus="${this.handleFocus}" 
+    onblur="${this.handleBlur}"
+    ${this.required}
+    pattern="${this.pattern}"
+    type="${this.type}" 
+    value=${this.value} />
   <div class="mds-text-input-bottom-border"></div>
 </div>
