@@ -1,6 +1,5 @@
 <link href="./mds-text-input.scss" />
 <div class="mds-text-input-wrapper ${this.value ? 'focus': ''}" onclick="${this.focusInput}">
-  <label class="mds-text-input-label" for="${this.inputId}">${this.label}</label>
   <input 
     id="${this.inputId}" 
     class="mds-text-input" 
@@ -11,5 +10,6 @@
     pattern="${this.pattern}"
     type="${this.type}" 
     value=${this.value} />
-  <div class="mds-text-input-bottom-border"></div>
+    <div class="mds-text-input-bottom-border"></div>
+    <label class="mds-text-input-label" for="${this.inputId}">${this.label}</label>
 </div>
