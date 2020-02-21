@@ -28,3 +28,11 @@ export const Email = () => (
     </form>
   </div>
 )
+
+export const EmailDomain = () => (
+  <div style={{ width: '500px', margin: '20px' }}>
+    <form>
+    <mds-text-input required pattern=".+@mckesson\..+" type="email" label="Please type in a McKesson email address" />
+    </form>
+  </div>
+)
