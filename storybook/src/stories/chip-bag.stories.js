@@ -10,21 +10,26 @@ export default {
 }
 
 export const ChipBag = () => (
-  <mds-paper>
+  <mds-paper style={{ margin: '10px' }}>
     <mds-chip-bag value="sample;chips" delimiter=";">
-      <div slot="chip-bag-helper">Add some chips!</div>
+      <div
+        style={{ fontStyle: 'italic', fontColor: 'rgba(0,0,0,0.2)', marginTop: '5px' }}
+        slot="mds-chip-bag-helper"
+      >
+        Add some chips!
+      </div>
     </mds-chip-bag>
   </mds-paper>
 )
 
 class CustomBag extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
 
     this.elementRef = React.createRef()
   }
 
-  componentDidMount(){
+  componentDidMount() {
     if (this.elementRef.current) {
       this.elementRef.current.addEventListener('chipclicked', this.props.onChipClick)
     }
@@ -33,7 +38,12 @@ class CustomBag extends React.Component {
   render() {
     return (
       <mds-paper>
-        <mds-chip-bag ref={this.elementRef} value="sample@email.com;othersample@email.com" chip-tag="mds-button" delimiter=";">
+        <mds-chip-bag
+          ref={this.elementRef}
+          value="sample@email.com;othersample@email.com"
+          chip-tag="mds-button"
+          delimiter=";"
+        >
           <div slot="chip-bag-helper">Add some chips!</div>
         </mds-chip-bag>
       </mds-paper>
@@ -41,5 +51,6 @@ class CustomBag extends React.Component {
   }
 }
 
-export const CustomChipBag = ()=> <CustomBag onChipClick={(e)=> action(`chip clicked!${e.detail}`, )()}/>
-
+export const CustomChipBag = () => (
+  <CustomBag onChipClick={e => action(`chip clicked!${e.detail}`)()} />
+)

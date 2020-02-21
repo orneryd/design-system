@@ -14,12 +14,8 @@
   cursor: text;
   margin: 0em;
   padding: 1px;
-  border-width: 1px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
   min-height: 2.2rem;
-
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   .mds-chip {
     margin: 3px;
   }
