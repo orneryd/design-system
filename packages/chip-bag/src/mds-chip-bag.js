@@ -25,7 +25,7 @@ export default class MdsChipBag extends HTMLElement {
       this.render()
       this.focusInput()
     } else if (this.chips.length && !this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
-      this.removeChip({ detail: this.chips[this.chips.length - 1] })
+      this.removeChip({ target: { innerHTML: this.chips[this.chips.length - 1]} })
       this.focusInput()
     }
   }
