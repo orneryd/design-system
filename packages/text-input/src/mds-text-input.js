@@ -11,8 +11,12 @@ export default class MdsTextInput extends HTMLElement {
     this.setAttribute('value', newValue)
   }
 
+  get type(){
+    return this.getAttribute('type') || 'text'
+  }
+
   get value() {
-    return this.getAttribute('value')
+    return this.getAttribute('value') || ''
   }
 
   get label() {
