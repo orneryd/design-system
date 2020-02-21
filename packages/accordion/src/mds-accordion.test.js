@@ -105,10 +105,10 @@ describe('MdsAccordion', () => {
       expect(styleNodes[0].tagName).toBe('STYLE')
     })
 
-    it('should render a div element', () => {
-      let mdsAccordion = element.shadowRoot.querySelectorAll('.mds-accordion')
+    it('should render an mds-paper element', () => {
+      let mdsAccordion = element.shadowRoot.querySelectorAll('mds-paper')
       expect(mdsAccordion.length).toBe(1)
-      expect(mdsAccordion[0].tagName).toBe('DIV')
+      expect(mdsAccordion[0].tagName).toBe('MDS-PAPER')
     })
     
     it('should render accordion header wrapper', () => {
@@ -171,7 +171,6 @@ describe('MdsAccordion', () => {
 
     it('adds the open css class when isOpen is true', () => {
       element.toggleCollapse()
-      console.log(headerIcon[0]._attributesMap)
       expect(headerIcon[0]._attributesMap.class).toBe('mds-accordion-header-icon open')
     })
 

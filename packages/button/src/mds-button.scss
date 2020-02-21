@@ -1,0 +1,54 @@
+@import '../../base/src/base.scss';
+
+$mds-button-primary-color: $mdsBlue !default;
+$mds-button-primary-color-hover: $mdsBlueDark !default;
+$mds-button-secondary-color: $mdsOrange !default;
+$mds-button-secondary-color-hover: $mdsOrangeDark !default;
+$mds-button-outlined-color: $mdsPurple !default;
+$mds-button-outlined-color-hover: $mdsBlackLightest !default;
+
+:host {
+  display: inline-block;
+}
+.button-content {
+  display: block;
+}
+.mds-button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 4px;
+  &.rounded {
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+  }
+
+  &.primary {
+    background-color: $mds-button-primary-color;
+
+    &:hover {
+      background-color: $mds-button-primary-color-hover;
+    }
+  }
+  &.secondary {
+    background-color: $mds-button-secondary-color;
+    &:hover {
+      background-color: $mds-button-secondary-color-hover;
+    }
+  }
+  &.outlined {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px $mds-button-outlined-color;
+    color: $mds-button-outlined-color;
+    &:hover {
+      background-color: $mds-button-outlined-color-hover;
+    }
+  }
+
+  .mds-button {
+    height: 2rem;
+    line-height: 2rem;
+  }
+}

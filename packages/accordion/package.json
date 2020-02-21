@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-accordion",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/mds-accordion.js",
   "scripts": {
@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+  },
+  "dependencies": {
+    "@mcklabs/mds-paper": "^0.0.2"
   }
 }

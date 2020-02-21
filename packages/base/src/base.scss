@@ -1,6 +1,8 @@
-*[class*="mds-"] {
-    box-sizing: content-box;
- }
- :host {
-    display: block;
-  }
+@import './vars.scss';
+
+*[class*='mds-'] {
+  box-sizing: content-box;
+}
+:host {
+  display: block;
+}

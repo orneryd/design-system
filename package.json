@@ -14,7 +14,7 @@
     "url": "https://github.com/mckesson/mckesson-design-system/issues"
   },
   "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm-release-local"
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
   },
   "scripts": {
     "build": "webpack",
@@ -28,7 +28,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
-    "@mcklabs/web-components": "1.1.4",
+    "@mcklabs/web-components": "1.1.5",
     "@webcomponents/custom-elements": "^1.2.4",
     "@webcomponents/shadydom": "^1.7.1",
     "babel-eslint": "10.0.3",

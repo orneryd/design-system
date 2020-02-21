@@ -23,8 +23,10 @@ export default class MdsChipBag extends HTMLElement {
     if (keyCode === ENTER_KEY_CODE) {
       this.addChips(this.inputElement.value)
       this.render()
+      this.focusInput()
     } else if (!this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
       this.removeChip({ detail: this.chips[this.chips.length - 1] })
+      this.focusInput()
     }
   }
 
@@ -54,6 +56,18 @@ export default class MdsChipBag extends HTMLElement {
     return this.getAttribute('allow-duplicates') === 'true'
   }
 
+  get chipCloseTag() {
+    return `</${this.chipTag}>`
+  }
+
+  get chipStartTag() {
+    return `<${this.chipTag} class="mds-chip ${this.getAttribute('chip-class')}" onclick="this.clickChip" onclosechip="this.removeChip">`
+  }
+
+  get chipTag() {
+    return this.getAttribute('chip-tag') || 'mds-chip'
+  }
+
   connectedCallback() {
     this.render()
     this.addEventListener('click', this.focusInput)
@@ -67,9 +81,14 @@ export default class MdsChipBag extends HTMLElement {
     this.inputElement.focus()
   }
 
+  clickChip({ target }) {
+    console.log('clickChip', target)
+    this.dispatchEvent(new CustomEvent('chipclicked', { detail: target.innerHTML }))
+  }
+
   removeChip({ detail }) {
-    this.chips.splice(this.chips.indexOf(detail), 1)
-    this.dispatchEvent(new CustomEvent('updatechips', { detail: this.chips }))
+    this.chips.splice(this.chips.indexOf(detail.innerHTML), 1)
+    this.dispatchEvent(new CustomEvent('chipsupdate', { detail: this.chips }))
     this.setAttribute('chips-length', this.chips.length)
     this.render()
   }
@@ -89,7 +108,6 @@ export default class MdsChipBag extends HTMLElement {
     attrsToAdd.forEach(attr => {
       this.inputElement.setAttribute(attr.name, attr.value)
     })
-    this.focusInput()
   }
 }
 

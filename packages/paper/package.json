@@ -1,0 +1,15 @@
+{
+    "name": "@mcklabs/mds-paper",
+    "version": "0.0.2",
+    "description": "",
+    "main": "dist/mds-paper.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "publishConfig": {
+      "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+    }
+  }
+  

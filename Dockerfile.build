@@ -11,8 +11,7 @@ ENV PCF_DEV_API=api.sys.dev-west.paas.mckesson.com
 ENV PCF_PROD_API=api.sys.prod-west.paas.mckesson.com
 ENV ROOT_CERT mckesson.root.1.crt
 
-
-RUN apk --no-cache add bash yarn openjdk8\
+RUN apk --no-cache add bash python2 yarn openjdk8\
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
     && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk \
     && apk add glibc-2.29-r0.apk \
@@ -32,6 +31,10 @@ RUN mkdir /src \
 WORKDIR /usr/app
 
 COPY . .
+
+RUN curl -u${ARTIFACTORY_USER}:${ARTIFACTORY_API_KEY} "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/auth/mcklabs" >> ./.npmrc
+
+RUN yarn && CI=true yarn test && yarn build
 
 WORKDIR /usr/app/storybook
 

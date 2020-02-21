@@ -3,15 +3,11 @@ import requireContext from 'require-context.macro';
 import '../src/index.css';
 import '../src/components/Typography/Typography.css';
 
-// import mckTheme from './mckTheme';
-// //
-// addParameters({
-//   options: {
-//     theme: mckTheme,
-//   },
-// })
-// automatically import all files ending in *.stories.js
-// configure(require.context('../src', true, /\.stories\.js$/), module);
+addParameters({
+  options: {
+    enableShortcuts: false
+  },
+})
 const req = requireContext('../src', true, /\.stories\.js$/);
 
 function loadStories() {

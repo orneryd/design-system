@@ -1,14 +1,8 @@
 @import '../../base/src/base.scss';
 
-:host(mds-accordion) {
-  padding: 20px;
-}
-.mds-accordion {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
-}
+$mds-accordion-icon-color-hover: $mdsBlackLightest !default;
+$mds-accordion-icon-color: $mdsBlack !default;
+
 .mds-accordion-header-wrapper {
     display: flex;
 }
@@ -24,7 +18,7 @@
     overflow: auto;
 }
 .mds-accordion-header-icon {
-  fill: currentColor;
+  fill: $mds-accordion-icon-color;
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -39,6 +33,6 @@
     transform: rotate(180deg);
   }
   &:hover {
-    background-color: rgba(0,0,0,.2);
+    background-color: $mds-accordion-icon-color-hover;
   }
 }
