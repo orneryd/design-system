@@ -44,13 +44,11 @@ describe('MckBanner', () => {
     it('should render an h1 element', () => {
       const mckChipNodes = element.shadowRoot.querySelectorAll('h1')
       expect(mckChipNodes.length).toBe(1)
-      expect(mckChipNodes[0].tagName).toBe('H1')
     })
 
     it('should render a p element', () => {
-      const mckChipNodes = element.shadowRoot.querySelectorAll('p')
+      const mckChipNodes = element.shadowRoot.querySelectorAll('h4')
       expect(mckChipNodes.length).toBe(1)
-      expect(mckChipNodes[0].tagName).toBe('P')
     })
   })
 })

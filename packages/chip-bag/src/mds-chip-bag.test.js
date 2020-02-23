@@ -14,23 +14,59 @@ describe('MckChipBag', () => {
     expect(element.shadowRoot).toBeDefined()
   })
 
-  describe('handleInputKeydown', () => {
-    it('calls addChips and render when the Enter key is pressed down', () => {
-      let addChipsSpy = spyOn(element, 'addChips')
-      let renderSpy = spyOn(element, 'render')
+  describe('handleInputKeyup', () => {
+    let addChipsSpy, renderSpy
+    beforeEach(()=>{
+      addChipsSpy = spyOn(element, 'addChips')
+      renderSpy = spyOn(element, 'render')
       element.inputElement.value = 'chip-text'
-      element.handleInputKeydown({ keyCode: ENTER_KEY_CODE })
+      element.handleInputKeyup({ keyCode: ENTER_KEY_CODE })
+    })
+
+    it('calls addChips and render when the Enter key is depressed', () => {
       expect(addChipsSpy.calls.count()).toBe(1)
       expect(addChipsSpy.calls.all()[0].args[0]).toBe('chip-text')
       expect(renderSpy.calls.count()).toBe(1)
     })
+  })
 
-    it('calls removeChip when the Backspace key is pressed down', () => {
-      let removeChipSpy = spyOn(element, 'removeChip')
-      element.chips = ['hello']
-      element.handleInputKeydown({ keyCode: BACKSPACE_KEY_CODE })
-      expect(removeChipSpy.calls.count()).toBe(1)
-      expect(removeChipSpy.calls.all()[0].args[0].detail).toBe('hello')
+  describe('handleInputKeydown', () => {
+    let addChipsSpy, renderSpy
+    beforeEach(()=>{
+      addChipsSpy = spyOn(element, 'addChips')
+      renderSpy = spyOn(element, 'render')
+      element.inputElement.value = 'chip-text'
+      element.handleInputKeydown({ keyCode: ENTER_KEY_CODE })
+    })
+
+    describe('when the input field is empty', ()=>{
+      let removeChipSpy
+      beforeEach(()=>{
+
+        removeChipSpy = spyOn(element, 'removeChip')
+        element.inputElement.value = '';
+        element.chips = ['hello']
+        element.handleInputKeydown({ keyCode: BACKSPACE_KEY_CODE })
+      })
+
+      it('calls removeChip when the Backspace key is pressed down', () => {
+        expect(removeChipSpy.calls.count()).toBe(1)
+        expect(removeChipSpy.calls.all()[0].args[0].target.innerHTML).toBe('hello')
+      })
+    })
+
+    describe('when the input field has any value', ()=>{
+      let removeChipSpy
+      beforeEach(()=>{
+
+        removeChipSpy = spyOn(element, 'removeChip')
+        element.inputElement.value = 'f';
+        element.chips = ['hello']
+        element.handleInputKeydown({ keyCode: BACKSPACE_KEY_CODE })
+      })
+      it('does not call removeChip when the Backspace key is pressed down', () => {
+        expect(removeChipSpy.calls.count()).toBe(0)
+      })
     })
   })
 
@@ -52,7 +88,7 @@ describe('MckChipBag', () => {
 
     it('dispatches an updatechips event with the chips array', () => {
       expect(dispatchEventSpy.calls.count()).toBe(1)
-      expect(dispatchEventSpy.calls.all()[0].args[0].type).toBe('updatechips')
+      expect(dispatchEventSpy.calls.all()[0].args[0].type).toBe('chipsupdate')
       expect(dispatchEventSpy.calls.all()[0].args[0].detail).toBe(element.chips)
     })
 
@@ -103,7 +139,7 @@ describe('MckChipBag', () => {
       dispatchEventSpy = spyOn(element, 'dispatchEvent')
       setAttributeSpy = spyOn(element, 'setAttribute')
       renderSpy = spyOn(element, 'render')
-      element.removeChip({ detail: 'hello' })
+      element.removeChip({ target: {innerHTML: 'hello' }})
     })
 
     it('dispatches an chipsupdate event', () => {
@@ -159,8 +195,9 @@ describe('MckChipBag', () => {
     })
 
     describe('mds-chip elements', () => {
-      let chips
+      let chips, input;
       beforeEach(() => {
+        input = element.shadowRoot.querySelectorAll('input')
         chips = element.shadowRoot.querySelectorAll('mds-chip')
       })
 
@@ -175,12 +212,18 @@ describe('MckChipBag', () => {
       it('should have chip-text attribute set to the value', () => {
         expect(chips[0].innerHTML).toBe('chip-text')
       })
+      
+      it('should have a single input element', () => {
+        expect(input.length).toBe(1)
+      })  
+      it('should have an onkeyup attribute set to this.handleInputKeyup', () => {
+        expect(input[0].getAttribute('onkeyup')).toBe('this.handleInputKeyup')
+      })    
+  
+      it('should have an onkeydown attribute set to this.handleInputKeydown', () => {
+        expect(input[0].getAttribute('onkeydown')).toBe('this.handleInputKeydown')
+      })
     })
-
-    it('should have an input element with an onkeyup attribute set to this.handleInputKeydown', () => {
-      const input = element.shadowRoot.querySelectorAll('input')
-      expect(input.length).toBe(1)
-      expect(input[0].getAttribute('onkeyup')).toBe('this.handleInputKeydown')
-    })
+   
   })
 })

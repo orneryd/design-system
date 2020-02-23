@@ -42,9 +42,6 @@ describe('MdsChip', () => {
       expect(dispatchSpy.calls.mostRecent().args[0].type).toBe('closechip')
     })
 
-    it('should call dispatchEvent on the element with the detail being itself', () => {
-      expect(dispatchSpy.calls.mostRecent().args[0].detail).toBe(element)
-    })
   })
   describe('connectedCallback', () => {
     it('should have a style element', () => {
@@ -59,10 +56,10 @@ describe('MdsChip', () => {
       expect(mckChipNodes[0].tagName).toBe('DIV')
     })
 
-    it('should have a close button that is the &times; symbol', () => {
+    it('should have a close button that an svg', () => {
       const mckChipButtons = element.shadowRoot.querySelectorAll('.mds-chip-remove')
       expect(mckChipButtons.length).toBe(1)
-      expect(mckChipButtons[0].innerHTML).toBe('&times')
+      expect(mckChipButtons[0].tagName).toBe('SVG')
     })
   })
 

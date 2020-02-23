@@ -20,12 +20,16 @@ export default class MdsChipBag extends HTMLElement {
   }
 
   handleInputKeydown({ keyCode }) {
+    if (this.chips.length && !this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
+      this.removeChip({ target: { innerHTML: this.chips[this.chips.length - 1] } })
+      this.focusInput()
+    }
+  }
+
+  handleInputKeyup({ keyCode }) {
     if (keyCode === ENTER_KEY_CODE) {
       this.addChips(this.inputElement.value)
       this.render()
-      this.focusInput()
-    } else if (this.chips.length && !this.inputElement.value && keyCode === BACKSPACE_KEY_CODE) {
-      this.removeChip({ target: { innerHTML: this.chips[this.chips.length - 1]} })
       this.focusInput()
     }
   }
