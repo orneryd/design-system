@@ -1,0 +1,34 @@
+mds-text-input {
+  position: relative;
+}
+
+mds-text-input[valid] {
+  height: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+mds-text-input[valid='true'] {
+  box-shadow: inset 0px 0px 0px 2px rgba(0, 255, 0, 0.8);
+}
+
+mds-text-input[valid='false'] {
+  box-shadow: inset 0px 0px 0px 2px rgba(255, 0, 0, 0.8);
+}
+
+mds-text-input[valid]::after {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+mds-text-input[valid='true']::after {
+  color: rgba(0, 255, 0, 0.8);
+  content: '\2714';
+}
+
+mds-text-input[valid='false']::after {
+  position: absolute;
+  color: rgba(255, 0, 0, 0.8);
+  content: '\2718';
+}

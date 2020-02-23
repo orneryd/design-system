@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../../../packages/text-input'
+import './input.stories.css';
 
 export default {
   title: 'Web Components/Input'
@@ -32,7 +33,7 @@ export const Email = () => (
 export const EmailDomain = () => (
   <div style={{ width: '500px', margin: '20px' }}>
     <form>
-    <mds-text-input required pattern=".+@mckesson\..+" type="email" label="Please type in a McKesson email address" />
+      <mds-text-input required pattern=".+@mckesson\..+" type="email" label="Please type in a McKesson email address" />
     </form>
   </div>
 )
