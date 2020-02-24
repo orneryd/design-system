@@ -43,20 +43,41 @@ export default class MdsTextInput extends HTMLElement {
     this.value = value
   }
 
-  handleBlur() {
-    if (!this.value) {
-      this.inputWrapper.classList.remove('focus')
-    } else if (this.required) {
-      if (!this.value.match(this.pattern)) {
-        this.setAttribute('valid', 'false')
-        this.classList.add('invalid')
-        this.inputElement.classList.add('invalid')
-        return;
-      } 
-    }
+  setInvalid(){
+    this.setAttribute('valid', 'false')
+    this.classList.remove('valid')
+    this.classList.add('invalid')
+  }
+
+  setValid(){
     this.setAttribute('valid', 'true')
     this.classList.remove('invalid')
-    this.inputElement.classList.remove('invalid')
+    this.classList.add('valid')
+  }
+
+  handleBlur() {
+    if (!this.value) {
+      // unfocus the element if we don't have value to let the animation reset.
+      this.inputWrapper.classList.remove('focus')
+    }
+    // assume we are valid first
+    let valid = true;
+    // check if input is a required field and we have a value
+    // if not required, our assumption that we are valid is correct.
+    if (this.required) {
+       // if we have no value set validity false.
+       // or check to see if we have a pattern to match against 
+       // if the value doesn't match against the pattern, set valid false.
+      if (!this.value || (this.pattern && !this.value.match(this.pattern))) {
+        valid = false;
+      }
+    } 
+    // finally, set the validity.
+    if (valid){
+      this.setValid()
+    } else {
+      this.setInvalid();
+    }
   }
 
   handleFocus() {
@@ -75,6 +96,10 @@ export default class MdsTextInput extends HTMLElement {
     const uniqueId = this.getAttribute('id')
     this.inputId = uniqueId || generateId()
     textInputTemplate(this).connect()
+    if (this.pattern) {
+      // we have a pattern so we need to mark it required.
+      this.setAttribute('required', '')
+    }
   }
 }
 

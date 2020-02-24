@@ -25,7 +25,7 @@ export const Secure = () => (
 export const Email = () => (
   <div style={{ width: '500px', margin: '20px' }}>
     <form>
-    <mds-text-input required pattern=".+@.+\..+" type="email" label="Type an email to be validated" />
+    <mds-text-input class="validated-input" required pattern=".+@.+\..+" type="email" label="Type an email to be validated" />
     </form>
   </div>
 )
@@ -33,7 +33,8 @@ export const Email = () => (
 export const EmailDomain = () => (
   <div style={{ width: '500px', margin: '20px' }}>
     <form>
-      <mds-text-input required pattern=".+@mckesson\..+" type="email" label="Please type in a McKesson email address" />
+      <mds-text-input class="validated-input" required pattern=".+@(mckesson|usoncology)\..+" type="email" label="Please type in a McKesson or US Oncology email address" />
+      <mds-button>Send Email</mds-button>
     </form>
   </div>
 )
