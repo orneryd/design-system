@@ -1,4 +1,5 @@
 import renderButton from './mds-button.html'
+import renderSubmitButton from './mds-button.submit.html'
 
 export default class MdsButton extends HTMLElement {
   constructor() {
@@ -11,7 +12,7 @@ export default class MdsButton extends HTMLElement {
   }
 
   attributeChangedCallback(){
-    renderButton(this).connect()
+    this.render()
   }
 
   get variant() {
@@ -26,8 +27,29 @@ export default class MdsButton extends HTMLElement {
     return url && `href="${url}"`
   }
 
+  onClick(event){
+    event.preventDefault()
+    if (this.getAttribute('type') === 'submit') {
+      let form = document.getElementById(this.getAttribute('form'))
+      if (!form && this.closest) {
+        form = this.closest('form')
+      } 
+      form && form.dispatchEvent(new Event('submit'))
+    }
+    this.dispatchEvent(new Event('click', {bubbles: true, composed: true}))
+  }
+
   connectedCallback() {
-    renderButton(this).connect()
+    this.render()
+  }
+
+  render() {
+    if (this.getAttribute('type') === 'submit') {
+      this.value = this.getAttribute('value') || "Submit";
+      renderSubmitButton(this).connect()
+    } else {
+      renderButton(this).connect()
+    }
   }
 }
 

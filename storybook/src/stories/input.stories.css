@@ -14,20 +14,20 @@
   right: 0.5rem;
 }
 
-.validated-input.valid {
-  box-shadow: inset 0px 0px 0px 2px rgba(0, 255, 0, 0.8);
-}
-
 .validated-input.valid::after {
-  color: rgba(0, 255, 0, 0.8);
+  color: #5A8E22;
   content: '\2714';
 }
 
 .validated-input.invalid {
-  box-shadow: inset 0px 0px 0px 2px rgba(255, 0, 0, 0.8);
+  border-bottom: 2px inset rgb(255, 0, 0);
 }
 
 .validated-input.invalid::after {
-  color: rgba(255, 0, 0, 0.8);
-  content: '\2718';
+  color: rgb(204, 0, 0);
+  content: '\2715';
+}
+
+.validation-message.error {
+    color: rgb(204, 0, 0);
 }

@@ -39,20 +39,34 @@ export default class MdsTextInput extends HTMLElement {
     return this.shadowRoot.querySelector('.mds-text-input-wrapper')
   }
 
+  get validityElement() {
+    return this.querySelector('input')
+  }
+
   handleInputChange({ target: { value } }) {
+    this.validityElement.value = value
     this.value = value
   }
 
-  setInvalid(){
+  setInvalid() {
     this.setAttribute('valid', 'false')
     this.classList.remove('valid')
     this.classList.add('invalid')
+    const validationMessage =
+      this.getAttribute('validation-message') || `${this.value} does not match ${this.pattern}`
+    this.notifyValidity(validationMessage)
   }
 
-  setValid(){
+  setValid() {
     this.setAttribute('valid', 'true')
     this.classList.remove('invalid')
     this.classList.add('valid')
+    this.notifyValidity('')
+  }
+
+  notifyValidity(message) {
+    this.inputElement.setCustomValidity(message)
+    this.validityElement.setCustomValidity(message)
   }
 
   handleBlur() {
@@ -61,22 +75,22 @@ export default class MdsTextInput extends HTMLElement {
       this.inputWrapper.classList.remove('focus')
     }
     // assume we are valid first
-    let valid = true;
+    let valid = true
     // check if input is a required field and we have a value
     // if not required, our assumption that we are valid is correct.
     if (this.required) {
-       // if we have no value set validity false.
-       // or check to see if we have a pattern to match against 
-       // if the value doesn't match against the pattern, set valid false.
+      // if we have no value set validity false.
+      // or check to see if we have a pattern to match against
+      // if the value doesn't match against the pattern, set valid false.
       if (!this.value || (this.pattern && !this.value.match(this.pattern))) {
-        valid = false;
+        valid = false
       }
-    } 
+    }
     // finally, set the validity.
-    if (valid){
+    if (valid) {
       this.setValid()
     } else {
-      this.setInvalid();
+      this.setInvalid()
     }
   }
 
@@ -100,6 +114,15 @@ export default class MdsTextInput extends HTMLElement {
       // we have a pattern so we need to mark it required.
       this.setAttribute('required', '')
     }
+    // ShadowDom elements do now show up in forms so we have to make a
+    // fake one and put it in our innerHTML to report validity concerns.
+    const validityReporter = document.createElement('input')
+    validityReporter.setAttribute('type', this.type)
+    if (this.hasAttribute('required')) {
+      validityReporter.setAttribute('required', '')
+      validityReporter.setAttribute('pattern', this.pattern)
+    }
+    this.appendChild(validityReporter)
   }
 }
 
