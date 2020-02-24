@@ -13,6 +13,7 @@
   height: 2rem;
   display: block;
   width: 100%;
+  border-bottom: 2px inset rgba(0, 0, 0, 0.2);
 }
 
 .mds-text-input-label {
@@ -27,12 +28,6 @@
 
 .mds-text-input-wrapper.focus .mds-text-input-label {
   transform: scale(0.875) translate(0.325rem, 0);
-}
-
-.mds-text-input-bottom-border {
-  margin-top: -2px;
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .mds-text-input:focus {
