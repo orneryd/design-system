@@ -17,12 +17,19 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
+  text-transform: inherit;
+  border: none;
+  margin: 0;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   color: #fff;
-  padding: .5rem;
+  font-size: initial;
+  padding: 0.5rem;
   border-radius: 4px;
   &.rounded {
     border-radius: 2rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   &.primary {
@@ -46,9 +53,12 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
       background-color: $mds-button-outlined-color-hover;
     }
   }
-
   .mds-button {
     height: 2rem;
     line-height: 2rem;
+  }
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.3;
   }
 }

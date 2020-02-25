@@ -1,5 +1,4 @@
 import renderButton from './mds-button.html'
-import renderSubmitButton from './mds-button.submit.html'
 
 export default class MdsButton extends HTMLElement {
   constructor() {
@@ -7,36 +6,69 @@ export default class MdsButton extends HTMLElement {
     this.attachShadow({ mode: 'open' })
   }
 
-  static get observedAttributes(){
+  static get observedAttributes() {
     return ['variant', 'disabled']
   }
 
-  attributeChangedCallback(){
-    this.render()
+  attributeChangedCallback(name) {
+    if (name === 'disabled' && this.buttonElement) {
+      if (this.isDisabled) {
+        this.buttonElement.classList.add('disabled')
+        this.buttonElement.setAttribute('disabled', 'disabled')
+        this.classList.add('disabled')
+      } else {
+        this.buttonElement.classList.remove('disabled')
+        this.buttonElement.removeAttribute('disabled', 'disabled')
+        this.classList.remove('disabled')
+      }
+    } 
+    if (name === 'variant') {
+      this.render()
+    }
+  }
+
+  get tag() {
+    return this.href ? 'a': 'button';
+  }
+  
+  get startTag() {
+    return `<${this.tag} onclick="this.onClick" ${this.href} class="mds-button ${this.variant}">`
+  }
+  get closeTag() {
+    return `</${this.tag}>`
+  }
+
+  get isDisabled() {
+    return this.hasAttribute('disabled') && this.getAttribute('disabled') !== 'false'
+  }
+
+  get buttonElement() {
+    return this.shadowRoot.querySelector('.mds-button')
   }
 
   get variant() {
     return this.getAttribute('variant') || 'primary'
   }
 
-  get disabled(){
-    return this.hasAttribute('disabled') ? 'disabled': 'enabled'
-  }
-  get href(){
-    const url = this.getAttribute('href') || this.getAttribute('to') || '';
-    return url && `href="${url}"`
+  get href() {
+    const url = this.getAttribute('href') || this.getAttribute('to') || ''
+    const target = this.getAttribute('target') || '_blank'
+    return url && `href="${url}" target="${target}"`
   }
 
-  onClick(event){
-    event.preventDefault()
+  onClick(event) {
+    if (this.isDisabled) {
+      event.preventDefault()
+      event.stopPropagation()
+      return false
+    }
     if (this.getAttribute('type') === 'submit') {
       let form = document.getElementById(this.getAttribute('form'))
       if (!form && this.closest) {
         form = this.closest('form')
-      } 
+      }
       form && form.dispatchEvent(new Event('submit'))
     }
-    this.dispatchEvent(new Event('click', {bubbles: true, composed: true}))
   }
 
   connectedCallback() {
@@ -44,12 +76,7 @@ export default class MdsButton extends HTMLElement {
   }
 
   render() {
-    if (this.getAttribute('type') === 'submit') {
-      this.value = this.getAttribute('value') || "Submit";
-      renderSubmitButton(this).connect()
-    } else {
-      renderButton(this).connect()
-    }
+    renderButton(this).connect()
   }
 }
 
