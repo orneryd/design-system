@@ -35,6 +35,10 @@ export const EmailDomainValidation = () => {
           console.log('value: ', e.value, e)
         }
       })
+    } else {
+      event.target.elements.forEach((e)=>{
+        e.value = ''
+      })
     }
     setValid(!messages.length)
   }
@@ -76,6 +80,10 @@ export const EmailDomainFriendlyMessage = () => {
           friendlyMessages.push(e.validationMessage)
           console.log('value: ', e.value, e)
         }
+      })
+    } else {
+      event.target.elements.forEach((e)=>{
+        e.value = ''
       })
     }
     setValid(!friendlyMessages.length)

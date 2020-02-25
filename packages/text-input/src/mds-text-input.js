@@ -8,7 +8,6 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   set value(newValue) {
-    this.validityElement.setAttribute('value', newValue)
     this.setAttribute('value', newValue)
   }
 
@@ -40,10 +39,6 @@ export default class MdsTextInput extends HTMLElement {
     return this.shadowRoot.querySelector('.mds-text-input-wrapper')
   }
 
-  get validityElement() {
-    return this.querySelector('input')
-  }
-
   handleInputChange({ target: { value } }) {
     this.value = value
   }
@@ -64,9 +59,23 @@ export default class MdsTextInput extends HTMLElement {
     this.notifyValidity('')
   }
 
+  reset(newVal) {
+    this.inputElement.value = newVal
+    this.value = newVal
+    this.inputWrapper.classList.remove('focus')
+    this.classList.remove('valid')
+    this.classList.remove('invalid')
+  }
+  
   notifyValidity(message) {
-    this.inputElement.setCustomValidity(message)
-    this.validityElement.setCustomValidity(message)
+    this.clone && this.removeChild(this.clone)
+    this.clone = this.inputElement.cloneNode()
+    this.clone.setCustomValidity(message)
+    Object.defineProperty(this.clone, 'value', {
+      set: newVal => this.reset(newVal),
+      get: ()=> this.value
+    });
+    this.appendChild(this.clone)
   }
 
   handleBlur() {
@@ -114,17 +123,6 @@ export default class MdsTextInput extends HTMLElement {
       // we have a pattern so we need to mark it required.
       this.setAttribute('required', '')
     }
-    // ShadowDom elements do now show up in forms so we have to make a
-    // fake one and put it in our innerHTML to report validity concerns.
-    this.innerHTML = ''
-    const validityReporter = document.createElement('input')
-    validityReporter.setAttribute('type', this.type)
-    if (this.hasAttribute('required')) {
-      validityReporter.setAttribute('required', '')
-      validityReporter.setCustomValidity(this.getAttribute('validation-message'))
-      validityReporter.setAttribute('pattern', this.pattern)
-    }
-    this.appendChild(validityReporter)
   }
 }
 
