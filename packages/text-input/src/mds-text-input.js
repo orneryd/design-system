@@ -95,9 +95,10 @@ export default class MdsTextInput extends HTMLElement {
     // if not required, our assumption that we are valid is correct.
     if (this.required && !this.value) {
       // if we have no value set validity false.
-      // or check to see if we have a pattern to match against
-      // if the value doesn't match against the pattern, set valid false.
+      valid = false
     }
+    // or check to see if we have a pattern to match against
+    // if the value doesn't match against the pattern, set valid false.
     if (this.pattern && !this.value.match(this.pattern)) {
       valid = false
     }
