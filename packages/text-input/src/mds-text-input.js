@@ -116,6 +116,7 @@ export default class MdsTextInput extends HTMLElement {
     }
     // ShadowDom elements do now show up in forms so we have to make a
     // fake one and put it in our innerHTML to report validity concerns.
+    this.innerHTML = ''
     const validityReporter = document.createElement('input')
     validityReporter.setAttribute('type', this.type)
     if (this.hasAttribute('required')) {
