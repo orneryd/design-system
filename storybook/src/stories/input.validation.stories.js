@@ -74,6 +74,8 @@ export const EmailDomainFriendlyMessage = () => {
   function validateForm(event) {
     event.preventDefault()
     friendlyMessages.length = 0
+    debugger
+
     if (!event.target.checkValidity()) {
       event.target.elements.forEach(e => {
         if (e.validationMessage) {

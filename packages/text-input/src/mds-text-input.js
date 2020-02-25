@@ -47,9 +47,11 @@ export default class MdsTextInput extends HTMLElement {
     this.setAttribute('valid', 'false')
     this.classList.remove('valid')
     this.classList.add('invalid')
-    const validationMessage =
-      this.getAttribute('validation-message') || `${this.value} does not match ${this.pattern}`
-    this.notifyValidity(validationMessage)
+    this.notifyValidity(this.validationMessage)
+  }
+
+  get validationMessage() {
+    return this.getAttribute('validation-message') || `${this.value} does not match ${this.pattern}`
   }
 
   setValid() {
@@ -66,15 +68,15 @@ export default class MdsTextInput extends HTMLElement {
     this.classList.remove('valid')
     this.classList.remove('invalid')
   }
-  
+
   notifyValidity(message) {
     this.clone && this.removeChild(this.clone)
     this.clone = this.inputElement.cloneNode()
     this.clone.setCustomValidity(message)
     Object.defineProperty(this.clone, 'value', {
       set: newVal => this.reset(newVal),
-      get: ()=> this.value
-    });
+      get: () => this.value
+    })
     this.appendChild(this.clone)
   }
 
@@ -83,17 +85,21 @@ export default class MdsTextInput extends HTMLElement {
       // unfocus the element if we don't have value to let the animation reset.
       this.inputWrapper.classList.remove('focus')
     }
+    this.setValidity()
+  }
+
+  setValidity() {
     // assume we are valid first
     let valid = true
     // check if input is a required field and we have a value
     // if not required, our assumption that we are valid is correct.
-    if (this.required) {
+    if (this.required && !this.value) {
       // if we have no value set validity false.
       // or check to see if we have a pattern to match against
       // if the value doesn't match against the pattern, set valid false.
-      if (!this.value || (this.pattern && !this.value.match(this.pattern))) {
-        valid = false
-      }
+    }
+    if (this.pattern && !this.value.match(this.pattern)) {
+      valid = false
     }
     // finally, set the validity.
     if (valid) {
@@ -119,9 +125,8 @@ export default class MdsTextInput extends HTMLElement {
     const uniqueId = this.getAttribute('id')
     this.inputId = uniqueId || generateId()
     textInputTemplate(this).connect()
-    if (this.pattern) {
-      // we have a pattern so we need to mark it required.
-      this.setAttribute('required', '')
+    if (this.required) {
+      this.notifyValidity(this.validationMessage)
     }
   }
 }
