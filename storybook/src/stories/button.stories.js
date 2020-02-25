@@ -37,7 +37,7 @@ export const Button = () => (
 export const Anchor = () => (
   <mds-button
     style={styles}
-    href="http://kittenwar.com"
+    href="https://www.google.com"
     target="_blank"
     variant={select(label, options, defaultValue, groupId)}
     disabled={boolean('Disabled', false, groupId)}
