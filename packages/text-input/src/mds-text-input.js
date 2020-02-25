@@ -8,6 +8,7 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   set value(newValue) {
+    this.validityElement.setAttribute('value', newValue)
     this.setAttribute('value', newValue)
   }
 
@@ -16,7 +17,7 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   get pattern() {
-    return this.getAttribute('pattern') || ''
+    return this.getAttribute('pattern') || '.*'
   }
 
   get type() {
@@ -44,7 +45,6 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   handleInputChange({ target: { value } }) {
-    this.validityElement.value = value
     this.value = value
   }
 
@@ -120,6 +120,7 @@ export default class MdsTextInput extends HTMLElement {
     validityReporter.setAttribute('type', this.type)
     if (this.hasAttribute('required')) {
       validityReporter.setAttribute('required', '')
+      validityReporter.setCustomValidity(this.getAttribute('validation-message'))
       validityReporter.setAttribute('pattern', this.pattern)
     }
     this.appendChild(validityReporter)
