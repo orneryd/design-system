@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-chip-bag",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "dist/mds-chip-bag.js",
   "scripts": {

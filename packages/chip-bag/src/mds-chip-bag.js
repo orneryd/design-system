@@ -11,6 +11,21 @@ export default class MdsChipBag extends HTMLElement {
     this.chips = []
   }
 
+  static get observedAttributes() {
+    return ["invalid"]
+  }
+
+  attributeChangedCallback(attributeName, oldValue, newValue) {
+    const root = this.shadowRoot.querySelector('.mds-chip-bag')
+    if (root && attributeName === "invalid") {
+      if (this.hasAttribute("invalid") && this.getAttribute("invalid") !== "false") {
+        root.classList.add("invalid")
+      } else {
+        root.classList.remove("invalid")
+      }
+    }
+  }
+
   get inputElement() {
     return this.shadowRoot.querySelector('.mds-chip-bag-input')
   }

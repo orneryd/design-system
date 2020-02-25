@@ -1,4 +1,5 @@
 import React from 'react'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import '../../../packages/paper'
 import '../../../packages/chip'
@@ -6,8 +7,10 @@ import '../../../packages/chip-bag'
 import '../../../packages/button'
 
 export default {
-  title: 'Web Components/Chip Bag'
+  title: 'Web Components/Chip Bag',
+  decorators: [withKnobs]
 }
+
 const chipClickedAction = action(`chip clicked!`)
 const chipUpdatedAction = action(`chips updated!`)
 
@@ -34,7 +37,12 @@ class DefaultChipBag extends React.Component {
   render() {
     return (
       <mds-paper style={{ margin: '10px' }}>
-        <mds-chip-bag ref={this.elementRef} value="sample;chips" delimiter=";">
+        <mds-chip-bag
+          ref={this.elementRef}
+          value="sample;chips"
+          delimiter=";"
+          invalid={boolean('Invalid', false, 'validation')}
+        >
           <div
             style={{ fontStyle: 'italic', fontColor: 'rgba(0,0,0,0.2)', marginTop: '5px' }}
             slot="mds-chip-bag-helper"
@@ -76,6 +84,7 @@ class CustomBag extends React.Component {
           value="sample@email.com;othersample@email.com"
           chip-tag="mds-button"
           delimiter=";"
+          invalid={boolean('Invalid', false, 'validation')}
         >
           <div
             style={{ fontStyle: 'italic', fontColor: 'rgba(0,0,0,0.2)', marginTop: '5px' }}
