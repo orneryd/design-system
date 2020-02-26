@@ -1,0 +1,10 @@
+<link href="./mds-checkbox.scss" />
+<div class="mds-checkbox-wrapper ${this.value ? 'focus': ''}" onclick="${this.focusInput}">
+  <input 
+    id="${this.inputId}" 
+    class="mds-checkbox"
+    type="checkbox" 
+    ${this.checked}
+    onchange="${this.handleChange}" />
+    <label class="mds-checkbox-label" for="${this.inputId}">${this.label}</label>
+</div>
