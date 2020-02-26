@@ -32,7 +32,6 @@ export const EmailDomainValidation = () => {
       event.target.elements.forEach(e => {
         if (e.validationMessage) {
           messages.push(e.validationMessage)
-          console.log('value: ', e.value, e)
         }
       })
     } else {
@@ -80,7 +79,6 @@ export const EmailDomainFriendlyMessage = () => {
       event.target.elements.forEach(e => {
         if (e.validationMessage) {
           friendlyMessages.push(e.validationMessage)
-          console.log('value: ', e.value, e)
         }
       })
     } else {

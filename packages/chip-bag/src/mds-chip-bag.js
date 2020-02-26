@@ -12,18 +12,23 @@ export default class MdsChipBag extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["invalid"]
+    return ['invalid']
+  }
+
+  checkInvalid() {
+    const root = this.shadowRoot.querySelector('.mds-chip-bag')
+
+    if (root) {
+      if (this.hasAttribute('invalid') && this.getAttribute('invalid') !== 'false') {
+        root.classList.add('invalid')
+      } else {
+        root.classList.remove('invalid')
+      }
+    }
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue) {
-    const root = this.shadowRoot.querySelector('.mds-chip-bag')
-    if (root && attributeName === "invalid") {
-      if (this.hasAttribute("invalid") && this.getAttribute("invalid") !== "false") {
-        root.classList.add("invalid")
-      } else {
-        root.classList.remove("invalid")
-      }
-    }
+    this.checkInvalid()
   }
 
   get inputElement() {
@@ -136,6 +141,7 @@ export default class MdsChipBag extends HTMLElement {
     attrsToAdd.forEach(attr => {
       this.inputElement.setAttribute(attr.name, attr.value)
     })
+    this.checkInvalid()
   }
 }
 
