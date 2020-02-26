@@ -12,3 +12,5 @@ npm i @mcklabs/mds-chip --save
 ```bash
 yarn add @mcklabs/mds-chip
 ```
+
+# DOCS

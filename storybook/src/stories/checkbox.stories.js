@@ -10,7 +10,7 @@ export default {
 }
 
 export const Checkbox = () => (
-  <div style={{ width: '500px', margin: '20px' }}>
-    <mds-checkbox checked={boolean('Checked', false, 'checkbox')} label="Some Label" />
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-checkbox value={boolean('value', false, 'checkbox')} label="Some Label" />
   </div>
 )

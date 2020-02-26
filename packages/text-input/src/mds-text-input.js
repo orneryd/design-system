@@ -20,7 +20,7 @@ export default class MdsTextInput extends HTMLElement {
   }
 
   handleBlur() {
-    if (!this.value) {
+    if (!this.hasAttribute('static-label') && !this.value) {
       // unfocus the element if we don't have value to let the animation reset.
       this.inputWrapper.classList.remove('focus')
     }
@@ -35,12 +35,19 @@ export default class MdsTextInput extends HTMLElement {
     this.shadowRoot.querySelector('.mds-text-input').focus()
   }
 
+  reset() {
+    this.inputWrapper.classList.remove('focus')
+  }
+
   connectedCallback() {
     this.render()
   }
 
   render() {
     textInputTemplate(this).connect()
+    if (this.hasAttribute('static-label')) {
+      this.inputWrapper.classList.add('focus')
+    }
     if (this.required) {
       this.notifyValidity(this.validationMessage)
     }

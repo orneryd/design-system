@@ -1,20 +1,25 @@
 import renderPaper from './mds-paper.html'
 
+/**
+ * @name MdsPaper
+ * @extends {HTMLElement} root The root element to find all elements from.
+ * @description Styled component that has different elevations
+ */
 export default class MdsPaper extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
   }
 
-  static get observedAttributes(){ 
+  static get observedAttributes() {
     return ['elevation']
   }
-  
-  attributeChangedCallback(){
+
+  attributeChangedCallback() {
     const root = this.shadowRoot.querySelector('.paper')
     if (root) {
       root.classList.remove(`elevation-${this.currentElevation}`)
-      this.currentElevation = this.elevation;
+      this.currentElevation = this.elevation
       root.classList.add(`elevation-${this.currentElevation}`)
     }
   }
@@ -24,7 +29,7 @@ export default class MdsPaper extends HTMLElement {
   }
 
   connectedCallback() {
-    this.currentElevation = this.elevation;
+    this.currentElevation = this.elevation
     renderPaper(this).connect()
   }
 }

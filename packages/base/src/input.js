@@ -19,7 +19,9 @@ export default superclass =>
     }
 
     get inputId() {
-      return this.getAttribute('id') || generateId()
+      // generate an ID that is almost guaranteed 
+      // to be uniqe so we don't end up with bad broswer behavior
+      return generateId(this.getAttribute('id'))
     }
 
     get required() {
@@ -34,23 +36,17 @@ export default superclass =>
       return this.getAttribute('label') || this.getAttribute('type') || ''
     }
 
-    get inputElement() {
-      return this.shadowRoot.querySelector('input')
-    }
-
-    setInvalid() {
-      this.setAttribute('valid', 'false')
-      this.classList.remove('valid')
-      this.classList.add('invalid')
-      this.notifyValidity(this.validationMessage)
-    }
-
     get validationMessage() {
       return (
         super.validationMessage ||
         this.getAttribute('validation-message') ||
         `${this.value} does not match ${this.pattern}`
       )
+    }
+
+    get inputElement() {
+      const root = this.shadowRoot || this
+      return root.querySelector('input') || super.inputElement
     }
 
     setValid() {
@@ -60,12 +56,22 @@ export default superclass =>
       this.notifyValidity('')
     }
 
+    setInvalid() {
+      this.setAttribute('valid', 'false')
+      this.classList.remove('valid')
+      this.classList.add('invalid')
+      this.notifyValidity(this.validationMessage)
+    }
+
     reset(newVal) {
+      super.reset && super.reset()
       this.inputElement.value = newVal
       this.value = newVal
-      this.inputWrapper.classList.remove('focus')
       this.classList.remove('valid')
       this.classList.remove('invalid')
+      if (this.required) {
+        this.notifyValidity(this.validationMessage)
+      }
     }
 
     addFormInput() {
@@ -75,10 +81,14 @@ export default superclass =>
         set: newVal => this.reset(newVal),
         get: () => this.value
       })
+      //override the id generation for the form so that we don't show the auto-generated suffix.
+      Object.defineProperty(this.clone, 'id', {
+        get: () => this.getAttribute('id')
+      })
       this.appendChild(this.clone)
     }
 
-    notifyValidity(message) {
+    notifyValidity(message = '') {
       this.addFormInput()
       this.clone.setCustomValidity(message)
     }
@@ -94,7 +104,7 @@ export default superclass =>
       }
       // or check to see if we have a pattern to match against
       // if the value doesn't match against the pattern, set valid false.
-      if (this.pattern && !this.value.match(this.pattern)) {
+      if (this.pattern && !this.value.toString().match(this.pattern)) {
         valid = false
       }
       // finally, set the validity.
@@ -111,5 +121,14 @@ export default superclass =>
       if (this.required) {
         this.notifyValidity(this.validationMessage)
       }
+      const attrsToAdd = []
+      Array.from(this.attributes).forEach(attr => {
+        if (attr.name !== 'slot' && attr.name !== 'class'&& attr.name !== 'id') {
+          attrsToAdd.push(attr)
+        }
+      })
+      attrsToAdd.forEach(attr => {
+        this.inputElement.setAttribute(attr.name, attr.value)
+      })
     }
   }

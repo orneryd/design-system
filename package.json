@@ -19,6 +19,7 @@
   "scripts": {
     "build": "webpack",
     "test": "NODE_ENV=test jest --runInBand",
+    "docs": "packages/docs.js",
     "coverage": "jest --runInBand --coverage --watchAll=false"
   },
   "devDependencies": {
@@ -44,6 +45,8 @@
     "jest-environment-happy-dom": "^0.0.41",
     "jest-resolve": "24.1.0",
     "jest-watch-typeahead": "0.4.2",
+    "jsdoc": "^3.6.3",
+    "jsdoc-to-markdown": "^5.0.3",
     "mini-css-extract-plugin": "0.8.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
