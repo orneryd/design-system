@@ -57,7 +57,7 @@ export const Date = () => (
 )
 
 
-export const DatTimeLocal = () => (
+export const DateTimeLocal = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
       <mds-text-input
