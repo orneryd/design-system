@@ -1,6 +1,5 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
-import { withKnobs, select } from '@storybook/addon-knobs'
+import { withKnobs, select, boolean } from '@storybook/addon-knobs'
 import '../../../packages/button'
 import '../../../packages/paper'
 
@@ -30,7 +29,18 @@ export const Button = () => (
   <mds-button
     style={styles}
     variant={select(label, options, defaultValue, groupId)}
-    onClick={action('clicked')}
+    disabled={boolean('Disabled', false, groupId)}
+  >
+    {select(label, options, defaultValue, groupId)}
+  </mds-button>
+)
+export const Anchor = () => (
+  <mds-button
+    style={styles}
+    href="https://www.google.com"
+    target="_blank"
+    variant={select(label, options, defaultValue, groupId)}
+    disabled={boolean('Disabled', false, groupId)}
   >
     {select(label, options, defaultValue, groupId)}
   </mds-button>

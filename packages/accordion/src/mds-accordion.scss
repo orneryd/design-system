@@ -4,18 +4,18 @@ $mds-accordion-icon-color-hover: $mdsBlackLightest !default;
 $mds-accordion-icon-color: $mdsBlack !default;
 
 .mds-accordion-header-wrapper {
-    display: flex;
+  display: flex;
 }
 .mds-accordion-header {
-    display: flex;
-    flex: 1;
-    cursor: pointer;
+  display: flex;
+  flex: 1;
+  cursor: pointer;
 }
 .mds-accordion-content {
-    display: block;
-    height: 0;
-    transition: height 0.2s;
-    overflow: auto;
+  display: block;
+  height: 0;
+  transition: height 0.2s;
+  overflow-y: auto;
 }
 .mds-accordion-header-icon {
   fill: $mds-accordion-icon-color;
@@ -28,7 +28,7 @@ $mds-accordion-icon-color: $mdsBlack !default;
   transform: rotate(0deg);
   border-radius: 50%;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   &.open {
     transform: rotate(180deg);
   }

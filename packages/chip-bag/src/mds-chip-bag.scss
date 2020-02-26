@@ -14,21 +14,19 @@
   cursor: text;
   margin: 0em;
   padding: 1px;
-  border-width: 1px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
   min-height: 2.2rem;
-
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  &.invalid {
+    border-bottom: 2px solid rgb(255, 0, 0);
+  }
   .mds-chip {
     margin: 3px;
+    display: flex;
+    flex: 0;
+    &:first-child {
+      margin-left: 0;
+    }
   }
-}
-
-.mds-chip-bag mds-chip {
-  display: flex;
-  flex: 0;
-  margin: 0 5px 3px 0;
 }
 
 .mds-chip-bag-input,
@@ -41,3 +39,4 @@
   outline: initial;
   font-size: 1rem;
 }
+

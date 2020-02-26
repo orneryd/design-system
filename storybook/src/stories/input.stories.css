@@ -1,0 +1,33 @@
+.validated-input {
+  position: relative;
+}
+
+.validated-input[valid] {
+  height: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.validated-input[valid]::after {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.validated-input.valid::after {
+  color: #5A8E22;
+  content: '\2714';
+}
+
+.validated-input.invalid {
+  border-bottom: 2px inset rgb(255, 0, 0);
+}
+
+.validated-input.invalid::after {
+  color: rgb(204, 0, 0);
+  content: '\2715';
+}
+
+.validation-message.error {
+    color: rgb(204, 0, 0);
+}

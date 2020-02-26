@@ -174,7 +174,7 @@
     }
   }
   const nodeAppendChild = global.Node.prototype.appendChild
-
+  global.HTMLElement.prototype.setCustomValidity = function(){}
   global.Node.prototype.appendChild = function(node) {
     if (node.parentNode && node.parentNode.childNodes) {
       if (!Array.isArray(node.parentNode.childNodes)) {

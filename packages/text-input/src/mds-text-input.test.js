@@ -31,6 +31,7 @@ describe('McKTextInput', () => {
     let removeSpy
     beforeEach(() => {
       removeSpy = spyOn(element.inputWrapper.classList, 'remove')
+      element.render()
       element.handleBlur()
     })
 
