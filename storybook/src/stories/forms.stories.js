@@ -104,7 +104,8 @@ export const InputsWithCheckboxes = () => {
           label="Optional Boolean"
           checked={boolean('Checked', false, 'Optional Checkbox')}
         ></mds-checkbox>
-        <div>Select a fruit</div>
+        <br/>
+        <div>Select a fruit:</div>
         <mds-radio name="fruit" value="Strawberry" />
         <mds-radio name="fruit" value="Orange" />
         <mds-radio name="fruit" value="Lemon" />
