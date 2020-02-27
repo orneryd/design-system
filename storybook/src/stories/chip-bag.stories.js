@@ -1,6 +1,7 @@
 import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
+import './chip-bag.stories.css'
 import '../../../packages/paper'
 import '../../../packages/chip'
 import '../../../packages/chip-bag'

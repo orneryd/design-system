@@ -2,26 +2,11 @@ import { generateId } from '../../base/src/base'
 
 export default superclass =>
   class extends superclass {
-    set value(newValue) {
-      this.setAttribute('value', newValue)
-    }
-
-    get disabled() {
-      return this.hasAttribute('disabled')
-    }
-
-    get value() {
-      return this.getAttribute('value') || ''
-    }
-
-    set value(newVal) {
-      this.setAttribute('value', newVal)
-    }
-
+    
     get inputId() {
-      // generate an ID that is almost guaranteed 
+      // generate an ID that is almost guaranteed
       // to be uniqe so we don't end up with bad broswer behavior
-      return generateId(this.getAttribute('id'))
+      return generateId(this.getAttribute('id') || this.getAttribute('name') || '')
     }
 
     get required() {
@@ -33,7 +18,11 @@ export default superclass =>
     }
 
     get label() {
-      return this.getAttribute('label') || this.getAttribute('type') || ''
+      return this.getAttribute('label') || this.getAttribute('value') || ''
+    }
+
+    get name() {
+      return this.getAttribute('name') || this.getAttribute('id') || ''
     }
 
     get validationMessage() {
@@ -64,9 +53,7 @@ export default superclass =>
     }
 
     reset(newVal) {
-      super.reset && super.reset()
-      this.inputElement.value = newVal
-      this.value = newVal
+      super.reset && super.reset(newVal)
       this.classList.remove('valid')
       this.classList.remove('invalid')
       if (this.required) {
@@ -76,14 +63,15 @@ export default superclass =>
 
     addFormInput() {
       this.clone && this.removeChild(this.clone)
-      this.clone = this.inputElement.cloneNode()
+      this.clone = this.inputElement.cloneNode(true)
+      this.clone.setAttribute('value', this.value)
       Object.defineProperty(this.clone, 'value', {
         set: newVal => this.reset(newVal),
         get: () => this.value
       })
       //override the id generation for the form so that we don't show the auto-generated suffix.
       Object.defineProperty(this.clone, 'id', {
-        get: () => this.getAttribute('id')
+        get: () => this.getAttribute('id') || this.getAttribute('name')
       })
       this.appendChild(this.clone)
     }
@@ -123,12 +111,13 @@ export default superclass =>
       }
       const attrsToAdd = []
       Array.from(this.attributes).forEach(attr => {
-        if (attr.name !== 'slot' && attr.name !== 'class'&& attr.name !== 'id') {
+        if (attr.name !== 'slot' && attr.name !== 'class' && attr.name !== 'id') {
           attrsToAdd.push(attr)
         }
       })
       attrsToAdd.forEach(attr => {
         this.inputElement.setAttribute(attr.name, attr.value)
+        this.clone.setAttribute(attr.name, attr.value)
       })
     }
   }

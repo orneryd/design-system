@@ -28,9 +28,8 @@ import accordionTemplate from './mds-accordion.html'
  * )
  */
 export default class MdsAccordion extends HTMLElement {
-  constructor(self) {
-    super(self)
-    self = this
+  constructor() {
+    super()
     this.attachShadow({ mode: 'open' })
   }
 

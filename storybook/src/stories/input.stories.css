@@ -1,3 +1,9 @@
+:root {
+  --mdsTextInputLabelTransform: scale(0.875) translate(0.325rem, -1.625rem);
+  --mdsTextInputLabelTransformOrigin: bottom left;
+  --mdsTextInputLabelTransformFocused: scale(0.875) translate(0.325rem, 0);
+}
+
 .validated-input {
   position: relative;
 }

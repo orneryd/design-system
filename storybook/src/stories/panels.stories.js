@@ -1,6 +1,6 @@
 import React from 'react'
 import { withKnobs, number } from '@storybook/addon-knobs'
-
+import './panel.stories.css'
 import '../../../packages/paper'
 import '../../../packages/accordion'
 const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

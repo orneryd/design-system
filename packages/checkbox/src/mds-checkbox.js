@@ -5,40 +5,49 @@ export default class MdsCheckbox extends HTMLElement {
   constructor() {
     super()
     this.attachShadow({ mode: 'open' })
-    this.defaultChecked = this.checked;
   }
   static get observedAttributes() {
     return ['checked']
   }
 
-  attributeChangedCallback(name){
+  attributeChangedCallback(name) {
     if (this.inputElement && name === 'checked') {
       this.setCheckedState()
     }
   }
 
-  setCheckedState(){
+  set value(newValue) {
+    if (newValue) {
+      this.setAttribute('checked', '')
+    } else {
+      this.removeAttribute('checked')
+    }
+  }
+
+  get value() {
+    return this.checked ? 'checked' : ''
+  }
+
+  setCheckedState() {
     if (this.checked) {
       this.inputElement.setAttribute('checked', '')
       this.indicatorElement.classList.add('checked')
-      this.value = 'checked'
     } else {
       this.inputElement.removeAttribute('checked')
       this.indicatorElement.classList.remove('checked')
-      this.value = ''
     }
     this.setValidity()
   }
 
-  get indicatorElement(){
+  get indicatorElement() {
     return this.shadowRoot.querySelector('.mds-checkbox-circle')
   }
 
   get checked() {
-    return (this.hasAttribute('checked') && this.getAttribute('checked') !== 'false')
+    return this.hasAttribute('checked')
   }
 
-  get validationMessage(){
+  get validationMessage() {
     const message = this.getAttribute('validation-message') || `${this.label} is required.`
     return this.required ? message : ''
   }
@@ -57,19 +66,24 @@ export default class MdsCheckbox extends HTMLElement {
     this.setCheckedState()
   }
 
-  reset(value = ''){
+  reset() {
     if (this.defaultChecked) {
-      this.setAttribute('checked', value)
+      this.setAttribute('checked', '')
     } else {
       this.removeAttribute('checked')
     }
   }
 
   connectedCallback() {
-   this.render()
+    if (this.getAttribute('checked') === 'false') {
+      this.removeAttribute('checked')
+    }
+    this.defaultChecked = this.checked
+    this.setAttribute('type', 'checkbox')
+    this.render()
   }
 
-  render(){
+  render() {
     textInputTemplate(this).connect()
     this.setCheckedState()
   }

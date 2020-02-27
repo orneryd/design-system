@@ -1,21 +1,21 @@
 @import '../../base/src/base.scss';
 
-.mds-checkbox-wrapper {
+.mds-radio-wrapper  {
   display: inline-block;
   margin: 0.25rem;
 }
 
-.mds-checkbox-label {
+.mds-radio-label {
   display: flex;
   flex-shrink: 1;
   cursor: pointer;
-  .mds-checkbox-border {
+  .mds-radio-border {
     position: relative;
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
-    border: var(--mdsCheckboxBorder, 3px inset $mdsPurple);
-    .mds-checkbox-circle {
+    border: var(--mdsRadioBorder, 3px inset $mdsPurple);
+    .mds-radio-circle {
       position: absolute;
       display: inline-block;
       top: 3px;
@@ -24,16 +24,14 @@
       left: 3px;
       border-radius: 50%;
       &.checked {
-        border-radius: 0;
-        transform: rotate(45deg) scale(1.4) translate(4px, -2px);
-        height: 0.6rem;
-        width: 0.25rem;
-        border-bottom: 3px solid var(--mdsCheckboxColorChecked, $mdsGreen);
-        border-right: 3px solid var(--mdsCheckboxColorChecked, $mdsGreen);
+        background-color: var(--mdsRadioCheckedColor, $mdsPurple);
+        &:hover {
+          background-color: var(--mdsRadioCheckedColor, $mdsPurpleDark);
+        }
       }
     }
   }
-  .mds-checkbox-label-text {
+  .mds-radio-label-text {
     margin-left: 0.5rem;
     flex-shrink: 1;
     align-content: center;

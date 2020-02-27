@@ -1,14 +1,10 @@
 @import '../../base/src/base.scss';
 
-$mds-chip-color: rgba(204, 204, 204, 0.5) !default;
-$mds-chip-remove-color: $mdsBlackLight !default;
-$mds-chip-remove-color-hover: $mdsBlack !default;
-$mds-chip-remove-color-active: $mdsBlack !default;
-
 .mds-chip {
   display: flex;
   align-items: center;
-  background-color: $mds-chip-color;
+  color: var(--mdsChipColor, inherit);
+  background-color: var(--mdsChipBackgroundColor, rgba(204, 204, 204, 0.5));
   padding: 0 12px;
   border-radius: 32px;
   height: 32px;
@@ -21,7 +17,7 @@ $mds-chip-remove-color-active: $mdsBlack !default;
   display: inline-block;
   justify-content: center;
   align-content: center;
-  fill: $mds-chip-remove-color;
+  fill: var(--mdsChipIconColor, $mdsBlackLight);
   height: 22px;
   width: 22px;
   font-size: 1rem;
@@ -31,11 +27,11 @@ $mds-chip-remove-color-active: $mdsBlack !default;
 }
 
 .mds-chip-remove:hover {
-  fill: $mds-chip-remove-color-hover;
+  fill: var(--mdsChipIconColorHover, $mdsBlack);
 }
 
 .mds-chip-remove:active {
-  fill: $mds-chip-remove-color-active;
+  fill: var(--mdsChipIconColorActive, $mdsBlack);
 }
 
 *,

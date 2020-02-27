@@ -6,6 +6,14 @@ export default class MdsTextInput extends HTMLElement {
     super()
     this.attachShadow({ mode: 'open' })
   }
+  
+  set value(newValue) {
+    this.setAttribute('value', newValue)
+  }
+
+  get value() {
+    return this.getAttribute('value') || ''
+  }
 
   get type() {
     return this.getAttribute('type') || 'text'
@@ -35,7 +43,9 @@ export default class MdsTextInput extends HTMLElement {
     this.shadowRoot.querySelector('.mds-text-input').focus()
   }
 
-  reset() {
+  reset(newVal) {    
+    this.value = newVal
+    this.inputElement.value = newVal
     this.inputWrapper.classList.remove('focus')
   }
 

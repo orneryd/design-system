@@ -2,7 +2,7 @@ const glob = require('glob');
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
-    entry: glob.sync('./packages/**/*.js').reduce((acc, path) => {
+    entry: glob.sync('./packages/**/src/*.js').reduce((acc, path) => {
         /**
          * The "[name]" placeholder in the "output" property will be replaced
          * with each key name in our "entry" object. We need to make sure the

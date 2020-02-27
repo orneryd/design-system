@@ -15,9 +15,9 @@
   margin: 0em;
   padding: 1px;
   min-height: 2.2rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: var(--mdsChipBagUnderline, 2px solid rgba(0, 0, 0, 0.2));
   &.invalid {
-    border-bottom: 2px solid rgb(255, 0, 0);
+    border-bottom: var(--mdsChipBagUnderlineInvalid, 2px solid rgb(255, 0, 0));
   }
   .mds-chip {
     margin: 3px;
@@ -39,4 +39,3 @@
   outline: initial;
   font-size: 1rem;
 }
-

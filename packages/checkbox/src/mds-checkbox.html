@@ -1,14 +1,14 @@
 <link href="./mds-checkbox.scss" />
-<div class="mds-checkbox-wrapper ${this.value ? 'focus': ''}" onclick="${this.onClick}">
-    <label class="mds-checkbox-label" for="${this.inputId}">
-      <input 
-      id="${this.inputId}" 
-      class="mds-checkbox"
-      type="checkbox" 
-      ${this.checked}/>
-      <span class="mds-checkbox-border">
-        <span class="mds-checkbox-circle"></span>
-      </span>
-      <span class="mds-checkbox-label-text">${this.label}</span>
-    </label>
+<div class="mds-checkbox-wrapper" onclick="${this.onClick}">
+  <label class="mds-checkbox-label" for="${this.inputId}">
+    <input 
+    id="${this.inputId}" 
+    class="mds-checkbox"
+    type="checkbox"
+    ${this.value}/>
+    <span class="mds-checkbox-border">
+      <span class="mds-checkbox-circle"></span>
+    </span>
+    <span class="mds-checkbox-label-text">${this.label}</span>
+  </label>
 </div>

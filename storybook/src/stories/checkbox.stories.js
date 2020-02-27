@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../../../packages/checkbox'
+import '../../../packages/radio'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 
@@ -11,6 +12,14 @@ export default {
 
 export const Checkbox = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-checkbox value={boolean('value', false, 'checkbox')} label="Some Label" />
+    <mds-checkbox checked={boolean('Checked', false, 'checkbox')} label="Some Label" />
+  </div>
+)
+
+export const Radio = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-radio type="radio" name="fruit" checked value="Strawberry" />
+    <mds-radio type="radio" name="fruit" value="Orange" />
+    <mds-radio type="radio" name="fruit" value="Lemon" />
   </div>
 )
