@@ -2,30 +2,69 @@ import accordionTemplate from './mds-accordion.html'
 
 /**
  * @module MdsAccordion
- * @extends {HTMLElement} 
+ * @extends {HTMLElement}
  * @description Component that allows you to collapse and expand content within a root [MdsPaper]{@link ../packages/paper} Element
+ * @param {String} [elevation="1"] Sets the elevation for the accordion's internal [MdsPaper]{@link ../packages/paper} element
+ * @param {AccordionState} [state="collapse"] Sets the initial state and can be toggled to open or close it
  *
- * @example @lang html
- * <mds-paper elevation="6"></mwc-paper>
+ * @property {enum} AccordionState The opened or collapsed state of the accordion
+ * @property {String} open "open"
+ * @property {String} collapse "collapse"
+ * @property {enum} CSSVariables
+ * @property {CSSVariable} mdsAccordionIconColor Overrides the icon color for the accordion indicator button.
+ * @property {CSSVariable} mdsAccordionIconColorHover Overrides the icon color on :hover for the accordion indicator button.
  *
- * @example @lang jsx
+ * @example @lang html <caption>HTML Usage</caption>
+ * <mds-accordion elevation="6" state="open">
+ *   <div slot="accordion-header">Default open</div>
+ *   <div slot="accordion-content">
+ *     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+ *     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ *     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+ *     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+ *     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ *   </div>
+ * </mwc-accordion>
+ *
+ * @example @lang jsx <caption>React Component</caption>
  * export const accordion = () => (
- * <div>
  *   <mds-accordion
- *     elevation={3}
- *     state="open"
+ *     elevation={6}
  *   >
- *     <div slot="accordion-header">Default open</div>
+ *     <div slot="accordion-header">Default collapse</div>
  *     <div slot="accordion-content">
- *      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
- *      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
- *      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
- *      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
- *      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ *       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+ *       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ *       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+ *       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+ *       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
  *     </div>
  *   </mds-accordion>
- * </div>
  * )
+ *
+ * @example @lang off
+ * ### Rendered in the browser
+ *
+ * ![](samples/accordion.png)
+ * <br/>
+ * 
+ * 
+ * @example @lang off
+ * ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
+ * 
+ * 
+ * @example @lang css
+ * :root {
+ *   --mdsAccordionIconColor: purple;
+ *   --mdsAccordionIconColorHover: orange;
+ * }
+ *
+ * 
+ * @example @lang off 
+ * ### Rendered in the browser
+ *
+ * ![](samples/accordion-custom.gif)
+ * <br/>
  */
 export default class MdsAccordion extends HTMLElement {
   constructor() {
@@ -83,4 +122,5 @@ export default class MdsAccordion extends HTMLElement {
     })
   }
 }
+
 customElements.define('mds-accordion', MdsAccordion)
