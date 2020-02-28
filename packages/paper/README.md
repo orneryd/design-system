@@ -13,7 +13,7 @@ npm i @mcklabs/mds-paper --save
 yarn add @mcklabs/mds-paper
 ```
 
-# DOCS
+# API
 <a name="module_MdsPaper"></a>
 
 ## MdsPaper ⇐ <code>HTMLElement</code>

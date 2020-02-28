@@ -13,7 +13,7 @@ npm i @mcklabs/mds-accordion --save
 yarn add @mcklabs/mds-accordion
 ```
 
-# DOCS
+# API
 <a name="module_MdsAccordion"></a>
 
 ## MdsAccordion ⇐ <code>HTMLElement</code>

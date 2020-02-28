@@ -13,4 +13,4 @@ npm i @mcklabs/mds-chip-bag --save
 yarn add @mcklabs/mds-chip-bag
 ```
 
-# DOCS
+# API

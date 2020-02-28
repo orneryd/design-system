@@ -13,4 +13,4 @@ npm i @mcklabs/mds-text-input --save
 yarn add @mcklabs/mds-text-input
 ```
 
-# DOCS
+# API

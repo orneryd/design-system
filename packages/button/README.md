@@ -13,7 +13,7 @@ npm i @mcklabs/mds-button --save
 yarn add @mcklabs/mds-button
 ```
 
-# DOCS
+# API
 <a name="module_MdsButton"></a>
 
 ## MdsButton ⇐ <code>HTMLElement</code>

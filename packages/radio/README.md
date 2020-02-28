@@ -13,4 +13,4 @@ npm i @mcklabs/mds-checkbox --save
 yarn add @mcklabs/mds-checkbox
 ```
 
-# DOCS
+# API

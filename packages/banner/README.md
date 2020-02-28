@@ -13,7 +13,7 @@ npm i @mcklabs/mds-banner --save
 yarn add @mcklabs/mds-banner
 ```
 
-# DOCS
+# API
 <a name="module_MdsBanner"></a>
 
 ## MdsBanner ⇐ <code>HTMLElement</code>

@@ -13,4 +13,4 @@ npm i @mcklabs/mds-i18n --save
 yarn add @mcklabs/mds-i18n
 ```
 
-# DOCS
+# API
