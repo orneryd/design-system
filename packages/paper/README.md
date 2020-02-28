@@ -30,10 +30,10 @@ Styled component that has different elevations
 | Name | Type | Description |
 | --- | --- | --- |
 | CSSVariables | <code>enum</code> |  |
-| mdsPaperBackgroundColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
-| mdsPaperBoxShadowHOffsetColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
-| mdsPaperBoxShadowVOffsetColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
-| mdsPaperBoxShadowBlurColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
+| --mdsPaperBackgroundColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
+| --mdsPaperBoxShadowHOffsetColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
+| --mdsPaperBoxShadowVOffsetColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
+| --mdsPaperBoxShadowBlurColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
 
 **Example** *(HTML Usage)*  
 ```html

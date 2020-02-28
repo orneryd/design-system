@@ -7,10 +7,10 @@ import renderPaper from './mds-paper.html'
  * @param {String} [elevation="1"] Sets the elevation for the accordion's internal [MdsPaper]{@link ../packages/paper} element
  * 
  * @property {enum} CSSVariables
- * @property {CSSVariable} mdsPaperBackgroundColor Overrides the icon color for the accordion indicator button.
- * @property {CSSVariable} mdsPaperBoxShadowHOffsetColor Overrides the icon color for the accordion indicator button.
- * @property {CSSVariable} mdsPaperBoxShadowVOffsetColor Overrides the icon color for the accordion indicator button.
- * @property {CSSVariable} mdsPaperBoxShadowBlurColor Overrides the icon color for the accordion indicator button.
+ * @property {CSSVariable} --mdsPaperBackgroundColor Overrides the icon color for the accordion indicator button.
+ * @property {CSSVariable} --mdsPaperBoxShadowHOffsetColor Overrides the icon color for the accordion indicator button.
+ * @property {CSSVariable} --mdsPaperBoxShadowVOffsetColor Overrides the icon color for the accordion indicator button.
+ * @property {CSSVariable} --mdsPaperBoxShadowBlurColor Overrides the icon color for the accordion indicator button.
  * 
  * @example @lang html <caption>HTML Usage</caption>
  * <mds-paper elevation="6">
