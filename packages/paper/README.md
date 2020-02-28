@@ -47,7 +47,9 @@ Styled component that has different elevations
 ```
 **Example** *(React Component)*  
 ```jsx
-export const accordion = () => (
+import '@mcklabs/mds-banner'
+
+export const paper = () => (
   <mds-paper
     elevation={6}
   >

@@ -20,9 +20,9 @@ const options = {
 const defaultValue = 'primary'
 const groupId = 'Buttons'
 
-const styles = { 
+const styles = {
   textTransform: 'capitalize',
-  margin: '1rem',
+  margin: '1rem'
 }
 
 export const Button = () => (
@@ -45,3 +45,45 @@ export const Anchor = () => (
     {select(label, options, defaultValue, groupId)}
   </mds-button>
 )
+
+export const AllButtons = () => {
+  return (
+    <div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="primary">Primary</mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="primary rounded">Primary Rounded</mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="primary" disabled>
+          Primary Disabled
+        </mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="secondary">Secondary</mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="secondary rounded" disabled="">
+          Secondary Rounded
+        </mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="secondary" disabled>
+          Secondary Disabled
+        </mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="outlined">Outlined</mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="outlined rounded">Outlined Rounded</mds-button>
+      </div>
+      <div style={{margin: '10px'}}>
+        <mds-button variant="outlined" disabled>
+          Outlined Disabled
+        </mds-button>
+      </div>
+    </div>
+  )
+}

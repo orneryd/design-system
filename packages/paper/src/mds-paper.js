@@ -22,7 +22,9 @@ import renderPaper from './mds-paper.html'
  * </mwc-paper>
  *
  * @example @lang jsx <caption>React Component</caption>
- * export const accordion = () => (
+ * import '@mcklabs/mds-banner'
+ * 
+ * export const paper = () => (
  *   <mds-paper
  *     elevation={6}
  *   >

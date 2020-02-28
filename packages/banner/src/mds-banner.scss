@@ -8,17 +8,21 @@
     padding-top: 4rem;
   
   h1, h4 {
-    max-width: var(--mdsBannerContentMaxWidth, 768px);
+    max-width: var(--mdsBannerMaxWidth, 768px);
     text-align: center;
     display: block;
   }
 
   h1 {
+    color: var(--mdsBannerHeaderColor, inherit);
+    max-width: var(--mdsBannerContentMaxWidth, 768px);
     font-size: 2rem;
     margin: 0 auto;
   }
 
   h4 {
+    color: var(--mdsBannerContentColor, inherit);
+    max-width: var(--mdsBannerContentMaxWidth, 768px);
     font-size: 0.9rem;
     margin: 1rem auto;
   }

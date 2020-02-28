@@ -1,0 +1,9 @@
+:root {
+  --mdsBannerColor: purple;
+  --mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);
+  /* --mdsBannerBackgroundColor: orange;
+  --mdsBannerHeaderColor: darkgreen;
+  --mdsBannerHeaderMaxWidth: 320px;
+  --mdsBannerContentColor: white;
+  --mdsBannerContentMaxWidth: 320px; */
+}

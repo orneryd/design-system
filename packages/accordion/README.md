@@ -30,12 +30,12 @@ Component that allows you to collapse and expand content within a root [MdsPaper
 
 | Name | Type | Description |
 | --- | --- | --- |
-| AccordionState | <code>enum</code> | The opened or collapsed state of the accordion |
-| open | <code>String</code> | "open" |
-| collapse | <code>String</code> | "collapse" |
-| CSSVariables | <code>enum</code> |  |
-| mdsAccordionIconColor | <code>CSSVariable</code> | Overrides the icon color for the accordion indicator button. |
-| mdsAccordionIconColorHover | <code>CSSVariable</code> | Overrides the icon color on :hover for the accordion indicator button. |
+| AccordionState | <code>enum</code> | &lt;mds-accordion state="${AccordionState}" /&gt; |
+| open | <code>String</code> | Set the accordion to open |
+| collapse | <code>String</code> | Set the accordion to collaspe |
+| CSSVariables | <code>enum</code> | below are the variables that can be overridden by css |
+| --mdsAccordionIconColor | <code>String</code> | Overrides the icon color for the accordion indicator button. |
+| --mdsAccordionIconColorHover | <code>String</code> | Overrides the icon color on :hover for the accordion indicator button. |
 
 **Example** *(HTML Usage)*  
 ```html
@@ -52,6 +52,8 @@ Component that allows you to collapse and expand content within a root [MdsPaper
 ```
 **Example** *(React Component)*  
 ```jsx
+import '@mcklabs/mds-accordion'
+
 export const accordion = () => (
   <mds-accordion
     elevation={6}

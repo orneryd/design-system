@@ -7,12 +7,12 @@ import accordionTemplate from './mds-accordion.html'
  * @param {String} [elevation="1"] Sets the elevation for the accordion's internal [MdsPaper]{@link ../packages/paper} element
  * @param {AccordionState} [state="collapse"] Sets the initial state and can be toggled to open or close it
  *
- * @property {enum} AccordionState The opened or collapsed state of the accordion
- * @property {String} open "open"
- * @property {String} collapse "collapse"
- * @property {enum} CSSVariables
- * @property {CSSVariable} mdsAccordionIconColor Overrides the icon color for the accordion indicator button.
- * @property {CSSVariable} mdsAccordionIconColorHover Overrides the icon color on :hover for the accordion indicator button.
+ * @property {enum} AccordionState &lt;mds-accordion state="${AccordionState}" /&gt;
+ * @property {String} open Set the accordion to open
+ * @property {String} collapse Set the accordion to collaspe
+ * @property {enum} CSSVariables below are the variables that can be overridden by css
+ * @property {String} --mdsAccordionIconColor Overrides the icon color for the accordion indicator button.
+ * @property {String} --mdsAccordionIconColorHover Overrides the icon color on :hover for the accordion indicator button.
  *
  * @example @lang html <caption>HTML Usage</caption>
  * <mds-accordion elevation="6" state="open">
@@ -27,6 +27,8 @@ import accordionTemplate from './mds-accordion.html'
  * </mwc-accordion>
  *
  * @example @lang jsx <caption>React Component</caption>
+ * import '@mcklabs/mds-accordion'
+ * 
  * export const accordion = () => (
  *   <mds-accordion
  *     elevation={6}
