@@ -117,7 +117,7 @@ export default class MdsButton extends HTMLElement {
   }
 
   get tag() {
-    return this.href ? 'a': 'button';
+    return this.urlTarget ? 'a': 'button';
   }
   
   get startTag() {
