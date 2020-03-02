@@ -93,13 +93,21 @@
     {
       "name": "mds-button",
       "path": "./packages/button/src/mds-button.js",
+      "description": "# mckesson-design-system button\nA styled button\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-button` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-button`\n```\n\n### HTML Usage\n```html\n<mds-button variant=\"primary\">Primary</mds-button>\n<mds-button variant=\"primary rounded\">Primary Rounded</mds-button>\n<mds-button variant=\"primary\" disabled>Primary Disabled</mds-button>\n<mds-button variant=\"secondary\">Secondary</mds-button>\n<mds-button variant=\"secondary rounded\" disabled=\"\">Secondary Rounded</mds-button>\n<mds-button variant=\"secondary\" disabled>Secondary Disabled</mds-button>\n<mds-button variant=\"outlined\">Outlined</mds-button>\n<mds-button variant=\"outlined rounded\">Outlined Rounded</mds-button>\n<mds-button variant=\"outlined\" disabled>Outlined Disabled</mds-button>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-button`\n\nexport const buttons = () => (\n<div>\n   <mds-button variant=\"primary\">Primary</mds-button>\n   <mds-button variant=\"primary rounded\">Primary Rounded</mds-button>\n   <mds-button variant=\"primary\" disabled>Primary Disabled</mds-button>\n   <mds-button variant=\"secondary\">Secondary</mds-button>\n   <mds-button variant=\"secondary rounded\" disabled=\"\">Secondary Rounded</mds-button>\n   <mds-button variant=\"secondary\" disabled>Secondary Disabled</mds-button>\n   <mds-button variant=\"outlined\">Outlined</mds-button>\n   <mds-button variant=\"outlined rounded\">Outlined Rounded</mds-button>\n   <mds-button variant=\"outlined\" disabled>Outlined Disabled</mds-button>\n</div>\n)\n```\n\n### HTML Usage\n```html\n<mds-button variant=\"primary\" href=\"http://kittenwar.com\">Rate Kittens</mds-button>\n```\n### Rendered in the browser\n\n![](samples/buttons.png)\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n\n```css\n:root {\n--mdsBannerMaxWidth: 1024px;\n--mdsBannerColor: purple;\n--mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);\n}\n```\n<br/>",
       "attributes": [
         {
+          "name": "href",
+          "description": "give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag",
+          "type": "String"
+        },
+        {
           "name": "variant",
-          "type": "string"
+          "description": "variant of the button",
+          "type": "String"
         },
         {
           "name": "disabled",
+          "description": "sets the enables or disabled state",
           "type": "String"
         }
       ],
@@ -125,19 +133,63 @@
           "type": "Element | null"
         },
         {
-          "name": "href",
+          "name": "buttonStyle",
           "type": "string"
         },
         {
-          "name": "variant",
-          "attribute": "variant",
+          "name": "urlTarget",
           "type": "string"
         }
       ],
       "cssProperties": [
         {
-          "name": "-",
-          "description": "mdsBannerColor Overrides the text color for the banner.",
+          "name": "--mdsButtonPrimaryColor",
+          "description": "Overrides the primary color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonPrimaryColorHover",
+          "description": "Overrides the primary color on hover",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonSecondaryColor",
+          "description": "Overrides the secondary color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonSecondaryColorHover",
+          "description": "Overrides the secondary color on hover",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedBackgroundColor",
+          "description": "Overrides the outlined background color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedBackgroundColorHover",
+          "description": "Overrides the outlined background color on hover",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedBorder",
+          "description": "Overrides the outlined border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedBorderHover",
+          "description": "Overrides the  outlined border color on hover",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedColor",
+          "description": "Overrides the outlined color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsButtonOulinedColorHover",
+          "description": "Overrides the outlined color on hover",
           "type": "String"
         }
       ]

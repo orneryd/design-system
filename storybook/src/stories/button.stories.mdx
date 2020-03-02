@@ -1,13 +1,8 @@
-import React from 'react'
+import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
 import { withKnobs, select, boolean } from '@storybook/addon-knobs'
-import '../../../packages/button/dist/mds-button'
-import '../../../packages/paper/dist/mds-paper'
-
-export default {
-  title: 'Web Components/Button',
-  decorators: [withKnobs]
-}
-
+import '../../../packages/button'
+import '../../../packages/paper'
+import README from '../../../packages/button/README.md'
 const label = 'Variants'
 const options = {
   Primary: 'primary',
@@ -19,36 +14,29 @@ const options = {
 }
 const defaultValue = 'primary'
 const groupId = 'Buttons'
-
 const styles = {
   textTransform: 'capitalize',
   margin: '1rem'
 }
 
-export const Button = () => (
-  <mds-button
-    style={styles}
-    variant={select(label, options, defaultValue, groupId)}
-    disabled={boolean('Disabled', false, groupId)}
-  >
-    {select(label, options, defaultValue, groupId)}
-  </mds-button>
-)
-export const Anchor = () => (
-  <mds-button
-    style={styles}
-    href="https://www.google.com"
-    target="_blank"
-    variant={select(label, options, defaultValue, groupId)}
-    disabled={boolean('Disabled', false, groupId)}
-  >
-    {select(label, options, defaultValue, groupId)}
-  </mds-button>
-)
+<Meta
+  title="Web Components/Buttons"
+  decorators={[withKnobs]}
+  parameters={{
+    component: 'mds-button',
+    options: { 
+      selectedPanel: 'storybookjs/knobs/panel'
+     }
+  }}
+/>
 
-export const AllButtons = () => {
-  return (
-    <div>
+<Description>
+    {README}
+</Description>
+
+<Preview withToolbar>
+  <Story name="All">
+     <div>
       <div style={{margin: '10px'}}>
         <mds-button variant="primary">Primary</mds-button>
       </div>
@@ -85,5 +73,27 @@ export const AllButtons = () => {
         </mds-button>
       </div>
     </div>
-  )
-}
+  </Story>
+</Preview>
+
+<Story name="Button">
+  <mds-button
+    style={styles}
+    variant={select(label, options, defaultValue, groupId)}
+    disabled={boolean('Disabled', false, groupId)}
+  >
+    {select(label, options, defaultValue, groupId)}
+  </mds-button>
+</Story>
+
+<Story name="Anchor">
+  <mds-button
+    style={styles}
+    href="https://www.google.com"
+    target="_blank"
+    variant={select(label, options, 'outlined rounded', groupId)}
+    disabled={boolean('Disabled', false, groupId)}
+  >
+    external link
+  </mds-button>
+</Story>
