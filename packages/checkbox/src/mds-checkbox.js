@@ -97,7 +97,14 @@ export default class MdsCheckbox extends HTMLElement {
   }
 
   get checked() {
-    return this.hasAttribute('checked')
+    if (this.hasAttribute('checked')) {
+      let current = this.getAttribute('checked')
+      if (current === 'false') {
+        return false
+      }
+      return true
+    }
+    return false
   }
 
   get validationMessage() {
@@ -130,6 +137,8 @@ export default class MdsCheckbox extends HTMLElement {
   connectedCallback() {
     if (this.getAttribute('checked') === 'false') {
       this.removeAttribute('checked')
+    } else {
+      this.setAttribute('checked', '')
     }
     this.defaultChecked = this.checked
     this.setAttribute('type', 'checkbox')

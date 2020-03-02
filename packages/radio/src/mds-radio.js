@@ -94,7 +94,14 @@ export default class MdsRadio extends HTMLElement {
   }
 
   get checked() {
-    return this.hasAttribute('checked')
+    if (this.hasAttribute('checked')) {
+      let current = this.getAttribute('checked')
+      if (current === 'false') {
+        return false
+      }
+      return true
+    }
+    return false
   }
 
   setCheckedState() {
@@ -140,9 +147,6 @@ export default class MdsRadio extends HTMLElement {
   }
 
   connectedCallback() {
-    if (this.getAttribute('checked') === 'false') {
-      this.removeAttribute('checked')
-    }
     this.defaultChecked = this.checked
     this.setAttribute('type', 'radio')
     this.render()
