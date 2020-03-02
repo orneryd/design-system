@@ -12,3 +12,5 @@ npm i @mcklabs/mds-i18n --save
 ```bash
 yarn add @mcklabs/mds-i18n
 ```
+
+# API

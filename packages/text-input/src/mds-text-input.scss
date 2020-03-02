@@ -1,6 +1,5 @@
 @import '../../base/src/base.scss';
 
-
 .mds-text-input {
   border-width: 0;
   border-style: none;
@@ -13,7 +12,10 @@
   height: 2rem;
   display: block;
   width: 100%;
-  border-bottom: 2px inset rgba(0, 0, 0, 0.2);
+  border-bottom: var(--mdsTextInputUnderline, 2px inset rgba(0, 0, 0, 0.2));
+  &.invalid {
+    border-bottom: var(--mdsTextInputUnderlineInvalid, 2px inset rgb(255, 0, 0));
+  }
 }
 
 .mds-text-input-label {
@@ -22,12 +24,13 @@
   color: $mdsBlackLight;
   opacity: 0.7;
   transition: transform 0.2s ease-in-out;
-  transform-origin: bottom left;
-  transform: scale(0.875) translate(0.325rem, -1.625rem);
+  transform: var(--mdsTextInputLabelTransform, scale(0.875) translate(0.325rem, -1.625rem));
+  transform-origin: var(--mdsTextInputLabelTransformOrigin, bottom left);
+  white-space: nowrap;
 }
 
 .mds-text-input-wrapper.focus .mds-text-input-label {
-  transform: scale(0.875) translate(0.325rem, 0);
+  transform: var(--mdsTextInputLabelTransformFocused, scale(0.875) translate(0.325rem, 0));
 }
 
 .mds-text-input:focus {

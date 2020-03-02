@@ -1,0 +1,14 @@
+{
+  "name": "@mcklabs/mds-checkbox",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/mds-checkbox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+  }
+}

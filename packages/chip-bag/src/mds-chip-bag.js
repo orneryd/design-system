@@ -3,6 +3,76 @@ import chipBagTemplate from './mds-chip-bag.html'
 export const ENTER_KEY_CODE = 13
 export const BACKSPACE_KEY_CODE = 8
 
+/**
+# mckesson-design-system chip-bag
+A styled chip-bag by the mckesson design team.
+
+## Installation
+
+### npm
+```bash
+npm i `@mcklabs/mds-chip-bag` --save
+```
+
+### yarn
+```bash
+yarn add `@mcklabs/mds-chip-bag`
+```
+
+### HTML Usage
+```html
+<mds-chip-bag label="Some Label" />
+<mds-chip-bag value="some initial value" label="I have an initial Value" />
+<mds-chip-bag type="password" label="Type Some Secure Text" />
+```
+
+### React Component
+```jsx
+import `@mcklabs/mds-chip-bag`
+
+export const Text = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-chip-bag label="Some Label" />
+  </div>
+)
+export const InitialValue = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-chip-bag value="some initial value" label="I have an initial Value" />
+  </div>
+)
+export const Secure = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-chip-bag type="password" label="Type Some Secure Text" />
+  </div>
+)
+
+```
+
+### Rendered in the browser
+
+![](samples/input.png)
+<br/>
+ *
+ *
+ * @module MdsChipBag
+ * @extends {HTMLElement}
+ * @element mds-chip-bag
+ * @description A component that gives you a bag of chips or other element you want 
+ * 
+ * @attr {String} value - the current set of chips, semicolon delimited
+ * @attr {String} invalid - wether the input is valid or not
+ * @attr {String} delimiter - the regex expression to split the input on
+ * @attr {String} chips-length - tbhe number of chips in the bag
+ * @attr {String} allow-duplicates - allows the addition of duplicate chip values
+ * @attr {String} chip-tag - changes the chip tag from mds-chip
+ * 
+ * @fires chipclick when a chip is clicked
+ * @fires chipsupdate when the bag is modified by removing or adding a chip
+ * 
+ * @cssproperty {String} --mdsChipBagUnderline - Overrides the input underline indictator
+ * @cssproperty {String} --mdsChipBagUnderlineInvalid - Overrides the label transform property
+ * 
+ */
 export default class MdsChipBag extends HTMLElement {
   constructor() {
     super()

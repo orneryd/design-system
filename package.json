@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mckesson-design-system",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Design System using StoryBook",
   "main": "dist/index.js",
   "repository": {
@@ -19,6 +19,9 @@
   "scripts": {
     "build": "webpack",
     "test": "NODE_ENV=test jest --runInBand",
+    "docs": "yarn readme && yarn wca",
+    "wca": "wca analyze \"packages/**/src/**/*.js\" --outFiles ./custom-elements.json",
+    "readme": "wca analyze \"packages/**/src/**/*.js\" --format markdown --outFiles {dir}/../README.md",
     "coverage": "jest --runInBand --coverage --watchAll=false"
   },
   "devDependencies": {
@@ -44,6 +47,8 @@
     "jest-environment-happy-dom": "^0.0.41",
     "jest-resolve": "24.1.0",
     "jest-watch-typeahead": "0.4.2",
+    "jsdoc": "^3.6.3",
+    "jsdoc-to-markdown": "^5.0.3",
     "mini-css-extract-plugin": "0.8.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
@@ -57,6 +62,7 @@
     "terser-webpack-plugin": "2.2.1",
     "ts-pnp": "1.1.5",
     "url-loader": "2.3.0",
+    "web-component-analyzer": "^1.0.3",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3"

@@ -1,13 +1,14 @@
 @import '../../base/src/base.scss';
 
 @mixin createShadow($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11, $x12) {
-  box-shadow: #{$x1}px #{$x2}px #{$x3}px #{$x4}px rgba(0, 0, 0, 0.2),
-    #{$x5}px #{$x6}px #{$x7}px #{$x8}px rgba(0, 0, 0, 0.14),
-    #{$x9}px #{$x10}px #{$x11}px #{$x12}px rgba(0, 0, 0, 0.12);
+  box-shadow: #{$x1}px #{$x2}px #{$x3}px #{$x4}px  var(--mdsPaperBoxShadowHOffsetColor, rgba(0, 0, 0, 0.2)),
+    #{$x5}px #{$x6}px #{$x7}px #{$x8}px  var(--mdsPaperBoxShadowVOffsetColor, rgba(0, 0, 0, 0.14)),
+    #{$x9}px #{$x10}px #{$x11}px #{$x12}px  var(--mdsPaperBoxShadowBlurColor, rgba(0, 0, 0, 0.12));
 }
 
 .paper {
-  background-color: #fff;
+  color: var(--mdsPaperColor, inherit);
+  background-color: var(--mdsPaperBackgroundColor, #fff);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   padding: 1rem;
   border-radius: 4px;

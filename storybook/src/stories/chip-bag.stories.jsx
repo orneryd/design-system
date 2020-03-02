@@ -1,13 +1,14 @@
 import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import '../../../packages/paper'
-import '../../../packages/chip'
-import '../../../packages/chip-bag'
-import '../../../packages/button'
+import './chip-bag.stories.css'
+import '../../../packages/paper/dist/mds-paper'
+import '../../../packages/chip/dist/mds-chip'
+import '../../../packages/chip-bag/dist/mds-chip-bag'
+import '../../../packages/button/dist/mds-button'
 
 export default {
-  title: 'Web Components/Chip Bag',
+  title: 'Web Components/Chip',
   decorators: [withKnobs]
 }
 
@@ -36,7 +37,7 @@ class DefaultChipBag extends React.Component {
   }
   render() {
     return (
-      <mds-paper style={{ margin: '10px' }}>
+      <mds-paper elevation={0} style={{ margin: '10px' }}>
         <mds-chip-bag
           ref={this.elementRef}
           value="sample;chips"
@@ -78,7 +79,7 @@ class CustomBag extends React.Component {
 
   render() {
     return (
-      <mds-paper style={{ margin: '10px' }}>
+      <mds-paper elevation={0} style={{ margin: '10px' }}>
         <mds-chip-bag
           ref={this.elementRef}
           value="sample@email.com;othersample@email.com"

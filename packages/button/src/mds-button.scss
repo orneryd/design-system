@@ -1,12 +1,5 @@
 @import '../../base/src/base.scss';
 
-$mds-button-primary-color: $mdsBlue !default;
-$mds-button-primary-color-hover: $mdsBlueDark !default;
-$mds-button-secondary-color: $mdsOrange !default;
-$mds-button-secondary-color-hover: $mdsOrangeDark !default;
-$mds-button-outlined-color: $mdsPurple !default;
-$mds-button-outlined-color-hover: $mdsBlackLightest !default;
-
 :host {
   display: inline-block;
 }
@@ -33,24 +26,27 @@ $mds-button-outlined-color-hover: $mdsBlackLightest !default;
   }
 
   &.primary {
-    background-color: $mds-button-primary-color;
+    background-color: var(--mdsButtonPrimaryColor, $mdsBlue);
 
     &:hover {
-      background-color: $mds-button-primary-color-hover;
+      background-color:  var(--mdsButtonPrimaryColorHover, $mdsBlueDark)
     }
   }
   &.secondary {
-    background-color: $mds-button-secondary-color;
+    background-color: var(--mdsButtonSecondaryColor, $mdsOrange);
     &:hover {
-      background-color: $mds-button-secondary-color-hover;
+      background-color:  var(--mdsButtonSecondaryColorHover, $mdsOrangeDark);
     }
   }
   &.outlined {
-    background-color: transparent;
-    box-shadow: inset 0px 0px 0px 2px $mds-button-outlined-color;
-    color: $mds-button-outlined-color;
+    
+    background-color: var(--mdsButtonOulinedBackgroundColor, transparent);
+    box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsPurple);
+    color: var(--mdsButtonOulinedColor, $mdsPurple);
     &:hover {
-      background-color: $mds-button-outlined-color-hover;
+      background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsGrayLightest);
+      box-shadow: var(--mdsButtonOulinedBorderHover, inherit);
+      color: var(--mdsButtonOulinedColorHover, inherit);
     }
   }
   .mds-button {

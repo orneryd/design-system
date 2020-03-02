@@ -1,0 +1,49 @@
+@import '../../base/src/base.scss';
+
+.mds-checkbox-wrapper {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.mds-checkbox-label {
+  display: flex;
+  flex-shrink: 1;
+  cursor: pointer;
+  .mds-checkbox-border {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: var(--mdsCheckboxBorder, 3px inset $mdsPurple);
+    .mds-checkbox-circle {
+      position: absolute;
+      display: inline-block;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
+      border-radius: 50%;
+      &.checked {
+        border-radius: 0;
+        transform: rotate(45deg) scale(1.4) translate(4px, -2px);
+        height: 0.6rem;
+        width: 0.25rem;
+        border-bottom: 3px solid var(--mdsCheckboxColorChecked, $mdsGreen);
+        border-right: 3px solid var(--mdsCheckboxColorChecked, $mdsGreen);
+      }
+    }
+  }
+  .mds-checkbox-label-text {
+    margin-left: 0.5rem;
+    flex-shrink: 1;
+    align-content: center;
+    align-self: center;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+  }
+}

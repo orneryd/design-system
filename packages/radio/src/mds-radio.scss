@@ -1,0 +1,47 @@
+@import '../../base/src/base.scss';
+
+.mds-radio-wrapper  {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.mds-radio-label {
+  display: flex;
+  flex-shrink: 1;
+  cursor: pointer;
+  .mds-radio-border {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: var(--mdsRadioBorder, 3px inset $mdsPurple);
+    .mds-radio-circle {
+      position: absolute;
+      display: inline-block;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
+      border-radius: 50%;
+      &.checked {
+        background-color: var(--mdsRadioColorChecked, $mdsPurple);
+        &:hover {
+          background-color: var(--mdsRadioColorChecked, $mdsPurpleDark);
+        }
+      }
+    }
+  }
+  .mds-radio-label-text {
+    margin-left: 0.5rem;
+    flex-shrink: 1;
+    align-content: center;
+    align-self: center;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+  }
+}
