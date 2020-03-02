@@ -1,31 +1,28 @@
-import { configure as configureReact, addParameters as addParametersReact } from '@storybook/react'
-import { configure, setCustomElements, addParameters } from '@storybook/web-components'
+import { configure, addParameters } from '@storybook/react'
 import requireContext from 'require-context.macro'
-import customElements from '../../custom-elements.json'
 import '../src/index.css'
+import { themes } from '@storybook/theming';
 // import '../src/components/Typography/Typography.css'
 
 addParameters({
   options: {
+    enableShortcuts: false,
     showRoots: true,
+    theme: themes.light
   },
   docs: {
     inlineStories: false
   }
 });
-  addParametersReact({
-    options: {
-      enableShortcuts: false
-    },
-  })
-
-setCustomElements(customElements)
 
 
 const req = requireContext('../src', true, /\.stories\.jsx$/)
 
-// function loadStories() {
-//   req.keys().forEach(filename => req(filename))
-// }
-
-configureReact(req, module)
+if (module.hot) {
+  module.hot.accept(req.id, () => {
+    const currentLocationHref = window.location.href;
+    window.history.pushState(null, null, currentLocationHref);
+    window.location.reload();
+  });
+}
+configure(req, module)

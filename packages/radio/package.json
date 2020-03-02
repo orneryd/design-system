@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-radio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/mds-radio.js",
   "scripts": {

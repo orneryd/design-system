@@ -33,6 +33,7 @@ export const EmailDomainValidation = () => {
       })
     }
     setValid(event.target.checkValidity())
+    return false;
   }
   return (
     <div style={{ width: '360px', margin: '20px' }}>
@@ -67,7 +68,7 @@ export const InputsWithCheckboxes = () => {
     const elements = [...event.target.elements]
     if (event.target.checkValidity()) {
       console.log(event.target.elements)
-      elements.map(e => {
+      elements.forEach(e => {
         const message = `form value: ${e.id} = checked:${e.checked} value:${e.value}`
         friendlyMessages.push(message)
         e.value = ''
@@ -75,7 +76,7 @@ export const InputsWithCheckboxes = () => {
 
       setValid(true)
     } else {
-      elements.map(e => {
+      elements.forEach(e => {
         friendlyMessages.push(`form value: ${e.id} = ${e.value} | ${e.validationMessage || ''}`)
       })
 
