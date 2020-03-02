@@ -17,11 +17,11 @@ yarn add `@mcklabs/mds-radio`
 
 ### HTML Usage
 ```html
-<div style={{ width: '360px', margin: '20px' }}>
+<form style={{ width: '360px', margin: '20px' }}>
 <mds-radio type="radio" name="fruit" checked value="Strawberry" />
 <mds-radio type="radio" name="fruit" value="Orange" />
 <mds-radio type="radio" name="fruit" value="Lemon" />
-</div>
+</form>
 ```
 
 ### React Component
@@ -29,11 +29,11 @@ yarn add `@mcklabs/mds-radio`
 import `@mcklabs/mds-checkbox`
 
 export const buttons = () => (
-<div style={{ width: '360px', margin: '20px' }}>
+<form style={{ width: '360px', margin: '20px' }}>
    <mds-radio type="radio" name="fruit" checked value="Strawberry" />
    <mds-radio type="radio" name="fruit" value="Orange" />
    <mds-radio type="radio" name="fruit" value="Lemon" />
-</div>
+</form>
 )
 ```
 

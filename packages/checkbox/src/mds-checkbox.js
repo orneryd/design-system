@@ -19,9 +19,9 @@ yarn add `@mcklabs/mds-checkbox`
 
 ### HTML Usage
 ```html
-<div style={{ width: '360px', margin: '20px' }}>
+<form>
   <mds-checkbox checked label="Some Label" />
-</div>
+</form>
 ```
 
 ### React Component
@@ -29,9 +29,9 @@ yarn add `@mcklabs/mds-checkbox`
 import `@mcklabs/mds-checkbox`
 
 export const buttons = () => (
-  <div style={{ width: '360px', margin: '20px' }}>
+  <form style={{ width: '360px', margin: '20px' }}>
     <mds-checkbox checked={"true"} label="Some Label" />
-  </div>
+  </form>
 )
 ```
 

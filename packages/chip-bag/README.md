@@ -1,37 +1,75 @@
 # mds-chip-bag
 
 # mckesson-design-system chip-bag
-A styled chip container that functions similar to a Chip Array
+A styled chip-bag by the mckesson design team.
 
 ## Installation
 
 ### npm
 ```bash
-npm i @mcklabs/mds-chip-bag --save
+npm i `@mcklabs/mds-chip-bag` --save
 ```
 
 ### yarn
 ```bash
-yarn add @mcklabs/mds-chip-bag
+yarn add `@mcklabs/mds-chip-bag`
 ```
+
+### HTML Usage
+```html
+<mds-chip-bag label="Some Label" />
+<mds-chip-bag value="some initial value" label="I have an initial Value" />
+<mds-chip-bag type="password" label="Type Some Secure Text" />
+```
+
+### React Component
+```jsx
+import `@mcklabs/mds-chip-bag`
+
+export const Text = () => (
+<div style={{ width: '360px', margin: '20px' }}>
+   <mds-chip-bag label="Some Label" />
+</div>
+)
+export const InitialValue = () => (
+<div style={{ width: '360px', margin: '20px' }}>
+   <mds-chip-bag value="some initial value" label="I have an initial Value" />
+</div>
+)
+export const Secure = () => (
+<div style={{ width: '360px', margin: '20px' }}>
+   <mds-chip-bag type="password" label="Type Some Secure Text" />
+</div>
+)
+
+```
+
+### Rendered in the browser
+
+![](samples/input.png)
+<br/>
 
 ## Attributes
 
-| Attribute |
-|-----------|
-| `invalid` |
+| Attribute          | Type     | Description                                   |
+|--------------------|----------|-----------------------------------------------|
+| `allow-duplicates` | `String` | allows the addition of duplicate chip values  |
+| `chip-tag`         | `String` | changes the chip tag from mds-chip            |
+| `chips-length`     | `String` | tbhe number of chips in the bag               |
+| `invalid`          | `String` | wether the input is valid or not              |
+| `value`            | `String` | the current set of chips, semicolon delimited |
 
 ## Properties
 
-| Property       | Modifiers | Type              | Default |
-|----------------|-----------|-------------------|---------|
-| `allowDups`    | readonly  | `boolean`         |         |
-| `chipCloseTag` | readonly  | `string`          |         |
-| `chipStartTag` | readonly  | `string`          |         |
-| `chipTag`      | readonly  | `string`          |         |
-| `chips`        |           | `never[]`         | []      |
-| `delimiter`    | readonly  | `RegExp`          |         |
-| `inputElement` | readonly  | `Element \| null` |         |
+| Property       | Attribute   | Modifiers | Type              | Default | Description                                |
+|----------------|-------------|-----------|-------------------|---------|--------------------------------------------|
+| `allowDups`    |             | readonly  | `boolean`         |         |                                            |
+| `chipCloseTag` |             | readonly  | `string`          |         |                                            |
+| `chipStartTag` |             | readonly  | `string`          |         |                                            |
+| `chipTag`      |             | readonly  | `string`          |         |                                            |
+| `chips`        |             |           | `never[]`         | []      |                                            |
+| `delimiter`    | `delimiter` |           | `String`          |         | the regex expression to split the input on |
+| `inputElement` |             | readonly  | `Element \| null` |         |                                            |
 
 ## Methods
 
@@ -49,7 +87,14 @@ yarn add @mcklabs/mds-chip-bag
 
 ## Events
 
-| Event         |
-|---------------|
-| `chipclick`   |
-| `chipsupdate` |
+| Event         | Description                                      |
+|---------------|--------------------------------------------------|
+| `chipclick`   | when a chip is clicked                           |
+| `chipsupdate` | when the bag is modified by removing or adding a chip |
+
+## CSS Custom Properties
+
+| Property                       | Type   | Description                              |
+|--------------------------------|--------|------------------------------------------|
+| `--mdsChipBagUnderline`        | String | Overrides the input underline indictator |
+| `--mdsChipBagUnderlineInvalid` | String | Overrides the label transform property   |

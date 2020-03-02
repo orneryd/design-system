@@ -20,11 +20,11 @@ yarn add `@mcklabs/mds-radio`
 
 ### HTML Usage
 ```html
-<div style={{ width: '360px', margin: '20px' }}>
+<form style={{ width: '360px', margin: '20px' }}>
   <mds-radio type="radio" name="fruit" checked value="Strawberry" />
   <mds-radio type="radio" name="fruit" value="Orange" />
   <mds-radio type="radio" name="fruit" value="Lemon" />
-</div>
+</form>
 ```
 
 ### React Component
@@ -32,11 +32,11 @@ yarn add `@mcklabs/mds-radio`
 import `@mcklabs/mds-checkbox`
 
 export const buttons = () => (
-  <div style={{ width: '360px', margin: '20px' }}>
+  <form style={{ width: '360px', margin: '20px' }}>
     <mds-radio type="radio" name="fruit" checked value="Strawberry" />
     <mds-radio type="radio" name="fruit" value="Orange" />
     <mds-radio type="radio" name="fruit" value="Lemon" />
-  </div>
+  </form>
 )
 ```
 
@@ -49,7 +49,7 @@ export const buttons = () => (
  * @module MdsRadio
  * @extends {HTMLElement}
  * @element mds-radio
- * @description A components that gives you a styled radio button that is spec compliant and can be used within normal `form` elements.
+ * @description A component that gives you a styled radio button that is spec compliant and can be used within normal `form` elements.
  * 
  * @attr {String} checked - the checked status
  * @attr {String} label - the checkbox label text

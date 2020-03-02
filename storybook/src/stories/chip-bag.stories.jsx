@@ -8,7 +8,7 @@ import '../../../packages/chip-bag/dist/mds-chip-bag'
 import '../../../packages/button/dist/mds-button'
 
 export default {
-  title: 'Web Components/Chip Bag',
+  title: 'Web Components/Chip',
   decorators: [withKnobs]
 }
 

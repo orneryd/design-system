@@ -3,7 +3,7 @@ import React from 'react'
 import '../../../packages/text-input/dist/mds-text-input'
 
 export default {
-  title: 'Web Components/Input'
+  title: 'Web Components/Inputs'
 }
 
 export const Text = () => (
