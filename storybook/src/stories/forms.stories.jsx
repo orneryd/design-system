@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
-import '../../../packages/text-input'
-import '../../../packages/checkbox'
+import '../../../packages/text-input/dist/mds-text-input'
+import '../../../packages/checkbox/dist/mds-checkbox'
 import './input.stories.css'
 
 export default {

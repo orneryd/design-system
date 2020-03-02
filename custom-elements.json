@@ -1,0 +1,238 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "mds-accordion",
+      "path": "./packages/accordion/src/mds-accordion.js",
+      "description": "# mckesson-design-system accordion\nA styled accordion or expandable panel that allows for a header and content. the component will dynamically expand to the size of the contents.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-accordion` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-accordion`\n```\n\n### Rendered\n![](samples/accordion.png)\n\n### Usage\n\n```html\n<mds-accordion elevation=\"6\" state=\"open\">\n<div slot=\"accordion-header\">Default open</div>\n<div slot=\"accordion-content\">\n   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n   labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n   laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n</div>\n</mwc-accordion>\n```\n\n### React Component\n\n```jsx\nimport `@mcklabs/mds-accordion`\n\nexport const accordion = () => (\n<mds-accordion\n   elevation={6}\n>\n   <div slot=\"accordion-header\">Default collapse</div>\n   <div slot=\"accordion-content\">\n     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n   </div>\n</mds-accordion>\n)\n```\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n\n```css\n:root {\n--mdsAccordionIconColor: purple;\n--mdsAccordionIconColorHover: orange;\n}\n```\n\n### Rendered in the browser\n![](samples/accordion-custom.gif)",
+      "attributes": [
+        {
+          "name": "elevation",
+          "description": "Sets the elevation for the accordion's internal MdsPaper",
+          "type": "String",
+          "default": "\"3\""
+        },
+        {
+          "name": "state",
+          "description": "Sets the initial state and can be toggled to open or close it",
+          "type": "String",
+          "default": "\"collapse\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "elevation",
+          "attribute": "elevation",
+          "description": "Sets the elevation for the accordion's internal MdsPaper",
+          "type": "String",
+          "default": "\"3\""
+        }
+      ],
+      "events": [
+        {
+          "name": "accordion-state",
+          "description": "the current state of the accordion"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsAccordionIconColor",
+          "description": "Overrides the icon color for the accordion indicator button."
+        },
+        {
+          "name": "--mdsAccordionIconColorHover",
+          "description": "Overrides the icon color on :hover for the accordion indicator button."
+        }
+      ]
+    },
+    {
+      "name": "mds-banner",
+      "path": "./packages/banner/src/mds-banner.js",
+      "description": "# mckesson-design-system banner\nA styled banner header and content\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-banner` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-banner`\n```\n\n### Rendered in the browser\n![](samples/banner.png)\n<br/>\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n```css\n:root {\n--mdsBannerMaxWidth: 1024px;\n--mdsBannerColor: purple;\n--mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);\n}\n```\n\n### Rendered in the browser\n![](samples/banner-custom.png)\n<br/>\n\n```css\n:root {\n--mdsBannerBackgroundColor: orange;\n--mdsBannerHeaderColor: darkgreen;\n--mdsBannerHeaderMaxWidth: 320px;\n--mdsBannerContentColor: white;\n--mdsBannerContentMaxWidth: 320px;\n}\n```\n\n### Rendered in the browser\n![](samples/banner-custom-2.png)\n<br/>",
+      "slots": [
+        {
+          "name": "header",
+          "description": "The header slot inside an h1 element"
+        },
+        {
+          "name": "content",
+          "description": "The content slot inside an h4 element"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsBannerColor",
+          "description": "Overrides the text color for the banner."
+        },
+        {
+          "name": "--mdsBannerBackgroundColor",
+          "description": "Overrides the background color for the header."
+        },
+        {
+          "name": "--mdsBannerMaxWidth",
+          "description": "Overrides the maxwidth for the header and content."
+        },
+        {
+          "name": "--mdsBannerHeaderColor",
+          "description": "Overrides the text color for the header."
+        },
+        {
+          "name": "--mdsBannerHeaderMaxWidth",
+          "description": "Overrides the max-width for the header."
+        },
+        {
+          "name": "--mdsBannerContentColor",
+          "description": "Overrides the text color for the content."
+        },
+        {
+          "name": "--mdsBannerContentMaxWidth",
+          "description": "Overrides the max-width for the header."
+        }
+      ]
+    },
+    {
+      "name": "mds-button",
+      "path": "./packages/button/src/mds-button.js",
+      "attributes": [
+        {
+          "name": "variant",
+          "type": "string"
+        },
+        {
+          "name": "disabled",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tag",
+          "type": "\"a\" | \"button\""
+        },
+        {
+          "name": "startTag",
+          "type": "string"
+        },
+        {
+          "name": "closeTag",
+          "type": "string"
+        },
+        {
+          "name": "isDisabled",
+          "type": "boolean"
+        },
+        {
+          "name": "buttonElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "href",
+          "type": "string"
+        },
+        {
+          "name": "variant",
+          "attribute": "variant",
+          "type": "string"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "-",
+          "description": "mdsBannerColor Overrides the text color for the banner.",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mds-chip",
+      "path": "./packages/chip/src/mds-chip.js"
+    },
+    {
+      "name": "mds-chip-bag",
+      "path": "./packages/chip-bag/src/mds-chip-bag.js",
+      "attributes": [
+        {
+          "name": "invalid"
+        }
+      ],
+      "properties": [
+        {
+          "name": "inputElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "delimiter",
+          "type": "RegExp"
+        },
+        {
+          "name": "allowDups",
+          "type": "boolean"
+        },
+        {
+          "name": "chipCloseTag",
+          "type": "string"
+        },
+        {
+          "name": "chipStartTag",
+          "type": "string"
+        },
+        {
+          "name": "chipTag",
+          "type": "string"
+        },
+        {
+          "name": "chips",
+          "type": "never[]",
+          "default": "[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "chipclick"
+        },
+        {
+          "name": "chipsupdate"
+        }
+      ]
+    },
+    {
+      "name": "mds-paper",
+      "path": "./packages/paper/src/mds-paper.js",
+      "description": "# mckesson-design-system paper\nA styled paper that you can set the elevation property for more drastic effects.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-paper` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-paper`\n```\n\n### HTML Usage\n```html\n<mds-paper elevation=\"6\">\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\nvoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\ncupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n</mwc-paper>```\n\n### React Component\n\n```js\nimport `@mcklabs/mds-banner`\n\nexport const paper = () => (\n<mds-paper\n   elevation={6}\n>\n     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n   </div>\n</mds-paper>\n)```\n### Rendered in the browser\n\n![](samples/paper.png)\n<br/>\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n\n```css\n:root {\n--mdsPaperColor: orange;\n--mdsPaperBackgroundColor: purple;\n--mdsPaperBoxShadowHOffsetColor: rgba(255, 0, 255, 0.2);\n--mdsPaperBoxShadowVOffsetColor: rgba(255, 0, 255, 0.14);\n--mdsPaperBoxShadowBlurColor: rgba(255, 0, 255, 0.12);\n}```\n\n### Rendered in the browser\n\n![](samples/paper-custom.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "elevation",
+          "description": "Sets the elevation for the accordion's internal MdsPaper element",
+          "type": "String",
+          "default": "\"3\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "elevation",
+          "attribute": "elevation",
+          "description": "Sets the elevation for the accordion's internal MdsPaper element",
+          "type": "String",
+          "default": "\"3\""
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsPaperBackgroundColor",
+          "description": "Overrides the icon color for the accordion indicator button."
+        },
+        {
+          "name": "--mdsPaperBoxShadowHOffsetColor",
+          "description": "Overrides the icon color for the accordion indicator button."
+        },
+        {
+          "name": "--mdsPaperBoxShadowVOffsetColor",
+          "description": "Overrides the icon color for the accordion indicator button."
+        },
+        {
+          "name": "--mdsPaperBoxShadowBlurColor",
+          "description": "Overrides the icon color for the accordion indicator button."
+        }
+      ]
+    }
+  ]
+}

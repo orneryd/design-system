@@ -3,15 +3,32 @@ import renderButton from './mds-button.html'
 /**
  * @module MdsButton
  * @extends {HTMLElement}
+ * @element mds-button
  * @description A components that give you a `button` or `anchor` tag depending on the usage.
- * @param {String} href give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag
- * @param {String} disabled
-
- * @property {enum} CSSVariables below are the variables that can be overridden by css
- * @property {String} --mdsBannerColor Overrides the text color for the banner.
-
+ * @attr {String} href give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag
+ * @attr {String} disabled
+ * @cssproperty {String} --mdsBannerColor Overrides the text color for the banner.
  *
- * @example @lang html <caption>HTML Usage</caption>
+ * 
+ * @example
+ * # mckesson-design-system button
+A styled button
+
+## Installation
+
+### npm
+```bash
+npm i `@mcklabs/mds-button` --save
+```
+
+### yarn
+```bash
+yarn add `@mcklabs/mds-button`
+```
+ * 
+ * @example
+ * ### HTML Usage
+ * ```html
  * <mds-button variant="primary">Primary</mds-button>
  * <mds-button variant="primary rounded">Primary Rounded</mds-button>
  * <mds-button variant="primary" disabled>Primary Disabled</mds-button>
@@ -21,9 +38,12 @@ import renderButton from './mds-button.html'
  * <mds-button variant="outlined">Outlined</mds-button>
  * <mds-button variant="outlined rounded">Outlined Rounded</mds-button>
  * <mds-button variant="outlined" disabled>Outlined Disabled</mds-button>
+ * ```
  *
- * @example @lang jsx <caption>React Component</caption>
- * import '@mcklabs/mds-button'
+ * @example 
+ * ### React Component
+ * ```jsx
+ * import `@mcklabs/mds-button`
  * 
  * export const buttons = () => (
  *   <div>
@@ -38,30 +58,29 @@ import renderButton from './mds-button.html'
  *     <mds-button variant="outlined" disabled>Outlined Disabled</mds-button>
  *   </div>
  * )
+ * ```
  * 
- * @example @lang html <caption>HTML Usage</caption>
+ * @example 
+ * ### HTML Usage
+ * ```html
  * <mds-button variant="primary" href="http://kittenwar.com">Rate Kittens</mds-button>
- * 
- * @example @lang off
+ * ```
+ * @example
  * ### Rendered in the browser
  *
  * ![](samples/buttons.png)
- * <br/>
  * 
- * 
- * @example @lang off
+ * @example
  * ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
  * 
- * 
- * @example @lang css
+ * ```css
  * :root {
  *   --mdsBannerMaxWidth: 1024px;
  *   --mdsBannerColor: purple;
  *   --mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);
  * }
- *
+ * ```
  * 
- * @example @lang off 
  * ### Rendered in the browser
  *
  * ![](samples/button-custom.png)

@@ -1,17 +1,31 @@
-import { configure, addParameters } from '@storybook/react';
-import requireContext from 'require-context.macro';
-import '../src/index.css';
-import '../src/components/Typography/Typography.css';
+import { configure as configureReact, addParameters as addParametersReact } from '@storybook/react'
+import { configure, setCustomElements, addParameters } from '@storybook/web-components'
+import requireContext from 'require-context.macro'
+import customElements from '../../custom-elements.json'
+import '../src/index.css'
+// import '../src/components/Typography/Typography.css'
 
 addParameters({
   options: {
-    enableShortcuts: false
+    showRoots: true,
   },
-})
-const req = requireContext('../src', true, /\.stories\.js$/);
+  docs: {
+    inlineStories: false
+  }
+});
+  addParametersReact({
+    options: {
+      enableShortcuts: false
+    },
+  })
 
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
+setCustomElements(customElements)
 
-configure(loadStories, module);
+
+const req = requireContext('../src', true, /\.stories\.jsx$/)
+
+// function loadStories() {
+//   req.keys().forEach(filename => req(filename))
+// }
+
+configureReact(req, module)

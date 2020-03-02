@@ -1,39 +1,22 @@
+# mds-button
+
+## Examples
+
 # mckesson-design-system button
 A styled button
-
 ## Installation
-
 ### npm
 ```bash
-npm i @mcklabs/mds-button --save
+npm i `@mcklabs/mds-button` --save
 ```
-
 ### yarn
+
 ```bash
-yarn add @mcklabs/mds-button
+yarn add `@mcklabs/mds-button`
 ```
 
-# API
-<a name="module_MdsButton"></a>
+### HTML Usage
 
-## MdsButton ⇐ <code>HTMLElement</code>
-A components that give you a `button` or `anchor` tag depending on the usage.
-
-**Extends**: <code>HTMLElement</code>  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| href | <code>String</code> | give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag |
-| disabled | <code>String</code> |  |
-
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| CSSVariables | <code>enum</code> | below are the variables that can be overridden by css |
-| --mdsBannerColor | <code>String</code> | Overrides the text color for the banner. |
-
-**Example** *(HTML Usage)*  
 ```html
 <mds-button variant="primary">Primary</mds-button>
 <mds-button variant="primary rounded">Primary Rounded</mds-button>
@@ -45,9 +28,11 @@ A components that give you a `button` or `anchor` tag depending on the usage.
 <mds-button variant="outlined rounded">Outlined Rounded</mds-button>
 <mds-button variant="outlined" disabled>Outlined Disabled</mds-button>
 ```
-**Example** *(React Component)*  
+
+### React Component
+
 ```jsx
-import '@mcklabs/mds-button'
+import `@mcklabs/mds-button`
 
 export const buttons = () => (
   <div>
@@ -63,18 +48,21 @@ export const buttons = () => (
   </div>
 )
 ```
-**Example** *(HTML Usage)*  
+
+### HTML Usage
+
 ```html
 <mds-button variant="primary" href="http://kittenwar.com">Rate Kittens</mds-button>
 ```
-**Example**  
+
+```javascript
 ### Rendered in the browser
 
 ![](samples/buttons.png)
-<br/>
-**Example**  
+```
+
 ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
-**Example**  
+
 ```css
 :root {
   --mdsBannerMaxWidth: 1024px;
@@ -82,8 +70,33 @@ export const buttons = () => (
   --mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);
 }
 ```
-**Example**  
-### Rendered in the browser
 
-![](samples/button-custom.png)
-<br/>
+## Attributes
+
+| Attribute  | Type     |
+|------------|----------|
+| `disabled` | `String` |
+
+## Properties
+
+| Property        | Attribute | Modifiers | Type              |
+|-----------------|-----------|-----------|-------------------|
+| `buttonElement` |           | readonly  | `Element \| null` |
+| `closeTag`      |           | readonly  | `string`          |
+| `href`          |           | readonly  | `string`          |
+| `isDisabled`    |           | readonly  | `boolean`         |
+| `startTag`      |           | readonly  | `string`          |
+| `tag`           |           | readonly  | `"a" \| "button"` |
+| `variant`       | `variant` |           | `string`          |
+
+## Methods
+
+| Method    | Type                               |
+|-----------|------------------------------------|
+| `onClick` | `(event: any): false \| undefined` |
+
+## CSS Custom Properties
+
+| Property | Type   | Description                                      |
+|----------|--------|--------------------------------------------------|
+| `-`      | String | mdsBannerColor Overrides the text color for the banner. |

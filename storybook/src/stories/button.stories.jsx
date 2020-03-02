@@ -1,7 +1,7 @@
 import React from 'react'
 import { withKnobs, select, boolean } from '@storybook/addon-knobs'
-import '../../../packages/button'
-import '../../../packages/paper'
+import '../../../packages/button/dist/mds-button'
+import '../../../packages/paper/dist/mds-paper'
 
 export default {
   title: 'Web Components/Button',
