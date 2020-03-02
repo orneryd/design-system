@@ -24,7 +24,8 @@ yarn add `@mcklabs/mds-paper`
   laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
   cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</mwc-paper>```
+</mwc-paper>
+```
 
 ### React Component
 
@@ -42,7 +43,9 @@ export const paper = () => (
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
   </mds-paper>
-)```
+)
+```
+
 ### Rendered in the browser
 
 ![](samples/paper.png)
@@ -57,7 +60,8 @@ export const paper = () => (
   --mdsPaperBoxShadowHOffsetColor: rgba(255, 0, 255, 0.2);
   --mdsPaperBoxShadowVOffsetColor: rgba(255, 0, 255, 0.14);
   --mdsPaperBoxShadowBlurColor: rgba(255, 0, 255, 0.12);
-}```
+}
+```
 
 ### Rendered in the browser
 
