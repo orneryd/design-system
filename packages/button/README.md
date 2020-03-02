@@ -70,7 +70,7 @@ export const buttons = () => (
 
 | Attribute  | Type     | Description                                      |
 |------------|----------|--------------------------------------------------|
-| `disabled` | `String` | sets the enables or disabled state               |
+| `disabled` | `String` | sets the enabled or disabled state               |
 | `href`     | `String` | give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag |
 | `variant`  | `String` | variant of the button                            |
 

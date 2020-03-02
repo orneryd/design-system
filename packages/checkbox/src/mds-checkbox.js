@@ -1,6 +1,59 @@
 import textInputTemplate from './mds-checkbox.html'
 import InputBase from '../../base/src/input'
 
+/**
+# mckesson-design-system checkbox
+A styled checkbox by the mckesson design team.
+
+## Installation
+
+### npm
+```bash
+npm i `@mcklabs/mds-checkbox` --save
+```
+
+### yarn
+```bash
+yarn add `@mcklabs/mds-checkbox`
+```
+
+### HTML Usage
+```html
+<div style={{ width: '360px', margin: '20px' }}>
+  <mds-checkbox checked label="Some Label" />
+</div>
+```
+
+### React Component
+```jsx
+import `@mcklabs/mds-checkbox`
+
+export const buttons = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-checkbox checked={"true"} label="Some Label" />
+  </div>
+)
+```
+
+### Rendered in the browser
+
+![](samples/checkbox.png)
+<br/>
+ *
+ *
+ * @module MdsCheckbox
+ * @extends {HTMLElement}
+ * @element mds-checkbox
+ * @description A components that gives you a styled checkbox that is spec compliant and can be used within normal `form` elements.
+ * 
+ * @attr {String} checked - the checked status
+ * @attr {String} label - the checkbox label text
+ * @attr {String} disabled - sets the enabled or disabled state
+ * 
+ * @cssproperty {String} --mdsCheckboxBorder - Overrides the border color
+ * @cssproperty {String} --mdsCheckboxColorChecked - Overrides the color of the checkbox
+ *
+ */
 export default class MdsCheckbox extends HTMLElement {
   constructor() {
     super()

@@ -1,6 +1,65 @@
 import radioTemplate from './mds-radio.html'
 import InputBase from '../../base/src/input'
 
+
+/**
+# mckesson-design-system checkbox
+A styled checkbox by the mckesson design team.
+
+## Installation
+
+### npm
+```bash
+npm i `@mcklabs/mds-radio` --save
+```
+
+### yarn
+```bash
+yarn add `@mcklabs/mds-radio`
+```
+
+### HTML Usage
+```html
+<div style={{ width: '360px', margin: '20px' }}>
+  <mds-radio type="radio" name="fruit" checked value="Strawberry" />
+  <mds-radio type="radio" name="fruit" value="Orange" />
+  <mds-radio type="radio" name="fruit" value="Lemon" />
+</div>
+```
+
+### React Component
+```jsx
+import `@mcklabs/mds-checkbox`
+
+export const buttons = () => (
+  <div style={{ width: '360px', margin: '20px' }}>
+    <mds-radio type="radio" name="fruit" checked value="Strawberry" />
+    <mds-radio type="radio" name="fruit" value="Orange" />
+    <mds-radio type="radio" name="fruit" value="Lemon" />
+  </div>
+)
+```
+
+### Rendered in the browser
+
+![](samples/radio.png)
+<br/>
+ *
+ *
+ * @module MdsRadio
+ * @extends {HTMLElement}
+ * @element mds-radio
+ * @description A components that gives you a styled radio button that is spec compliant and can be used within normal `form` elements.
+ * 
+ * @attr {String} checked - the checked status
+ * @attr {String} label - the checkbox label text
+ * @attr {String} name - the checkbox label text
+ * @attr {String} value - the checkbox value
+ * @attr {String} disabled - sets the enabled or disabled state
+ * 
+ * @cssproperty {String} --mdsRadioBorder - Overrides the border color
+ * @cssproperty {String} --mdsRadioColorChecked - Overrides the color of the checked indicator
+ */
 export default class MdsRadio extends HTMLElement {
   constructor() {
     super()

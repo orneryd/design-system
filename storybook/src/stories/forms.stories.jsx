@@ -17,14 +17,15 @@ export const EmailDomainValidation = () => {
   function validateForm(event) {
     event.preventDefault()
     messages.length = 0
+    const elements = [...event.target.elements]
     if (event.target.checkValidity()) {
-      event.target.elements.forEach(e => {
+      elements.forEach(e => {
         const message = `form value: ${e.id || e.name} = ${e.value}`
         messages.push(message)
         e.value = ''
       })
     } else {
-      event.target.elements.forEach(e => {
+      elements.forEach(e => {
         console.log(`form value: ${e.id || e.name} = ${e.value}; ${e.validationMessage}`)
         if (e.validationMessage) {
           messages.push(e.validationMessage)
@@ -63,9 +64,10 @@ export const InputsWithCheckboxes = () => {
   function validateForm(event) {
     event.preventDefault()
     friendlyMessages.length = 0
+    const elements = [...event.target.elements]
     if (event.target.checkValidity()) {
       console.log(event.target.elements)
-      event.target.elements.forEach(e => {
+      elements.map(e => {
         const message = `form value: ${e.id} = checked:${e.checked} value:${e.value}`
         friendlyMessages.push(message)
         e.value = ''
@@ -73,7 +75,7 @@ export const InputsWithCheckboxes = () => {
 
       setValid(true)
     } else {
-      event.target.elements.forEach(e => {
+      elements.map(e => {
         friendlyMessages.push(`form value: ${e.id} = ${e.value} | ${e.validationMessage || ''}`)
       })
 

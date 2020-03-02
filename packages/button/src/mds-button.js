@@ -71,10 +71,10 @@ export const buttons = () => (
  * @module MdsButton
  * @extends {HTMLElement}
  * @element mds-button
- * @description A components that give you a `button` or `anchor` tag depending on the usage.
+ * @description A component that gives you a `button` or `anchor` tag depending on the usage.
  * 
  * @attr {String} href - give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag
- * @attr {String} disabled - sets the enables or disabled state
+ * @attr {String} disabled - sets the enabled or disabled state
  * @attr {String} variant - variant of the button
  * 
  * @cssproperty {String} --mdsButtonPrimaryColor - Overrides the primary color

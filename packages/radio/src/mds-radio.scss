@@ -24,9 +24,9 @@
       left: 3px;
       border-radius: 50%;
       &.checked {
-        background-color: var(--mdsRadioCheckedColor, $mdsPurple);
+        background-color: var(--mdsRadioColorChecked, $mdsPurple);
         &:hover {
-          background-color: var(--mdsRadioCheckedColor, $mdsPurpleDark);
+          background-color: var(--mdsRadioColorChecked, $mdsPurpleDark);
         }
       }
     }

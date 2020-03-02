@@ -107,7 +107,7 @@
         },
         {
           "name": "disabled",
-          "description": "sets the enables or disabled state",
+          "description": "sets the enabled or disabled state",
           "type": "String"
         }
       ],
@@ -190,6 +190,64 @@
         {
           "name": "--mdsButtonOulinedColorHover",
           "description": "Overrides the outlined color on hover",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mds-checkbox",
+      "path": "./packages/checkbox/src/mds-checkbox.js",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-checkbox` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-checkbox`\n```\n\n### HTML Usage\n```html\n<div style={{ width: '360px', margin: '20px' }}>\n<mds-checkbox checked label=\"Some Label\" />\n</div>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-checkbox`\n\nexport const buttons = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-checkbox checked={\"true\"} label=\"Some Label\" />\n</div>\n)\n```\n\n### Rendered in the browser\n\n![](samples/checkbox.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "the checked status",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "disabled",
+          "description": "sets the enabled or disabled state",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "type": "\"\" | \"checked\""
+        },
+        {
+          "name": "indicatorElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "validationMessage",
+          "type": "string"
+        },
+        {
+          "name": "inputWrapper",
+          "type": "Element | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "the checked status",
+          "type": "String"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsCheckboxBorder",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsCheckboxColorChecked",
+          "description": "Overrides the color of the checkbox",
           "type": "String"
         }
       ]
@@ -283,6 +341,72 @@
         {
           "name": "--mdsPaperBoxShadowBlurColor",
           "description": "Overrides the icon color for the accordion indicator button."
+        }
+      ]
+    },
+    {
+      "name": "mds-radio",
+      "path": "./packages/radio/src/mds-radio.js",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<div style={{ width: '360px', margin: '20px' }}>\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</div>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-checkbox`\n\nexport const buttons = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</div>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "the checkbox value",
+          "type": "String"
+        },
+        {
+          "name": "checked",
+          "description": "the checked status",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "disabled",
+          "description": "sets the enabled or disabled state",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "the checkbox value",
+          "type": "String"
+        },
+        {
+          "name": "validationMessage",
+          "type": "string"
+        },
+        {
+          "name": "indicatorElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "the checked status",
+          "type": "String"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsRadioBorder",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsRadioColorChecked",
+          "description": "Overrides the color of the checked indicator",
+          "type": "String"
         }
       ]
     }
