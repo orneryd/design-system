@@ -3,6 +3,23 @@ import chipBagTemplate from './mds-chip-bag.html'
 export const ENTER_KEY_CODE = 13
 export const BACKSPACE_KEY_CODE = 8
 
+/**
+# mckesson-design-system chip-bag
+A styled chip container that functions similar to a Chip Array
+
+## Installation
+
+### npm
+```bash
+npm i @mcklabs/mds-chip-bag --save
+```
+
+### yarn
+```bash
+yarn add @mcklabs/mds-chip-bag
+```
+
+ */
 export default class MdsChipBag extends HTMLElement {
   constructor() {
     super()

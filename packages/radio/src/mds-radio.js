@@ -59,6 +59,7 @@ export const buttons = () => (
  * 
  * @cssproperty {String} --mdsRadioBorder - Overrides the border color
  * @cssproperty {String} --mdsRadioColorChecked - Overrides the color of the checked indicator
+ * 
  */
 export default class MdsRadio extends HTMLElement {
   constructor() {
@@ -109,19 +110,6 @@ export default class MdsRadio extends HTMLElement {
     this.clone.setAttribute('name', this.getAttribute('name'))
     this.clone.setAttribute('value', this.value)
   }
-
-  // set checked(newVal) {
-  //   // if (newVal) {
-  //   //   this.setAttribute('checked', '')
-  //   //   this.clone.setAttribute('checked', '')
-  //   // } else {
-  //   //   this.removeAttribute('checked')
-  //   //   this.clone.removeAttribute('checked')
-  //   // }
-  //   // this.clone.setAttribute('id', this.getAttribute('id') || this.getAttribute('name'))
-  //   // this.clone.setAttribute('name', this.getAttribute('name'))
-  //   // this.clone.setAttribute('value', this.value)
-  // }
 
   get validationMessage() {
     const message = this.getAttribute('validation-message') || `${this.label} is required.`

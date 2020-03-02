@@ -254,11 +254,58 @@
     },
     {
       "name": "mds-chip",
-      "path": "./packages/chip/src/mds-chip.js"
+      "path": "./packages/chip/src/mds-chip.js",
+      "description": "# mckesson-design-system chip\nA styled chip that functions similar a tag or chip in bootstrap or material ui.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-chip` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-chip`\n```",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "the value for the chip",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the label for the chip",
+          "type": "String"
+        }
+      ],
+      "events": [
+        {
+          "name": "closechip",
+          "description": "emitted when the X is clicked."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsChipColor",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipBackgroundColor",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColor",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColorHover",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColorActive",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        }
+      ]
     },
     {
       "name": "mds-chip-bag",
       "path": "./packages/chip-bag/src/mds-chip-bag.js",
+      "description": "# mckesson-design-system chip-bag\nA styled chip container that functions similar to a Chip Array\n\n## Installation\n\n### npm\n```bash\nnpm i @mcklabs/mds-chip-bag --save\n```\n\n### yarn\n```bash\nyarn add @mcklabs/mds-chip-bag\n```",
       "attributes": [
         {
           "name": "invalid"

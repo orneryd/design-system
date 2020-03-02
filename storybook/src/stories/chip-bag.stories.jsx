@@ -37,7 +37,7 @@ class DefaultChipBag extends React.Component {
   }
   render() {
     return (
-      <mds-paper style={{ margin: '10px' }}>
+      <mds-paper elevation={0} style={{ margin: '10px' }}>
         <mds-chip-bag
           ref={this.elementRef}
           value="sample;chips"
@@ -79,7 +79,7 @@ class CustomBag extends React.Component {
 
   render() {
     return (
-      <mds-paper style={{ margin: '10px' }}>
+      <mds-paper elevation={0} style={{ margin: '10px' }}>
         <mds-chip-bag
           ref={this.elementRef}
           value="sample@email.com;othersample@email.com"
