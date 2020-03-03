@@ -437,7 +437,7 @@
     {
       "name": "mds-radio",
       "path": "./packages/radio/src/mds-radio.js",
-      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style={{ width: '360px', margin: '20px' }}>\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-radio`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style=\"width: 360px; margin: 20px;\">\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-radio`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
       "attributes": [
         {
           "name": "value",
@@ -503,7 +503,7 @@
     {
       "name": "",
       "path": "./packages/react/src/index.js",
-      "description": "# mckesson-design-system react-support\nA wrapper to handle custom events within any custom elements you want to use within react.\nIt will also destory the events on unmount for you.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-react` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-react`\n```\n\n### React Component\n```jsx\nimport WebComponentWrapper from `@mcklabs/mds-react`\n\nexport const buttons = () => (\n<WebComponentWrapper tag=\"my-element\" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />\n)\n```",
+      "description": "# mckesson-design-system react-support\nA wrapper to handle custom events within any custom elements you want to use within react.\nIt will also destory the events on unmount for you.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-react` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-react`\n```\n\n### React Component\n```jsx\nimport WebComponentWrapper from `@mcklabs/mds-react`\n\nexport const wrapped = () => (\n<WebComponentWrapper tag=\"my-element\" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />\n)\n```",
       "attributes": [
         {
           "name": "tag",

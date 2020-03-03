@@ -17,7 +17,7 @@ yarn add `@mcklabs/mds-radio`
 
 ### HTML Usage
 ```html
-<form style={{ width: '360px', margin: '20px' }}>
+<form style="width: 360px; margin: 20px;">
 <mds-radio type="radio" name="fruit" checked value="Strawberry" />
 <mds-radio type="radio" name="fruit" value="Orange" />
 <mds-radio type="radio" name="fruit" value="Lemon" />

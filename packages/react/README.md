@@ -20,7 +20,7 @@ yarn add `@mcklabs/mds-react`
 ```jsx
 import WebComponentWrapper from `@mcklabs/mds-react`
 
-export const buttons = () => (
+export const wrapped = () => (
 <WebComponentWrapper tag="my-element" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />
 )
 ```
