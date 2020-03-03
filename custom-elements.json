@@ -46,6 +46,148 @@
       ]
     },
     {
+      "name": "mds-chip",
+      "path": "./packages/chip/src/mds-chip.js",
+      "description": "# mckesson-design-system chip\nA styled chip that functions similar a tag or chip in bootstrap or material ui.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-chip` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-chip`\n```",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "the value for the chip",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the label for the chip",
+          "type": "String"
+        }
+      ],
+      "events": [
+        {
+          "name": "closechip",
+          "description": "emitted when the X is clicked."
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsChipColor",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipBackgroundColor",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColor",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColorHover",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipIconColorActive",
+          "description": "Overrides the color of the checkbox",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mds-chip-bag",
+      "path": "./packages/chip-bag/src/mds-chip-bag.js",
+      "description": "# mckesson-design-system chip-bag\nA styled chip-bag by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-chip-bag` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-chip-bag`\n```\n\n### HTML Usage\n```html\n<mds-chip-bag label=\"Some Label\" />\n<mds-chip-bag value=\"some initial value\" label=\"I have an initial Value\" />\n<mds-chip-bag type=\"password\" label=\"Type Some Secure Text\" />\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-chip-bag`\n\nexport const Text = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag label=\"Some Label\" />\n</div>\n)\nexport const InitialValue = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag value=\"some initial value\" label=\"I have an initial Value\" />\n</div>\n)\nexport const Secure = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag type=\"password\" label=\"Type Some Secure Text\" />\n</div>\n)\n\n```\n\n### Rendered in the browser\n\n![](samples/input.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "delimiter",
+          "description": "the regex expression to split the input on",
+          "type": "String"
+        },
+        {
+          "name": "value",
+          "description": "the current set of chips, semicolon delimited",
+          "type": "String"
+        },
+        {
+          "name": "chips-length",
+          "description": "tbhe number of chips in the bag",
+          "type": "String"
+        },
+        {
+          "name": "allow-duplicates",
+          "description": "allows the addition of duplicate chip values",
+          "type": "String"
+        },
+        {
+          "name": "chip-tag",
+          "description": "changes the chip tag from mds-chip",
+          "type": "String"
+        },
+        {
+          "name": "invalid",
+          "description": "wether the input is valid or not",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "inputElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "delimiter",
+          "attribute": "delimiter",
+          "description": "the regex expression to split the input on",
+          "type": "String"
+        },
+        {
+          "name": "allowDups",
+          "type": "boolean"
+        },
+        {
+          "name": "chipCloseTag",
+          "type": "string"
+        },
+        {
+          "name": "chipStartTag",
+          "type": "string"
+        },
+        {
+          "name": "chipTag",
+          "type": "string"
+        },
+        {
+          "name": "chips",
+          "type": "never[]",
+          "default": "[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "chipclick",
+          "description": "when a chip is clicked"
+        },
+        {
+          "name": "chipsupdate",
+          "description": "when the bag is modified by removing or adding a chip"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsChipBagUnderline",
+          "description": "Overrides the input underline indictator",
+          "type": "String"
+        },
+        {
+          "name": "--mdsChipBagUnderlineInvalid",
+          "description": "Overrides the label transform property",
+          "type": "String"
+        }
+      ]
+    },
+    {
       "name": "mds-banner",
       "path": "./packages/banner/src/mds-banner.js",
       "description": "# mckesson-design-system banner\nA styled banner header and content\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-banner` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-banner`\n```\n\n### Rendered in the browser\n![](samples/banner.png)\n<br/>\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n```css\n:root {\n--mdsBannerMaxWidth: 1024px;\n--mdsBannerColor: purple;\n--mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);\n}\n```\n\n### Rendered in the browser\n![](samples/banner-custom.png)\n<br/>\n\n```css\n:root {\n--mdsBannerBackgroundColor: orange;\n--mdsBannerHeaderColor: darkgreen;\n--mdsBannerHeaderMaxWidth: 320px;\n--mdsBannerContentColor: white;\n--mdsBannerContentMaxWidth: 320px;\n}\n```\n\n### Rendered in the browser\n![](samples/banner-custom-2.png)\n<br/>",
@@ -253,148 +395,6 @@
       ]
     },
     {
-      "name": "mds-chip",
-      "path": "./packages/chip/src/mds-chip.js",
-      "description": "# mckesson-design-system chip\nA styled chip that functions similar a tag or chip in bootstrap or material ui.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-chip` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-chip`\n```",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "the value for the chip",
-          "type": "String"
-        },
-        {
-          "name": "label",
-          "description": "the label for the chip",
-          "type": "String"
-        }
-      ],
-      "events": [
-        {
-          "name": "closechip",
-          "description": "emitted when the X is clicked."
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--mdsChipColor",
-          "description": "Overrides the border color",
-          "type": "String"
-        },
-        {
-          "name": "--mdsChipBackgroundColor",
-          "description": "Overrides the color of the checkbox",
-          "type": "String"
-        },
-        {
-          "name": "--mdsChipIconColor",
-          "description": "Overrides the color of the checkbox",
-          "type": "String"
-        },
-        {
-          "name": "--mdsChipIconColorHover",
-          "description": "Overrides the color of the checkbox",
-          "type": "String"
-        },
-        {
-          "name": "--mdsChipIconColorActive",
-          "description": "Overrides the color of the checkbox",
-          "type": "String"
-        }
-      ]
-    },
-    {
-      "name": "mds-chip-bag",
-      "path": "./packages/chip-bag/src/mds-chip-bag.js",
-      "description": "# mckesson-design-system chip-bag\nA styled chip-bag by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-chip-bag` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-chip-bag`\n```\n\n### HTML Usage\n```html\n<mds-chip-bag label=\"Some Label\" />\n<mds-chip-bag value=\"some initial value\" label=\"I have an initial Value\" />\n<mds-chip-bag type=\"password\" label=\"Type Some Secure Text\" />\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-chip-bag`\n\nexport const Text = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag label=\"Some Label\" />\n</div>\n)\nexport const InitialValue = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag value=\"some initial value\" label=\"I have an initial Value\" />\n</div>\n)\nexport const Secure = () => (\n<div style={{ width: '360px', margin: '20px' }}>\n   <mds-chip-bag type=\"password\" label=\"Type Some Secure Text\" />\n</div>\n)\n\n```\n\n### Rendered in the browser\n\n![](samples/input.png)\n<br/>",
-      "attributes": [
-        {
-          "name": "delimiter",
-          "description": "the regex expression to split the input on",
-          "type": "String"
-        },
-        {
-          "name": "value",
-          "description": "the current set of chips, semicolon delimited",
-          "type": "String"
-        },
-        {
-          "name": "chips-length",
-          "description": "tbhe number of chips in the bag",
-          "type": "String"
-        },
-        {
-          "name": "allow-duplicates",
-          "description": "allows the addition of duplicate chip values",
-          "type": "String"
-        },
-        {
-          "name": "chip-tag",
-          "description": "changes the chip tag from mds-chip",
-          "type": "String"
-        },
-        {
-          "name": "invalid",
-          "description": "wether the input is valid or not",
-          "type": "String"
-        }
-      ],
-      "properties": [
-        {
-          "name": "inputElement",
-          "type": "Element | null"
-        },
-        {
-          "name": "delimiter",
-          "attribute": "delimiter",
-          "description": "the regex expression to split the input on",
-          "type": "String"
-        },
-        {
-          "name": "allowDups",
-          "type": "boolean"
-        },
-        {
-          "name": "chipCloseTag",
-          "type": "string"
-        },
-        {
-          "name": "chipStartTag",
-          "type": "string"
-        },
-        {
-          "name": "chipTag",
-          "type": "string"
-        },
-        {
-          "name": "chips",
-          "type": "never[]",
-          "default": "[]"
-        }
-      ],
-      "events": [
-        {
-          "name": "chipclick",
-          "description": "when a chip is clicked"
-        },
-        {
-          "name": "chipsupdate",
-          "description": "when the bag is modified by removing or adding a chip"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--mdsChipBagUnderline",
-          "description": "Overrides the input underline indictator",
-          "type": "String"
-        },
-        {
-          "name": "--mdsChipBagUnderlineInvalid",
-          "description": "Overrides the label transform property",
-          "type": "String"
-        }
-      ]
-    },
-    {
       "name": "mds-paper",
       "path": "./packages/paper/src/mds-paper.js",
       "description": "# mckesson-design-system paper\nA styled paper that you can set the elevation property for more drastic effects.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-paper` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-paper`\n```\n\n### HTML Usage\n```html\n<mds-paper elevation=\"6\">\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\nlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\nvoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\ncupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n</mwc-paper>\n```\n\n### React Component\n\n```js\nimport `@mcklabs/mds-banner`\n\nexport const paper = () => (\n<mds-paper\n   elevation={6}\n>\n     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n     laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n     voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n   </div>\n</mds-paper>\n)\n```\n\n### Rendered in the browser\n\n![](samples/paper.png)\n<br/>\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n\n```css\n:root {\n--mdsPaperColor: orange;\n--mdsPaperBackgroundColor: purple;\n--mdsPaperBoxShadowHOffsetColor: rgba(255, 0, 255, 0.2);\n--mdsPaperBoxShadowVOffsetColor: rgba(255, 0, 255, 0.14);\n--mdsPaperBoxShadowBlurColor: rgba(255, 0, 255, 0.12);\n}\n```\n\n### Rendered in the browser\n\n![](samples/paper-custom.png)\n<br/>",
@@ -435,74 +435,8 @@
       ]
     },
     {
-      "name": "mds-radio",
-      "path": "./packages/radio/src/mds-radio.js",
-      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style=\"width: 360px; margin: 20px;\">\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-radio`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
-      "attributes": [
-        {
-          "name": "value",
-          "description": "the checkbox value",
-          "type": "String"
-        },
-        {
-          "name": "checked",
-          "description": "the checked status",
-          "type": "String"
-        },
-        {
-          "name": "label",
-          "description": "the checkbox label text",
-          "type": "String"
-        },
-        {
-          "name": "name",
-          "description": "the checkbox label text",
-          "type": "String"
-        },
-        {
-          "name": "disabled",
-          "description": "sets the enabled or disabled state",
-          "type": "String"
-        }
-      ],
-      "properties": [
-        {
-          "name": "value",
-          "attribute": "value",
-          "description": "the checkbox value",
-          "type": "String"
-        },
-        {
-          "name": "validationMessage",
-          "type": "string"
-        },
-        {
-          "name": "indicatorElement",
-          "type": "Element | null"
-        },
-        {
-          "name": "checked",
-          "attribute": "checked",
-          "description": "the checked status",
-          "type": "String"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--mdsRadioBorder",
-          "description": "Overrides the border color",
-          "type": "String"
-        },
-        {
-          "name": "--mdsRadioColorChecked",
-          "description": "Overrides the color of the checked indicator",
-          "type": "String"
-        }
-      ]
-    },
-    {
       "name": "",
-      "path": "./packages/react/src/index.js",
+      "path": "./packages/react/src/mds-react.js",
       "description": "# mckesson-design-system react-support\nA wrapper to handle custom events within any custom elements you want to use within react.\nIt will also destory the events on unmount for you.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-react` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-react`\n```\n\n### React Component\n```jsx\nimport WebComponentWrapper from `@mcklabs/mds-react`\n\nexport const wrapped = () => (\n<WebComponentWrapper tag=\"my-element\" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />\n)\n```",
       "attributes": [
         {
@@ -600,6 +534,72 @@
         {
           "name": "--mdsTextInputLabelTransformFocused",
           "description": "Overrides the label transform property when focused",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mds-radio",
+      "path": "./packages/radio/src/mds-radio.js",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style=\"width: 360px; margin: 20px;\">\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-radio`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "value",
+          "description": "the checkbox value",
+          "type": "String"
+        },
+        {
+          "name": "checked",
+          "description": "the checked status",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "disabled",
+          "description": "sets the enabled or disabled state",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "attribute": "value",
+          "description": "the checkbox value",
+          "type": "String"
+        },
+        {
+          "name": "validationMessage",
+          "type": "string"
+        },
+        {
+          "name": "indicatorElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "the checked status",
+          "type": "String"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsRadioBorder",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsRadioColorChecked",
+          "description": "Overrides the color of the checked indicator",
           "type": "String"
         }
       ]

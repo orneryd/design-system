@@ -1,5 +1,3 @@
-import React from 'react'
-
 const toEventName = (string) => {
   const sanitized = string
     .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2')
