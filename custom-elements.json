@@ -91,64 +91,6 @@
       ]
     },
     {
-      "name": "mds-checkbox",
-      "path": "./packages/checkbox/src/mds-checkbox.js",
-      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-checkbox` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-checkbox`\n```\n\n### HTML Usage\n```html\n<form>\n<mds-checkbox checked label=\"Some Label\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-checkbox`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-checkbox checked={\"true\"} label=\"Some Label\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/checkbox.png)\n<br/>",
-      "attributes": [
-        {
-          "name": "checked",
-          "description": "the checked status",
-          "type": "String"
-        },
-        {
-          "name": "label",
-          "description": "the checkbox label text",
-          "type": "String"
-        },
-        {
-          "name": "disabled",
-          "description": "sets the enabled or disabled state",
-          "type": "String"
-        }
-      ],
-      "properties": [
-        {
-          "name": "value",
-          "type": "\"checked\" | \"\""
-        },
-        {
-          "name": "indicatorElement",
-          "type": "Element | null"
-        },
-        {
-          "name": "validationMessage",
-          "type": "string"
-        },
-        {
-          "name": "inputWrapper",
-          "type": "Element | null"
-        },
-        {
-          "name": "checked",
-          "attribute": "checked",
-          "description": "the checked status",
-          "type": "String"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--mdsCheckboxBorder",
-          "description": "Overrides the border color",
-          "type": "String"
-        },
-        {
-          "name": "--mdsCheckboxColorChecked",
-          "description": "Overrides the color of the checkbox",
-          "type": "String"
-        }
-      ]
-    },
-    {
       "name": "mds-button",
       "path": "./packages/button/src/mds-button.js",
       "description": "# mckesson-design-system button\nA styled button\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-button` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-button`\n```\n\n### HTML Usage\n```html\n<mds-button variant=\"primary\">Primary</mds-button>\n<mds-button variant=\"primary rounded\">Primary Rounded</mds-button>\n<mds-button variant=\"primary\" disabled>Primary Disabled</mds-button>\n<mds-button variant=\"secondary\">Secondary</mds-button>\n<mds-button variant=\"secondary rounded\" disabled=\"\">Secondary Rounded</mds-button>\n<mds-button variant=\"secondary\" disabled>Secondary Disabled</mds-button>\n<mds-button variant=\"outlined\">Outlined</mds-button>\n<mds-button variant=\"outlined rounded\">Outlined Rounded</mds-button>\n<mds-button variant=\"outlined\" disabled>Outlined Disabled</mds-button>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-button`\n\nexport const buttons = () => (\n<div>\n   <mds-button variant=\"primary\">Primary</mds-button>\n   <mds-button variant=\"primary rounded\">Primary Rounded</mds-button>\n   <mds-button variant=\"primary\" disabled>Primary Disabled</mds-button>\n   <mds-button variant=\"secondary\">Secondary</mds-button>\n   <mds-button variant=\"secondary rounded\" disabled=\"\">Secondary Rounded</mds-button>\n   <mds-button variant=\"secondary\" disabled>Secondary Disabled</mds-button>\n   <mds-button variant=\"outlined\">Outlined</mds-button>\n   <mds-button variant=\"outlined rounded\">Outlined Rounded</mds-button>\n   <mds-button variant=\"outlined\" disabled>Outlined Disabled</mds-button>\n</div>\n)\n```\n\n### HTML Usage\n```html\n<mds-button variant=\"primary\" href=\"http://kittenwar.com\">Rate Kittens</mds-button>\n```\n### Rendered in the browser\n\n![](samples/buttons.png)\n\n### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage\n\n```css\n:root {\n--mdsBannerMaxWidth: 1024px;\n--mdsBannerColor: purple;\n--mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);\n}\n```\n<br/>",
@@ -248,6 +190,64 @@
         {
           "name": "--mdsButtonOulinedColorHover",
           "description": "Overrides the outlined color on hover",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "mds-checkbox",
+      "path": "./packages/checkbox/src/mds-checkbox.js",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-checkbox` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-checkbox`\n```\n\n### HTML Usage\n```html\n<form>\n<mds-checkbox checked label=\"Some Label\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-checkbox`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-checkbox checked={\"true\"} label=\"Some Label\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/checkbox.png)\n<br/>",
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "the checked status",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "description": "the checkbox label text",
+          "type": "String"
+        },
+        {
+          "name": "disabled",
+          "description": "sets the enabled or disabled state",
+          "type": "String"
+        }
+      ],
+      "properties": [
+        {
+          "name": "value",
+          "type": "\"\" | \"checked\""
+        },
+        {
+          "name": "indicatorElement",
+          "type": "Element | null"
+        },
+        {
+          "name": "validationMessage",
+          "type": "string"
+        },
+        {
+          "name": "inputWrapper",
+          "type": "Element | null"
+        },
+        {
+          "name": "checked",
+          "attribute": "checked",
+          "description": "the checked status",
+          "type": "String"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--mdsCheckboxBorder",
+          "description": "Overrides the border color",
+          "type": "String"
+        },
+        {
+          "name": "--mdsCheckboxColorChecked",
+          "description": "Overrides the color of the checkbox",
           "type": "String"
         }
       ]
@@ -437,7 +437,7 @@
     {
       "name": "mds-radio",
       "path": "./packages/radio/src/mds-radio.js",
-      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style={{ width: '360px', margin: '20px' }}>\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-checkbox`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
+      "description": "# mckesson-design-system checkbox\nA styled checkbox by the mckesson design team.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-radio` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-radio`\n```\n\n### HTML Usage\n```html\n<form style={{ width: '360px', margin: '20px' }}>\n<mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n<mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n```\n\n### React Component\n```jsx\nimport `@mcklabs/mds-radio`\n\nexport const buttons = () => (\n<form style={{ width: '360px', margin: '20px' }}>\n   <mds-radio type=\"radio\" name=\"fruit\" checked value=\"Strawberry\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Orange\" />\n   <mds-radio type=\"radio\" name=\"fruit\" value=\"Lemon\" />\n</form>\n)\n```\n\n### Rendered in the browser\n\n![](samples/radio.png)\n<br/>",
       "attributes": [
         {
           "name": "value",
@@ -497,6 +497,28 @@
           "name": "--mdsRadioColorChecked",
           "description": "Overrides the color of the checked indicator",
           "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "path": "./packages/react/src/index.js",
+      "description": "# mckesson-design-system react-support\nA wrapper to handle custom events within any custom elements you want to use within react.\nIt will also destory the events on unmount for you.\n\n## Installation\n\n### npm\n```bash\nnpm i `@mcklabs/mds-react` --save\n```\n\n### yarn\n```bash\nyarn add `@mcklabs/mds-react`\n```\n\n### React Component\n```jsx\nimport WebComponentWrapper from `@mcklabs/mds-react`\n\nexport const buttons = () => (\n<WebComponentWrapper tag=\"my-element\" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />\n)\n```",
+      "attributes": [
+        {
+          "name": "tag",
+          "description": "tag to render",
+          "type": "String"
+        },
+        {
+          "name": "on(.*)",
+          "description": "(.*) is the event to listen to camelCased. It is converted to kebab-case. \nIf your CustomEvent's name is `custom-event-name` you need to set the prop as onCustomEventName in react.",
+          "type": "Func"
+        }
+      ],
+      "properties": [
+        {
+          "name": "elementRef"
         }
       ]
     },

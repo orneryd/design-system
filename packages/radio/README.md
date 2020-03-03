@@ -26,7 +26,7 @@ yarn add `@mcklabs/mds-radio`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-checkbox`
+import `@mcklabs/mds-radio`
 
 export const buttons = () => (
 <form style={{ width: '360px', margin: '20px' }}>
