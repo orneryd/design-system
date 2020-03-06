@@ -2,7 +2,6 @@
  * @jest-environment jest-environment-happy-dom
  */
 import './mds-accordion'
-import MdsAccordion from './mds-accordion'
 
 describe('MdsAccordion', () => {
   let element
