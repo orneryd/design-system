@@ -1,8 +1,8 @@
 {
   "name": "@mcklabs/mds-i18n",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
-  "main": "dist/mds-i18n.js",
+  "main": "src/mds-i18n.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

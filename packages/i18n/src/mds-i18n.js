@@ -11,7 +11,4 @@ I18n.addMessages('en-US', commonStrings)
 
 customElements.define('mds-i18n', ContextBinding(I18nMessage));
 
-export default {
-  I18n,
-  I18nMessage
-}
+export default I18n
