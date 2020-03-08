@@ -70,7 +70,8 @@ class WebComponentWrapper extends React.Component {
 
   render() {
     return React.createElement(this.props.tag, {
-      ref: this.elementRef
+      ref: this.elementRef,
+      ...this.props
     })
   }
 }
