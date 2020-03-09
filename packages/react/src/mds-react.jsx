@@ -1,3 +1,5 @@
+import React from 'react'
+
 const toEventName = (string) => {
   const sanitized = string
     .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2')
@@ -68,7 +70,8 @@ class WebComponentWrapper extends React.Component {
 
   render() {
     return React.createElement(this.props.tag, {
-      ref: this.elementRef
+      ref: this.elementRef,
+      ...this.props
     })
   }
 }

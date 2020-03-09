@@ -1,8 +1,8 @@
 {
   "name": "@mcklabs/mds-react",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Wrappers and components to help with react support",
-  "main": "src/mds-react.js",
+  "main": "src/mds-react.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
