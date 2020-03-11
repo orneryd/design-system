@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/mckesson/mckesson-design-system.git"
   },
+  "files": [
+    "dist/*",
+    "packages/**/*"
+  ],
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/mckesson/mckesson-design-system#readme",
