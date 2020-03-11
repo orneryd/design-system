@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-button",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "",
   "main": "dist/mds-button.js",
   "scripts": {

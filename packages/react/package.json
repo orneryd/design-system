@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Wrappers and components to help with react support",
   "main": "src/mds-react.jsx",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-checkbox",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "main": "dist/mds-checkbox.js",
   "scripts": {
