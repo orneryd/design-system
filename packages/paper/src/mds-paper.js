@@ -1,3 +1,4 @@
+import {registerComponent} from '@mcklabs/mds-core'
 import renderPaper from './mds-paper.html'
 
 /**
@@ -107,4 +108,4 @@ export default class MdsPaper extends HTMLElement {
   }
 }
 
-customElements.define('mds-paper', MdsPaper)
+registerComponent('mds-paper', MdsPaper)

@@ -1,6 +1,6 @@
 {
   "name": "@mcklabs/mds-chip-bag",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/mds-chip-bag.js",
   "scripts": {
@@ -8,10 +8,12 @@
   },
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
-    "@mcklabs/mds-chip": "*"
-  },
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+  },
+  "dependencies": {
+    "@mcklabs/web-components": ">=1.1.5",
+    "@mcklabs/mds-chip": ">=0.1.0",
+    "@mcklabs/mds-core": ">=0.1.0"
   }
 }

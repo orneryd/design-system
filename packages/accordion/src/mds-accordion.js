@@ -1,3 +1,5 @@
+import '@mcklabs/mds-paper'
+import {registerComponent} from '@mcklabs/mds-core'
 import accordionTemplate from './mds-accordion.html'
 
 /**
@@ -143,4 +145,4 @@ export default class MdsAccordion extends HTMLElement {
   }
 }
 
-customElements.define('mds-accordion', MdsAccordion)
+registerComponent('mds-accordion', MdsAccordion)

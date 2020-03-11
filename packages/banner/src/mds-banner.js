@@ -1,3 +1,4 @@
+import {registerComponent} from '@mcklabs/mds-core'
 import renderBanner from './mds-banner.html'
 /**
 # mckesson-design-system banner
@@ -119,4 +120,4 @@ export default class MdsBanner extends HTMLElement {
   }
 }
 
-customElements.define('mds-banner', MdsBanner)
+registerComponent('mds-banner', MdsBanner)

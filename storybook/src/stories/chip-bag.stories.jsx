@@ -2,10 +2,10 @@ import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import './chip-bag.stories.css'
-import '../../../packages/paper/dist/mds-paper'
-import '../../../packages/chip/dist/mds-chip'
-import '../../../packages/chip-bag/dist/mds-chip-bag'
-import '../../../packages/button/dist/mds-button'
+import '@mcklabs/mds-paper'
+import '@mcklabs/mds-chip'
+import '@mcklabs/mds-chip-bag'
+import '@mcklabs/mds-button'
 
 export default {
   title: 'Web Components/Chip',

@@ -1,5 +1,6 @@
-import textInputTemplate from './mds-checkbox.html'
-import InputBase from '../../base/src/input'
+import {registerComponent} from '@mcklabs/mds-core'
+import InputBase from '@mcklabs/mds-input-base'
+import checkboxTemplate from './mds-checkbox.html'
 
 /**
 # mckesson-design-system checkbox
@@ -146,9 +147,9 @@ export default class MdsCheckbox extends HTMLElement {
   }
 
   render() {
-    textInputTemplate(this).connect()
+    checkboxTemplate(this).connect()
     this.setCheckedState()
   }
 }
 
-customElements.define('mds-checkbox', InputBase(MdsCheckbox))
+registerComponent('mds-checkbox', InputBase(MdsCheckbox))

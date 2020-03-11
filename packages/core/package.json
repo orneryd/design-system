@@ -1,8 +1,8 @@
 {
-  "name": "@mcklabs/mds-text-input",
-  "version": "0.1.2",
+  "name": "@mcklabs/mds-core",
+  "version": "0.1.1",
   "description": "",
-  "main": "dist/mds-text-input.js",
+  "main": "dist/mds-core.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +10,5 @@
   "license": "ISC",
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  },
-  "dependencies": {
-    "@mcklabs/web-components": ">=1.1.5",
-    "@mcklabs/mds-core": ">=0.1.0"
   }
 }

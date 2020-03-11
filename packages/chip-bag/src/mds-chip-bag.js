@@ -1,3 +1,5 @@
+import '@mcklabs/mds-chip'
+import {registerComponent} from '@mcklabs/mds-core'
 import chipBagTemplate from './mds-chip-bag.html'
 
 export const ENTER_KEY_CODE = 13
@@ -215,4 +217,4 @@ export default class MdsChipBag extends HTMLElement {
   }
 }
 
-customElements.define('mds-chip-bag', MdsChipBag)
+registerComponent('mds-chip-bag', MdsChipBag)

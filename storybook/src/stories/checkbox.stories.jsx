@@ -1,7 +1,7 @@
 import React from 'react'
 
-import '../../../packages/checkbox/dist/mds-checkbox'
-import '../../../packages/radio/dist/mds-radio'
+import '@mcklabs/mds-checkbox'
+import '@mcklabs/mds-radio'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 

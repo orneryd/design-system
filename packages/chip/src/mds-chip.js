@@ -1,3 +1,4 @@
+import {registerComponent} from '@mcklabs/mds-core'
 import renderChip from './mds-chip.html'
 
 /**
@@ -49,4 +50,4 @@ export default class MdsChip extends HTMLElement {
   }
 }
 
-customElements.define('mds-chip', MdsChip)
+registerComponent('mds-chip', MdsChip)

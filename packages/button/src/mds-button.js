@@ -1,3 +1,4 @@
+import {registerComponent} from '@mcklabs/mds-core'
 import renderButton from './mds-button.html'
 
 /**
@@ -169,4 +170,4 @@ export default class MdsButton extends HTMLElement {
   }
 }
 
-customElements.define('mds-button', MdsButton)
+registerComponent('mds-button', MdsButton)
