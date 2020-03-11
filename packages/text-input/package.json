@@ -12,6 +12,7 @@
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
   },
   "dependencies": {
+    "@mcklabs/mds-input-base": ">=0.1.0",
     "@mcklabs/web-components": ">=1.1.5",
     "@mcklabs/mds-core": ">=0.1.0"
   }

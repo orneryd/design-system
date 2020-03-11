@@ -16,8 +16,11 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js)$',
     '^.+\\.module\\.(css|sass|scss)$'
   ],
-  modulePaths: ['<rootDir>/packages'],
+  modulePaths: [
+    '<rootDir>/node_modules'
+  ],
   moduleNameMapper: {
+    "@mcklabs/mds-(.+)$": '<rootDir>/packages/$1',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
   moduleFileExtensions: [
