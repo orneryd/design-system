@@ -1,5 +1,6 @@
+import {registerComponent} from '@mcklabs/mds-core'
+import InputBase from '@mcklabs/mds-input-base'
 import radioTemplate from './mds-radio.html'
-import InputBase from '../../base/src/input'
 
 
 /**
@@ -158,4 +159,4 @@ export default class MdsRadio extends HTMLElement {
   }
 }
 
-customElements.define('mds-radio', InputBase(MdsRadio))
+registerComponent('mds-radio', InputBase(MdsRadio))

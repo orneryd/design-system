@@ -1,4 +1,5 @@
-import InputBase from '../../base/src/input'
+import {registerComponent} from '@mcklabs/mds-core'
+import InputBase from '@mcklabs/mds-input-base'
 import textInputTemplate from './mds-text-input.html'
 
 /**
@@ -20,11 +21,11 @@ yarn add `@mcklabs/mds-text-input`
 ### HTML Usage
 ```html
 <form>
-  <mds-text-input label="Some Label" />
-  <mds-text-input value="some initial value" label="I have an initial Value" />
-  <mds-text-input type="password" label="Type Some Secure Text" />
-  <mds-text-input type="email" label="Type an email to be validated" />
-  <mds-text-input type="date" static-label label="Enter a Date" />
+  <mds-text-input label="Some Label"></mds-text-input>
+  <mds-text-input value="some initial value" label="I have an initial Value"></mds-text-input>
+  <mds-text-input type="password" label="Type Some Secure Text"></mds-text-input>
+  <mds-text-input type="email" label="Type an email to be validated"></mds-text-input>
+  <mds-text-input type="date" static-label label="Enter a Date"></mds-text-input>
 </form>
 ```
 
@@ -34,17 +35,17 @@ import `@mcklabs/mds-checkbox`
 
 export const Text = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input label="Some Label" />
+    <mds-text-input label="Some Label"></mds-text-input>
   </div>
 )
 export const InitialValue = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input value="some initial value" label="I have an initial Value" />
+    <mds-text-input value="some initial value" label="I have an initial Value"></mds-text-input>
   </div>
 )
 export const Secure = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input type="password" label="Type Some Secure Text" />
+    <mds-text-input type="password" label="Type Some Secure Text"></mds-text-input>
   </div>
 )
 
@@ -54,7 +55,7 @@ export const Email = () => (
       <mds-text-input
         type="email"
         label="Type an email to be validated"
-      />
+      ></mds-text-input>
     </form>
   </div>
 )
@@ -65,7 +66,7 @@ export const Color = () => (
         type="color"
         static-label
         label="Select a color"
-      />
+      ></mds-text-input>
     </form>
   </div>
 )
@@ -77,7 +78,7 @@ export const Date = () => (
         type="date"
         static-label
         label="Enter a Date"
-      />
+      ></mds-text-input>
     </form>
   </div>
 )
@@ -172,4 +173,4 @@ export default class MdsTextInput extends HTMLElement {
   }
 }
 
-customElements.define('mds-text-input', InputBase(MdsTextInput))
+registerComponent('mds-text-input', InputBase(MdsTextInput))

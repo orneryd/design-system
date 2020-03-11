@@ -1,3 +1,4 @@
+import {registerComponent} from '@mcklabs/mds-core'
 import { I18n, I18nMessage, ContextBinding } from '@mcklabs/web-components';
 import commonStrings from './common-strings.json'
 
@@ -9,6 +10,6 @@ I18n.setLang(activeLanguage)
 
 I18n.addMessages('en-US', commonStrings)
 
-customElements.define('mds-i18n', ContextBinding(I18nMessage));
+registerComponent('mds-i18n', ContextBinding(I18nMessage));
 
 export default I18n

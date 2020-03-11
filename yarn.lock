@@ -912,7 +912,7 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mcklabs/web-components@1.1.5":
+"@mcklabs/web-components@^1.1.5":
   version "1.1.5"
   resolved "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/@mcklabs/web-components/-/@mcklabs/web-components-1.1.5.tgz#dc76b8d870d13165175f85a657292165f433c6d6"
   integrity sha1-3Ha42HDRMWUXX4WmVykhZfQzxtY=

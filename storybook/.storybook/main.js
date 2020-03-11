@@ -1,3 +1,5 @@
+const generateAliases = require('../../alias')
+
 module.exports = {
   addons: [
     '@storybook/addon-actions',
@@ -14,6 +16,10 @@ module.exports = {
     // 'PRODUCTION' is used when building the static version of storybook.
 
     // Make whatever fine-grained changes you need
+    config.resolve = config.resolve || {}
+    config.resolve.extensions = config.resolve.extensions || ['*', '.js', '.md', '.jsx', '.mdx'],
+    config.resolve.alias = config.resolve.alias || {},
+    config.resolve.alias = generateAliases(config.resolve.alias)
     config.module.rules.push({
         test: /packages.+\.html$/,
         exclude: /node_modules/,

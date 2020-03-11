@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../../packages/text-input/dist/mds-text-input'
+import '@mcklabs/mds-text-input'
 
 export default {
   title: 'Web Components/Inputs'

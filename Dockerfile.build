@@ -34,7 +34,7 @@ COPY . .
 
 RUN curl -u${ARTIFACTORY_USER}:${ARTIFACTORY_API_KEY} "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/auth/mcklabs" >> ./.npmrc
 
-RUN yarn && CI=true yarn test && yarn build
+RUN yarn && yarn build && CI=true yarn test && yarn build:cdn
 
 WORKDIR /usr/app/storybook
 

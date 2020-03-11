@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/mckesson/mckesson-design-system.git"
   },
+  "files": [
+    "dist/*",
+    "packages/**/*"
+  ],
   "author": "",
   "license": "ISC",
   "homepage": "https://github.com/mckesson/mckesson-design-system#readme",
@@ -17,7 +21,8 @@
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack && yarn build:cdn",
+    "build:cdn": "NODE_ENV=production webpack",
     "test": "NODE_ENV=test jest --runInBand",
     "docs": "wca analyze \"packages/**/src/**/*.js\" --format markdown --outFiles {dir}/../README.md",
     "coverage": "jest --runInBand --coverage --watchAll=false"
@@ -29,7 +34,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
-    "@mcklabs/web-components": "1.1.5",
+    "@mcklabs/web-components": "^1.1.5",
     "@webcomponents/custom-elements": "^1.2.4",
     "@webcomponents/shadydom": "^1.7.1",
     "babel-eslint": "10.0.3",

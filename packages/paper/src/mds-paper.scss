@@ -1,4 +1,4 @@
-@import '../../base/src/base.scss';
+@import '../../core/src/core.scss';
 
 @mixin createShadow($x1, $x2, $x3, $x4, $x5, $x6, $x7, $x8, $x9, $x10, $x11, $x12) {
   box-shadow: #{$x1}px #{$x2}px #{$x3}px #{$x4}px  var(--mdsPaperBoxShadowHOffsetColor, rgba(0, 0, 0, 0.2)),

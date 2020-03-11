@@ -1,8 +1,8 @@
 {
-  "name": "@mcklabs/base",
-  "version": "0.1.1",
+  "name": "@mcklabs/mds-input-base",
+  "version": "0.1.0",
   "description": "",
-  "main": "dist/base.js",
+  "main": "src/mds-input-base.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
