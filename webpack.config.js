@@ -3,7 +3,9 @@ const glob = require('glob')
 const generateAliases = require('./alias')
 const generateExternals = require('./externals')
 const makeForCDN = process.env.NODE_ENV === 'production';
+const packageJson = require('./package.json')
 
+const versionedIndex = `/dist/mds-${packageJson.version}`;
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: glob.sync('./packages/**/src/*.js').reduce(
@@ -21,16 +23,19 @@ module.exports = {
        * as the value
        */
       if (entry.indexOf('.test') === -1 && entry.indexOf('dist/') === -1) {
+        const rootFolder = path.replace(`src/${entry}.js`, '');
+        const { version } = require(`${rootFolder}/package.json`)
+        const versionedEntry = `/dist/${entry}-${version}`;
         if (makeForCDN) {
-          acc[`/dist/${entry}`] = path
-          acc['/dist/index'].push(path)
+          acc[versionedEntry] = path
+          acc[versionedIndex].push(path)
         } else {
-          acc[`${path.replace(`src/${entry}.js`, '')}dist/${entry}`] = path
+          acc[`${rootFolder}dist/${entry}`] = path
         }
       }
       return acc
     },
-    makeForCDN ? { '/dist/index': [] } : {}
+    makeForCDN ? { [versionedIndex]: [] } : {}
   ),
   output: {
     filename: '[name].js',

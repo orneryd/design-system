@@ -1,4 +1,4 @@
-FROM registry.mckesson.com/er2niot/mcklabs-pipeline-base:prod
+FROM registry.mckesson.com/devservices/mcklabs-node-pipeline-base:2.2.0
 
 ARG PCF_USER
 ARG PCF_PASSWORD
@@ -6,33 +6,25 @@ ENV PCF_USER=$PCF_USER
 ENV PCF_PASSWORD=$PCF_PASSWORD
 ARG ARTIFACTORY_USER
 ARG ARTIFACTORY_API_KEY
+ARG VERACODE_SCANNER_API_KEY
+ARG SONARQUBE_API_KEY
 
 ENV PCF_DEV_API=api.sys.dev-west.paas.mckesson.com
 ENV PCF_PROD_API=api.sys.prod-west.paas.mckesson.com
-ENV ROOT_CERT mckesson.root.1.crt
+ENV BRANCH=$BRANCH
+ENV SONARQUBE_API_KEY=$SONARQUBE_API_KEY
+ENV SONARQUBE_PROJECT_KEY=fbc9aeaf-4a49-475b-abc6-39c45ba9cef2:new-labs-website
 
-RUN apk --no-cache add bash python2 yarn openjdk8\
-    && wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
-    && wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.29-r0/glibc-2.29-r0.apk \
-    && apk add glibc-2.29-r0.apk \
-    && curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx \
-    && chmod +x cf \
-    && mv cf /usr/local/bin
+ENV VERACODE_SCANNER_API_KEY=$VERACODE_SCANNER_API_KEY
+ENV VERACODE_APP_ID=530663
 
-ADD .pipeline/*.crt /usr/local/share/ca-certificates/
 
-RUN mkdir /src \
-  && apk update \
-  && apk add curl nodejs git \
-  && sed -i 's|http\://dl-cdn.alpinelinux.org|https\://alpine.global.ssl.fastly.net|g' /etc/apk/repositories \
-  && update-ca-certificates
 
+RUN mckduc node write-npm-config --artifactory-user "${ARTIFACTORY_USER}" --artifactory-apikey "${ARTIFACTORY_API_KEY}" --path ~/.npmrc
 
 WORKDIR /usr/app
 
 COPY . .
-
-RUN curl -u${ARTIFACTORY_USER}:${ARTIFACTORY_API_KEY} "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm/auth/mcklabs" >> ./.npmrc
 
 RUN yarn && yarn build && CI=true yarn test && yarn build:cdn
 
