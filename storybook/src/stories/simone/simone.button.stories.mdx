@@ -1,0 +1,94 @@
+import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
+import { withKnobs, select, boolean } from '@storybook/addon-knobs'
+import '@mcklabs/mds-button'
+import '@mcklabs/mds-paper'
+import README from '@mcklabs/mds-button-readme'
+const label = 'Variants'
+const options = {
+  Primary: 'primary',
+  PrimaryInverted: 'primary inverted',
+  PrimaryRounded: 'primary rounded',
+  PrimaryRoundedInverted: 'primary rounded inverted',
+  Action: 'action',
+  ActionInverted: 'action inverted',
+  ActionRounded: 'action rounded',
+  ActionRoundedInverted: 'action rounded inverted',
+  Info: 'info rounded',
+  InfoInverted: 'info inverted',
+  InfoRounded: 'info rounded',
+  InfoRoundedInverted: 'info rounded inverted',
+  Warning: 'warning',
+  WarningInverted: 'warning inverted',
+  WarningRounded: 'warning rounded',
+  WarningRoundedInverted: 'warning rounded inverted',
+  Danger: 'danger',
+  DangerInverted: 'danger rounded',
+  DangerRounded: 'danger inverted',
+  DangerRoundedInverted: 'danger rounded inverted',
+  Inverted: 'inverted',
+  RoundedInverted: 'rounded inverted'
+}
+const defaultValue = 'primary'
+const groupId = 'Buttons'
+const styles = {
+  textTransform: 'capitalize',
+  margin: '1rem'
+}
+
+<Meta
+  title="Simone/Buttons"
+  decorators={[withKnobs]}
+  parameters={{
+    component: 'mds-button',
+    options: { 
+      selectedPanel: 'storybookjs/knobs/panel'
+     }
+  }}
+/>
+
+<Description>
+    {README}
+</Description>
+
+<Preview withToolbar>
+  <Story name="All">
+    <>
+      <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+      {Object.values(options).map(variant => {
+        return (<div style={{margin: '10px 0'}}>
+              <mds-button variant={variant}>
+                <span class="btn condensed">{variant}</span>
+              </mds-button>
+            </div>)
+      })}
+    </>
+  </Story>
+</Preview>
+
+<Story name="Button">
+  <>
+  <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+  <mds-button
+    style={styles}
+    variant={select(label, options, defaultValue, groupId)}
+    disabled={boolean('Disabled', false, groupId)}
+  >
+    <span class="btn condensed">{select(label, options, defaultValue, groupId)}</span>
+  </mds-button>
+  </>
+</Story>
+
+<Story name="Anchor">
+  <>
+  <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+  <mds-button
+    style={styles}
+    href="https://www.google.com"
+    target="_blank"
+    variant={select(label, options, 'outlined rounded', groupId)}
+    disabled={boolean('Disabled', false, groupId)}
+  >
+    <span class="btn condensed">external link</span>
+  </mds-button>
+  </>
+</Story>

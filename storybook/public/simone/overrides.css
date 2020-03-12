@@ -1,0 +1,67 @@
+:root {
+  /* --mdsTextInputLabelTransform: scale(0.875) translate(0.325rem, -1.625rem);
+  --mdsTextInputLabelTransformOrigin: top left;
+  --mdsTextInputLabelTransformFocused: scale(0.7) translate(0.325rem, -3.5em); */
+}
+
+/*Simone overrides*/
+:root {
+  --mdsTextInputLabelTransform: scale(0.875) translate(0.375rem, -1.75rem);
+  --mdsTextInputLabelTransformOrigin: top left;
+  --mdsTextInputLabelTransformFocused: scale(0.7) translate(0.375rem, -4.2rem);
+  /* mds-text-input overrides */
+  --mdsTextInputBorder: 1px solid #ddd;
+  --mdsTextInputBorderRadius: 2px;
+  --mdsTextInputBoxShadow: 0 1px 1px rgba(0,0,0, 0.075);
+  --mdsTextInputUnderline: 1px inset rgba(0, 0, 0, 0.2);
+  --mdsTextInputUnderlineInvalid: inherit;
+  --mdsButtonBorderRadius: 2px;
+}
+
+mds-text-input {
+  margin-top: 1.5rem;
+}
+
+.condensed {
+  font-family: 'Roboto Condensed',sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: -0.5px;
+}
+.btn {
+  text-transform: uppercase;
+}
+
+
+.validated-input {
+  position: relative;
+}
+
+.validated-input[valid] {
+  height: 2rem;
+  margin-bottom: 1.4rem;
+}
+
+.validated-input[valid]::after {
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.validated-input.valid::after {
+  color: #5A8E22;
+  content: '\2714';
+}
+
+.validated-input.invalid {
+  border-bottom: 2px inset rgb(255, 0, 0);
+}
+
+.validated-input.invalid::after {
+  color: rgb(204, 0, 0);
+  content: '\2715';
+}
+
+.validation-message.error {
+    color: rgb(204, 0, 0);
+}

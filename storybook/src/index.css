@@ -1,17 +1,8 @@
 :root {
   /* --mdsFontFamily: 'Roboto Condensed', sans-serif; */
   /* --mdsButtonTextTransform: uppercase; */
-  --mdsButtonBorderRadius: 2px;
+  /* --mdsButtonBorderRadius: 2px; */
 }
 html {
   font-family: 'Roboto Condensed', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.condensed {
-  font-family: 'Roboto Condensed',sans-serif;
-  font-size: 0.85rem;
-  /* letter-spacing: -1px; */
-}
-.btn {
-  text-transform: uppercase;
 }

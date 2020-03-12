@@ -75,9 +75,9 @@
     box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsPurple);
     color: var(--mdsButtonOulinedColor, $mdsPurple);
     &:hover {
-      background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsGrayLightest);
+      background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsPurple);
       box-shadow: var(--mdsButtonOulinedBorderHover, inherit);
-      color: var(--mdsButtonOulinedColorHover, inherit);
+      color: var(--mdsButtonOulinedColorHover, $mdsWhite);
     }
     
     &.primary {
