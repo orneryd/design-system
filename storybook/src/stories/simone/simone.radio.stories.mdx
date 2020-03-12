@@ -1,0 +1,28 @@
+
+import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
+import '@mcklabs/mds-radio'
+import README from '@mcklabs/mds-radio-readme'
+
+<Meta
+  title="Simone/Radio"
+  parameters={{
+    component: 'mds-radio',
+    options: { 
+      selectedPanel: 'storybookjs/knobs/panel'
+     }
+  }}
+/>
+
+<Description>
+    {README}
+</Description>
+
+<Preview withToolbar>
+  <Story name="Radio">
+    <div style={{ width: '360px', margin: '20px' }}>
+      <mds-radio standard type="radio" name="fruit" checked value="Strawberry" />
+      <mds-radio standard type="radio" name="fruit" value="Orange" />
+      <mds-radio standard type="radio" name="fruit" value="Lemon" />
+    </div>
+  </Story>
+</Preview>

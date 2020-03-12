@@ -1,0 +1,26 @@
+
+import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
+import '@mcklabs/mds-checkbox'
+import README from '@mcklabs/mds-checkbox-readme'
+
+<Meta
+  title="Simone/Checkbox"
+  parameters={{
+    component: 'mds-checkbox',
+    options: { 
+      selectedPanel: 'storybookjs/knobs/panel'
+     }
+  }}
+/>
+
+<Description>
+    {README}
+</Description>
+
+<Preview withToolbar>
+  <Story name="Checkbox">
+    <div style={{ width: '360px', margin: '20px' }}>
+      <mds-checkbox standard label="Some Label" />
+    </div>
+  </Story>
+</Preview>
