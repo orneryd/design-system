@@ -18,6 +18,22 @@ const styles = {
   textTransform: 'capitalize',
   margin: '1rem'
 }
+const buttonVariants = [
+  "primary",
+  "secondary",
+  "action",
+  "info",
+  "warning",
+  "danger",
+  "outlined"
+];
+const buttonSubVariants = [
+  "rounded"
+];
+const buttonOutlineVariants = [
+  "inverted",
+  "outlined"
+];
 
 <Meta
   title="Web Components/Buttons"
@@ -36,43 +52,27 @@ const styles = {
 
 <Preview withToolbar>
   <Story name="All">
-     <div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="primary">Primary</mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="primary rounded">Primary Rounded</mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="primary" disabled>
-          Primary Disabled
-        </mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="secondary">Secondary</mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="secondary rounded" disabled="">
-          Secondary Rounded
-        </mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="secondary" disabled>
-          Secondary Disabled
-        </mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="outlined">Outlined</mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="outlined rounded">Outlined Rounded</mds-button>
-      </div>
-      <div style={{margin: '10px'}}>
-        <mds-button variant="outlined" disabled>
-          Outlined Disabled
-        </mds-button>
-      </div>
-    </div>
+    <>
+      {buttonVariants.map(variant => {
+        return (<>
+            <div style={{margin: '10px 0'}}>
+              <mds-button variant={variant}>{variant}</mds-button>
+            </div>
+            {buttonSubVariants.map(subVariant => {
+              return (<>
+                  <div style={{margin: '10px 0'}}>
+                    <mds-button variant={`${variant} ${subVariant}`}>{variant}&nbsp;{subVariant}</mds-button>
+                  </div>
+                  {buttonOutlineVariants.map(outline => {
+                    return (<div style={{margin: '10px 0'}}>
+                        <mds-button variant={`${variant} ${subVariant} ${outline}`}>{variant}&nbsp;{subVariant}&nbsp;{outline}</mds-button>
+                      </div>)
+                    })}
+                </>
+              )})}
+          </>
+        )})}
+    </>
   </Story>
 </Preview>
 

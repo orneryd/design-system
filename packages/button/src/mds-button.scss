@@ -19,7 +19,8 @@
   color: #fff;
   font-size: initial;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius:  var(--mdsButtonBorderRadius, 4px);
+
   &.rounded {
     border-radius: 2rem;
     padding: 0.5rem 1rem;
@@ -32,14 +33,44 @@
       background-color:  var(--mdsButtonPrimaryColorHover, $mdsBlueDark)
     }
   }
-  &.secondary {
+  &.secondary,
+  &.action {
     background-color: var(--mdsButtonSecondaryColor, $mdsOrange);
     &:hover {
       background-color:  var(--mdsButtonSecondaryColorHover, $mdsOrangeDark);
     }
   }
-  &.outlined {
-    
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  &.success {
+    background-color: var(--mdsButtonSuccessColor, $mdsGreen);
+    &:hover {
+      background-color: var(--mdsButtonSuccessHoverColor, $mdsGreenDark);
+    }
+  }
+  &.info {
+    background-color: var(--mdsButtonInfoColor, $mdsBlueDark);
+    &:hover {
+      background-color: var(--mdsButtonInfoHoverColor, $mdsBlueDarker);
+    } 
+  }
+  &.warning {
+    background-color: var(--mdsButtonWarningsColor, $mdsRust);
+    &:hover {
+      background-color: var(--mdsButtonWarningHoverColor, $mdsRustDarker);
+    }
+  }
+  &.danger {
+    background-color: var(--mdsButtonDangerColor, $mdsRedLight);
+    &:hover {
+      background-color: var(--mdsButtonDangerHoverColor, $mdsRed);
+    }
+  }
+
+  &.outlined,
+  &.inverted {
     background-color: var(--mdsButtonOulinedBackgroundColor, transparent);
     box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsPurple);
     color: var(--mdsButtonOulinedColor, $mdsPurple);
@@ -48,13 +79,69 @@
       box-shadow: var(--mdsButtonOulinedBorderHover, inherit);
       color: var(--mdsButtonOulinedColorHover, inherit);
     }
-  }
-  .mds-button {
-    height: 2rem;
-    line-height: 2rem;
-  }
-  &.disabled {
-    pointer-events: none;
-    opacity: 0.3;
+    
+    &.primary {
+      color: var(--mdsButtonOulinedColor, $mdsBlue);
+      box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsBlue);
+
+      &:hover {
+        background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsBlueDark);
+        box-shadow: var(--mdsButtonOulinedBorderHover, $mdsBlueDark);
+        color: var(--mdsButtonOulinedColorHover, $mdsWhite);
+      }
+    }
+
+    &.secondary,
+    &.action {
+      color: var(--mdsButtonSecondaryOulinedColor, $mdsOrange);
+      box-shadow: var(--mdsButtonSecondaryOulinedBorder, inset 0px 0px 0px 2px $mdsOrange);
+
+      &:hover {
+        background-color: var(--mdsButtonSecondaryOulinedBackgroundColorHover, $mdsOrangeDark);
+        box-shadow: var(--mdsButtonSecondaryOulinedBorderHover, $mdsOrangeDark);
+        color: var(--mdsButtonSecondaryOulinedColorHover, $mdsWhite);
+      }
+    }
+    &.success {
+      color: var(--mdsButtonSuccessOulinedColor, $mdsGreen);
+      box-shadow: var(--mdsButtonSuccessOulinedBorder, inset 0px 0px 0px 2px $mdsGreen);
+
+      &:hover {
+        background-color: var(--mdsButtonOSuccessulinedBackgroundColorHover, $mdsGreenDark);
+        box-shadow: var(--mdsButtonSuccessOulinedBorderHover, $mdsGreenDark);
+        color: var(--mdsButtonSuccessOulinedColorHover, $mdsWhite);
+      }
+    }
+
+    &.info {
+      color: var(--mdsButtonInfoOulinedColor, $mdsBlueDark);
+      box-shadow: var(--mdsButtonInfoOulinedBorder, inset 0px 0px 0px 2px $mdsBlueDark);
+
+      &:hover {
+        background-color: var(--mdsButtonInfoOulinedBackgroundColorHover, $mdsBlueDarker);
+        box-shadow: var(--mdsButtonInfoOulinedBorderHover, $mdsBlueDarker);
+        color: var(--mdsButtonInfoOulinedColorHover, $mdsWhite);
+      }
+    }
+    &.warning {
+      color: var(--mdsButtonWarningOulinedColor, $mdsRust);
+      box-shadow: var(--mdsButtonWarningOulinedBorder, inset 0px 0px 0px 2px $mdsRust);
+
+      &:hover {
+        background-color: var(--mdsButtonWarningOulinedBackgroundColorHover, $mdsRustDarker);
+        box-shadow: var(--mdsButtonWarningOulinedBorderHover, $mdsRustDarker);
+        color: var(--mdsButtonWarningOulinedColorHover, $mdsWhite);
+      }
+    }
+    &.danger {
+      color: var(--mdsButtonDangerOulinedColor, $mdsRedLight);
+      box-shadow: var(--mdsButtonDangerOulinedBorder, inset 0px 0px 0px 2px $mdsRedLight);
+
+      &:hover {
+        background-color: var(--mdsButtonDangerOulinedBackgroundColorHover, $mdsRed);
+        box-shadow: var(--mdsButtonDangerOulinedBorderHover, $mdsRed);
+        color: var(--mdsButtonDangerOulinedColorHover, $mdsWhite);
+      }
+    }
   }
 }
