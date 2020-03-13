@@ -105,12 +105,18 @@ export default class MdsRadio extends HTMLElement {
     return false
   }
 
+  get standard() {
+    return this.hasAttribute('standard') ? 'standard' : ''
+  }
+
   setCheckedState() {
     if (this.checked) {
       this.inputElement.setAttribute('checked', '')
+      this.inputElement.checked = true;
       this.indicatorElement.classList.add('checked')
     } else {
       this.inputElement.removeAttribute('checked')
+      this.inputElement.checked = false;
       this.indicatorElement.classList.remove('checked')
     }
     this.setValidity()

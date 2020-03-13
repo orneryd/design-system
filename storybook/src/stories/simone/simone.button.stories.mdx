@@ -6,31 +6,31 @@ import README from '@mcklabs/mds-button-readme'
 const label = 'Variants'
 const options = {
   Primary: 'primary',
-  PrimaryOutlined: 'primary outlined',
+  PrimaryInverted: 'primary inverted',
   PrimaryRounded: 'primary rounded',
-  PrimaryRoundedOutlined: 'primary rounded outlined',
-  Secondary: 'secondary',
-  SecondaryOutlined: 'secondary outlined',
-  SecondaryRounded: 'secondary rounded',
-  SecondaryRoundedOutlined: 'secondary rounded outlined',
+  PrimaryRoundedInverted: 'primary rounded inverted',
+  Action: 'action',
+  ActionInverted: 'action inverted',
+  ActionRounded: 'action rounded',
+  ActionRoundedInverted: 'action rounded inverted',
   Info: 'info',
-  InfoOutlined: 'info outlined',
+  InfoInverted: 'info inverted',
   InfoRounded: 'info rounded',
-  InfoRoundedOutlined: 'info rounded outlined',
+  InfoRoundedInverted: 'info rounded inverted',
   Success: 'success',
-  SuccessOutlined: 'success outlined',
+  SuccessInverted: 'success inverted',
   SuccessRounded: 'success rounded',
-  SuccessRoundedOutlined: 'success rounded outlined',
+  SuccessRoundedInverted: 'success rounded inverted',
   Warning: 'warning',
-  WarningOutlined: 'warning outlined',
+  WarningInverted: 'warning inverted',
   WarningRounded: 'warning rounded',
-  WarningRoundedOutlined: 'warning rounded outlined',
+  WarningRoundedInverted: 'warning rounded inverted',
   Danger: 'danger',
-  DangerOutlined: 'danger rounded',
-  DangerRounded: 'danger outlined',
-  DangerRoundedOutlined: 'danger rounded outlined',
-  Outlined: 'outlined',
-  RoundedOutlined: 'rounded outlined'
+  DangerInverted: 'danger rounded',
+  DangerRounded: 'danger inverted',
+  DangerRoundedInverted: 'danger rounded inverted',
+  Inverted: 'inverted',
+  RoundedInverted: 'rounded inverted'
 }
 const defaultValue = 'primary'
 const groupId = 'Buttons'
@@ -40,7 +40,7 @@ const styles = {
 }
 
 <Meta
-  title="Web Components/Buttons"
+  title="Simone/Buttons"
   decorators={[withKnobs]}
   parameters={{
     component: 'mds-button',
@@ -60,7 +60,9 @@ const styles = {
       <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
       {Object.values(options).map(variant => {
         return (<div style={{margin: '10px 0'}}>
-              <mds-button variant={variant}>{variant}</mds-button>
+              <mds-button variant={variant}>
+                <span class="btn condensed">{variant}</span>
+              </mds-button>
             </div>)
       })}
     </>
@@ -68,16 +70,21 @@ const styles = {
 </Preview>
 
 <Story name="Button">
+  <>
+  <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
   <mds-button
     style={styles}
     variant={select(label, options, defaultValue, groupId)}
     disabled={boolean('Disabled', false, groupId)}
   >
-    {select(label, options, defaultValue, groupId)}
+    <span class="btn condensed">{select(label, options, defaultValue, groupId)}</span>
   </mds-button>
+  </>
 </Story>
 
 <Story name="Anchor">
+  <>
+  <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
   <mds-button
     style={styles}
     href="https://www.google.com"
@@ -85,6 +92,7 @@ const styles = {
     variant={select(label, options, 'outlined rounded', groupId)}
     disabled={boolean('Disabled', false, groupId)}
   >
-    external link
+    <span class="btn condensed">external link</span>
   </mds-button>
+  </>
 </Story>

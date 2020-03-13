@@ -46,4 +46,17 @@
     width: 1.5rem;
     cursor: pointer;
   }
+
+  &.standard {
+    .mds-checkbox-border {
+      display: none;
+    }
+    input {
+      position: initial;
+      opacity: 1;
+      height: initial;
+      width: initial;
+      cursor: pointer;
+    }
+  }
 }

@@ -3,7 +3,6 @@ import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 import '@mcklabs/mds-text-input'
 import '@mcklabs/mds-checkbox'
-import './input.stories.css'
 
 export default {
   title: 'Web Components/Forms',

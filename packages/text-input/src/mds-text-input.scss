@@ -12,9 +12,14 @@
   height: 2rem;
   display: block;
   width: 100%;
+  border: var(--mdsTextInputBorder, inherit);
+  border-radius: var(--mdsTextInputBorderRadius, inherit);
+  box-shadow: var(--mdsTextInputBoxShadow, inherit);
   border-bottom: var(--mdsTextInputUnderline, 2px inset rgba(0, 0, 0, 0.2));
   &.invalid {
-    border-bottom: var(--mdsTextInputUnderlineInvalid, 2px inset rgb(255, 0, 0));
+    border: var(--mdsTextInputBorderInvalid, inherit);
+    box-shadow: var(--mdsTextInputBoxShadowInvalid, inherit);
+    border-bottom: var(--mdsTextInputUnderlineInvalid, 2px inset $mdsRedDark);
   }
 }
 
@@ -33,6 +38,11 @@
   transform: var(--mdsTextInputLabelTransformFocused, scale(0.875) translate(0.325rem, 0));
 }
 
-.mds-text-input:focus {
+.mds-text-input:focus,
+.mds-text-input:-moz-focusring {
   outline: none;
+}
+
+input[type="file" i].mds-text-input {
+  padding: 0.3rem;
 }

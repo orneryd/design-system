@@ -1,30 +1,34 @@
 import React from 'react'
 
 import '@mcklabs/mds-text-input'
-import './input.stories.css'
 
 export default {
-  title: 'Web Components/Inputs'
+  title: 'Simone/Inputs'
 }
 
 export const Text = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
     <mds-text-input label="Some Label" />
   </div>
 )
+
 export const InitialValue = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
     <mds-text-input value="some initial value" label="I have an initial Value" />
   </div>
 )
 export const Secure = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
     <mds-text-input type="password" label="Type Some Secure Text" />
   </div>
 )
 
 export const Email = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
     <form>
       <mds-text-input
         type="email"
@@ -35,6 +39,8 @@ export const Email = () => (
 )
 export const Color = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+
     <form>
       <mds-text-input
         type="color"
@@ -47,6 +53,8 @@ export const Color = () => (
 
 export const Date = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+
     <form>
       <mds-text-input
         type="date"
@@ -60,6 +68,8 @@ export const Date = () => (
 
 export const DateTimeLocal = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+
     <form>
       <mds-text-input
         type="datetime-local"
@@ -73,6 +83,8 @@ export const DateTimeLocal = () => (
 
 export const File = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+
     <form>
       <mds-text-input
         type="File"
@@ -85,6 +97,8 @@ export const File = () => (
 
 export const Image = () => (
   <div style={{ width: '360px', margin: '20px' }}>
+    <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+
     <form>
       <mds-text-input
         type="Image"

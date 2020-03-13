@@ -108,6 +108,10 @@ export default class MdsCheckbox extends HTMLElement {
     return false
   }
 
+  get standard() {
+    return this.hasAttribute('standard') ? 'standard' : ''
+  }
+  
   get validationMessage() {
     const message = this.getAttribute('validation-message') || `${this.label} is required.`
     return this.required ? message : ''
