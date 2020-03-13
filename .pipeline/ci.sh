@@ -8,3 +8,7 @@ handle_error() {
 }
 
 trap 'handle_error $LINENO' ERR
+
+yarn && yarn build && CI=true yarn test && yarn build:cdn
+
+( cd storybook ; yarn && CI=true yarn test && yarn build-storybook )
