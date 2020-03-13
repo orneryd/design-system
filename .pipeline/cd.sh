@@ -9,6 +9,8 @@ handle_error() {
 
 trap 'handle_error $LINENO' ERR
 
+.pipeline/ci.sh
+
 echo 'Deploying to development'
 cp -av ../dist ./build/dist
 cp -av ./public/samples ./build/samples

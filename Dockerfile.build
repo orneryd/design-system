@@ -1,4 +1,4 @@
-FROM registry.mckesson.com/devservices/mcklabs-node-pipeline-base:2.2.0
+FROM registry.mckesson.com/devservices/mcklabs-node-pipeline-base:3.0.2
 
 ARG PCF_USER
 ARG PCF_PASSWORD
@@ -6,28 +6,13 @@ ENV PCF_USER=$PCF_USER
 ENV PCF_PASSWORD=$PCF_PASSWORD
 ARG ARTIFACTORY_USER
 ARG ARTIFACTORY_API_KEY
-ARG VERACODE_SCANNER_API_KEY
-ARG SONARQUBE_API_KEY
 
 ENV PCF_DEV_API=api.sys.dev-west.paas.mckesson.com
 ENV PCF_PROD_API=api.sys.prod-west.paas.mckesson.com
 ENV BRANCH=$BRANCH
-ENV SONARQUBE_API_KEY=$SONARQUBE_API_KEY
-ENV SONARQUBE_PROJECT_KEY=fbc9aeaf-4a49-475b-abc6-39c45ba9cef2:new-labs-website
-
-ENV VERACODE_SCANNER_API_KEY=$VERACODE_SCANNER_API_KEY
-ENV VERACODE_APP_ID=530663
-
-
 
 RUN mckduc node write-npm-config --artifactory-user "${ARTIFACTORY_USER}" --artifactory-apikey "${ARTIFACTORY_API_KEY}" --path ~/.npmrc
 
 WORKDIR /usr/app
 
 COPY . .
-
-RUN yarn && yarn build && CI=true yarn test && yarn build:cdn
-
-WORKDIR /usr/app/storybook
-
-RUN yarn && CI=true yarn test && yarn build-storybook
