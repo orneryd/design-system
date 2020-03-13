@@ -6,11 +6,31 @@ import README from '@mcklabs/mds-button-readme'
 const label = 'Variants'
 const options = {
   Primary: 'primary',
+  PrimaryOutlined: 'primary outlined',
   PrimaryRounded: 'primary rounded',
+  PrimaryRoundedOutlined: 'primary rounded outlined',
   Secondary: 'secondary',
+  SecondaryOutlined: 'secondary outlined',
   SecondaryRounded: 'secondary rounded',
+  SecondaryRoundedOutlined: 'secondary rounded outlined',
+  Info: 'info',
+  InfoOutlined: 'info outlined',
+  InfoRounded: 'info rounded',
+  InfoRoundedOutlined: 'info rounded outlined',
+  Success: 'success',
+  SuccessOutlined: 'success outlined',
+  SuccessRounded: 'success rounded',
+  SuccessRoundedOutlined: 'success rounded outlined',
+  Warning: 'warning',
+  WarningOutlined: 'warning outlined',
+  WarningRounded: 'warning rounded',
+  WarningRoundedOutlined: 'warning rounded outlined',
+  Danger: 'danger',
+  DangerOutlined: 'danger rounded',
+  DangerRounded: 'danger outlined',
+  DangerRoundedOutlined: 'danger rounded outlined',
   Outlined: 'outlined',
-  OutlinedRounded: 'outlined rounded'
+  RoundedOutlined: 'rounded outlined'
 }
 const defaultValue = 'primary'
 const groupId = 'Buttons'
@@ -18,23 +38,6 @@ const styles = {
   textTransform: 'capitalize',
   margin: '1rem'
 }
-const buttonVariants = [
-  "primary",
-  "secondary",
-  "info",
-  "warning",
-  "danger",
-  "outlined"
-];
-const buttonSubVariants = [
-  "rounded"
-];
-const buttonOutlineVariants = [
-  "outlined"
-];
-const buttonStates = [
-  "disabled"
-];
 
 <Meta
   title="Web Components/Buttons"
@@ -54,27 +57,12 @@ const buttonStates = [
 <Preview withToolbar>
   <Story name="All">
     <>
-      {buttonVariants.map(variant => {
-        return (<>
-            <div style={{margin: '10px 0'}}>
+      <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
+      {Object.values(options).map(variant => {
+        return (<div style={{margin: '10px 0'}}>
               <mds-button variant={variant}>{variant}</mds-button>
-            </div>
-            {buttonSubVariants.map(subVariant => {
-              return (<>
-                  <div style={{margin: '10px 0'}}>
-                    <mds-button variant={`${variant} ${subVariant}`}>{variant}&nbsp;{subVariant}</mds-button>
-                  </div>
-                  {buttonOutlineVariants.map(outline => {
-                    return (<>
-                      <div style={{margin: '10px 0'}}>
-                        <mds-button variant={`${variant} ${subVariant} ${outline}`}>{variant}&nbsp;{subVariant}&nbsp;{outline}</mds-button>
-                      </div>
-                      </>)
-                    })}
-                </>
-              )})}
-          </>
-        )})}
+            </div>)
+      })}
     </>
   </Story>
 </Preview>
