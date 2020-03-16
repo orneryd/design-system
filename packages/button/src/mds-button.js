@@ -61,10 +61,60 @@ export const buttons = () => (
 ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
 
 ```css
-:root {
-  --mdsBannerMaxWidth: 1024px;
-  --mdsBannerColor: purple;
-  --mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);
+:mds-button {
+  --mdsButtonBorderRadius: 4px;
+  --mdsButtonPrimaryColor: $mdsBlue;
+  --mdsButtonPrimaryColorHover: $mdsBlueDark;
+  --mdsButtonSecondaryColor: $mdsOrange;
+  --mdsButtonSecondaryColorHover: $mdsOrangeDark;
+  --mdsButtonSuccessColor: $mdsGreen;
+  --mdsButtonSuccessHoverColor: $mdsGreenDark;
+  --mdsButtonInfoColor: $mdsBlueDark;
+  --mdsButtonInfoHoverColor: $mdsBlueDarker;
+  --mdsButtonWarningsColor: $mdsRust;
+  --mdsButtonWarningHoverColor: $mdsRustDarker;
+  --mdsButtonDangerColor: $mdsRedLight;
+  --mdsButtonDangerHoverColor: $mdsRed;
+  --mdsButtonOulinedBackgroundColor: transparent;
+  --mdsButtonOulinedBorder: inset 0px 0px 0px 2px $mdsPurple;
+  --mdsButtonOulinedColor: $mdsPurple;
+  --mdsButtonOulinedBackgroundColorHover: $mdsPurple;
+  --mdsButtonOulinedBorderHover: inherit;
+  --mdsButtonOulinedColorHover: $mdsWhite;
+  --mdsButtonOulinedColor: $mdsPurple;
+  --mdsButtonOulinedBackgroundColorHover: $mdsPurple;
+  --mdsButtonOulinedBorderHover: inherit;
+  --mdsButtonOulinedColorHover: $mdsWhite;
+  --mdsButtonOulinedColor: $mdsBlue;
+  --mdsButtonOulinedBorder: inset 0px 0px 0px 2px $mdsBlue;
+  --mdsButtonOulinedBackgroundColorHover: $mdsBlueDark;
+  --mdsButtonOulinedBorderHover: $mdsBlueDark;
+  --mdsButtonOulinedColorHover: $mdsWhite;
+  --mdsButtonSecondaryOulinedColor: $mdsOrange;
+  --mdsButtonSecondaryOulinedBorder: inset 0px 0px 0px 2px $mdsOrange;
+  --mdsButtonSecondaryOulinedBackgroundColorHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOulinedBorderHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOulinedColorHover: $mdsWhite;
+  --mdsButtonSuccessOulinedColor: $mdsGreen;
+  --mdsButtonSuccessOulinedBorder: inset 0px 0px 0px 2px $mdsGreen;
+  --mdsButtonOSuccessulinedBackgroundColorHover: $mdsGreenDark;
+  --mdsButtonSuccessOulinedBorderHover: $mdsGreenDark;
+  --mdsButtonSuccessOulinedColorHover: $mdsWhite;
+  --mdsButtonInfoOulinedColor: $mdsBlueDark;
+  --mdsButtonInfoOulinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
+  --mdsButtonInfoOulinedBackgroundColorHover: $mdsBlueDarker;
+  --mdsButtonInfoOulinedBorderHover: $mdsBlueDarker;
+  --mdsButtonInfoOulinedColorHover: $mdsWhite;
+  --mdsButtonWarningOulinedColor: $mdsRust;
+  --mdsButtonWarningOulinedBorder: inset 0px 0px 0px 2px $mdsRust;
+  --mdsButtonWarningOulinedBackgroundColorHover: $mdsRustDarker;
+  --mdsButtonWarningOulinedBorderHover: $mdsRustDarker;
+  --mdsButtonWarningOulinedColorHover: $mdsWhite;
+  --mdsButtonDangerOulinedColor: $mdsRedLight;
+  --mdsButtonDangerOulinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
+  --mdsButtonDangerOulinedBackgroundColorHover: $mdsRed;
+  --mdsButtonDangerOulinedBorderHover: $mdsRed;
+  --mdsButtonDangerOulinedColorHover: $mdsWhite;
 }
 ```
 <br/>
