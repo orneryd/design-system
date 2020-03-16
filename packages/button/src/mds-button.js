@@ -68,53 +68,53 @@ export const buttons = () => (
   --mdsButtonSecondaryColor: $mdsOrange;
   --mdsButtonSecondaryColorHover: $mdsOrangeDark;
   --mdsButtonSuccessColor: $mdsGreen;
-  --mdsButtonSuccessHoverColor: $mdsGreenDark;
+  --mdsButtonSuccessColorHover : $mdsGreenDark;
   --mdsButtonInfoColor: $mdsBlueDark;
-  --mdsButtonInfoHoverColor: $mdsBlueDarker;
+  --mdsButtonInfoColorHover : $mdsBlueDarker;
   --mdsButtonWarningsColor: $mdsRust;
-  --mdsButtonWarningHoverColor: $mdsRustDarker;
+  --mdsButtonWarningColorHover : $mdsRustDarker;
   --mdsButtonDangerColor: $mdsRedLight;
-  --mdsButtonDangerHoverColor: $mdsRed;
-  --mdsButtonOulinedBackgroundColor: transparent;
-  --mdsButtonOulinedBorder: inset 0px 0px 0px 2px $mdsPurple;
-  --mdsButtonOulinedColor: $mdsPurple;
-  --mdsButtonOulinedBackgroundColorHover: $mdsPurple;
-  --mdsButtonOulinedBorderHover: inherit;
-  --mdsButtonOulinedColorHover: $mdsWhite;
-  --mdsButtonOulinedColor: $mdsPurple;
-  --mdsButtonOulinedBackgroundColorHover: $mdsPurple;
-  --mdsButtonOulinedBorderHover: inherit;
-  --mdsButtonOulinedColorHover: $mdsWhite;
-  --mdsButtonOulinedColor: $mdsBlue;
-  --mdsButtonOulinedBorder: inset 0px 0px 0px 2px $mdsBlue;
-  --mdsButtonOulinedBackgroundColorHover: $mdsBlueDark;
-  --mdsButtonOulinedBorderHover: $mdsBlueDark;
-  --mdsButtonOulinedColorHover: $mdsWhite;
-  --mdsButtonSecondaryOulinedColor: $mdsOrange;
-  --mdsButtonSecondaryOulinedBorder: inset 0px 0px 0px 2px $mdsOrange;
-  --mdsButtonSecondaryOulinedBackgroundColorHover: $mdsOrangeDark;
-  --mdsButtonSecondaryOulinedBorderHover: $mdsOrangeDark;
-  --mdsButtonSecondaryOulinedColorHover: $mdsWhite;
-  --mdsButtonSuccessOulinedColor: $mdsGreen;
-  --mdsButtonSuccessOulinedBorder: inset 0px 0px 0px 2px $mdsGreen;
-  --mdsButtonOSuccessulinedBackgroundColorHover: $mdsGreenDark;
-  --mdsButtonSuccessOulinedBorderHover: $mdsGreenDark;
-  --mdsButtonSuccessOulinedColorHover: $mdsWhite;
-  --mdsButtonInfoOulinedColor: $mdsBlueDark;
-  --mdsButtonInfoOulinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
-  --mdsButtonInfoOulinedBackgroundColorHover: $mdsBlueDarker;
-  --mdsButtonInfoOulinedBorderHover: $mdsBlueDarker;
-  --mdsButtonInfoOulinedColorHover: $mdsWhite;
-  --mdsButtonWarningOulinedColor: $mdsRust;
-  --mdsButtonWarningOulinedBorder: inset 0px 0px 0px 2px $mdsRust;
-  --mdsButtonWarningOulinedBackgroundColorHover: $mdsRustDarker;
-  --mdsButtonWarningOulinedBorderHover: $mdsRustDarker;
-  --mdsButtonWarningOulinedColorHover: $mdsWhite;
-  --mdsButtonDangerOulinedColor: $mdsRedLight;
-  --mdsButtonDangerOulinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
-  --mdsButtonDangerOulinedBackgroundColorHover: $mdsRed;
-  --mdsButtonDangerOulinedBorderHover: $mdsRed;
-  --mdsButtonDangerOulinedColorHover: $mdsWhite;
+  --mdsButtonDangerColorHover : $mdsRed;
+  --mdsButtonOutlinedBackgroundColor: transparent;
+  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px $mdsPurple;
+  --mdsButtonOutlinedColor: $mdsPurple;
+  --mdsButtonOutlinedBackgroundColorHover: $mdsPurple;
+  --mdsButtonOutlinedBorderHover: inherit;
+  --mdsButtonOutlinedColorHover: $mdsWhite;
+  --mdsButtonOutlinedColor: $mdsPurple;
+  --mdsButtonOutlinedBackgroundColorHover: $mdsPurple;
+  --mdsButtonOutlinedBorderHover: inherit;
+  --mdsButtonOutlinedColorHover: $mdsWhite;
+  --mdsButtonOutlinedColor: $mdsBlue;
+  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px $mdsBlue;
+  --mdsButtonOutlinedBackgroundColorHover: $mdsBlueDark;
+  --mdsButtonOutlinedBorderHover: $mdsBlueDark;
+  --mdsButtonOutlinedColorHover: $mdsWhite;
+  --mdsButtonSecondaryOutlinedColor: $mdsOrange;
+  --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px $mdsOrange;
+  --mdsButtonSecondaryOutlinedBackgroundColorHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOutlinedBorderHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOutlinedColorHover: $mdsWhite;
+  --mdsButtonSuccessOutlinedColor: $mdsGreen;
+  --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px $mdsGreen;
+  --mdsButtonSuccessOutlinedBackgroundColorHover: $mdsGreenDark;
+  --mdsButtonSuccessOutlinedBorderHover: $mdsGreenDark;
+  --mdsButtonSuccessOutlinedColorHover: $mdsWhite;
+  --mdsButtonInfoOutlinedColor: $mdsBlueDark;
+  --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
+  --mdsButtonInfoOutlinedBackgroundColorHover: $mdsBlueDarker;
+  --mdsButtonInfoOutlinedBorderHover: $mdsBlueDarker;
+  --mdsButtonInfoOutlinedColorHover: $mdsWhite;
+  --mdsButtonWarningOutlinedColor: $mdsRust;
+  --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px $mdsRust;
+  --mdsButtonWarningOutlinedBackgroundColorHover: $mdsRustDarker;
+  --mdsButtonWarningOutlinedBorderHover: $mdsRustDarker;
+  --mdsButtonWarningOutlinedColorHover: $mdsWhite;
+  --mdsButtonDangerOutlinedColor: $mdsRedLight;
+  --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
+  --mdsButtonDangerOutlinedBackgroundColorHover: $mdsRed;
+  --mdsButtonDangerOutlinedBorderHover: $mdsRed;
+  --mdsButtonDangerOutlinedColorHover: $mdsWhite;
 }
 ```
 <br/>
@@ -131,13 +131,58 @@ export const buttons = () => (
  * @cssproperty {String} --mdsButtonPrimaryColor - Overrides the primary color
  * @cssproperty {String} --mdsButtonPrimaryColorHover - Overrides the primary color on hover
  * @cssproperty {String} --mdsButtonSecondaryColor - Overrides the secondary color
- * @cssproperty {String} --mdsButtonSecondaryColorHover  - Overrides the secondary color on hover
- * @cssproperty {String} --mdsButtonOulinedBackgroundColor  - Overrides the outlined background color
- * @cssproperty {String} --mdsButtonOulinedBackgroundColorHover - Overrides the outlined background color on hover
- * @cssproperty {String} --mdsButtonOulinedBorder - Overrides the outlined border color
- * @cssproperty {String} --mdsButtonOulinedBorderHover - Overrides the  outlined border color on hover
- * @cssproperty {String} --mdsButtonOulinedColor - Overrides the outlined color
- * @cssproperty {String} --mdsButtonOulinedColorHover - Overrides the outlined color on hover
+ * @cssproperty {String} --mdsButtonSecondaryColorHover - Overrides the secondary color on hover
+ * @cssproperty {String} --mdsButtonOutlinedBackgroundColor - Overrides the outlined background color
+ * @cssproperty {String} --mdsButtonOutlinedBackgroundColorHover - Overrides the outlined background color on hover
+ * @cssproperty {String} --mdsButtonOutlinedBorder - Overrides the outlined border color
+ * @cssproperty {String} --mdsButtonOutlinedBorderHover - Overrides the outlined border color on hover
+ * @cssproperty {String} --mdsButtonOutlinedColor - Overrides the outlined color
+ * @cssproperty {String} --mdsButtonOutlinedColorHover - Overrides the outlined color on hover
+ * 
+ * @cssproperty {String} --mdsButtonBorderRadius - Overrides the radius border
+ * @cssproperty {String} --mdsButtonPrimaryColor - Overrides the primary color
+ * @cssproperty {String} --mdsButtonPrimaryColorHover - Overrides the primary color on hover
+ * @cssproperty {String} --mdsButtonSecondaryColor - Overrides the secondary color
+ * @cssproperty {String} --mdsButtonSecondaryColorHover - Overrides the secondary color on hover
+ * @cssproperty {String} --mdsButtonSuccessColor - Overrides the success color
+ * @cssproperty {String} --mdsButtonSuccessColorHover  - Overrides the success color on hover
+ * @cssproperty {String} --mdsButtonInfoColor - Overrides the the info color
+ * @cssproperty {String} --mdsButtonInfoColorHover  - Overrides the info color on hover
+ * @cssproperty {String} --mdsButtonWarningColor - Overrides the warning color
+ * @cssproperty {String} --mdsButtonWarningColorHover  - Overrides the warnings color on hover
+ * @cssproperty {String} --mdsButtonDangerColor - Overrides the danger color
+ * @cssproperty {String} --mdsButtonDangerColorHover  - Overrides the danger color on hover
+ * @cssproperty {String} --mdsButtonOutlinedBackgroundColor - Overrides the outlined background color
+ * @cssproperty {String} --mdsButtonOutlinedBorder - Overrides the outlined border
+ * @cssproperty {String} --mdsButtonOutlinedColor - Overrides the outlined color
+ * @cssproperty {String} --mdsButtonOutlinedBackgroundColorHover - Overrides the outlined background color on hover
+ * @cssproperty {String} --mdsButtonOutlinedColorHover - Overrides the outlined color on hover
+ * @cssproperty {String} --mdsButtonOutlinedBorderHover - Overrides the outlined border on hover
+ * @cssproperty {String} --mdsButtonSecondaryOutlinedColor - Overrides the secondary outlined color
+ * @cssproperty {String} --mdsButtonSecondaryOutlinedBorder - Overrides the secondary outlined border
+ * @cssproperty {String} --mdsButtonSecondaryOutlinedBackgroundColorHover - Overrides the secondary outlined background color on hover
+ * @cssproperty {String} --mdsButtonSecondaryOutlinedBorderHover - Overrides the secondary outlined border on hover
+ * @cssproperty {String} --mdsButtonSecondaryOutlinedColorHover - Overrides the secondary outlined color on hover
+ * @cssproperty {String} --mdsButtonSuccessOutlinedColor - Overrides the success outlined color
+ * @cssproperty {String} --mdsButtonSuccessOutlinedBorder - Overrides the success outlined border
+ * @cssproperty {String} --mdsButtonSuccessOutlinedBackgroundColorHover - Overrides the success outlined background color on hover
+ * @cssproperty {String} --mdsButtonSuccessOutlinedBorderHover - Overrides the success outlined border on hover
+ * @cssproperty {String} --mdsButtonSuccessOutlinedColorHover - Overrides the success outlined color on hover
+ * @cssproperty {String} --mdsButtonInfoOutlinedColor - Overrides the info outlined color
+ * @cssproperty {String} --mdsButtonInfoOutlinedBorder - Overrides the info outlined border
+ * @cssproperty {String} --mdsButtonInfoOutlinedBackgroundColorHover - Overrides the info outlined background color on hover
+ * @cssproperty {String} --mdsButtonInfoOutlinedBorderHover - Overrides the info outlined border on hover
+ * @cssproperty {String} --mdsButtonInfoOutlinedColorHover - Overrides the info outlined color on hover
+ * @cssproperty {String} --mdsButtonWarningOutlinedColor - Overrides the warning outlined color
+ * @cssproperty {String} --mdsButtonWarningOutlinedBorder - Overrides the warning outlined border
+ * @cssproperty {String} --mdsButtonWarningOutlinedBackgroundColorHover - Overrides the warning outlined background color on hover
+ * @cssproperty {String} --mdsButtonWarningOutlinedBorderHover - Overrides the warning outlined border on hover
+ * @cssproperty {String} --mdsButtonWarningOutlinedColorHover - Overrides the warning outlined color on hover
+ * @cssproperty {String} --mdsButtonDangerOutlinedColor - Overrides the danger outlined color
+ * @cssproperty {String} --mdsButtonDangerOutlinedBorder - Overrides the danger outlined border
+ * @cssproperty {String} --mdsButtonDangerOutlinedBackgroundColorHover - Overrides the danger outlined background color on hover
+ * @cssproperty {String} --mdsButtonDangerOutlinedBorderHover - Overrides the danger outlined border on hover
+ * @cssproperty {String} --mdsButtonDangerOutlinedColorHover - Overrides the danger outlined color on hover
  *
  */
 export default class MdsButton extends HTMLElement {

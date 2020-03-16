@@ -57,7 +57,7 @@
     } 
   }
   &.warning {
-    background-color: var(--mdsButtonWarningsColor, $mdsRust);
+    background-color: var(--mdsButtonWarningColor, $mdsRust);
     &:hover {
       background-color: var(--mdsButtonWarningHoverColor, $mdsRustDarker);
     }
@@ -71,76 +71,76 @@
 
   &.outlined,
   &.inverted {
-    background-color: var(--mdsButtonOulinedBackgroundColor, transparent);
-    box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsPurple);
-    color: var(--mdsButtonOulinedColor, $mdsPurple);
+    background-color: var(--mdsButtonOutlinedBackgroundColor, transparent);
+    box-shadow: var(--mdsButtonOutlinedBorder, inset 0px 0px 0px 2px $mdsPurple);
+    color: var(--mdsButtonOutlinedColor, $mdsPurple);
     &:hover {
-      background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsPurple);
-      box-shadow: var(--mdsButtonOulinedBorderHover, inherit);
-      color: var(--mdsButtonOulinedColorHover, $mdsWhite);
+      background-color: var(--mdsButtonOutlinedBackgroundColorHover, $mdsPurple);
+      box-shadow: var(--mdsButtonOutlinedBorderHover, inherit);
+      color: var(--mdsButtonOutlinedColorHover, $mdsWhite);
     }
     
     &.primary {
-      color: var(--mdsButtonOulinedColor, $mdsBlue);
-      box-shadow: var(--mdsButtonOulinedBorder, inset 0px 0px 0px 2px $mdsBlue);
+      color: var(--mdsButtonOutlinedColor, $mdsBlue);
+      box-shadow: var(--mdsButtonOutlinedBorder, inset 0px 0px 0px 2px $mdsBlue);
 
       &:hover {
-        background-color: var(--mdsButtonOulinedBackgroundColorHover, $mdsBlueDark);
-        box-shadow: var(--mdsButtonOulinedBorderHover, $mdsBlueDark);
-        color: var(--mdsButtonOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonOutlinedBackgroundColorHover, $mdsBlueDark);
+        box-shadow: var(--mdsButtonOutlinedBorderHover, $mdsBlueDark);
+        color: var(--mdsButtonOutlinedColorHover, $mdsWhite);
       }
     }
 
     &.secondary,
     &.action {
-      color: var(--mdsButtonSecondaryOulinedColor, $mdsOrange);
-      box-shadow: var(--mdsButtonSecondaryOulinedBorder, inset 0px 0px 0px 2px $mdsOrange);
+      color: var(--mdsButtonSecondaryOutlinedColor, $mdsOrange);
+      box-shadow: var(--mdsButtonSecondaryOutlinedBorder, inset 0px 0px 0px 2px $mdsOrange);
 
       &:hover {
-        background-color: var(--mdsButtonSecondaryOulinedBackgroundColorHover, $mdsOrangeDark);
-        box-shadow: var(--mdsButtonSecondaryOulinedBorderHover, $mdsOrangeDark);
-        color: var(--mdsButtonSecondaryOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonSecondaryOutlinedBackgroundColorHover, $mdsOrangeDark);
+        box-shadow: var(--mdsButtonSecondaryOutlinedBorderHover, $mdsOrangeDark);
+        color: var(--mdsButtonSecondaryOutlinedColorHover, $mdsWhite);
       }
     }
     &.success {
-      color: var(--mdsButtonSuccessOulinedColor, $mdsGreen);
-      box-shadow: var(--mdsButtonSuccessOulinedBorder, inset 0px 0px 0px 2px $mdsGreen);
+      color: var(--mdsButtonSuccessOutlinedColor, $mdsGreen);
+      box-shadow: var(--mdsButtonSuccessOutlinedBorder, inset 0px 0px 0px 2px $mdsGreen);
 
       &:hover {
-        background-color: var(--mdsButtonOSuccessulinedBackgroundColorHover, $mdsGreenDark);
-        box-shadow: var(--mdsButtonSuccessOulinedBorderHover, $mdsGreenDark);
-        color: var(--mdsButtonSuccessOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonSuccessOutlinedBackgroundColorHover, $mdsGreenDark);
+        box-shadow: var(--mdsButtonSuccessOutlinedBorderHover, $mdsGreenDark);
+        color: var(--mdsButtonSuccessOutlinedColorHover, $mdsWhite);
       }
     }
 
     &.info {
-      color: var(--mdsButtonInfoOulinedColor, $mdsBlueDark);
-      box-shadow: var(--mdsButtonInfoOulinedBorder, inset 0px 0px 0px 2px $mdsBlueDark);
+      color: var(--mdsButtonInfoOutlinedColor, $mdsBlueDark);
+      box-shadow: var(--mdsButtonInfoOutlinedBorder, inset 0px 0px 0px 2px $mdsBlueDark);
 
       &:hover {
-        background-color: var(--mdsButtonInfoOulinedBackgroundColorHover, $mdsBlueDarker);
-        box-shadow: var(--mdsButtonInfoOulinedBorderHover, $mdsBlueDarker);
-        color: var(--mdsButtonInfoOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonInfoOutlinedBackgroundColorHover, $mdsBlueDarker);
+        box-shadow: var(--mdsButtonInfoOutlinedBorderHover, $mdsBlueDarker);
+        color: var(--mdsButtonInfoOutlinedColorHover, $mdsWhite);
       }
     }
     &.warning {
-      color: var(--mdsButtonWarningOulinedColor, $mdsRust);
-      box-shadow: var(--mdsButtonWarningOulinedBorder, inset 0px 0px 0px 2px $mdsRust);
+      color: var(--mdsButtonWarningOutlinedColor, $mdsRust);
+      box-shadow: var(--mdsButtonWarningOutlinedBorder, inset 0px 0px 0px 2px $mdsRust);
 
       &:hover {
-        background-color: var(--mdsButtonWarningOulinedBackgroundColorHover, $mdsRustDarker);
-        box-shadow: var(--mdsButtonWarningOulinedBorderHover, $mdsRustDarker);
-        color: var(--mdsButtonWarningOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonWarningOutlinedBackgroundColorHover, $mdsRustDarker);
+        box-shadow: var(--mdsButtonWarningOutlinedBorderHover, $mdsRustDarker);
+        color: var(--mdsButtonWarningOutlinedColorHover, $mdsWhite);
       }
     }
     &.danger {
-      color: var(--mdsButtonDangerOulinedColor, $mdsRedLight);
-      box-shadow: var(--mdsButtonDangerOulinedBorder, inset 0px 0px 0px 2px $mdsRedLight);
+      color: var(--mdsButtonDangerOutlinedColor, $mdsRedLight);
+      box-shadow: var(--mdsButtonDangerOutlinedBorder, inset 0px 0px 0px 2px $mdsRedLight);
 
       &:hover {
-        background-color: var(--mdsButtonDangerOulinedBackgroundColorHover, $mdsRed);
-        box-shadow: var(--mdsButtonDangerOulinedBorderHover, $mdsRed);
-        color: var(--mdsButtonDangerOulinedColorHover, $mdsWhite);
+        background-color: var(--mdsButtonDangerOutlinedBackgroundColorHover, $mdsRed);
+        box-shadow: var(--mdsButtonDangerOutlinedBorderHover, $mdsRed);
+        color: var(--mdsButtonDangerOutlinedColorHover, $mdsWhite);
       }
     }
   }

@@ -49,7 +49,7 @@ export const buttons = () => (
 
 ### HTML Usage
 ```html
-<mds-button variant="primary" href="http://kittenwar.com">Rate Kittens</mds-button>
+<mds-button variant="primary" href="https://www.google.com">Largest Online Advertiser</mds-button>
 ```
 ### Rendered in the browser
 
@@ -96,12 +96,12 @@ export const buttons = () => (
 
 | Property                                 | Type   | Description                                      |
 |------------------------------------------|--------|--------------------------------------------------|
-| `--mdsButtonOulinedBackgroundColor`      | String | Overrides the outlined background color          |
-| `--mdsButtonOulinedBackgroundColorHover` | String | Overrides the outlined background color on hover |
-| `--mdsButtonOulinedBorder`               | String | Overrides the outlined border color              |
-| `--mdsButtonOulinedBorderHover`          | String | Overrides the  outlined border color on hover    |
-| `--mdsButtonOulinedColor`                | String | Overrides the outlined color                     |
-| `--mdsButtonOulinedColorHover`           | String | Overrides the outlined color on hover            |
+| `--mdsButtonOutlinedBackgroundColor`      | String | Overrides the outlined background color          |
+| `--mdsButtonOutlinedBackgroundColorHover` | String | Overrides the outlined background color on hover |
+| `--mdsButtonOutlinedBorder`               | String | Overrides the outlined border color              |
+| `--mdsButtonOutlinedBorderHover`          | String | Overrides the  outlined border color on hover    |
+| `--mdsButtonOutlinedColor`                | String | Overrides the outlined color                     |
+| `--mdsButtonOutlinedColorHover`           | String | Overrides the outlined color on hover            |
 | `--mdsButtonPrimaryColor`                | String | Overrides the primary color                      |
 | `--mdsButtonPrimaryColorHover`           | String | Overrides the primary color on hover             |
 | `--mdsButtonSecondaryColor`              | String | Overrides the secondary color                    |
