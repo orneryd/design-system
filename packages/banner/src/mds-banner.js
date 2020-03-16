@@ -22,7 +22,7 @@ yarn add `@mcklabs/mds-banner`
 
 ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
 ```css
-:root {
+mds-banner {
   --mdsBannerColor: rgb(254, 254, 254);
   --mdsBannerBackgroundColor: rgb(25, 35, 67);
   --mdsBannerMaxWidth: 768px;
