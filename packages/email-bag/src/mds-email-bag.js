@@ -81,13 +81,21 @@ export default class EmailBag extends HTMLElement {
         'Content-Type': 'text/html'
       }
     }).then(response => {
-      return response.json()
+      if (response.status < 400) {
+        return response.json()
+      } else {
+        return Promise.reject({ email, error: `${email} ${response.statusText}`})
+      }
     })
   }
 
   chipsUpdate(e) {
     const incomingEmails = e.detail
     this.value = incomingEmails.join(';')
+
+    if (this.hasAttribute('skip-check')) {
+      return Promise.resolve(incomingEmails)
+    }
 
     this.dispatchEvent(new CustomEvent('validationstart'))
 
@@ -110,28 +118,30 @@ export default class EmailBag extends HTMLElement {
       } else {
         this.spinner.style.visibility = 'visible'
         const emailValidationCalls = []
+        const emailValidationFailures = []
         incomingEmails.forEach(email => {
           emailValidationCalls.push(
             this.validateEmail(email, {
               headers: {
                 'Content-Type': 'text/html'
               }
+            }).catch(({error})=>{
+              emailValidationFailures.push(`${error}; `)
             })
           )
         })
         return Promise.all(emailValidationCalls)
           .then(() => {
-            this.notifyValidity(``)
-            this.removeInvalidCSS()
+            const validationMessage = decodeURIComponent(emailValidationFailures.join(''));
+            if (validationMessage) {
+              this.setInvalidCSS()
+            } else {
+              this.removeInvalidCSS()
+            }
+            this.notifyValidity(validationMessage)
             this.spinner.style.visibility = 'hidden'
             this.dispatchEvent(new CustomEvent('validationend', { detail: incomingEmails }))
             return incomingEmails
-          })
-          .catch(error => {
-            this.notifyValidity(decodeURIComponent(error))
-            this.setInvalidCSS()
-            this.spinner.style.visibility = 'hidden'
-            this.dispatchEvent(new CustomEvent('validationend', { detail: error }))
           })
       }
     }
@@ -157,7 +167,7 @@ export default class EmailBag extends HTMLElement {
   }
 
   notifyValidity(message) {
-    this.shadowRoot.querySelector('.error-text').innerHTML = message
+    this.shadowRoot.querySelector('.error-text').textContent = message
     this.clone && this.removeChild(this.clone)
     this.clone = this.chipBag.inputElement.cloneNode()
     this.clone.style.visibility = 'hidden'
@@ -182,7 +192,9 @@ export default class EmailBag extends HTMLElement {
     this.render()
   }
   render() {
-    emailBagTemplate(this).connect()
+    const rendered = emailBagTemplate(this);
+    rendered.forEach((n) => n.tagName === 'MDS-CHIP-BAG' && n.setAttribute('value', this.getAttribute('value')))
+    rendered.connect()
     this.notifyValidity(this.hasAttribute('required') ? this.validMessage : '')
   }
 }
