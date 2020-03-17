@@ -52,7 +52,6 @@ mds-banner {
  * @cssproperty --mdsBannerBackgroundColor - Overrides the background color for the header.
  * @cssproperty --mdsBannerMaxWidth - Overrides the maxwidth for the header and content.
  * @cssproperty --mdsBannerHeaderColor - Overrides the text color for the header.
- * @cssproperty --mdsBannerHeaderMaxWidth - Overrides the max-width for the header.
  * @cssproperty --mdsBannerContentColor - Overrides the text color for the content.
  * @cssproperty --mdsBannerContentMaxWidth - Overrides the max-width for the header.
  *
