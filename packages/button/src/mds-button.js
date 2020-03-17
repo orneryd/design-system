@@ -52,7 +52,7 @@ export const buttons = () => (
 
 ### HTML Usage
 ```html
-<mds-button variant="primary" href="http://kittenwar.com">Rate Kittens</mds-button>
+<mds-button variant="primary" href="https://www.google.com">Search Things With Google</mds-button>
 ```
 ### Rendered in the browser
 
@@ -127,17 +127,6 @@ export const buttons = () => (
  * @attr {String} href - give the button an href and it will render an `anchor` tag with the appropriate href instead of a `button` tag
  * @attr {String} disabled - sets the enabled or disabled state
  * @attr {String} variant - variant of the button
- * 
- * @cssproperty {String} --mdsButtonPrimaryColor - Overrides the primary color
- * @cssproperty {String} --mdsButtonPrimaryColorHover - Overrides the primary color on hover
- * @cssproperty {String} --mdsButtonSecondaryColor - Overrides the secondary color
- * @cssproperty {String} --mdsButtonSecondaryColorHover - Overrides the secondary color on hover
- * @cssproperty {String} --mdsButtonOutlinedBackgroundColor - Overrides the outlined background color
- * @cssproperty {String} --mdsButtonOutlinedBackgroundColorHover - Overrides the outlined background color on hover
- * @cssproperty {String} --mdsButtonOutlinedBorder - Overrides the outlined border color
- * @cssproperty {String} --mdsButtonOutlinedBorderHover - Overrides the outlined border color on hover
- * @cssproperty {String} --mdsButtonOutlinedColor - Overrides the outlined color
- * @cssproperty {String} --mdsButtonOutlinedColorHover - Overrides the outlined color on hover
  * 
  * @cssproperty {String} --mdsButtonBorderRadius - Overrides the radius border
  * @cssproperty {String} --mdsButtonPrimaryColor - Overrides the primary color
