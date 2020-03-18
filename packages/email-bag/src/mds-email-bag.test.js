@@ -72,35 +72,38 @@ describe('mds-email-bag', () => {
         })
       })
     })
-
-    it('calls notifyValidity if there is an invalid email', () => {
-      element.setAttribute('required')
-      element.setAttribute('domains', ['mckesson'])
-      element.chipsUpdate({ detail: ['test.email@invalid.com'] })
-      expect(notifyValiditySpy.calls.count()).toBe(1)
-      expect(notifyValiditySpy.calls.allArgs()[0][0]).toBe(
-        'Required\nInvalid: test.email@invalid.com'
-      )
-    })
-
-    it('sets invalid css if there is an invalid email', () => {
-      element.setAttribute('required')
-      element.setAttribute('domains', ['mckesson'])
-      element.chipsUpdate({ detail: ['test.email@invalid.com'] })
-      expect(setInvalidCSSSpy.calls.count()).toBe(1)
-    })
-
-    it('sets a visible spinner when all emails are valid', () => {
-      element.setAttribute('required')
-      element.setAttribute('domains', 'mckesson')
-      element.chipsUpdate({ detail: ['test.email@mckesson.com'] })
-      expect(element.spinner.style.visibility).toBe('visible')
-    })
-
+    
     describe('when emails are required and the domain is mckesson', () => {
       beforeEach(() => {
         element.setAttribute('required')
         element.setAttribute('domains', 'mckesson')
+      })
+
+      describe('when there is an invalid email', () => {
+        beforeEach(() => {
+          element.chipsUpdate({ detail: ['test.email@invalid.com'] })
+        })
+  
+        it('calls notifyValidity if there is an invalid email', () => {
+          expect(notifyValiditySpy.calls.count()).toBe(1)
+          expect(notifyValiditySpy.calls.allArgs()[0][0]).toBe(
+            'Required\nInvalid: test.email@invalid.com'
+          )
+        })
+    
+        it('sets invalid css if there is an invalid email', () => {
+          expect(setInvalidCSSSpy.calls.count()).toBe(1)
+        })
+      })
+
+      describe('when there is an invalid email', () => {
+        beforeEach(() => {
+          element.chipsUpdate({ detail: ['test.email@mckesson.com'] })
+        })
+    
+        it('sets a visible spinner when all emails are valid', () => {
+          expect(element.spinner.style.visibility).toBe('visible')
+        })
       })
 
       describe('when all emails are successfully validated', () => {
