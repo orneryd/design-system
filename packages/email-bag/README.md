@@ -1,6 +1,6 @@
 # mds-email-bag
 
-A form input designed to validate emails against MeKesson's email lookup API.
+A form input designed to validate emails against McKesson's email lookup API.
 It functions similarly to that of the chip-bag but with an asynchronous API call for validation
 
 ### Usage
