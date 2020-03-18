@@ -1,15 +1,39 @@
 #!/usr/bin/env bash
 
+# get the arguments and declare them as variables 
+# arguments are defined as variables that equal themselves.
+# 
+# example: 
+# 
+# $ ./version.sh foo 
+# makes the variable foo=foo inside the script.
+# 
+# arguments with - or -- get the next argument as its value.
+# example: 
+# 
+# $ ./version.sh --foo bar 
+# makes the variable publish=bar inside the script.
+# 
+# If a flag is passed without a second param, it is set to "true"
+# example:
+# 
+# $ ./version.sh --publish  
+# makes the variable publish=true inside the script.
+# 
+# $ ./version.sh --publish patch 
+# makes the variable publish=patch inside the script.
+# makes the variable patch=patch inside the script.
+# 
 while [ $# -gt 0 ]; do
     if [[ $1 == *"-"* ]]; then
-        v="${1/-/}"
-        v="${v/-/}"
-        val=$2
+        PARAM="${1/-/}"
+        PARAM="${PARAM/-/}"
+        VALUE=$2
         if [ -z "$2" ]; then
-            val="true"
+            VALUE="true"
         fi
-        declare $v="$val"
-        echo "$v=$val"
+        declare $PARAM="$val"
+        echo "$PARAM=$val"
     else 
         declare $1="$1"
         echo "$1=$1"
