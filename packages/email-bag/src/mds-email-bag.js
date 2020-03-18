@@ -3,7 +3,7 @@ import { registerComponent } from '@mcklabs/mds-core'
 import emailBagTemplate from './mds-email-bag.html'
 
 /**
-A form input designed to validate emails against mckesson's email lookup api.
+A form input designed to validate emails against McKesson's email lookup API.
 It functions similarly to that of the chip-bag but with an asynchronous api call for validation
 
 ### Usage
@@ -38,12 +38,12 @@ export const ToolingForm = ({ onFormSuccess }) => (
  * @module ToolingForm
  * @element mds-email-bag
  * @extends {HTMLElement}
- * @description A form input designed to validate emails against mckesson's email lookup api. It functions similarly to that of the chip-bag but with an asynchronous api call for validation
+ * @description A form input designed to validate emails against McKesson's email lookup API. It functions similarly to that of the chip-bag but with an asynchronous api call for validation
  * 
  * @attr {String} email-lookup-route - The entire path for the user lookup service. default `/api/v1/emails`
  * 
- * @fires validationstart - before the validation api call is executed. 
- * @fires validationend - after the validation api call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error.
+ * @fires validationstart - before the validation API call is executed. 
+ * @fires validationend - after the validation API call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error.
  * 
  */
 export default class EmailBag extends HTMLElement {
