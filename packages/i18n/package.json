@@ -10,5 +10,8 @@
   "license": "ISC",
   "publishConfig": {
     "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+  },
+  "dependencies": {
+    "@mcklabs/web-components": ">=1.1.5"
   }
 }

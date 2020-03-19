@@ -1,0 +1,21 @@
+{
+    "name": "@mcklabs/mds-email-bag",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/mds-email-bag.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "publishConfig": {
+      "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+    },
+    "dependencies": {
+      "@mcklabs/web-components": ">=1.1.5",
+      "@mcklabs/mds-chip": ">=0.1.2",
+      "@mcklabs/mds-chip-bag": ">=0.1.2",
+      "@mcklabs/mds-core": ">=0.1.0"
+    }
+  }
+  

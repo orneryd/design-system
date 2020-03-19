@@ -1,0 +1,14 @@
+<link href="./mds-email-bag.scss" />
+<slot></slot>
+<mds-chip-bag class="emails" required delimiter="[\\s,;]+" onchipsupdate="${this.chipsUpdate}">
+  <div slot="mds-chip-bag-helper">
+    <mds-i18n class="helper-text" key="type.email"></mds-i18n>
+    <span class="error-text"></span>
+    <div class="spinner-ring" style="visibility: hidden;">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</mds-chip-bag>

@@ -47,13 +47,14 @@ export const buttons = () => (
 
 ## Properties
 
-| Property            | Attribute | Modifiers | Type              | Description        |
-|---------------------|-----------|-----------|-------------------|--------------------|
-| `checked`           | `checked` |           | `String`          | the checked status |
-| `indicatorElement`  |           | readonly  | `Element \| null` |                    |
-| `inputWrapper`      |           | readonly  | `Element \| null` |                    |
-| `validationMessage` |           | readonly  | `string`          |                    |
-| `value`             |           |           | `"" \| "checked"` |                    |
+| Property            | Attribute | Modifiers | Type               | Description        |
+|---------------------|-----------|-----------|--------------------|--------------------|
+| `checked`           | `checked` |           | `String`           | the checked status |
+| `indicatorElement`  |           | readonly  | `Element \| null`  |                    |
+| `inputWrapper`      |           | readonly  | `Element \| null`  |                    |
+| `standard`          |           | readonly  | `"standard" \| ""` |                    |
+| `validationMessage` |           | readonly  | `string`           |                    |
+| `value`             |           |           | `"" \| "checked"`  |                    |
 
 ## Methods
 

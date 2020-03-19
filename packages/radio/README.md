@@ -52,12 +52,13 @@ export const buttons = () => (
 
 ## Properties
 
-| Property            | Attribute | Modifiers | Type              | Description        |
-|---------------------|-----------|-----------|-------------------|--------------------|
-| `checked`           | `checked` |           | `String`          | the checked status |
-| `indicatorElement`  |           | readonly  | `Element \| null` |                    |
-| `validationMessage` |           | readonly  | `string`          |                    |
-| `value`             | `value`   |           | `String`          | the checkbox value |
+| Property            | Attribute | Modifiers | Type               | Description        |
+|---------------------|-----------|-----------|--------------------|--------------------|
+| `checked`           | `checked` |           | `String`           | the checked status |
+| `indicatorElement`  |           | readonly  | `Element \| null`  |                    |
+| `standard`          |           | readonly  | `"standard" \| ""` |                    |
+| `validationMessage` |           | readonly  | `string`           |                    |
+| `value`             | `value`   |           | `String`           | the checkbox value |
 
 ## Methods
 

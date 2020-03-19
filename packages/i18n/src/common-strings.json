@@ -1,4 +1,5 @@
 {
+    "type.email": "Type an email address and press Enter",
     "messages.loading": "login",
     "buttons.login": "login",
     "buttons.submit": "submit",
