@@ -42,8 +42,8 @@ export const ToolingForm = ({ onFormSuccess }) => (
  * 
  * @attr {String} email-lookup-route - The entire path for the user lookup service. default `/api/v1/emails`
  * 
- * @fires validationstart - before the validation API call is executed. 
- * @fires validationend - after the validation API call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error.
+ * @fires validationstart - Before the validation API call is executed. 
+ * @fires validationend - After the validation API call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error.
  * 
  */
 export default class EmailBag extends HTMLElement {

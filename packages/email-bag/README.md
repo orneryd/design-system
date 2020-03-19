@@ -1,7 +1,7 @@
 # mds-email-bag
 
 A form input designed to validate emails against McKesson's email lookup API.
-It functions similarly to that of the chip-bag but with an asynchronous API call for validation
+It functions similarly to that of the chip-bag but with an asynchronous api call for validation
 
 ### Usage
 
@@ -36,7 +36,7 @@ export const ToolingForm = ({ onFormSuccess }) => (
 
 | Attribute            | Type     | Description                                      |
 |----------------------|----------|--------------------------------------------------|
-| `email-lookup-route` | `String` | the entire path for the user lookup service. default `/api/v1/emails` |
+| `email-lookup-route` | `String` | The entire path for the user lookup service. default `/api/v1/emails` |
 
 ## Properties
 
@@ -64,5 +64,5 @@ export const ToolingForm = ({ onFormSuccess }) => (
 
 | Event             | Description                                      |
 |-------------------|--------------------------------------------------|
-| `validationend`   | after the validation API call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error. |
-| `validationstart` | before the validation API call is executed.      |
+| `validationend`   | After the validation API call is executed. Event.detail is the complete list of emails. In case of an error, event.detail is an error. |
+| `validationstart` | Before the validation API call is executed.      |

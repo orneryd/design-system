@@ -14,7 +14,6 @@ const chipUpdatedAction = action(`chips updated!`)
 class DefaultEmailBag extends React.Component {
   constructor(props) {
     super(props)
-
     this.elementRef = React.createRef()
   }
 
@@ -31,6 +30,7 @@ class DefaultEmailBag extends React.Component {
       this.elementRef.current.removeEventListener('chipsupdate', chipUpdatedAction)
     }
   }
+  
   render() {
     return (
       <mds-paper elevation={0} style={{ margin: '10px' }}>
