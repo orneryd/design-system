@@ -1,7 +1,7 @@
 # mds-template
 
 A template element designed to allow for reusable templates on the fly without needing to write javascript.
-It support es6-type template literal style syntax for values. 
+It supports an es6-type template literal style syntax for values. 
 No function calls or ternary expressions are supported within the markup itself. Only values.
 
 ### Usage
