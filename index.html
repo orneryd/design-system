@@ -27,11 +27,22 @@
         <mds-text-input label="Your Email Address"></mds-text-input>
       </mds-paper>
       <mds-banner>
-        <span slot="header">hello</span>
+        <span slot="header">
+          <mds-bears></mds-bears>
+          <mds-bears someattr="bears"></mds-bears>
+        </span>
         <span slot="content">there</span>
       </mds-banner>
     </div>
-    <script src="dist/index.js"></script>
+    <template is="mds-template" name="mds-bears" someattr="default value" >
+      <style>
+        :host {
+          display: block;
+        }
+      </style>
+      <div>${this.someattr}</div>
+    </template>
+    <script src="dist/mds-0.1.0.js"></script>
     <script></script>
   </body>
 </html>
