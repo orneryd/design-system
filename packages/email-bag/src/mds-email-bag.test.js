@@ -109,7 +109,7 @@ describe('mds-email-bag', () => {
       describe('when all emails are successfully validated', () => {
         let validateEmailSpy
         beforeEach(done => {
-          validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue('success')
+          validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue(Promise.resolve({}))
           element.chipsUpdate({ detail: ['test.email@mckesson.com'] }).then(incomingEmails => {
             done()
           })
@@ -143,7 +143,7 @@ describe('mds-email-bag', () => {
       describe('when all emails are successfully validated', () => {
         let validateEmailSpy
         beforeEach(done => {
-          validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue(Promise.reject())
+          validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue(Promise.reject({}))
           element.chipsUpdate({ detail: ['test.email@mckesson.com'] }).then(incomingEmails => {
             done()
           })
@@ -156,7 +156,7 @@ describe('mds-email-bag', () => {
 
         it('calls notifyValidity if one of the validation calls fails', () => {
           expect(notifyValiditySpy.calls.count()).toBe(1)
-          expect(notifyValiditySpy.calls.allArgs()[0][0]).toBe('undefined')
+          expect(notifyValiditySpy.calls.allArgs()[0][0]).toBe('undefined; ')
         })
 
         it('sets invalid css if one of the validation calls fails', () => {
