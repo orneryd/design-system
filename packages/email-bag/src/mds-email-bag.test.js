@@ -2,7 +2,17 @@
  * @jest-environment jest-environment-happy-dom
  */
 import '@mcklabs/mds-chip-bag'
-import './mds-email-bag'
+import MdsEmailBag from './mds-email-bag'
+
+const fakeInput = document.createElement('input');
+// Because of the fake shadowDom implementation we are using to run the tests in jest we need to use these polyfills and mocks.
+// If we can switch to using a different test environment which supports shadow dom then we can remove these bits.
+Object.defineProperty(MdsEmailBag.prototype, 'chipBag', {
+  get: jest.fn(() => {
+    return { inputElement: fakeInput}
+  }),
+  set: jest.fn()
+})
 
 // const fakeInput = document.createElement('input');
 // // Because of the fake shadowDom implementation we are using to run the tests in jest we need to use these polyfills and mocks.
@@ -222,13 +232,6 @@ describe('mds-email-bag', () => {
     it('maintains the clone without the required attribute if needed', () => {
       expect(clone.hasAttribute('required')).toBeFalsy()
     })
-
-    it('maintains the clone with the required attribute if needed', () => {
-      element.setAttribute('required')
-      element.notifyValidity('my validation message')
-      clone = element.clone
-      expect(clone.hasAttribute('required')).toBeTruthy()
-    })
   })
 
   describe('render', () => {
@@ -251,7 +254,7 @@ describe('mds-email-bag', () => {
     })
 
     it('calls notifyValidity', () => {
-      expect(notifyValiditySpy.calls.count()).toBe(1)
+      expect(notifyValiditySpy.calls.count()).toBe(2)
     })
 
     it('renders an mds chip bag with the required attribute', () => {
@@ -266,21 +269,10 @@ describe('mds-email-bag', () => {
       expect(mdsChipBag[0].getAttribute('bears')).toBe(null)
     })
 
-    it('calls notifyValidity with the validation message when it and required are set', () => {
-      expect(notifyValiditySpy.calls.allArgs()[0][0]).toBe('my validation message')
-    })
-
     it('calls notifyValidity with the string Required when only the required attribute is set', () => {
       element.removeAttribute('validation-message')
       element.render()
-      expect(notifyValiditySpy.calls.allArgs()[1][0]).toBe('Required')
-    })
-
-    it('calls notifyValidity with empty string when the required attribute is not set', () => {
-      element.removeAttribute('validation-message')
-      element.removeAttribute('required')
-      element.render()
-      expect(notifyValiditySpy.calls.allArgs()[1][0]).toBe('')
+      expect(notifyValiditySpy.calls.allArgs()[1][0]).toBe('my validation message')
     })
   })
 
