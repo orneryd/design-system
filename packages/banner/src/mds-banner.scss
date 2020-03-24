@@ -1,7 +1,7 @@
 @import '../../core/src/core.scss';
 
 .mds-banner {
-    color: var(--mdsBannerColor,#FEFEFE);
+    color: var(--mdsBannerColor,rgb(254, 254, 254));
     display: block;
     background-color: var(--mdsBannerBackgroundColor, rgb(25, 35, 67));
     padding-bottom: 10rem;

@@ -22,26 +22,19 @@ yarn add `@mcklabs/mds-banner`
 
 ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
 ```css
-:root {
-  --mdsBannerMaxWidth: 1024px;
-  --mdsBannerColor: purple;
-  --mdsBannerBackgroundColor: rgba(255, 166, 0, 0.783);
+mds-banner {
+  --mdsBannerColor: rgb(254, 254, 254);
+  --mdsBannerBackgroundColor: rgb(25, 35, 67);
+  --mdsBannerMaxWidth: 768px;
+  --mdsBannerHeaderColor: inherit;
+  --mdsBannerContentMaxWidth: 768px;
+  --mdsBannerContentColor: inherit;
 }
 ```
 
 ### Rendered in the browser
  ![](samples/banner-custom.png)
 <br/>
-
-```css
-:root {
-  --mdsBannerBackgroundColor: orange;
-  --mdsBannerHeaderColor: darkgreen;
-  --mdsBannerHeaderMaxWidth: 320px;
-  --mdsBannerContentColor: white;
-  --mdsBannerContentMaxWidth: 320px;
-}
-```
 
 ### Rendered in the browser
  ![](samples/banner-custom-2.png)
@@ -59,7 +52,6 @@ yarn add `@mcklabs/mds-banner`
  * @cssproperty --mdsBannerBackgroundColor - Overrides the background color for the header.
  * @cssproperty --mdsBannerMaxWidth - Overrides the maxwidth for the header and content.
  * @cssproperty --mdsBannerHeaderColor - Overrides the text color for the header.
- * @cssproperty --mdsBannerHeaderMaxWidth - Overrides the max-width for the header.
  * @cssproperty --mdsBannerContentColor - Overrides the text color for the content.
  * @cssproperty --mdsBannerContentMaxWidth - Overrides the max-width for the header.
  *
