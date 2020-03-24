@@ -84,7 +84,7 @@ export default class EmailBag extends HTMLElement {
       if (response.status < 400) {
         return response.json()
       } else {
-        return Promise.reject({ email, error: `${email} ${response.statusText}`})
+        return Promise.reject({ email, error: `${email} ${response.statusText}` })
       }
     })
   }
@@ -125,24 +125,23 @@ export default class EmailBag extends HTMLElement {
               headers: {
                 'Content-Type': 'text/html'
               }
-            }).catch(({error})=>{
+            }).catch(({ error }) => {
               emailValidationFailures.push(`${error}; `)
             })
           )
         })
-        return Promise.all(emailValidationCalls)
-          .then(() => {
-            const validationMessage = decodeURIComponent(emailValidationFailures.join(''));
-            if (validationMessage) {
-              this.setInvalidCSS()
-            } else {
-              this.removeInvalidCSS()
-            }
-            this.notifyValidity(validationMessage)
-            this.spinner.style.visibility = 'hidden'
-            this.dispatchEvent(new CustomEvent('validationend', { detail: incomingEmails }))
-            return incomingEmails
-          })
+        return Promise.all(emailValidationCalls).then(() => {
+          const validationMessage = decodeURIComponent(emailValidationFailures.join(''))
+          if (validationMessage) {
+            this.setInvalidCSS()
+          } else {
+            this.removeInvalidCSS()
+          }
+          this.notifyValidity(validationMessage)
+          this.spinner.style.visibility = 'hidden'
+          this.dispatchEvent(new CustomEvent('validationend', { detail: incomingEmails }))
+          return incomingEmails
+        })
       }
     }
   }
@@ -192,8 +191,10 @@ export default class EmailBag extends HTMLElement {
     this.render()
   }
   render() {
-    const rendered = emailBagTemplate(this);
-    rendered.forEach((n) => n.tagName === 'MDS-CHIP-BAG' && n.setAttribute('value', this.getAttribute('value')))
+    const rendered = emailBagTemplate(this)
+    rendered.forEach(
+      n => n.tagName === 'MDS-CHIP-BAG' && n.setAttribute('value', this.getAttribute('value'))
+    )
     rendered.connect()
     this.notifyValidity(this.hasAttribute('required') ? this.validMessage : '')
   }
