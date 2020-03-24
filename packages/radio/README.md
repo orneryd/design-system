@@ -56,7 +56,7 @@ export const buttons = () => (
 |---------------------|-----------|-----------|--------------------|--------------------|
 | `checked`           | `checked` |           | `String`           | the checked status |
 | `indicatorElement`  |           | readonly  | `Element \| null`  |                    |
-| `standard`          |           | readonly  | `"standard" \| ""` |                    |
+| `standard`          |           | readonly  | `"" \| "standard"` |                    |
 | `validationMessage` |           | readonly  | `string`           |                    |
 | `value`             | `value`   |           | `String`           | the checkbox value |
 
