@@ -12,6 +12,8 @@ trap 'handle_error $LINENO' ERR
 .pipeline/ci.sh
 
 echo 'Deploying to development'
+
+cd storybook
 cp -av ../dist ./build/dist
 cp -av ./public/samples ./build/samples
 cp -av ./public/simone ./build/simone
