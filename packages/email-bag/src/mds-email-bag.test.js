@@ -4,6 +4,16 @@
 import '@mcklabs/mds-chip-bag'
 import './mds-email-bag'
 
+// const fakeInput = document.createElement('input');
+// // Because of the fake shadowDom implementation we are using to run the tests in jest we need to use these polyfills and mocks.
+// // If we can switch to using a different test environment which supports shadow dom then we can remove these bits.
+// Object.defineProperty(MdsEmailBag.prototype, 'chipBag', {
+//   get: jest.fn(() => {
+//     return { inputElement: fakeInput}
+//   }),
+//   set: jest.fn()
+// })
+
 describe('mds-email-bag', () => {
   let element
   beforeEach(() => {

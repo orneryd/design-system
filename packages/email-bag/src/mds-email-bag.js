@@ -191,11 +191,11 @@ export default class EmailBag extends HTMLElement {
     this.render()
   }
   render() {
-    const rendered = emailBagTemplate(this)
-    rendered.forEach(
-      n => n.tagName === 'MDS-CHIP-BAG' && n.setAttribute('value', this.getAttribute('value'))
-    )
-    rendered.connect()
+    emailBagTemplate(this).connect()
+    if (this.hasAttribute('value')) {
+      this.chipBag.chips = this.getAttribute('value').split(/;\s*/);
+      this.chipBag.render()
+    }
     this.notifyValidity(this.hasAttribute('required') ? this.validMessage : '')
   }
 }
