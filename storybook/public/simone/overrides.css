@@ -16,6 +16,55 @@
   --mdsTextInputUnderline: 1px inset rgba(0, 0, 0, 0.2);
   --mdsTextInputUnderlineInvalid: inherit;
   --mdsButtonBorderRadius: 2px;
+  --mdsFontFamily: 'Roboto Condensed', sans-serif;
+  --mdsFontWeight: 400;
+  /* mds-button overrides */
+  --mdsButtonBorderRadius: 2px;
+  --mdsButtonPrimaryColor: rgba(49, 133, 205, 1);
+  --mdsButtonSecondaryColor: rgba(241, 135, 18, 1);
+  --mdsButtonSuccessColor: rgba(111, 175, 42, 1);
+  --mdsButtonInfoColor: rgba(49, 133, 205, 1);
+  --mdsButtonWarningColor: rgba(196, 109, 12, 1);
+  --mdsButtonDangerColor: rgba(217, 83, 79, 1);
+  
+  --mdsButtonPrimaryColorHover: rgba(56, 106, 159, 1);
+  --mdsButtonSecondaryColorHover: rgba(196, 109, 12, 1);
+  --mdsButtonSuccessColorHover : rgba(85, 134, 32, 1);
+  --mdsButtonInfoColorHover : rgba(56, 106, 159, 1);
+  --mdsButtonWarningColorHover : rgba(241, 135, 18, 1);
+  --mdsButtonDangerColorHover : rgba(201, 48, 44, 1);
+  
+  /* --mdsButtonOutlinedBackgroundColor: transparent;
+  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px $mdsPurple;
+  --mdsButtonOutlinedColor: $mdsPurple;
+  --mdsButtonOutlinedBackgroundColorHover: $mdsPurple;
+  --mdsButtonOutlinedBorderHover: inherit;
+  --mdsButtonOutlinedColorHover: $mdsWhite;
+  --mdsButtonSecondaryOutlinedColor: $mdsOrange;
+  --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px $mdsOrange;
+  --mdsButtonSecondaryOutlinedBackgroundColorHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOutlinedBorderHover: $mdsOrangeDark;
+  --mdsButtonSecondaryOutlinedColorHover: $mdsWhite;
+  --mdsButtonSuccessOutlinedColor: $mdsGreen;
+  --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px $mdsGreen;
+  --mdsButtonSuccessOutlinedBackgroundColorHover: $mdsGreenDark;
+  --mdsButtonSuccessOutlinedBorderHover: $mdsGreenDark;
+  --mdsButtonSuccessOutlinedColorHover: $mdsWhite;
+  --mdsButtonInfoOutlinedColor: $mdsBlueDark;
+  --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
+  --mdsButtonInfoOutlinedBackgroundColorHover: $mdsBlueDarker;
+  --mdsButtonInfoOutlinedBorderHover: $mdsBlueDarker;
+  --mdsButtonInfoOutlinedColorHover: $mdsWhite;
+  --mdsButtonWarningOutlinedColor: $mdsRust;
+  --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px $mdsRust;
+  --mdsButtonWarningOutlinedBackgroundColorHover: $mdsRustDarker;
+  --mdsButtonWarningOutlinedBorderHover: $mdsRustDarker;
+  --mdsButtonWarningOutlinedColorHover: $mdsWhite;
+  --mdsButtonDangerOutlinedColor: $mdsRedLight;
+  --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
+  --mdsButtonDangerOutlinedBackgroundColorHover: $mdsRed;
+  --mdsButtonDangerOutlinedBorderHover: $mdsRed;
+  --mdsButtonDangerOutlinedColorHover: $mdsWhite; */
 }
 
 mds-text-input {
