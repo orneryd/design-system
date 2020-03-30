@@ -26,45 +26,51 @@
   --mdsButtonInfoColor: rgba(49, 133, 205, 1);
   --mdsButtonWarningColor: rgba(196, 109, 12, 1);
   --mdsButtonDangerColor: rgba(217, 83, 79, 1);
-  
+  /* mds-button hover overrides */
   --mdsButtonPrimaryColorHover: rgba(56, 106, 159, 1);
   --mdsButtonSecondaryColorHover: rgba(196, 109, 12, 1);
   --mdsButtonSuccessColorHover : rgba(85, 134, 32, 1);
   --mdsButtonInfoColorHover : rgba(56, 106, 159, 1);
   --mdsButtonWarningColorHover : rgba(241, 135, 18, 1);
   --mdsButtonDangerColorHover : rgba(201, 48, 44, 1);
-  
-  /* --mdsButtonOutlinedBackgroundColor: transparent;
+  /* mds-button inverted common override */
+  --mdsButtonOutlinedBackgroundColor: transparent;
+  /* mds-button primary inverted overrides */
   --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px $mdsPurple;
   --mdsButtonOutlinedColor: $mdsPurple;
   --mdsButtonOutlinedBackgroundColorHover: $mdsPurple;
   --mdsButtonOutlinedBorderHover: inherit;
   --mdsButtonOutlinedColorHover: $mdsWhite;
+  /* mds-button action inverted overrides */
   --mdsButtonSecondaryOutlinedColor: $mdsOrange;
   --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px $mdsOrange;
   --mdsButtonSecondaryOutlinedBackgroundColorHover: $mdsOrangeDark;
   --mdsButtonSecondaryOutlinedBorderHover: $mdsOrangeDark;
   --mdsButtonSecondaryOutlinedColorHover: $mdsWhite;
+  /* mds-button success inverted overrides */
   --mdsButtonSuccessOutlinedColor: $mdsGreen;
   --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px $mdsGreen;
   --mdsButtonSuccessOutlinedBackgroundColorHover: $mdsGreenDark;
   --mdsButtonSuccessOutlinedBorderHover: $mdsGreenDark;
   --mdsButtonSuccessOutlinedColorHover: $mdsWhite;
+  /* mds-button info inverted overrides */
   --mdsButtonInfoOutlinedColor: $mdsBlueDark;
   --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
   --mdsButtonInfoOutlinedBackgroundColorHover: $mdsBlueDarker;
   --mdsButtonInfoOutlinedBorderHover: $mdsBlueDarker;
   --mdsButtonInfoOutlinedColorHover: $mdsWhite;
+  /* mds-button warning inverted overrides */
   --mdsButtonWarningOutlinedColor: $mdsRust;
   --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px $mdsRust;
   --mdsButtonWarningOutlinedBackgroundColorHover: $mdsRustDarker;
   --mdsButtonWarningOutlinedBorderHover: $mdsRustDarker;
   --mdsButtonWarningOutlinedColorHover: $mdsWhite;
+  /* mds-button danger inverted overrides */
   --mdsButtonDangerOutlinedColor: $mdsRedLight;
   --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
   --mdsButtonDangerOutlinedBackgroundColorHover: $mdsRed;
   --mdsButtonDangerOutlinedBorderHover: $mdsRed;
-  --mdsButtonDangerOutlinedColorHover: $mdsWhite; */
+  --mdsButtonDangerOutlinedColorHover: $mdsWhite;
 }
 
 mds-text-input {
