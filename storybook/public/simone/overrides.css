@@ -16,6 +16,61 @@
   --mdsTextInputUnderline: 1px inset rgba(0, 0, 0, 0.2);
   --mdsTextInputUnderlineInvalid: inherit;
   --mdsButtonBorderRadius: 2px;
+  --mdsFontFamily: 'Roboto Condensed', sans-serif;
+  --mdsFontWeight: 400;
+  /* mds-button overrides */
+  --mdsButtonBorderRadius: 2px;
+  --mdsButtonPrimaryColor: rgba(49, 133, 205, 1);
+  --mdsButtonSecondaryColor: rgba(241, 135, 18, 1);
+  --mdsButtonSuccessColor: rgba(111, 175, 42, 1);
+  --mdsButtonInfoColor: rgba(49, 133, 205, 1);
+  --mdsButtonWarningColor: rgba(196, 109, 12, 1);
+  --mdsButtonDangerColor: rgba(217, 83, 79, 1);
+  /* mds-button hover overrides */
+  --mdsButtonPrimaryColorHover: rgba(56, 106, 159, 1);
+  --mdsButtonSecondaryColorHover: rgba(196, 109, 12, 1);
+  --mdsButtonSuccessColorHover : rgba(85, 134, 32, 1);
+  --mdsButtonInfoColorHover : rgba(56, 106, 159, 1);
+  --mdsButtonWarningColorHover : rgba(241, 135, 18, 1);
+  --mdsButtonDangerColorHover : rgba(201, 48, 44, 1);
+  /* mds-button inverted common override */
+  --mdsButtonOutlinedBackgroundColor: transparent;
+  /* mds-button primary inverted overrides */
+  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px rgba(49, 133, 205, 1);
+  --mdsButtonOutlinedColor: rgba(49, 133, 205, 1);
+  --mdsButtonOutlinedBackgroundColorHover: rgba(39, 106, 164, 1);
+  --mdsButtonOutlinedBorderHover: rgba(37, 101, 156, 1);
+  --mdsButtonOutlinedColorHover: rgba(255, 255, 255, 1);
+  /* mds-button action inverted overrides */
+  --mdsButtonSecondaryOutlinedColor: rgba(241, 135, 18, 1);
+  --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px rgba(241, 135, 18, 1);
+  --mdsButtonSecondaryOutlinedBackgroundColorHover: rgba(196, 109, 12, 1);
+  --mdsButtonSecondaryOutlinedBorderHover: rgba(187, 103, 11, 1);
+  --mdsButtonSecondaryOutlinedColorHover: rgba(255, 255, 255, 1);
+  /* mds-button success inverted overrides */
+  --mdsButtonSuccessOutlinedColor: rgba(111, 175, 42, 1);
+  --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px rgba(111, 175, 42, 1);
+  --mdsButtonSuccessOutlinedBackgroundColorHover: rgba(85, 134, 32, 1);
+  --mdsButtonSuccessOutlinedBorderHover: rgba(80, 126, 30, 1);
+  --mdsButtonSuccessOutlinedColorHover: rgba(255, 255, 255, 1);
+  /* mds-button info inverted overrides */
+  --mdsButtonInfoOutlinedColor: rgba(49, 133, 205, 1);
+  --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px rgba(49, 133, 205, 1);
+  --mdsButtonInfoOutlinedBackgroundColorHover: rgba(39, 106, 164, 1);
+  --mdsButtonInfoOutlinedBorderHover: rgba(37, 101, 156, 1);
+  --mdsButtonInfoOutlinedColorHover: rgba(255, 255, 255, 1);
+  /* mds-button warning inverted overrides */
+  --mdsButtonWarningOutlinedColor: rgba(196, 109, 12, 1);
+  --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px rgba(196, 109, 12, 1);
+  --mdsButtonWarningOutlinedBackgroundColorHover: rgba(148, 82, 9, 1);
+  --mdsButtonWarningOutlinedBorderHover: rgba(138, 77, 8, 1);
+  --mdsButtonWarningOutlinedColorHover: rgba(255, 255, 255, 1);
+  /* mds-button danger inverted overrides */
+  --mdsButtonDangerOutlinedColor: rgba(217, 83, 79, 1);
+  --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px rgba(217, 83, 79, 1);
+  --mdsButtonDangerOutlinedBackgroundColorHover: rgba(201, 48, 44, 1);
+  --mdsButtonDangerOutlinedBorderHover: rgba(193, 46, 42, 1);
+  --mdsButtonDangerOutlinedColorHover: rgba(255, 255, 255, 1);
 }
 
 mds-text-input {
@@ -30,7 +85,6 @@ mds-text-input {
 .btn {
   text-transform: uppercase;
 }
-
 
 .validated-input {
   position: relative;
