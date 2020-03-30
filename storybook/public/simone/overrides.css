@@ -36,41 +36,41 @@
   /* mds-button inverted common override */
   --mdsButtonOutlinedBackgroundColor: transparent;
   /* mds-button primary inverted overrides */
-  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px $mdsPurple;
-  --mdsButtonOutlinedColor: $mdsPurple;
-  --mdsButtonOutlinedBackgroundColorHover: $mdsPurple;
-  --mdsButtonOutlinedBorderHover: inherit;
-  --mdsButtonOutlinedColorHover: $mdsWhite;
+  --mdsButtonOutlinedBorder: inset 0px 0px 0px 2px rgba(49, 133, 205, 1);
+  --mdsButtonOutlinedColor: rgba(49, 133, 205, 1);
+  --mdsButtonOutlinedBackgroundColorHover: rgba(39, 106, 164, 1);
+  --mdsButtonOutlinedBorderHover: rgba(37, 101, 156, 1);
+  --mdsButtonOutlinedColorHover: rgba(255, 255, 255, 1);
   /* mds-button action inverted overrides */
-  --mdsButtonSecondaryOutlinedColor: $mdsOrange;
-  --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px $mdsOrange;
-  --mdsButtonSecondaryOutlinedBackgroundColorHover: $mdsOrangeDark;
-  --mdsButtonSecondaryOutlinedBorderHover: $mdsOrangeDark;
-  --mdsButtonSecondaryOutlinedColorHover: $mdsWhite;
+  --mdsButtonSecondaryOutlinedColor: rgba(241, 135, 18, 1);
+  --mdsButtonSecondaryOutlinedBorder: inset 0px 0px 0px 2px rgba(241, 135, 18, 1);
+  --mdsButtonSecondaryOutlinedBackgroundColorHover: rgba(196, 109, 12, 1);
+  --mdsButtonSecondaryOutlinedBorderHover: rgba(187, 103, 11, 1);
+  --mdsButtonSecondaryOutlinedColorHover: rgba(255, 255, 255, 1);
   /* mds-button success inverted overrides */
-  --mdsButtonSuccessOutlinedColor: $mdsGreen;
-  --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px $mdsGreen;
-  --mdsButtonSuccessOutlinedBackgroundColorHover: $mdsGreenDark;
-  --mdsButtonSuccessOutlinedBorderHover: $mdsGreenDark;
-  --mdsButtonSuccessOutlinedColorHover: $mdsWhite;
+  --mdsButtonSuccessOutlinedColor: rgba(111, 175, 42, 1);
+  --mdsButtonSuccessOutlinedBorder: inset 0px 0px 0px 2px rgba(111, 175, 42, 1);
+  --mdsButtonSuccessOutlinedBackgroundColorHover: rgba(85, 134, 32, 1);
+  --mdsButtonSuccessOutlinedBorderHover: rgba(80, 126, 30, 1);
+  --mdsButtonSuccessOutlinedColorHover: rgba(255, 255, 255, 1);
   /* mds-button info inverted overrides */
-  --mdsButtonInfoOutlinedColor: $mdsBlueDark;
-  --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px $mdsBlueDark;
-  --mdsButtonInfoOutlinedBackgroundColorHover: $mdsBlueDarker;
-  --mdsButtonInfoOutlinedBorderHover: $mdsBlueDarker;
-  --mdsButtonInfoOutlinedColorHover: $mdsWhite;
+  --mdsButtonInfoOutlinedColor: rgba(49, 133, 205, 1);
+  --mdsButtonInfoOutlinedBorder: inset 0px 0px 0px 2px rgba(49, 133, 205, 1);
+  --mdsButtonInfoOutlinedBackgroundColorHover: rgba(39, 106, 164, 1);
+  --mdsButtonInfoOutlinedBorderHover: rgba(37, 101, 156, 1);
+  --mdsButtonInfoOutlinedColorHover: rgba(255, 255, 255, 1);
   /* mds-button warning inverted overrides */
-  --mdsButtonWarningOutlinedColor: $mdsRust;
-  --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px $mdsRust;
-  --mdsButtonWarningOutlinedBackgroundColorHover: $mdsRustDarker;
-  --mdsButtonWarningOutlinedBorderHover: $mdsRustDarker;
-  --mdsButtonWarningOutlinedColorHover: $mdsWhite;
+  --mdsButtonWarningOutlinedColor: rgba(196, 109, 12, 1);
+  --mdsButtonWarningOutlinedBorder: inset 0px 0px 0px 2px rgba(196, 109, 12, 1);
+  --mdsButtonWarningOutlinedBackgroundColorHover: rgba(148, 82, 9, 1);
+  --mdsButtonWarningOutlinedBorderHover: rgba(138, 77, 8, 1);
+  --mdsButtonWarningOutlinedColorHover: rgba(255, 255, 255, 1);
   /* mds-button danger inverted overrides */
-  --mdsButtonDangerOutlinedColor: $mdsRedLight;
-  --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px $mdsRedLight;
-  --mdsButtonDangerOutlinedBackgroundColorHover: $mdsRed;
-  --mdsButtonDangerOutlinedBorderHover: $mdsRed;
-  --mdsButtonDangerOutlinedColorHover: $mdsWhite;
+  --mdsButtonDangerOutlinedColor: rgba(217, 83, 79, 1);
+  --mdsButtonDangerOutlinedBorder: inset 0px 0px 0px 2px rgba(217, 83, 79, 1);
+  --mdsButtonDangerOutlinedBackgroundColorHover: rgba(201, 48, 44, 1);
+  --mdsButtonDangerOutlinedBorderHover: rgba(193, 46, 42, 1);
+  --mdsButtonDangerOutlinedColorHover: rgba(255, 255, 255, 1);
 }
 
 mds-text-input {
