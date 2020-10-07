@@ -1,18 +1,18 @@
 # mds-banner
 
-# mckesson-design-system banner
+# design-system banner
 A styled banner header and content
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-banner` --save
+npm i `@ornery/mds-banner` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-banner`
+yarn add `@ornery/mds-banner`
 ```
 
 ### Rendered in the browser

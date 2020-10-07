@@ -1,18 +1,18 @@
 # mds-checkbox
 
-# mckesson-design-system checkbox
-A styled checkbox by the mckesson design team.
+# design-system checkbox
+A styled checkbox by the ornery design team.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-checkbox` --save
+npm i `@ornery/mds-checkbox` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-checkbox`
+yarn add `@ornery/mds-checkbox`
 ```
 
 ### HTML Usage
@@ -24,7 +24,7 @@ yarn add `@mcklabs/mds-checkbox`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-checkbox`
+import `@ornery/mds-checkbox`
 
 export const buttons = () => (
 <form style={{ width: '360px', margin: '20px' }}>

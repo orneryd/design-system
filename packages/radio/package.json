@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-radio",
+  "name": "@ornery/mds-radio",
   "version": "0.1.3",
   "description": "",
   "main": "dist/mds-radio.js",
@@ -8,12 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  },
   "dependencies": {
-    "@mcklabs/mds-input-base": ">=0.1.0",
-    "@mcklabs/web-components": ">=1.1.5",
-    "@mcklabs/mds-core": ">=0.1.0"
+    "@ornery/mds-input-base": ">=0.1.0",
+    "@ornery/web-components": ">=1.1.5",
+    "@ornery/mds-core": ">=0.1.0"
   }
 }

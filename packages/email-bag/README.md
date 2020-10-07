@@ -1,6 +1,6 @@
 # mds-email-bag
 
-A form input designed to validate emails against McKesson's email lookup API.
+A form input designed to validate emails against ornery's email lookup API.
 It functions similarly to that of the chip-bag but with an asynchronous api call for validation
 
 ### Usage
@@ -11,8 +11,8 @@ It functions similarly to that of the chip-bag but with an asynchronous api call
 
 ### React WebComponentWrapper
 ```jsx
-import `@mcklabs/mds-email-bag`
-import WebComponentWrapper from '@mcklabs/mds-react'
+import `@ornery/mds-email-bag`
+import WebComponentWrapper from '@ornery/mds-react'
 
 export const ToolingForm = ({ onValidationstart, onValidationend }) => (
 <WebComponentWrapper 
@@ -24,8 +24,8 @@ export const ToolingForm = ({ onValidationstart, onValidationend }) => (
 ```
 ### React Component
 ```jsx
-import `@mcklabs/mds-email-bag`
-import WebComponentWrapper from '@mcklabs/mds-react'
+import `@ornery/mds-email-bag`
+import WebComponentWrapper from '@ornery/mds-react'
 
 export const ToolingForm = ({ onFormSuccess }) => (
   <mds-email-bag></mds-email-bag>

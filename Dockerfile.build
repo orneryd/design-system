@@ -1,4 +1,3 @@
-FROM registry.mckesson.com/devservices/mcklabs-node-pipeline-base:3.0.2
 
 ARG PCF_USER
 ARG PCF_PASSWORD
@@ -7,8 +6,8 @@ ENV PCF_PASSWORD=$PCF_PASSWORD
 ARG ARTIFACTORY_USER
 ARG ARTIFACTORY_API_KEY
 
-ENV PCF_DEV_API=api.sys.dev-west.paas.mckesson.com
-ENV PCF_PROD_API=api.sys.prod-west.paas.mckesson.com
+ENV PCF_DEV_API=api.sys.dev-west.paas.ornery.com
+ENV PCF_PROD_API=api.sys.prod-west.paas.ornery.com
 ENV BRANCH=$BRANCH
 
 RUN mckduc node write-npm-config --artifactory-user "${ARTIFACTORY_USER}" --artifactory-apikey "${ARTIFACTORY_API_KEY}" --path ~/.npmrc

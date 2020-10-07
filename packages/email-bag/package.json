@@ -1,5 +1,5 @@
 {
-    "name": "@mcklabs/mds-email-bag",
+    "name": "@ornery/mds-email-bag",
     "version": "0.1.2",
     "description": "",
     "main": "dist/mds-email-bag.js",
@@ -8,14 +8,11 @@
     },
     "author": "",
     "license": "ISC",
-    "publishConfig": {
-      "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-    },
     "dependencies": {
-      "@mcklabs/web-components": ">=1.1.5",
-      "@mcklabs/mds-chip": ">=0.1.2",
-      "@mcklabs/mds-chip-bag": ">=0.1.2",
-      "@mcklabs/mds-core": ">=0.1.0"
+      "@ornery/web-components": ">=1.1.5",
+      "@ornery/mds-chip": ">=0.1.2",
+      "@ornery/mds-chip-bag": ">=0.1.2",
+      "@ornery/mds-core": ">=0.1.0"
     }
   }
   

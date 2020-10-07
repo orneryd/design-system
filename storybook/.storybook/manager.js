@@ -33,9 +33,9 @@ const theme = create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'Mckesson Design System',
-  brandUrl: 'https://github.com/mckesson/mckesson-design-system',
-  brandImage: '/logo192.svg',
+  brandTitle: 'ornery Design System',
+  brandUrl: 'https://github.com/ornery/design-system',
+  brandImage: '/logo192.png',
 });
 
 addons.setConfig({

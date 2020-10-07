@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-accordion",
+  "name": "@ornery/mds-accordion",
   "version": "0.1.2",
   "description": "",
   "main": "dist/mds-accordion.js",
@@ -8,12 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  },
   "dependencies": {
-    "@mcklabs/web-components": ">=1.1.5",
-    "@mcklabs/mds-core": ">=0.1.0",
-    "@mcklabs/mds-paper": ">=0.1.0"
+    "@ornery/web-components": ">=1.1.5",
+    "@ornery/mds-core": ">=0.1.0",
+    "@ornery/mds-paper": ">=0.1.0"
   }
 }

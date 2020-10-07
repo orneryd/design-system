@@ -1,6 +1,6 @@
-import { registerComponent } from '@mcklabs/mds-core'
-import { template, ContextBinding } from '@mcklabs/web-components'
-import { bindEvents, setupConnect } from '@mcklabs/web-components/templates'
+import { registerComponent } from '@ornery/mds-core'
+import { template, ContextBinding } from '@ornery/web-components'
+import { bindEvents, setupConnect } from '@ornery/web-components/templates'
 const templateNameRegexp = /^mds\-[\w-]/
 
 /**

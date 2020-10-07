@@ -1,9 +1,9 @@
-import '@mcklabs/mds-chip-bag'
-import { registerComponent } from '@mcklabs/mds-core'
+import '@ornery/mds-chip-bag'
+import { registerComponent } from '@ornery/mds-core'
 import emailBagTemplate from './mds-email-bag.html'
 
 /**
-A form input designed to validate emails against McKesson's email lookup API.
+A form input designed to validate emails against ornery's email lookup API.
 It functions similarly to that of the chip-bag but with an asynchronous api call for validation
 
 ### Usage
@@ -14,8 +14,8 @@ It functions similarly to that of the chip-bag but with an asynchronous api call
 
 ### React WebComponentWrapper
 ```jsx
-import `@mcklabs/mds-email-bag`
-import WebComponentWrapper from '@mcklabs/mds-react'
+import `@ornery/mds-email-bag`
+import WebComponentWrapper from '@ornery/mds-react'
 
 export const ToolingForm = ({ onValidationstart, onValidationend }) => (
   <WebComponentWrapper 
@@ -27,8 +27,8 @@ export const ToolingForm = ({ onValidationstart, onValidationend }) => (
 ```
 ### React Component
 ```jsx
-import `@mcklabs/mds-email-bag`
-import WebComponentWrapper from '@mcklabs/mds-react'
+import `@ornery/mds-email-bag`
+import WebComponentWrapper from '@ornery/mds-react'
 
 export const ToolingForm = ({ onFormSuccess }) => (
    <mds-email-bag></mds-email-bag>
@@ -38,7 +38,7 @@ export const ToolingForm = ({ onFormSuccess }) => (
  * @module ToolingForm
  * @element mds-email-bag
  * @extends {HTMLElement}
- * @description A form input designed to validate emails against McKesson's email lookup API. It functions similarly to that of the chip-bag but with an asynchronous api call for validation
+ * @description A form input designed to validate emails against ornery's email lookup API. It functions similarly to that of the chip-bag but with an asynchronous api call for validation
  * 
  * @attr {String} email-lookup-route - The entire path for the user lookup service. default `/api/v1/emails`
  * 

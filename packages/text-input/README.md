@@ -1,18 +1,18 @@
 # mds-text-input
 
-# mckesson-design-system text-input
-A styled text-input by the mckesson design team.
+# design-system text-input
+A styled text-input by the ornery design team.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-text-input` --save
+npm i `@ornery/mds-text-input` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-text-input`
+yarn add `@ornery/mds-text-input`
 ```
 
 ### HTML Usage
@@ -28,7 +28,7 @@ yarn add `@mcklabs/mds-text-input`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-checkbox`
+import `@ornery/mds-checkbox`
 
 export const Text = () => (
 <div style={{ width: '360px', margin: '20px' }}>

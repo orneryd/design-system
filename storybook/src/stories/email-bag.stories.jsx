@@ -1,8 +1,8 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import '@mcklabs/mds-paper'
-import '@mcklabs/mds-email-bag'
-import '@mcklabs/mds-button'
+import '@ornery/mds-paper'
+import '@ornery/mds-email-bag'
+import '@ornery/mds-button'
 
 export default {
   title: 'Web Components/Chip',
@@ -35,7 +35,7 @@ class DefaultEmailBag extends React.Component {
     return (
       <mds-paper elevation={0} style={{ margin: '10px' }}>
         <mds-email-bag
-          value="jeff.moore2@mckesson.com;devin.birtciel@email.com"
+          value="jeff.moore2@ornery.com;devin.birtciel@email.com"
           delimiter=";">
         </mds-email-bag>
       </mds-paper>

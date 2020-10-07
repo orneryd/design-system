@@ -1,22 +1,22 @@
-import '@mcklabs/mds-paper'
-import {registerComponent} from '@mcklabs/mds-core'
+import '@ornery/mds-paper'
+import {registerComponent} from '@ornery/mds-core'
 import accordionTemplate from './mds-accordion.html'
 
 /**
  *
-# mckesson-design-system accordion
+# design-system accordion
 A styled accordion or expandable panel that allows for a header and content. the component will dynamically expand to the size of the contents.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-accordion` --save
+npm i `@ornery/mds-accordion` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-accordion`
+yarn add `@ornery/mds-accordion`
 ```
 
 ### Rendered
@@ -40,7 +40,7 @@ yarn add `@mcklabs/mds-accordion`
 ### React Component
 
 ```jsx
-import `@mcklabs/mds-accordion`
+import `@ornery/mds-accordion`
 
 export const accordion = () => (
   <mds-accordion

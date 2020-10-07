@@ -55,9 +55,9 @@ module.exports = {
     alias: generateAliases()
   },
   externals: makeForCDN ? [] : generateExternals([
-    "@mcklabs/web-components",
-    "@mcklabs/web-components/src/utils",
-    "@mcklabs/web-components/templates"
+    "@ornery/web-components",
+    "@ornery/web-components/src/utils",
+    "@ornery/web-components/templates"
   ]),
   // tell webpack to run babel on every file type we want. how we transpile from es6 to regular js
   module: {
@@ -87,7 +87,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: '@mcklabs/web-components/loader',
+            loader: '@ornery/web-components/loader',
             options: {
               minimize: true,
               removeComments: true,

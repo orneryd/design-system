@@ -1,18 +1,18 @@
 # mds-button
 
-# mckesson-design-system button
+# design-system button
 A styled button
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-button` --save
+npm i `@ornery/mds-button` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-button`
+yarn add `@ornery/mds-button`
 ```
 
 ### HTML Usage
@@ -30,7 +30,7 @@ yarn add `@mcklabs/mds-button`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-button`
+import `@ornery/mds-button`
 
 export const buttons = () => (
 <div>

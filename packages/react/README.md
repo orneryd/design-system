@@ -1,6 +1,6 @@
 # 
 
-# mckesson-design-system react-support
+# design-system react-support
 A wrapper to handle custom events within any custom elements you want to use within react.
 It will also destory the events on unmount for you.
 
@@ -8,17 +8,17 @@ It will also destory the events on unmount for you.
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-react` --save
+npm i `@ornery/mds-react` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-react`
+yarn add `@ornery/mds-react`
 ```
 
 ### React Component
 ```jsx
-import WebComponentWrapper from `@mcklabs/mds-react`
+import WebComponentWrapper from `@ornery/mds-react`
 
 export const wrapped = () => (
 <WebComponentWrapper tag="my-element" onMyCustomEvent={()=> console.log('I haz cuztem events!')} />

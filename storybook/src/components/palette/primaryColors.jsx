@@ -129,7 +129,7 @@ class PrimaryColors extends React.Component {
     return (
 
       <Container>
-          <h1>McKesson Palette</h1>
+          <h1>ornery Palette</h1>
 
           <p>We use color as a visual way to communicate our brand. We have three
           palettes to pull from: primary, secondary and support. This variety allows
@@ -138,8 +138,8 @@ class PrimaryColors extends React.Component {
           <p>&nbsp;</p>
 
           <Wrapper>
-            <h3>McKesson Primary Two Colors</h3>
-            <p>Our primary colors of McKesson Blue and McKesson Orange are the colors used in our logotype.</p>
+            <h3>ornery Primary Two Colors</h3>
+            <p>Our primary colors of ornery Blue and ornery Orange are the colors used in our logotype.</p>
             <p>We include tints and shades in our color palette to help us better set apart or highlight information. The use of tints and shades also adds visual interest to information graphics, such as charts, graphs and illustrations.</p>
             <p>Only three tints and three shades in 60%, 40% and 20% increments of any given color are used.</p>
 

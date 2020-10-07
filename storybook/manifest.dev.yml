@@ -5,6 +5,6 @@ applications:
     instances: 1
     routes:
       - route: dev-dsm.apps.internal
-      - route: dev-dsm.app.dev-west.paas.mckesson.com
+      - route: dev-dsm.app.dev-west.paas.ornery.com
     buildpacks:
       - staticfile_buildpack

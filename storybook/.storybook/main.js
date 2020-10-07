@@ -24,7 +24,7 @@ module.exports = {
         test: /packages.+\.html$/,
         exclude: /node_modules/,
         use: [{
-            loader: '@mcklabs/web-components/loader',
+            loader: '@ornery/web-components/loader',
             options: {
                 minimize: true,
                 removeComments: true,

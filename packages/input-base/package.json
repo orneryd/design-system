@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-input-base",
+  "name": "@ornery/mds-input-base",
   "version": "0.1.0",
   "description": "",
   "main": "src/mds-input-base.js",
@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  }
+  "license": "ISC"
 }

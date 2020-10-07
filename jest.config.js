@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: '@mcklabs/design-system',
+  displayName: '@ornery/design-system',
   roots: ['<rootDir>/packages'],
   setupFiles: ['<rootDir>/test/polyfills.js'],
   testEnvironment: 'jest-environment-happy-dom',
@@ -10,7 +10,7 @@ module.exports = {
   transform: {
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
     '^.+\\.scss$': '<rootDir>/test/config/cssTransform.js',
-    '^.+\\.html$': '@mcklabs/web-components/jestLoader'
+    '^.+\\.html$': '@ornery/web-components/jestLoader'
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js)$',
@@ -20,7 +20,7 @@ module.exports = {
     '<rootDir>/node_modules'
   ],
   moduleNameMapper: {
-    "@mcklabs/mds-(.+)$": '<rootDir>/packages/$1',
+    "@ornery/mds-(.+)$": '<rootDir>/packages/$1',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
   moduleFileExtensions: [

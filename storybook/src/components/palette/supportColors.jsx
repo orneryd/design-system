@@ -147,7 +147,7 @@ class SupportColors extends React.Component {
       <ThemeProvider theme={{ theme: 'light', fontBase: 'fontFamily' }}>
       <Container>
 
-          <h1>McKesson Palette</h1>
+          <h1>ornery Palette</h1>
 
           <p>We use color as a visual way to communicate our brand. We have three
           palettes to pull from: primary, secondary and support. This variety allows
@@ -156,7 +156,7 @@ class SupportColors extends React.Component {
           <p>&nbsp;</p>
 
           <Wrapper>
-            <h3>McKesson Support Palette</h3>
+            <h3>ornery Support Palette</h3>
             <p>Our support colors complement our primary palette. They are used for covers, backgrounds and graphic elements. The use of tints and shades also adds visual interest to information graphics, such as charts, graphs and illustrations.</p>
             <p>You can use three tints and three shades in 60%, 40% and 20% increments of any given color are used.</p>
 

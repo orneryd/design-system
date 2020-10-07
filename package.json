@@ -1,11 +1,11 @@
 {
-  "name": "@mcklabs/mckesson-design-system",
+  "name": "@ornery/design-system",
   "version": "0.1.0",
   "description": "Design System using StoryBook",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mckesson/mckesson-design-system.git"
+    "url": "git+https://github.com/ornery/design-system.git"
   },
   "files": [
     "dist/*",
@@ -13,12 +13,9 @@
   ],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/mckesson/mckesson-design-system#readme",
+  "homepage": "https://github.com/ornery/design-system#readme",
   "bugs": {
-    "url": "https://github.com/mckesson/mckesson-design-system/issues"
-  },
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
+    "url": "https://github.com/ornery/design-system/issues"
   },
   "scripts": {
     "build": "webpack && yarn build:cdn",
@@ -34,7 +31,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
-    "@mcklabs/web-components": "^1.1.5",
+    "@ornery/web-components": "^1.0.0",
     "@webcomponents/custom-elements": "^1.2.4",
     "@webcomponents/shadydom": "^1.7.1",
     "babel-eslint": "10.0.3",

@@ -1,20 +1,20 @@
-import {registerComponent} from '@mcklabs/mds-core'
+import {registerComponent} from '@ornery/mds-core'
 import renderChip from './mds-chip.html'
 
 /**
-# mckesson-design-system chip
+# design-system chip
 A styled chip that functions similar a tag or chip in bootstrap or material ui.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-chip` --save
+npm i `@ornery/mds-chip` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-chip`
+yarn add `@ornery/mds-chip`
 ```
  *
  *

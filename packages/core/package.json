@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-core",
+  "name": "@ornery/mds-core",
   "version": "0.1.1",
   "description": "",
   "main": "dist/mds-core.js",
@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  }
+  "license": "ISC"
 }

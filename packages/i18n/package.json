@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-i18n",
+  "name": "@ornery/mds-i18n",
   "version": "0.1.3",
   "description": "",
   "main": "dist/mds-i18n.js",
@@ -8,10 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  },
   "dependencies": {
-    "@mcklabs/web-components": ">=1.1.5"
+    "@ornery/web-components": ">=1.1.5"
   }
 }

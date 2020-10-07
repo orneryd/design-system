@@ -1,10 +1,10 @@
 import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import '@mcklabs/mds-paper'
-import '@mcklabs/mds-chip'
-import '@mcklabs/mds-chip-bag'
-import '@mcklabs/mds-button'
+import '@ornery/mds-paper'
+import '@ornery/mds-chip'
+import '@ornery/mds-chip-bag'
+import '@ornery/mds-button'
 
 export default {
   title: 'Web Components/Chip',

@@ -1,18 +1,18 @@
 # mds-chip-bag
 
-# mckesson-design-system chip-bag
-A styled chip-bag by the mckesson design team.
+# design-system chip-bag
+A styled chip-bag by the ornery design team.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-chip-bag` --save
+npm i `@ornery/mds-chip-bag` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-chip-bag`
+yarn add `@ornery/mds-chip-bag`
 ```
 
 ### HTML Usage
@@ -24,7 +24,7 @@ yarn add `@mcklabs/mds-chip-bag`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-chip-bag`
+import `@ornery/mds-chip-bag`
 
 export const Text = () => (
 <div style={{ width: '360px', margin: '20px' }}>

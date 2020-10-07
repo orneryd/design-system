@@ -1,18 +1,18 @@
 # mds-paper
 
-# mckesson-design-system paper
+# design-system paper
 A styled paper that you can set the elevation property for more drastic effects.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-paper` --save
+npm i `@ornery/mds-paper` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-paper`
+yarn add `@ornery/mds-paper`
 ```
 
 ### HTML Usage
@@ -29,7 +29,7 @@ cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est la
 ### React Component
 
 ```js
-import `@mcklabs/mds-banner`
+import `@ornery/mds-banner`
 
 export const paper = () => (
 <mds-paper

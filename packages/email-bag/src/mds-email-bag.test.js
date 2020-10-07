@@ -1,7 +1,7 @@
 /**
  * @jest-environment jest-environment-happy-dom
  */
-import '@mcklabs/mds-chip-bag'
+import '@ornery/mds-chip-bag'
 import MdsEmailBag from './mds-email-bag'
 
 const fakeInput = document.createElement('input');
@@ -93,10 +93,10 @@ describe('mds-email-bag', () => {
       })
     })
     
-    describe('when emails are required and the domain is mckesson', () => {
+    describe('when emails are required and the domain is ornery', () => {
       beforeEach(() => {
         element.setAttribute('required')
-        element.setAttribute('domains', 'mckesson')
+        element.setAttribute('domains', 'ornery')
       })
 
       describe('when there is an invalid email', () => {
@@ -118,7 +118,7 @@ describe('mds-email-bag', () => {
 
       describe('when there is an invalid email', () => {
         beforeEach(() => {
-          element.chipsUpdate({ detail: ['test.email@mckesson.com'] })
+          element.chipsUpdate({ detail: ['test.email@ornery.com'] })
         })
     
         it('sets a visible spinner when all emails are valid', () => {
@@ -130,14 +130,14 @@ describe('mds-email-bag', () => {
         let validateEmailSpy
         beforeEach(done => {
           validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue(Promise.resolve({}))
-          element.chipsUpdate({ detail: ['test.email@mckesson.com'] }).then(incomingEmails => {
+          element.chipsUpdate({ detail: ['test.email@ornery.com'] }).then(incomingEmails => {
             done()
           })
         })
 
         it('calls validateEmail with the email to be validated', () => {
           expect(validateEmailSpy.calls.count()).toBe(1)
-          expect(validateEmailSpy.calls.allArgs()[0][0]).toBe('test.email@mckesson.com')
+          expect(validateEmailSpy.calls.allArgs()[0][0]).toBe('test.email@ornery.com')
         })
 
         it('calls notifyValidity', () => {
@@ -164,14 +164,14 @@ describe('mds-email-bag', () => {
         let validateEmailSpy
         beforeEach(done => {
           validateEmailSpy = spyOn(element, 'validateEmail').and.returnValue(Promise.reject({}))
-          element.chipsUpdate({ detail: ['test.email@mckesson.com'] }).then(incomingEmails => {
+          element.chipsUpdate({ detail: ['test.email@ornery.com'] }).then(incomingEmails => {
             done()
           })
         })
 
         it('calls validateEmail with the email to be validated', () => {
           expect(validateEmailSpy.calls.count()).toBe(1)
-          expect(validateEmailSpy.calls.allArgs()[0][0]).toBe('test.email@mckesson.com')
+          expect(validateEmailSpy.calls.allArgs()[0][0]).toBe('test.email@ornery.com')
         })
 
         it('calls notifyValidity if one of the validation calls fails', () => {

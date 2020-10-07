@@ -1,22 +1,22 @@
-import {registerComponent} from '@mcklabs/mds-core'
-import InputBase from '@mcklabs/mds-input-base'
+import {registerComponent} from '@ornery/mds-core'
+import InputBase from '@ornery/mds-input-base'
 import radioTemplate from './mds-radio.html'
 
 
 /**
-# mckesson-design-system checkbox
-A styled checkbox by the mckesson design team.
+# design-system checkbox
+A styled checkbox by the ornery design team.
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-radio` --save
+npm i `@ornery/mds-radio` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-radio`
+yarn add `@ornery/mds-radio`
 ```
 
 ### HTML Usage
@@ -30,7 +30,7 @@ yarn add `@mcklabs/mds-radio`
 
 ### React Component
 ```jsx
-import `@mcklabs/mds-radio`
+import `@ornery/mds-radio`
 
 export const buttons = () => (
   <form style={{ width: '360px', margin: '20px' }}>

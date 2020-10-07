@@ -1,5 +1,5 @@
-import {registerComponent} from '@mcklabs/mds-core'
-import { I18n, I18nMessage, ContextBinding } from '@mcklabs/web-components';
+import {registerComponent} from '@ornery/mds-core'
+import { I18n, I18nMessage, ContextBinding } from '@ornery/web-components';
 import commonStrings from './common-strings.json'
 
 const language = navigator.language || 'en-US'  // language without region code

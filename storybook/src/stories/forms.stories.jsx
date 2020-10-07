@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
-import '@mcklabs/mds-text-input'
-import '@mcklabs/mds-checkbox'
+import '@ornery/mds-text-input'
+import '@ornery/mds-checkbox'
 
 export default {
   title: 'Web Components/Forms',
@@ -41,9 +41,9 @@ export const EmailDomainValidation = () => {
         <mds-text-input
           class="validated-input"
           required
-          pattern=".+@(mckesson|usoncology)\.(ca|ie|com)"
+          pattern=".+@(ornery|usoncology)\.(ca|ie|com)"
           type="email"
-          label="Please type a McKesson or US Oncology email address"
+          label="Please type a ornery or US Oncology email address"
         />
         <mds-button type="submit" form="sample-form">
           Submit &amp; Clear
@@ -90,10 +90,10 @@ export const InputsWithCheckboxes = () => {
           id="email"
           class="validated-input"
           required
-          pattern=".+@(mckesson|usoncology)\.(ca|ie|com)"
-          validation-message="Not a valid McKesson email address"
+          pattern=".+@(ornery|usoncology)\.(ca|ie|com)"
+          validation-message="Not a valid ornery email address"
           type="email"
-          label="Please type a McKesson or US Oncology email address"
+          label="Please type a ornery or US Oncology email address"
         />
         <mds-checkbox
           id="required-checkbox"

@@ -1,19 +1,19 @@
-import {registerComponent} from '@mcklabs/mds-core'
+import {registerComponent} from '@ornery/mds-core'
 import renderBanner from './mds-banner.html'
 /**
-# mckesson-design-system banner
+# design-system banner
 A styled banner header and content
 
 ## Installation
 
 ### npm
 ```bash
-npm i `@mcklabs/mds-banner` --save
+npm i `@ornery/mds-banner` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@mcklabs/mds-banner`
+yarn add `@ornery/mds-banner`
 ```
 
 ### Rendered in the browser
@@ -80,7 +80,7 @@ mds-banner {
  * @example
  * ### React Component
  * 
- * import '@mcklabs/mds-banner'
+ * import '@ornery/mds-banner'
  * 
  * export const banner = () => (
  *   <mds-banner>

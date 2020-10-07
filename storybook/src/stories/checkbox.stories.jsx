@@ -1,7 +1,7 @@
 import React from 'react'
 
-import '@mcklabs/mds-checkbox'
-import '@mcklabs/mds-radio'
+import '@ornery/mds-checkbox'
+import '@ornery/mds-radio'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "@mcklabs/mds-template",
+  "name": "@ornery/mds-template",
   "version": "0.1.0",
   "description": "",
   "main": "dist/mds-template.js",
@@ -8,11 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "publishConfig": {
-    "registry": "https://tools.mckesson.com/artifactory/api/npm/mcklabs-npm"
-  },
   "dependencies": {
-    "@mcklabs/web-components": "^0.1.15",
-    "@mcklabs/mds-core": "^0.1.1"
+    "@ornery/web-components": "0.1.15",
+    "@ornery/mds-core": "0.1.1"
   }
 }

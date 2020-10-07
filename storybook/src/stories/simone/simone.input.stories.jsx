@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '@mcklabs/mds-text-input'
+import '@ornery/mds-text-input'
 
 export default {
   title: 'Simone/Inputs'
