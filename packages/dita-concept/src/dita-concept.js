@@ -108,8 +108,10 @@ export default class UIConcept extends HTMLElement {
   }
 
   connectedCallback() {
-    this.header = this.querySelector('ui-title').innerHTML;
-    this.content = this.querySelector('conbody').innerHTML;
+    const ditaTitle = this.querySelector('title')
+    const conceptBody = this.querySelector('conbody')
+    this.header = ditaTitle && ditaTitle.innerHTML;
+    this.content = conceptBody && conceptBody.innerHTML;
     this.render()
   }
   render(){

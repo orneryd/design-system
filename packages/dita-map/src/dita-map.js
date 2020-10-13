@@ -1,7 +1,8 @@
 import { registerComponent } from '@ornery/ui-core'
-// import UIButton from '@ornery/ui-button'
-// import renderMap from './dita-map.html'
-const customDitaElements = ['xref', 'concept', 'title']
+import '@ornery/render-html'
+import UIButton from '@ornery/ui-button'
+
+const customDitaElements = ['xref', 'concept']
 const elementNames = customDitaElements.map(t => t + '(ref)?').join('|')
 const elementsRegex = new RegExp(`(${elementNames})`, 'gi')
 /**
@@ -111,19 +112,35 @@ export default class DitaMap extends HTMLElement {
     this.attachShadow({ mode: 'open' })
   }
 
+  attributeChangedCallback(){
+    this.getContent()
+  }
+
   connectedCallback() {
-    fetch(this.getAttribute('href'))
-      .then(response => response.text())
-      .then(htmlString => {
-        const ditaMapToElm = htmlString.replace(elementsRegex, 'ui-$1')
-        const correctedXml = ditaMapToElm.replace(/<([\w-]+)(.*)\/\s*>/gi, '<$1$2></$1>')
-        const parser = new DOMParser()
-        const doc = parser.parseFromString(correctedXml, 'text/html')
-        const root = [...doc.body.childNodes]
-        root.forEach(n => this.shadowRoot.appendChild(n))
-      })
+    this.getContent()
+  }
+
+  getContent() {
+    if (this.getAttribute('href')) {
+      fetch(this.getAttribute('href'))
+        .then(response => response.text())
+        .then((str)=> this.render(str))
+    } else if (this.getAttribute('dita')) {
+      this.render(this.getAttribute('dita'))
+    } else {
+      this.render(this.innerHTML);
+    }
+  }
+
+  render(ditaXml) {
+    const parser = new DOMParser()
+    const ditaMapToElm = ditaXml.replace(elementsRegex, 'dita-$1')
+    const correctedXml = ditaMapToElm.replace(/<([\w-]+)(.*)\/\s*>/gim, '<$1$2></$1>')
+    const doc = parser.parseFromString(correctedXml, 'text/html')
+    const root = [...doc.body.childNodes]
+    root.forEach(n => this.shadowRoot.appendChild(n))
   }
 }
 
 registerComponent('dita-map', DitaMap)
-// registerComponent('dita-xref', class extends UIButton{})
+registerComponent('dita-xref', class extends UIButton{})

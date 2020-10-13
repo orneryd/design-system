@@ -1,10 +1,11 @@
 <concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-2950" xml:lang="en-us" domains="(topic concept) (topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d) " ditaarch:DITAArchVersion="1.3" class="- topic/topic concept/concept ">
-<title class="- topic/title ">bwhTopic</title>
+<title class="- topic/title ">bwhTopic from remote .dita file</title>
 <shortdesc class="- topic/shortdesc "/>
 <prolog class="- topic/prolog ">
-<author type="creator" translate="no" class="- topic/author ">Greg Shear &lt;greg.shear@jorsek.com</author>
+<author type="creator" translate="no" class="- topic/author ">Greg Shear &lt;greg.shear@jorsek.com&gt;</author>
 </prolog>
 <conbody class="- topic/body concept/conbody ">
+I am loaded remotely from the file server.
 <section class="- topic/section ">
 <title class="- topic/title "/>
 <p class="- topic/p ">

@@ -105,14 +105,23 @@ export default class RenderHTML extends HTMLElement {
     super()
     this.attachShadow({ mode: 'open' })
   }
+  attributeChangedCallback(){
+    this.getContent()
+  }
 
   connectedCallback() {
+    this.getContent()
+  }
+
+  getContent() {
     if (this.getAttribute('href')) {
       fetch(this.getAttribute('href'))
         .then(response => response.text())
         .then((str)=> this.render(str))
-    } else if (this.getAttribute('markup')) {
-      render(this.getAttribute('markup'))
+    } else if (this.getAttribute('html')) {
+      this.render(this.getAttribute('html'))
+    } else {
+      this.render(this.innerHTML);
     }
   }
 
