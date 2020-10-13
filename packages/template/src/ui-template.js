@@ -79,10 +79,10 @@ export default class HTMLUITemplateElement extends HTMLTemplateElement {
             Array.from(props.attributes).forEach(attr => {
               this[attr.name] = attr.value
             })
-            Array.from(this.attributes).forEach(attr => {
+            Array.from(props.attributes).forEach(attr => {
               this[attr.name] = attr.value
             })
-            render(this).connect()
+            render(props).connect()
           }
           disconnectedCallback() {
             // Later, you can stop observing

@@ -14,15 +14,17 @@ export default {
 }
 
 export const RemoteRender = () => (
-  <render-html href="/samples/snippet.html"></render-html>
+  <render-html href="/samples/snippet.html" placeholder="Your Email Address"></render-html>
 )
 
 export const RenderAttribute = () => (
-  <render-html html="<p> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></p>"></render-html>
+  <render-html placeholder="Do something else" html="<p> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></p> ${this.placeholder}"></render-html>
 )
 
+const interpolation = 'How did i get here? ${this.placeholder}'
 export const RenderBody = () => (
-  <render-html>
+  <render-html placeholder="I'm changing via attributes" >
     <div> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></div>
+    <div>{interpolation}</div>
   </render-html>
 )

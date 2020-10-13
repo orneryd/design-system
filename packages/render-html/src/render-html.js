@@ -1,4 +1,5 @@
 import { registerComponent } from '@ornery/ui-core'
+import { bindEvents, template } from '@ornery/web-components';
 /**
 # design-system map
 A styled map header and content
@@ -105,12 +106,24 @@ export default class RenderHTML extends HTMLElement {
     super()
     this.attachShadow({ mode: 'open' })
   }
+
   attributeChangedCallback(){
+    this.applyAttributes()
     this.getContent()
   }
 
   connectedCallback() {
+    this.applyAttributes()
     this.getContent()
+  }
+
+  applyAttributes() {
+    Array.from(this.attributes).forEach(attr => {
+      this[attr.name] = attr.value
+    })
+    Array.from(this.attributes).forEach(attr => {
+      this[attr.name] = attr.value
+    })
   }
 
   getContent() {
@@ -126,11 +139,13 @@ export default class RenderHTML extends HTMLElement {
   }
 
   render(markupStr) {
-    const parser = new DOMParser()
-    const correctedXml = markupStr.replace(/<([\w-]+)(.*)\/\s*>/gim, '<$1$2></$1>')
-    const doc = parser.parseFromString(correctedXml, 'text/html')
-    const root = [...doc.body.childNodes]
-    root.forEach(n => this.shadowRoot.appendChild(n))
+    const props = this
+    const templateWithProps = markupStr.replace(/\$\{.+?}/gim, s => {
+      return template(s, props)
+    }).replace(/<([\w-]+)(.*)\/\s*>/gim, '<$1$2></$1>')
+    const parsed = new DOMParser().parseFromString(templateWithProps, 'text/html'); 
+    const elements = [...parsed.head.children, ...bindEvents(parsed.body, props).childNodes];
+    elements.forEach(n => this.shadowRoot.appendChild(n))
   }
 }
 

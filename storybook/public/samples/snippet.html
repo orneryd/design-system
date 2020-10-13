@@ -1,21 +1,13 @@
 <div>
-    <h3>I can safely render HTML content <strong>without</strong> setting innerHTML which is unsafe.</strong></h3>
+    <h3>I can safely render HTML content <strong>without</strong> setting innerHTML.</h3>
+    <h3>setting innertHTML is unsafe and exposes users to xss payloads.</h3> 
     <ui-paper>
-    <ui-text-input label="Your Email Address"></ui-text-input>
+    <ui-text-input label="${this.placeholder}"></ui-text-input>
     </ui-paper>
     <ui-banner>
-    <span slot="header">
-        <ui-bears></ui-bears>
-        <ui-bears someattr="bears"></ui-bears>
-    </span>
-    <span slot="content">there</span>
+        <span slot="header">
+            some special header
+        </span>
+        <span slot="content">some specialized content</span>
     </ui-banner>
 </div>
-<template is="ui-template" name="ui-bears" someattr="default value" >
-    <style>
-    :host {
-        display: block;
-    }
-    </style>
-    <div>${this.someattr}</div>
-</template>
