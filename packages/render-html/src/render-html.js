@@ -1,8 +1,5 @@
 import { bindEvents, template } from '@ornery/web-components';
 /**
-# design-system map
-A styled map header and content
-
 ## Installation
 
 ### npm
@@ -15,90 +12,38 @@ npm i `@ornery/render-html` --save
 yarn add `@ornery/render-html`
 ```
 
-### Rendered in the browser
- ![](samples/map.png)
-<br/>
+## Examples
 
-### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
-```css
-render-html {
-  --renderHtmlColor: rgb(254, 254, 254);
-  --renderHtmlBackgroundColor: rgb(25, 35, 67);
-  --renderHtmlMaxWidth: 768px;
-  --renderHtmlHeaderColor: inherit;
-  --renderHtmlContentMaxWidth: 768px;
-  --renderHtmlContentColor: inherit;
-}
+```javascript
+import '@ornery/render-html'
 ```
-
-### Rendered in the browser
- ![](samples/map-custom.png)
-<br/>
-
-### Rendered in the browser
- ![](samples/map-custom-2.png)
-<br/>
  * 
  * 
- * @module UImap
+ * @module RenderHTML
  * @extends {HTMLElement}
  * @element render-html
- * @description Component to encapsulate the styling of a site map
  * 
- * @slot header - The header slot inside an h1 element
- * @slot content - The content slot inside an h4 element
- * @cssproperty --renderHtmlColor - Overrides the text color for the map.
- * @cssproperty --renderHtmlBackgroundColor - Overrides the background color for the header.
- * @cssproperty --renderHtmlMaxWidth - Overrides the maxwidth for the header and content.
- * @cssproperty --renderHtmlHeaderColor - Overrides the text color for the header.
- * @cssproperty --renderHtmlContentColor - Overrides the text color for the content.
- * @cssproperty --renderHtmlContentMaxWidth - Overrides the max-width for the header.
  *
  * @example
+ * ```jsx
+ * ### JSX or HTML
+ * export const RemoteRender = () => (
+ *   <render-html href="/samples/snippet.html" placeholder="Your Email Address"></render-html>
+ * )
  * 
+ * export const RenderAttribute = () => (
+ *   <render-html placeholder="Do something else" html="<p> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></p> ${this.placeholder}"></render-html>
+ * )
  * 
- * @example
- * ### HTML
- * <render-html>
- *   <span slot="header">
- *     Lorem Ipsum
- *   </span>
- *   <span slot="content">
- *     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
- *     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
- *     laboris nisi ut aliquip ex ea commodo consequat.
- *   </span>
- *   <span slot="content">
- *     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
- *     commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
- *     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
- *     qui officia deserunt mollit anim id est laborum.
- *   </span>
- * </render-html>
- *
- * @example
- * ### React Component
- * 
- * import '@ornery/render-html'
- * 
- * export const map = () => (
- *   <render-html>
- *     <span slot="header">
- *       Lorem Ipsum
- *     </span>
- *     <span slot="content">
- *       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
- *       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
- *       laboris nisi ut aliquip ex ea commodo consequat.
- *     </span>
- *     <span slot="content">
- *       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
- *       commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
- *       dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
- *       qui officia deserunt mollit anim id est laborum.
- *     </span>
+ * const interpolation = 'How did i get here? ${this.placeholder}'
+ * export const RenderBody = () => (
+ *   <render-html placeholder="I'm changing via attributes" >
+ *     <div> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></div>
+ *     <div>{interpolation}</div>
  *   </render-html>
  * )
+ * ```
+ * 
  */
 export default class RenderHTML extends HTMLElement {
   constructor() {
