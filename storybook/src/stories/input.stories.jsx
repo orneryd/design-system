@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '@ornery/ui-text-input'
-import './input.stories.css'
+// import './input.stories.css'
 
 export default {
   title: 'Web Components/Inputs'
