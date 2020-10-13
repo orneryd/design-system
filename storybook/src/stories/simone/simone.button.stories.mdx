@@ -1,8 +1,8 @@
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
 import { withKnobs, select, boolean } from '@storybook/addon-knobs'
-import '@ornery/mds-button'
-import '@ornery/mds-paper'
-import README from '@ornery/mds-button-readme'
+import '@ornery/ui-button'
+import '@ornery/ui-paper'
+import README from '@ornery/ui-button-readme'
 const label = 'Variants'
 const options = {
   Primary: 'primary',
@@ -29,7 +29,7 @@ const styles = {
   title="Simone/Buttons"
   decorators={[withKnobs]}
   parameters={{
-    component: 'mds-button',
+    component: 'ui-button',
     options: { 
       selectedPanel: 'storybookjs/knobs/panel'
      }
@@ -46,9 +46,9 @@ const styles = {
       <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
       {Object.values(options).map(variant => {
         return (<div style={{margin: '10px 0'}}>
-              <mds-button variant={variant}>
+              <ui-button variant={variant}>
                 <span class="btn condensed">{variant}</span>
-              </mds-button>
+              </ui-button>
             </div>)
       })}
     </>
@@ -58,20 +58,20 @@ const styles = {
 <Story name="Button">
   <>
   <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
-  <mds-button
+  <ui-button
     style={styles}
     variant={select(label, options, defaultValue, groupId)}
     disabled={boolean('Disabled', false, groupId)}
   >
     <span class="btn condensed">{select(label, options, defaultValue, groupId)}</span>
-  </mds-button>
+  </ui-button>
   </>
 </Story>
 
 <Story name="Anchor">
   <>
   <link rel="stylesheet" type="text/css" href="/simone/overrides.css" />
-  <mds-button
+  <ui-button
     style={styles}
     href="https://www.google.com"
     target="_blank"
@@ -79,6 +79,6 @@ const styles = {
     disabled={boolean('Disabled', false, groupId)}
   >
     <span class="btn condensed">external link</span>
-  </mds-button>
+  </ui-button>
   </>
 </Story>

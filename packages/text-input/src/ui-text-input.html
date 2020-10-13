@@ -1,0 +1,14 @@
+<link href="./ui-text-input.scss" />
+<div class="ui-text-input-wrapper ${this.value ? 'focus': ''}" onclick="${this.focusInput}">
+  <input 
+    id="${this.inputId}" 
+    class="ui-text-input" 
+    onkeyup="${this.handleInputChange}" 
+    onfocus="${this.handleFocus}" 
+    onblur="${this.handleBlur}"
+    ${this.required}
+    pattern="${this.pattern}"
+    type="${this.type}" 
+    value=${this.value} />
+    <label class="ui-text-input-label" for="${this.inputId}">${this.label}</label>
+</div>

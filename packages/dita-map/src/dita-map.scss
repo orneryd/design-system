@@ -1,0 +1,29 @@
+@import '../../core/src/core.scss';
+
+.dita-map {
+    color: var(--ditaMapColor,rgb(254, 254, 254));
+    display: block;
+    background-color: var(--ditaMapBackgroundColor, rgb(25, 35, 67));
+    padding-bottom: 10rem;
+    padding-top: 4rem;
+  
+  h1, h4 {
+    max-width: var(--ditaMapMaxWidth, 768px);
+    text-align: center;
+    display: block;
+  }
+
+  h1 {
+    color: var(--ditaMapHeaderColor, inherit);
+    max-width: var(--ditaMapContentMaxWidth, 768px);
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+
+  h4 {
+    color: var(--ditaMapContentColor, inherit);
+    max-width: var(--ditaMapContentMaxWidth, 768px);
+    font-size: 0.9rem;
+    margin: 1rem auto;
+  }
+}

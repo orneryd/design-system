@@ -1,4 +1,4 @@
-# mds-radio
+# ui-radio
 
 # design-system checkbox
 A styled checkbox by the ornery design team.
@@ -7,32 +7,32 @@ A styled checkbox by the ornery design team.
 
 ### npm
 ```bash
-npm i `@ornery/mds-radio` --save
+npm i `@ornery/ui-radio` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-radio`
+yarn add `@ornery/ui-radio`
 ```
 
 ### HTML Usage
 ```html
 <form style="width: 360px; margin: 20px;">
-<mds-radio type="radio" name="fruit" checked value="Strawberry" />
-<mds-radio type="radio" name="fruit" value="Orange" />
-<mds-radio type="radio" name="fruit" value="Lemon" />
+<ui-radio type="radio" name="fruit" checked value="Strawberry" />
+<ui-radio type="radio" name="fruit" value="Orange" />
+<ui-radio type="radio" name="fruit" value="Lemon" />
 </form>
 ```
 
 ### React Component
 ```jsx
-import `@ornery/mds-radio`
+import `@ornery/ui-radio`
 
 export const buttons = () => (
 <form style={{ width: '360px', margin: '20px' }}>
-   <mds-radio type="radio" name="fruit" checked value="Strawberry" />
-   <mds-radio type="radio" name="fruit" value="Orange" />
-   <mds-radio type="radio" name="fruit" value="Lemon" />
+   <ui-radio type="radio" name="fruit" checked value="Strawberry" />
+   <ui-radio type="radio" name="fruit" value="Orange" />
+   <ui-radio type="radio" name="fruit" value="Lemon" />
 </form>
 )
 ```
@@ -72,5 +72,5 @@ export const buttons = () => (
 
 | Property                 | Type   | Description                                  |
 |--------------------------|--------|----------------------------------------------|
-| `--mdsRadioBorder`       | String | Overrides the border color                   |
-| `--mdsRadioColorChecked` | String | Overrides the color of the checked indicator |
+| `--uiRadioBorder`       | String | Overrides the border color                   |
+| `--uiRadioColorChecked` | String | Overrides the color of the checked indicator |

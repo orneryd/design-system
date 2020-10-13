@@ -1,8 +1,8 @@
 {
-  "name": "@ornery/mds-button",
+  "name": "@ornery/ui-button",
   "version": "0.1.5",
   "description": "",
-  "main": "dist/mds-button.js",
+  "main": "dist/ui-button.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@ornery/web-components": ">=1.1.5",
-    "@ornery/mds-core": ">=0.1.0"
+    "@ornery/ui-core": ">=0.1.0"
   }
 }

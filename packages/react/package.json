@@ -1,13 +1,13 @@
 {
-  "name": "@ornery/mds-react",
+  "name": "@ornery/react-web-components",
   "version": "0.0.5",
   "description": "Wrappers and components to help with react support",
-  "main": "src/mds-react.jsx",
+  "main": "src/react-web-components.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "timothyswt@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "react": "*"
   }

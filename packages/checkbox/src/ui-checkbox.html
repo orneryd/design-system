@@ -1,0 +1,15 @@
+<link href="./ui-checkbox.scss" />
+<div class="ui-checkbox-wrapper" onclick="${this.onClick}">
+  <label class="ui-checkbox-label ${this.standard}" for="${this.inputId}">
+    <input 
+    id="${this.inputId}" 
+    class="ui-checkbox"
+    type="checkbox"
+    name="${this.name}"
+    ${this.value}/>
+    <span class="ui-checkbox-border">
+      <span class="ui-checkbox-circle"></span>
+    </span>
+    <span class="ui-checkbox-label-text">${this.label}</span>
+  </label>
+</div>

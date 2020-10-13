@@ -1,12 +1,12 @@
 import { Preview, Meta, Description, Story } from '@storybook/addon-docs/blocks'
 import { withKnobs, number } from '@storybook/addon-knobs'
-import '@ornery/mds-text-input'
-import README from '@ornery/mds-text-input-readme'
+import '@ornery/ui-text-input'
+import README from '@ornery/ui-text-input-readme'
 
 <Meta
   title="Web Components/Inputs"
   parameters={{
-    component: 'mds-paper',
+    component: 'ui-paper',
     options: { selectedPanel: 'storybookjs/knobs/panel' }
   }}
 />
@@ -18,29 +18,29 @@ import README from '@ornery/mds-text-input-readme'
 <Preview withToolbar>
   <Story name="All">
     <form style={{ width: '360px', margin: '20px' }}>  
-      <mds-text-input label="Some Label" />
-      <mds-text-input value="some initial value" label="I have an initial Value" />
-      <mds-text-input type="password" label="Type Some Secure Text" />
-      <mds-text-input
+      <ui-text-input label="Some Label" />
+      <ui-text-input value="some initial value" label="I have an initial Value" />
+      <ui-text-input type="password" label="Type Some Secure Text" />
+      <ui-text-input
         type="email"
         label="Type an email to be validated"
       />
-      <mds-text-input
+      <ui-text-input
         type="color"
         static-label
         label="Select a color"
       />
-      <mds-text-input
+      <ui-text-input
         type="date"
         static-label
         label="Enter a Date"
       />
-      <mds-text-input
+      <ui-text-input
         type="File"
         static-label
         label="Select a file"
       />
-      <mds-text-input
+      <ui-text-input
         type="Image"
         style={{height: '250px', width: '300px'}}
         src="http://www.kittenwar.com/c_images/2012/06/24/210259.2.jpg"

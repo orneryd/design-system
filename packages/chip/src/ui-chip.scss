@@ -1,0 +1,50 @@
+@import '../../core/src/core.scss';
+
+.ui-chip {
+  display: flex;
+  align-items: center;
+  color: var(--uiChipColor, inherit);
+  background-color: var(--uiChipBackgroundColor, rgba(204, 204, 204, 0.5));
+  padding: 0 12px;
+  border-radius: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.ui-chip-remove {
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  fill: var(--uiChipIconColor, $mdsBlackLight);
+  height: 22px;
+  width: 22px;
+  font-size: 1rem;
+  margin-right: -6px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.ui-chip-remove:hover {
+  fill: var(--uiChipIconColorHover, $mdsBlack);
+}
+
+.ui-chip-remove:active {
+  fill: var(--uiChipIconColorActive, $mdsBlack);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.ui-chip-text {
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 3px;
+  margin: 0 2px;
+  white-space: nowrap;
+}

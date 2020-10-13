@@ -1,4 +1,4 @@
-# mds-paper
+# ui-paper
 
 # design-system paper
 A styled paper that you can set the elevation property for more drastic effects.
@@ -7,17 +7,17 @@ A styled paper that you can set the elevation property for more drastic effects.
 
 ### npm
 ```bash
-npm i `@ornery/mds-paper` --save
+npm i `@ornery/ui-paper` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-paper`
+yarn add `@ornery/ui-paper`
 ```
 
 ### HTML Usage
 ```html
-<mds-paper elevation="6">
+<ui-paper elevation="6">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -29,10 +29,10 @@ cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est la
 ### React Component
 
 ```js
-import `@ornery/mds-banner`
+import `@ornery/ui-banner`
 
 export const paper = () => (
-<mds-paper
+<ui-paper
    elevation={6}
 >
      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -41,7 +41,7 @@ export const paper = () => (
      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
    </div>
-</mds-paper>
+</ui-paper>
 )
 ```
 
@@ -54,11 +54,11 @@ export const paper = () => (
 
 ```css
 :root {
---mdsPaperColor: orange;
---mdsPaperBackgroundColor: purple;
---mdsPaperBoxShadowHOffsetColor: rgba(255, 0, 255, 0.2);
---mdsPaperBoxShadowVOffsetColor: rgba(255, 0, 255, 0.14);
---mdsPaperBoxShadowBlurColor: rgba(255, 0, 255, 0.12);
+--uiPaperColor: orange;
+--uiPaperBackgroundColor: purple;
+--uiPaperBoxShadowHOffsetColor: rgba(255, 0, 255, 0.2);
+--uiPaperBoxShadowVOffsetColor: rgba(255, 0, 255, 0.14);
+--uiPaperBoxShadowBlurColor: rgba(255, 0, 255, 0.12);
 }
 ```
 
@@ -71,13 +71,13 @@ export const paper = () => (
 
 | Property    | Attribute   | Type     | Default | Description                                      |
 |-------------|-------------|----------|---------|--------------------------------------------------|
-| `elevation` | `elevation` | `String` | "3"     | Sets the elevation for the accordion's internal MdsPaper element |
+| `elevation` | `elevation` | `String` | "3"     | Sets the elevation for the accordion's internal UIPaper element |
 
 ## CSS Custom Properties
 
 | Property                          | Description                                      |
 |-----------------------------------|--------------------------------------------------|
-| `--mdsPaperBackgroundColor`       | Overrides the icon color for the accordion indicator button. |
-| `--mdsPaperBoxShadowBlurColor`    | Overrides the icon color for the accordion indicator button. |
-| `--mdsPaperBoxShadowHOffsetColor` | Overrides the icon color for the accordion indicator button. |
-| `--mdsPaperBoxShadowVOffsetColor` | Overrides the icon color for the accordion indicator button. |
+| `--uiPaperBackgroundColor`       | Overrides the icon color for the accordion indicator button. |
+| `--uiPaperBoxShadowBlurColor`    | Overrides the icon color for the accordion indicator button. |
+| `--uiPaperBoxShadowHOffsetColor` | Overrides the icon color for the accordion indicator button. |
+| `--uiPaperBoxShadowVOffsetColor` | Overrides the icon color for the accordion indicator button. |

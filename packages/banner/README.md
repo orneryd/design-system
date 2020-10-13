@@ -1,4 +1,4 @@
-# mds-banner
+# ui-banner
 
 # design-system banner
 A styled banner header and content
@@ -7,12 +7,12 @@ A styled banner header and content
 
 ### npm
 ```bash
-npm i `@ornery/mds-banner` --save
+npm i `@ornery/ui-banner` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-banner`
+yarn add `@ornery/ui-banner`
 ```
 
 ### Rendered in the browser
@@ -21,13 +21,13 @@ yarn add `@ornery/mds-banner`
 
 ### Set the following variables in your imported SCSS/CSS file or html `style` tag, before usage
 ```css
-mds-banner {
---mdsBannerColor: rgb(254, 254, 254);
---mdsBannerBackgroundColor: rgb(25, 35, 67);
---mdsBannerMaxWidth: 768px;
---mdsBannerHeaderColor: inherit;
---mdsBannerContentMaxWidth: 768px;
---mdsBannerContentColor: inherit;
+ui-banner {
+--uiBannerColor: rgb(254, 254, 254);
+--uiBannerBackgroundColor: rgb(25, 35, 67);
+--uiBannerMaxWidth: 768px;
+--uiBannerHeaderColor: inherit;
+--uiBannerContentMaxWidth: 768px;
+--uiBannerContentColor: inherit;
 }
 ```
 
@@ -47,7 +47,7 @@ mds-banner {
 
 ```html
 ### HTML
-<mds-banner>
+<ui-banner>
   <span slot="header">
     Lorem Ipsum
   </span>
@@ -62,7 +62,7 @@ mds-banner {
     dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
     qui officia deserunt mollit anim id est laborum.
   </span>
-</mds-banner>
+</ui-banner>
 ```
 
 ```javascript
@@ -82,9 +82,9 @@ import '
 
 | Property                     | Description                                      |
 |------------------------------|--------------------------------------------------|
-| `--mdsBannerBackgroundColor` | Overrides the background color for the header.   |
-| `--mdsBannerColor`           | Overrides the text color for the banner.         |
-| `--mdsBannerContentColor`    | Overrides the text color for the content.        |
-| `--mdsBannerContentMaxWidth` | Overrides the max-width for the header.          |
-| `--mdsBannerHeaderColor`     | Overrides the text color for the header.         |
-| `--mdsBannerMaxWidth`        | Overrides the maxwidth for the header and content. |
+| `--uiBannerBackgroundColor` | Overrides the background color for the header.   |
+| `--uiBannerColor`           | Overrides the text color for the banner.         |
+| `--uiBannerContentColor`    | Overrides the text color for the content.        |
+| `--uiBannerContentMaxWidth` | Overrides the max-width for the header.          |
+| `--uiBannerHeaderColor`     | Overrides the text color for the header.         |
+| `--uiBannerMaxWidth`        | Overrides the maxwidth for the header and content. |

@@ -1,4 +1,4 @@
-# mds-chip-bag
+# ui-chip-bag
 
 # design-system chip-bag
 A styled chip-bag by the ornery design team.
@@ -7,38 +7,38 @@ A styled chip-bag by the ornery design team.
 
 ### npm
 ```bash
-npm i `@ornery/mds-chip-bag` --save
+npm i `@ornery/ui-chip-bag` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-chip-bag`
+yarn add `@ornery/ui-chip-bag`
 ```
 
 ### HTML Usage
 ```html
-<mds-chip-bag label="Some Label" />
-<mds-chip-bag value="some initial value" label="I have an initial Value" />
-<mds-chip-bag type="password" label="Type Some Secure Text" />
+<ui-chip-bag label="Some Label" />
+<ui-chip-bag value="some initial value" label="I have an initial Value" />
+<ui-chip-bag type="password" label="Type Some Secure Text" />
 ```
 
 ### React Component
 ```jsx
-import `@ornery/mds-chip-bag`
+import `@ornery/ui-chip-bag`
 
 export const Text = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-chip-bag label="Some Label" />
+   <ui-chip-bag label="Some Label" />
 </div>
 )
 export const InitialValue = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-chip-bag value="some initial value" label="I have an initial Value" />
+   <ui-chip-bag value="some initial value" label="I have an initial Value" />
 </div>
 )
 export const Secure = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-chip-bag type="password" label="Type Some Secure Text" />
+   <ui-chip-bag type="password" label="Type Some Secure Text" />
 </div>
 )
 
@@ -54,7 +54,7 @@ export const Secure = () => (
 | Attribute          | Type     | Description                                   |
 |--------------------|----------|-----------------------------------------------|
 | `allow-duplicates` | `String` | allows the addition of duplicate chip values  |
-| `chip-tag`         | `String` | changes the chip tag from mds-chip            |
+| `chip-tag`         | `String` | changes the chip tag from ui-chip            |
 | `chips-length`     | `String` | tbhe number of chips in the bag               |
 | `invalid`          | `String` | wether the input is valid or not              |
 | `value`            | `String` | the current set of chips, semicolon delimited |
@@ -96,5 +96,5 @@ export const Secure = () => (
 
 | Property                       | Type   | Description                              |
 |--------------------------------|--------|------------------------------------------|
-| `--mdsChipBagUnderline`        | String | Overrides the input underline indictator |
-| `--mdsChipBagUnderlineInvalid` | String | Overrides the label transform property   |
+| `--uiChipBagUnderline`        | String | Overrides the input underline indictator |
+| `--uiChipBagUnderlineInvalid` | String | Overrides the label transform property   |

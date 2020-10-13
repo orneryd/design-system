@@ -1,7 +1,7 @@
 :root {
-  /* --mdsFontFamily: 'Roboto Condensed', sans-serif; */
-  /* --mdsButtonTextTransform: uppercase; */
-  /* --mdsButtonBorderRadius: 2px; */
+  /* --uiFontFamily: 'Roboto Condensed', sans-serif; */
+  /* --uiButtonTextTransform: uppercase; */
+  /* --uiButtonBorderRadius: 2px; */
 }
 html {
   font-family: 'Roboto Condensed', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

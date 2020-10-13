@@ -1,0 +1,62 @@
+@import '../../core/src/core.scss';
+
+.ui-checkbox-wrapper {
+  display: inline-block;
+  margin: 0.25rem;
+}
+
+.ui-checkbox-label {
+  display: flex;
+  flex-shrink: 1;
+  cursor: pointer;
+  .ui-checkbox-border {
+    position: relative;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    border: var(--uiCheckboxBorder, 3px inset $mdsPurple);
+    .ui-checkbox-circle {
+      position: absolute;
+      display: inline-block;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
+      border-radius: 50%;
+      &.checked {
+        border-radius: 0;
+        transform: rotate(45deg) scale(1.4) translate(4px, -2px);
+        height: 0.6rem;
+        width: 0.25rem;
+        border-bottom: 3px solid var(--uiCheckboxColorChecked, $mdsGreen);
+        border-right: 3px solid var(--uiCheckboxColorChecked, $mdsGreen);
+      }
+    }
+  }
+  .ui-checkbox-label-text {
+    margin-left: 0.5rem;
+    flex-shrink: 1;
+    align-content: center;
+    align-self: center;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+  }
+
+  &.standard {
+    .ui-checkbox-border {
+      display: none;
+    }
+    input {
+      position: initial;
+      opacity: 1;
+      height: initial;
+      width: initial;
+      cursor: pointer;
+    }
+  }
+}

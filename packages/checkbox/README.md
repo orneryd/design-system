@@ -1,4 +1,4 @@
-# mds-checkbox
+# ui-checkbox
 
 # design-system checkbox
 A styled checkbox by the ornery design team.
@@ -7,28 +7,28 @@ A styled checkbox by the ornery design team.
 
 ### npm
 ```bash
-npm i `@ornery/mds-checkbox` --save
+npm i `@ornery/ui-checkbox` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-checkbox`
+yarn add `@ornery/ui-checkbox`
 ```
 
 ### HTML Usage
 ```html
 <form>
-<mds-checkbox checked label="Some Label" />
+<ui-checkbox checked label="Some Label" />
 </form>
 ```
 
 ### React Component
 ```jsx
-import `@ornery/mds-checkbox`
+import `@ornery/ui-checkbox`
 
 export const buttons = () => (
 <form style={{ width: '360px', margin: '20px' }}>
-   <mds-checkbox checked={"true"} label="Some Label" />
+   <ui-checkbox checked={"true"} label="Some Label" />
 </form>
 )
 ```
@@ -68,5 +68,5 @@ export const buttons = () => (
 
 | Property                    | Type   | Description                         |
 |-----------------------------|--------|-------------------------------------|
-| `--mdsCheckboxBorder`       | String | Overrides the border color          |
-| `--mdsCheckboxColorChecked` | String | Overrides the color of the checkbox |
+| `--uiCheckboxBorder`       | String | Overrides the border color          |
+| `--uiCheckboxColorChecked` | String | Overrides the color of the checkbox |

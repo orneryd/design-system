@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 
-import '@ornery/mds-text-input'
-import '@ornery/mds-checkbox'
+import '@ornery/ui-text-input'
+import '@ornery/ui-checkbox'
 
 export default {
   title: 'Web Components/Forms',
@@ -38,16 +38,16 @@ export const EmailDomainValidation = () => {
     <div style={{ width: '360px', margin: '20px' }}>
       <iframe title="dummy" name="dummyframe" id="dummyframe" style={{ display: 'none' }}></iframe>
       <form id="sample-form" onSubmit={e => validateForm(e)} target="dummyframe">
-        <mds-text-input
+        <ui-text-input
           class="validated-input"
           required
           pattern=".+@(ornery|usoncology)\.(ca|ie|com)"
           type="email"
           label="Please type a ornery or US Oncology email address"
         />
-        <mds-button type="submit" form="sample-form">
+        <ui-button type="submit" form="sample-form">
           Submit &amp; Clear
-        </mds-button>
+        </ui-button>
         {messages.map(message => (
           <h5 key={message} className={`validation-message ${!valid && 'error'}`}>
             {message}
@@ -86,7 +86,7 @@ export const InputsWithCheckboxes = () => {
     <div style={{ width: '360px', margin: '20px' }}>
       <iframe title="dummy" name="dummyframe" id="dummyframe" style={{ display: 'none' }}></iframe>
       <form id="sample-form" onSubmit={e => validateForm(e)} target="dummyframe">
-        <mds-text-input
+        <ui-text-input
           id="email"
           class="validated-input"
           required
@@ -95,25 +95,25 @@ export const InputsWithCheckboxes = () => {
           type="email"
           label="Please type a ornery or US Oncology email address"
         />
-        <mds-checkbox
+        <ui-checkbox
           id="required-checkbox"
           label="Required Boolean"
           required
           checked={boolean('Checked', false, 'Required Checkbox')}
-        ></mds-checkbox>
-        <mds-checkbox
+        ></ui-checkbox>
+        <ui-checkbox
           id="optional-checkbox"
           label="Optional Boolean"
           checked={boolean('Checked', false, 'Optional Checkbox')}
-        ></mds-checkbox>
+        ></ui-checkbox>
         <br/>
         <div>Select a fruit:</div>
-        <mds-radio name="fruit" value="Strawberry" />
-        <mds-radio name="fruit" value="Orange" />
-        <mds-radio name="fruit" value="Lemon" />
-        <mds-button type="submit" form="sample-form">
+        <ui-radio name="fruit" value="Strawberry" />
+        <ui-radio name="fruit" value="Orange" />
+        <ui-radio name="fruit" value="Lemon" />
+        <ui-button type="submit" form="sample-form">
           Submit &amp; Clear
-        </mds-button>
+        </ui-button>
         {friendlyMessages.map(message => (
           <h5 key={message} className={`validation-message ${!valid && 'error'}`}>
             {message}

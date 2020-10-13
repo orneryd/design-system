@@ -1,0 +1,48 @@
+@import '../../core/src/core.scss';
+
+.ui-text-input {
+  border-width: 0;
+  border-style: none;
+  border-image: none;
+  background-color: initial;
+  box-sizing: border-box;
+  padding-left: .3rem;
+  outline: initial;
+  font-size: 1rem;
+  height: 2rem;
+  display: block;
+  width: 100%;
+  border: var(--uiTextInputBorder, inherit);
+  border-radius: var(--uiTextInputBorderRadius, inherit);
+  box-shadow: var(--uiTextInputBoxShadow, inherit);
+  border-bottom: var(--uiTextInputUnderline, 2px inset rgba(0, 0, 0, 0.2));
+  &.invalid {
+    border: var(--uiTextInputBorderInvalid, inherit);
+    box-shadow: var(--uiTextInputBoxShadowInvalid, inherit);
+    border-bottom: var(--uiTextInputUnderlineInvalid, 2px inset $mdsRedDark);
+  }
+}
+
+.ui-text-input-label {
+  margin-bottom: -0.4rem;
+  display: inline-block;
+  color: $mdsBlackLight;
+  opacity: 0.7;
+  transition: transform 0.2s ease-in-out;
+  transform: var(--uiTextInputLabelTransform, scale(0.875) translate(0.325rem, -1.625rem));
+  transform-origin: var(--uiTextInputLabelTransformOrigin, bottom left);
+  white-space: nowrap;
+}
+
+.ui-text-input-wrapper.focus .ui-text-input-label {
+  transform: var(--uiTextInputLabelTransformFocused, scale(0.875) translate(0.325rem, 0));
+}
+
+.ui-text-input:focus,
+.ui-text-input:-moz-focusring {
+  outline: none;
+}
+
+input[type="file" i].ui-text-input {
+  padding: 0.3rem;
+}

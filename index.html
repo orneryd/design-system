@@ -23,18 +23,32 @@
   <body style="margin:0; width:100%">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div>
-      <mds-paper>
-        <mds-text-input label="Your Email Address"></mds-text-input>
-      </mds-paper>
-      <mds-banner>
+      <ui-paper>
+        <ui-text-input label="Your Email Address"></ui-text-input>
+      </ui-paper>
+      <ui-banner>
         <span slot="header">
-          <mds-bears></mds-bears>
-          <mds-bears someattr="bears"></mds-bears>
+          <ui-bears></ui-bears>
+          <ui-bears someattr="bears"></ui-bears>
         </span>
         <span slot="content">there</span>
-      </mds-banner>
+      </ui-banner>
     </div>
-    <template is="mds-template" name="mds-bears" someattr="default value" >
+    <dita-map href="http://localhost:9009/samples/sample.dita">
+     </dita-map>
+    <!-- <easy-dita href=""> -->
+          <!-- <esd-topicmeta> -->
+          <!-- <ui-author year="2009">Kristen James Eberlein</ui-author> -->
+          <!-- <esd-copyright> -->
+            <!-- <ui-copyryear ></ui-copyryear> -->
+          <!-- <ui-copyryear year="2009"></ui-copyryear> -->
+          <!-- <esd-copyrholder>OASIS</esd-copyrholder> -->
+          <!-- </copyright> -->
+        <!-- </ed-topicmeta> -->
+        <!-- <ed-topicref href="dita_maps.dita" navtitle="DITA maps"> -->
+        <!-- <ed-topicref href="definition_ditamaps.dita" navtitle="Definition of DITA maps"></topicref> -->
+    <!-- </easy-dita> -->
+    <template is="ui-template" name="ui-bears" someattr="default value" >
       <style>
         :host {
           display: block;
@@ -42,7 +56,15 @@
       </style>
       <div>${this.someattr}</div>
     </template>
-    <script src="dist/mds-0.1.0.js"></script>
+    <template is="ui-template" name="ui-author">
+    
+      <slot></slot>
+      <div>${this.year}</div>
+    </template>
+    <template is="ui-template" name="ui-copyryear" year="No year">
+      <div>${this.year}</div>
+    </template>
+    <script src="dist/ui-0.1.0.js"></script>
     <script></script>
   </body>
 </html>

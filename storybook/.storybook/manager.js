@@ -33,7 +33,7 @@ const theme = create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'ornery Design System',
+  brandTitle: 'Ornery Design System',
   brandUrl: 'https://github.com/ornery/design-system',
   brandImage: '/logo192.png',
 });

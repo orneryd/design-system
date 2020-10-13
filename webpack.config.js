@@ -5,7 +5,7 @@ const generateExternals = require('./externals')
 const makeForCDN = process.env.NODE_ENV === 'production';
 const packageJson = require('./package.json')
 
-const versionedIndex = `/dist/mds-${packageJson.version}`;
+const versionedIndex = `/dist/ui-${packageJson.version}`;
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: glob.sync('./packages/**/src/*.js').reduce(

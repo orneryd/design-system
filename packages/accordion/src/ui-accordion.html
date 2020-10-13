@@ -1,0 +1,10 @@
+<link href="./ui-accordion.scss" />
+<ui-paper elevation="${this.elevation}">
+  <div class="ui-accordion-header-wrapper" onclick="${this.onHeaderClick}">
+    <slot name="accordion-header" class="ui-accordion-header"></slot>
+    <svg class="ui-accordion-header-icon">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  </div>
+  <slot name="accordion-content" class="ui-accordion-content"></slot>
+</ui-paper>

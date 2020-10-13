@@ -1,12 +1,12 @@
 
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
-import '@ornery/mds-radio'
-import README from '@ornery/mds-radio-readme'
+import '@ornery/ui-radio'
+import README from '@ornery/ui-radio-readme'
 
 <Meta
   title="Simone/Radio"
   parameters={{
-    component: 'mds-radio',
+    component: 'ui-radio',
     options: { 
       selectedPanel: 'storybookjs/knobs/panel'
      }
@@ -20,9 +20,9 @@ import README from '@ornery/mds-radio-readme'
 <Preview withToolbar>
   <Story name="Radio">
     <div style={{ width: '360px', margin: '20px' }}>
-      <mds-radio standard type="radio" name="fruit" checked value="Strawberry" />
-      <mds-radio standard type="radio" name="fruit" value="Orange" />
-      <mds-radio standard type="radio" name="fruit" value="Lemon" />
+      <ui-radio standard type="radio" name="fruit" checked value="Strawberry" />
+      <ui-radio standard type="radio" name="fruit" value="Orange" />
+      <ui-radio standard type="radio" name="fruit" value="Lemon" />
     </div>
   </Story>
 </Preview>

@@ -1,4 +1,4 @@
-# mds-text-input
+# ui-text-input
 
 # design-system text-input
 A styled text-input by the ornery design team.
@@ -7,63 +7,63 @@ A styled text-input by the ornery design team.
 
 ### npm
 ```bash
-npm i `@ornery/mds-text-input` --save
+npm i `@ornery/ui-text-input` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-text-input`
+yarn add `@ornery/ui-text-input`
 ```
 
 ### HTML Usage
 ```html
 <form>
-<mds-text-input label="Some Label"></mds-text-input>
-<mds-text-input value="some initial value" label="I have an initial Value"></mds-text-input>
-<mds-text-input type="password" label="Type Some Secure Text"></mds-text-input>
-<mds-text-input type="email" label="Type an email to be validated"></mds-text-input>
-<mds-text-input type="date" static-label label="Enter a Date"></mds-text-input>
+<ui-text-input label="Some Label"></ui-text-input>
+<ui-text-input value="some initial value" label="I have an initial Value"></ui-text-input>
+<ui-text-input type="password" label="Type Some Secure Text"></ui-text-input>
+<ui-text-input type="email" label="Type an email to be validated"></ui-text-input>
+<ui-text-input type="date" static-label label="Enter a Date"></ui-text-input>
 </form>
 ```
 
 ### React Component
 ```jsx
-import `@ornery/mds-checkbox`
+import `@ornery/ui-checkbox`
 
 export const Text = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-text-input label="Some Label"></mds-text-input>
+   <ui-text-input label="Some Label"></ui-text-input>
 </div>
 )
 export const InitialValue = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-text-input value="some initial value" label="I have an initial Value"></mds-text-input>
+   <ui-text-input value="some initial value" label="I have an initial Value"></ui-text-input>
 </div>
 )
 export const Secure = () => (
 <div style={{ width: '360px', margin: '20px' }}>
-   <mds-text-input type="password" label="Type Some Secure Text"></mds-text-input>
+   <ui-text-input type="password" label="Type Some Secure Text"></ui-text-input>
 </div>
 )
 
 export const Email = () => (
 <div style={{ width: '360px', margin: '20px' }}>
    <form>
-     <mds-text-input
+     <ui-text-input
        type="email"
        label="Type an email to be validated"
-     ></mds-text-input>
+     ></ui-text-input>
    </form>
 </div>
 )
 export const Color = () => (
 <div style={{ width: '360px', margin: '20px' }}>
    <form>
-     <mds-text-input
+     <ui-text-input
        type="color"
        static-label
        label="Select a color"
-     ></mds-text-input>
+     ></ui-text-input>
    </form>
 </div>
 )
@@ -71,11 +71,11 @@ export const Color = () => (
 export const Date = () => (
 <div style={{ width: '360px', margin: '20px' }}>
    <form>
-     <mds-text-input
+     <ui-text-input
        type="date"
        static-label
        label="Enter a Date"
-     ></mds-text-input>
+     ></ui-text-input>
    </form>
 </div>
 )
@@ -118,8 +118,8 @@ export const Date = () => (
 
 | Property                              | Type   | Description                                      |
 |---------------------------------------|--------|--------------------------------------------------|
-| `--mdsTextInputLabelTransform`        | String | Overrides the label transform property           |
-| `--mdsTextInputLabelTransformFocused` | String | Overrides the label transform property when focused |
-| `--mdsTextInputLabelTransformOrigin`  | String | Overrides the label transform-origin property    |
-| `--mdsTextInputUnderline`             | String | Overrides the input underline indictator         |
-| `--mdsTextInputUnderlineInvalid`      | String | Overrides the input underline indictator when invalid |
+| `--uiTextInputLabelTransform`        | String | Overrides the label transform property           |
+| `--uiTextInputLabelTransformFocused` | String | Overrides the label transform property when focused |
+| `--uiTextInputLabelTransformOrigin`  | String | Overrides the label transform-origin property    |
+| `--uiTextInputUnderline`             | String | Overrides the input underline indictator         |
+| `--uiTextInputUnderlineInvalid`      | String | Overrides the input underline indictator when invalid |

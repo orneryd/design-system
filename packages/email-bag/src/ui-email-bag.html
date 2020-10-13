@@ -1,0 +1,14 @@
+<link href="./ui-email-bag.scss" />
+<slot></slot>
+<ui-chip-bag class="emails" required delimiter="[\\s,;]+" onchipsupdate="${this.chipsUpdate}">
+  <div slot="ui-chip-bag-helper">
+    <ui-i18n class="helper-text" key="type.email"></ui-i18n>
+    <span class="error-text"></span>
+    <div class="spinner-ring" style="visibility: hidden;">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ui-chip-bag>

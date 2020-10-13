@@ -5,12 +5,12 @@ A styled chip that functions similar a tag or chip in bootstrap or material ui.
 
 ### npm
 ```bash
-npm i @ornery/mds-i18n --save
+npm i @ornery/ui-i18n --save
 ```
 
 ### yarn
 ```bash
-yarn add @ornery/mds-i18n
+yarn add @ornery/ui-i18n
 ```
 
 # API

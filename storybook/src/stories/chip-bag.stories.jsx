@@ -1,10 +1,10 @@
 import React from 'react'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import '@ornery/mds-paper'
-import '@ornery/mds-chip'
-import '@ornery/mds-chip-bag'
-import '@ornery/mds-button'
+import '@ornery/ui-paper'
+import '@ornery/ui-chip'
+import '@ornery/ui-chip-bag'
+import '@ornery/ui-button'
 
 export default {
   title: 'Web Components/Chip',
@@ -36,8 +36,8 @@ class DefaultChipBag extends React.Component {
   }
   render() {
     return (
-      <mds-paper elevation={0} style={{ margin: '10px' }}>
-        <mds-chip-bag
+      <ui-paper elevation={0} style={{ margin: '10px' }}>
+        <ui-chip-bag
           ref={this.elementRef}
           value="sample;chips"
           delimiter=";"
@@ -45,12 +45,12 @@ class DefaultChipBag extends React.Component {
         >
           <div
             style={{ fontStyle: 'italic', fontColor: 'rgba(0,0,0,0.2)', marginTop: '5px' }}
-            slot="mds-chip-bag-helper"
+            slot="ui-chip-bag-helper"
           >
             Add some chips!
           </div>
-        </mds-chip-bag>
-      </mds-paper>
+        </ui-chip-bag>
+      </ui-paper>
     )
   }
 }
@@ -78,22 +78,22 @@ class CustomBag extends React.Component {
 
   render() {
     return (
-      <mds-paper elevation={0} style={{ margin: '10px' }}>
-        <mds-chip-bag
+      <ui-paper elevation={0} style={{ margin: '10px' }}>
+        <ui-chip-bag
           ref={this.elementRef}
           value="sample@email.com;othersample@email.com"
-          chip-tag="mds-button"
+          chip-tag="ui-button"
           delimiter=";"
           invalid={boolean('Invalid', false, 'validation')}
         >
           <div
             style={{ fontStyle: 'italic', fontColor: 'rgba(0,0,0,0.2)', marginTop: '5px' }}
-            slot="mds-chip-bag-helper"
+            slot="ui-chip-bag-helper"
           >
             Add some buttons!
           </div>
-        </mds-chip-bag>
-      </mds-paper>
+        </ui-chip-bag>
+      </ui-paper>
     )
   }
 }

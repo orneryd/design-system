@@ -1,14 +1,14 @@
 
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
-import '@ornery/mds-checkbox'
-import README from '@ornery/mds-checkbox-readme'
+import '@ornery/ui-checkbox'
+import README from '@ornery/ui-checkbox-readme'
 
 <Meta
   title="Web Components/Checkbox"
   decorators={[withKnobs]}
   parameters={{
-    component: 'mds-checkbox',
+    component: 'ui-checkbox',
     options: { 
       selectedPanel: 'storybookjs/knobs/panel'
      }
@@ -22,7 +22,7 @@ import README from '@ornery/mds-checkbox-readme'
 <Preview withToolbar>
   <Story name="Checkbox">
     <div style={{ width: '360px', margin: '20px' }}>
-      <mds-checkbox checked={boolean('Checked', false, 'checkbox')} label="Some Label" />
+      <ui-checkbox checked={boolean('Checked', false, 'checkbox')} label="Some Label" />
     </div>
   </Story>
 </Preview>

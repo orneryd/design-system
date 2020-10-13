@@ -1,8 +1,8 @@
 {
-  "name": "@ornery/mds-template",
+  "name": "@ornery/ui-template",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/mds-template.js",
+  "main": "dist/ui-template.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@ornery/web-components": "0.1.15",
-    "@ornery/mds-core": "0.1.1"
+    "@ornery/ui-core": "0.1.1"
   }
 }

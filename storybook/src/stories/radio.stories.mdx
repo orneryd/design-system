@@ -1,14 +1,14 @@
 
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
-import '@ornery/mds-radio'
-import README from '@ornery/mds-radio-readme'
+import '@ornery/ui-radio'
+import README from '@ornery/ui-radio-readme'
 
 <Meta
   title="Web Components/Checkbox"
   decorators={[withKnobs]}
   parameters={{
-    component: 'mds-radio',
+    component: 'ui-radio',
     options: { 
       selectedPanel: 'storybookjs/knobs/panel'
      }
@@ -22,9 +22,9 @@ import README from '@ornery/mds-radio-readme'
 <Preview withToolbar>
   <Story name="Radio">
     <div style={{ width: '360px', margin: '20px' }}>
-      <mds-radio type="radio" name="fruit" checked value="Strawberry" />
-      <mds-radio type="radio" name="fruit" value="Orange" />
-      <mds-radio type="radio" name="fruit" value="Lemon" />
+      <ui-radio type="radio" name="fruit" checked value="Strawberry" />
+      <ui-radio type="radio" name="fruit" value="Orange" />
+      <ui-radio type="radio" name="fruit" value="Lemon" />
     </div>
   </Story>
 </Preview>

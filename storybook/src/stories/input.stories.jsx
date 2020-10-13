@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '@ornery/mds-text-input'
+import '@ornery/ui-text-input'
 import './input.stories.css'
 
 export default {
@@ -9,24 +9,24 @@ export default {
 
 export const Text = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input label="Some Label" />
+    <ui-text-input label="Some Label" />
   </div>
 )
 export const InitialValue = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input value="some initial value" label="I have an initial Value" />
+    <ui-text-input value="some initial value" label="I have an initial Value" />
   </div>
 )
 export const Secure = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <mds-text-input type="password" label="Type Some Secure Text" />
+    <ui-text-input type="password" label="Type Some Secure Text" />
   </div>
 )
 
 export const Email = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="email"
         label="Type an email to be validated"
       />
@@ -36,7 +36,7 @@ export const Email = () => (
 export const Color = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="color"
         static-label
         label="Select a color"
@@ -48,7 +48,7 @@ export const Color = () => (
 export const Date = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="date"
         static-label
         label="Enter a Date"
@@ -61,7 +61,7 @@ export const Date = () => (
 export const DateTimeLocal = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="datetime-local"
         static-label
         label="Enter a Date and Time"
@@ -74,7 +74,7 @@ export const DateTimeLocal = () => (
 export const File = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="File"
         static-label
         label="Select a file"
@@ -86,7 +86,7 @@ export const File = () => (
 export const Image = () => (
   <div style={{ width: '360px', margin: '20px' }}>
     <form>
-      <mds-text-input
+      <ui-text-input
         type="Image"
         style={{height: '250px', width: '300px'}}
         src="http://www.kittenwar.com/c_images/2012/06/24/210259.2.jpg"

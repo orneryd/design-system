@@ -1,0 +1,35 @@
+@import '../../core/src/core.scss';
+
+.ui-accordion-header-wrapper {
+  display: flex;
+}
+.ui-accordion-header {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+}
+.ui-accordion-content {
+  display: block;
+  height: 0;
+  transition: height 0.2s;
+  overflow-y: auto;
+}
+.ui-accordion-header-icon {
+  fill: var(--uiAccordionIconColor, $mdsBlack);
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  user-select: none;
+  transform: rotate(0deg);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &.open {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: var(--uiAccordionIconColorHover, $mdsBlackLightest);
+  }
+}

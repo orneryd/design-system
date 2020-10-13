@@ -1,11 +1,11 @@
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
-import '@ornery/mds-banner'
-import README from '@ornery/mds-banner-readme'
+import '@ornery/ui-banner'
+import README from '@ornery/ui-banner-readme'
 
 <Meta
   title="Web Components/Panels"
   parameters={{
-    component: 'mds-banner',
+    component: 'ui-banner',
     options: { selectedPanel: 'storybookjs/knobs/panel' }
   }}
 />
@@ -16,7 +16,7 @@ import README from '@ornery/mds-banner-readme'
 
 <Preview withToolbar>
   <Story name="Banner">
-    <mds-banner class="header">
+    <ui-banner class="header">
       <span slot="header">Lorem Ipsum</span>
       <span slot="content">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -29,6 +29,6 @@ import README from '@ornery/mds-banner-readme'
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
         culpa qui officia deserunt mollit anim id est laborum.
       </span>
-    </mds-banner>
+    </ui-banner>
   </Story>
 </Preview>

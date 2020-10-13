@@ -1,11 +1,11 @@
 @import './vars.scss';
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
 
-*[class*='mds-'] {
+*[class*='ui-'] {
   box-sizing: content-box;
-  font-family: var(--mdsFontFamily, 'Roboto-Light', 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu',
+  font-family: var(--uiFontFamily, 'Roboto-Light', 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif);
-  font-weight: var(--mdsFontWeight, 300);
+  font-weight: var(--uiFontWeight, 300);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

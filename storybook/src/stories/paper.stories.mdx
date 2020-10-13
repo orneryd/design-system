@@ -1,8 +1,8 @@
 import { Preview, Meta, Description, Story } from '@storybook/addon-docs/blocks'
 import { withKnobs, number } from '@storybook/addon-knobs'
-import '@ornery/mds-paper'
-import '@ornery/mds-accordion'
-import README from '@ornery/mds-paper-readme'
+import '@ornery/ui-paper'
+import '@ornery/ui-accordion'
+import README from '@ornery/ui-paper-readme'
 const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
@@ -22,7 +22,7 @@ const groupId = 'ELEVATION'
 <Meta
   title="Web Components/Panels"
   parameters={{
-    component: 'mds-paper',
+    component: 'ui-paper',
     options: { selectedPanel: 'storybookjs/knobs/panel' }
   }}
 />
@@ -34,20 +34,20 @@ const groupId = 'ELEVATION'
 <Preview withToolbar>
   <Story name="Paper">
     <div>
-      <mds-paper
+      <ui-paper
         style={{ display: 'inline-block', margin: '10px' }}
         elevation={number(label, defaultValue, options, groupId)}
       >
         <h4>Elevation&nbsp;{number(label, defaultValue, options, groupId)}</h4>
         <div>{loremIpsum}</div>
-      </mds-paper>
+      </ui-paper>
       {elevations.map((el, i) => {
         return (
-          <mds-paper key={i} style={{ display: 'inline-block', margin: '10px' }} elevation={el}>
+          <ui-paper key={i} style={{ display: 'inline-block', margin: '10px' }} elevation={el}>
             <h4 style={{ height: '200px', width: '200px', margin: 0, padding: 0 }}>
               Elevation&nbsp;{el}
             </h4>
-          </mds-paper>
+          </ui-paper>
         )
       })}
     </div>

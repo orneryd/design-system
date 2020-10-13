@@ -1,0 +1,12 @@
+<link href="./ui-chip-bag.scss" />
+<div class="ui-chip-bag">
+  ${this.chips.map((v) => `${this.chipStartTag}${v}${this.chipCloseTag}`).join("")}
+  <input
+    class="ui-chip-bag-input"
+    onblur="${this.handleBlur}"
+    onkeyup="${this.handleInputKeyup}"
+    onkeydown="${this.handleInputKeydown}"
+    type="text"
+  />
+</div>
+<slot name="ui-chip-bag-helper"></slot>

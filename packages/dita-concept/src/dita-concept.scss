@@ -1,0 +1,29 @@
+@import '../../core/src/core.scss';
+
+.dita-concept {
+    color: var(--uiUIConceptColor,rgb(254, 254, 254));
+    display: block;
+    background-color: var(--uiUIConceptBackgroundColor, rgb(25, 35, 67));
+    padding-bottom: 10rem;
+    padding-top: 4rem;
+  
+  h1, h4 {
+    max-width: var(--uiUIConceptMaxWidth, 768px);
+    text-align: center;
+    display: block;
+  }
+
+  h1 {
+    color: var(--uiUIConceptHeaderColor, inherit);
+    max-width: var(--uiUIConceptContentMaxWidth, 768px);
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+
+  h4 {
+    color: var(--uiUIConceptContentColor, inherit);
+    max-width: var(--uiUIConceptContentMaxWidth, 768px);
+    font-size: 0.9rem;
+    margin: 1rem auto;
+  }
+}

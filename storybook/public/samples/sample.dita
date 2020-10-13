@@ -1,0 +1,29 @@
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-2950" xml:lang="en-us" domains="(topic concept) (topic abbrev-d) a(props deliveryTarget) (topic equation-d) (topic hazard-d) (topic hi-d) (topic indexing-d) (topic markup-d) (topic mathml-d) (topic pr-d) (topic relmgmt-d) (topic sw-d) (topic svg-d) (topic ui-d) (topic ut-d) (topic markup-d xml-d) " ditaarch:DITAArchVersion="1.3" class="- topic/topic concept/concept ">
+<title class="- topic/title ">bwhTopic</title>
+<shortdesc class="- topic/shortdesc "/>
+<prolog class="- topic/prolog ">
+<author type="creator" translate="no" class="- topic/author ">Greg Shear &lt;greg.shear@jorsek.com</author>
+</prolog>
+<conbody class="- topic/body concept/conbody ">
+<section class="- topic/section ">
+<title class="- topic/title "/>
+<p class="- topic/p ">
+<xref href="https://www.google.com" scope="external" class="- topic/xref ">google</xref>
+</p>
+<p class="- topic/p ">
+<xref href="http://www.easydita.com" scope="external" class="- topic/xref ">ezd</xref>
+</p>
+<p class="- topic/p "/>
+<p class="- topic/p ">
+<imagemap href="mantis.png" class="+ topic/fig ut-d/imagemap ">
+<image href="" placement="inline" class="- topic/image "/>
+<area class="+ topic/figgroup ut-d/area ">
+<shape translate="no" class="+ topic/keyword ut-d/shape "/>
+<coords translate="no" class="+ topic/ph ut-d/coords "/>
+<xref class="- topic/xref "/>
+</area>
+</imagemap>
+</p>
+</section>
+</conbody>
+</concept>

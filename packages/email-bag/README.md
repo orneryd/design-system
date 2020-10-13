@@ -1,4 +1,4 @@
-# mds-email-bag
+# ui-email-bag
 
 A form input designed to validate emails against ornery's email lookup API.
 It functions similarly to that of the chip-bag but with an asynchronous api call for validation
@@ -6,17 +6,17 @@ It functions similarly to that of the chip-bag but with an asynchronous api call
 ### Usage
 
 ```html
-<mds-email-bag></mds-email-bag>
+<ui-email-bag></ui-email-bag>
 ```
 
 ### React WebComponentWrapper
 ```jsx
-import `@ornery/mds-email-bag`
-import WebComponentWrapper from '@ornery/mds-react'
+import `@ornery/ui-email-bag`
+import WebComponentWrapper from '@ornery/react-web-components'
 
 export const ToolingForm = ({ onValidationstart, onValidationend }) => (
 <WebComponentWrapper 
-   tag="mds-email-bag" 
+   tag="ui-email-bag" 
    onValidationstart={onValidationstart} 
    onValidationend={onValidationend} 
 />
@@ -24,11 +24,11 @@ export const ToolingForm = ({ onValidationstart, onValidationend }) => (
 ```
 ### React Component
 ```jsx
-import `@ornery/mds-email-bag`
-import WebComponentWrapper from '@ornery/mds-react'
+import `@ornery/ui-email-bag`
+import WebComponentWrapper from '@ornery/react-web-components'
 
 export const ToolingForm = ({ onFormSuccess }) => (
-  <mds-email-bag></mds-email-bag>
+  <ui-email-bag></ui-email-bag>
 )
 ```
 

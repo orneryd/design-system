@@ -20,7 +20,7 @@ module.exports = {
     '<rootDir>/node_modules'
   ],
   moduleNameMapper: {
-    "@ornery/mds-(.+)$": '<rootDir>/packages/$1',
+    "@ornery/(.+)$": '<rootDir>/packages/$1',
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy'
   },
   moduleFileExtensions: [

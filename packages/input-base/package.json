@@ -1,8 +1,8 @@
 {
-  "name": "@ornery/mds-input-base",
+  "name": "@ornery/ui-input-base",
   "version": "0.1.0",
   "description": "",
-  "main": "src/mds-input-base.js",
+  "main": "src/ui-input-base.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

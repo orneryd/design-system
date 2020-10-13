@@ -1,8 +1,8 @@
 {
-  "name": "@ornery/mds-core",
+  "name": "@ornery/ui-core",
   "version": "0.1.1",
   "description": "",
-  "main": "dist/mds-core.js",
+  "main": "dist/ui-core.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

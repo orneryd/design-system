@@ -1,4 +1,4 @@
-# mds-chip
+# ui-chip
 
 # design-system chip
 A styled chip that functions similar a tag or chip in bootstrap or material ui.
@@ -7,12 +7,12 @@ A styled chip that functions similar a tag or chip in bootstrap or material ui.
 
 ### npm
 ```bash
-npm i `@ornery/mds-chip` --save
+npm i `@ornery/ui-chip` --save
 ```
 
 ### yarn
 ```bash
-yarn add `@ornery/mds-chip`
+yarn add `@ornery/ui-chip`
 ```
 
 ## Attributes
@@ -38,8 +38,8 @@ yarn add `@ornery/mds-chip`
 
 | Property                   | Type   | Description                         |
 |----------------------------|--------|-------------------------------------|
-| `--mdsChipBackgroundColor` | String | Overrides the color of the checkbox |
-| `--mdsChipColor`           | String | Overrides the border color          |
-| `--mdsChipIconColor`       | String | Overrides the color of the checkbox |
-| `--mdsChipIconColorActive` | String | Overrides the color of the checkbox |
-| `--mdsChipIconColorHover`  | String | Overrides the color of the checkbox |
+| `--uiChipBackgroundColor` | String | Overrides the color of the checkbox |
+| `--uiChipColor`           | String | Overrides the border color          |
+| `--uiChipIconColor`       | String | Overrides the color of the checkbox |
+| `--uiChipIconColorActive` | String | Overrides the color of the checkbox |
+| `--uiChipIconColorHover`  | String | Overrides the color of the checkbox |

@@ -1,14 +1,14 @@
 import { Preview, Meta, Description, Story } from '@storybook/addon-docs/blocks'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import '@ornery/mds-paper'
-import '@ornery/mds-chip'
-import README from  '@ornery/mds-chip-readme'
+import '@ornery/ui-paper'
+import '@ornery/ui-chip'
+import README from  '@ornery/ui-chip-readme'
 
 <Meta
   title="Web Components/Chip"
   parameters={{
-    component: 'mds-chip',
+    component: 'ui-chip',
     options: { selectedPanel: 'storybookjs/knobs/panel' }
   }}
 />
@@ -20,7 +20,7 @@ import README from  '@ornery/mds-chip-readme'
 <Preview withToolbar>
   <Story name="Chip">
       <div style={{ margin: '1rem' }}>
-        <mds-chip value="somevalue">I'm a chip</mds-chip>
+        <ui-chip value="somevalue">I'm a chip</ui-chip>
       </div>
   </Story>
 </Preview>
