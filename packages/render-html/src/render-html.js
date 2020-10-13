@@ -1,4 +1,3 @@
-import { registerComponent } from '@ornery/ui-core'
 import { bindEvents, template } from '@ornery/web-components';
 /**
 # design-system map
@@ -149,4 +148,4 @@ export default class RenderHTML extends HTMLElement {
   }
 }
 
-registerComponent('render-html', RenderHTML)
+customElements.define('render-html', RenderHTML)
