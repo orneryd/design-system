@@ -1,6 +1,6 @@
 {
   "name": "@ornery/render-html",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/render-html.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "timothyswt@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "@ornery/web-components": ">=1.1.5"
+    "@ornery/web-components": ">=1.0.0"
   }
 }
