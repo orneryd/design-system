@@ -51,6 +51,10 @@ export default class RenderHTML extends HTMLElement {
     this.attachShadow({ mode: 'open' })
   }
 
+  static get observedAttributes() {
+    return ['html', 'href']
+  }
+
   attributeChangedCallback(){
     this.applyAttributes()
     this.getContent()
