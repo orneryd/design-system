@@ -40,7 +40,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: __dirname,
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs'
   },
   devtool: 'source-map',
   performance: {
