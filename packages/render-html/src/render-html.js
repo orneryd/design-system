@@ -83,6 +83,7 @@ export default class RenderHTML extends HTMLElement {
   }
 
   render(markupStr) {
+    this.shadowRoot.innerHTML = ''
     const props = this
     const templateWithProps = markupStr.replace(/\$\{.+?}/gim, s => {
       return template(s, props)
