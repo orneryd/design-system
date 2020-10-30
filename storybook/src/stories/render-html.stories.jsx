@@ -14,7 +14,7 @@ export default {
 }
 
 export const RemoteRender = () => (
-  <render-html href="/samples/snippet.html" placeholder="Your Email Address"></render-html>
+  <render-html href="/samples/snippet.html" placeholder="Your Email Address" shadow="true"></render-html>
 )
 
 export const RenderAttribute = () => (
@@ -27,4 +27,8 @@ export const RenderBody = () => (
     <div> I am some simple html content to be passed as either <ul><li>an 'html' attribute </li><li>as the body</li></ul></div>
     <div>{interpolation}</div>
   </render-html>
+)
+
+export const NoShadow = () => (
+  <render-html href="/samples/snippet.html" placeholder="Your Email Address" shadow="false"></render-html>
 )

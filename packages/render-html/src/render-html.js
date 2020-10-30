@@ -48,7 +48,6 @@ import '@ornery/render-html'
 export default class RenderHTML extends HTMLElement {
   constructor() {
     super()
-    this.attachShadow({ mode: 'open' })
   }
 
   static get observedAttributes() {
@@ -61,6 +60,7 @@ export default class RenderHTML extends HTMLElement {
   }
 
   connectedCallback() {
+    if(this.useShadow && !this.shadowRoot) this.attachShadow({ mode: 'open' })
     this.applyAttributes()
     this.getContent()
   }
@@ -72,6 +72,16 @@ export default class RenderHTML extends HTMLElement {
     Array.from(this.attributes).forEach(attr => {
       this[attr.name] = attr.value
     })
+  }
+
+  get useShadow() {
+    if (this.hasAttribute('shadow')) {
+      let current = this.getAttribute('shadow')
+      if (current === 'false') {
+        return false
+      }
+    }
+    return true
   }
 
   getContent() {
@@ -87,14 +97,15 @@ export default class RenderHTML extends HTMLElement {
   }
 
   render(markupStr) {
-    this.shadowRoot.innerHTML = ''
+    const root = this.shadowRoot || this;
+    root.innerHTML = ''
     const props = this
     const templateWithProps = markupStr.replace(/\$\{.+?}/gim, s => {
       return template(s, props)
     }).replace(/<([\w-]+)(.*)\/\s*>/gim, '<$1$2></$1>')
     const parsed = new DOMParser().parseFromString(templateWithProps, 'text/html'); 
     const elements = [...parsed.head.children, ...bindEvents(parsed.body, props).childNodes];
-    elements.forEach(n => this.shadowRoot.appendChild(n))
+    elements.forEach(n => root.appendChild(n))
   }
 }
 
