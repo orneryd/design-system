@@ -1,6 +1,6 @@
 {
   "name": "@ornery/react-web-components",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Wrappers and components to help with react support",
   "main": "src/react-web-components.jsx",
   "scripts": {
