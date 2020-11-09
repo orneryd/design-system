@@ -54,13 +54,13 @@ export default class RenderHTML extends HTMLElement {
     return ['html', 'href']
   }
 
-  attributeChangedCallback(){
+  attributeChangedCallback() {
     this.applyAttributes()
     this.getContent()
   }
 
   connectedCallback() {
-    if(this.useShadow && !this.shadowRoot) this.attachShadow({ mode: 'open' })
+    if (this.useShadow && !this.shadowRoot) this.attachShadow({ mode: 'open' })
     this.applyAttributes()
     this.getContent()
   }
@@ -88,7 +88,7 @@ export default class RenderHTML extends HTMLElement {
     if (this.getAttribute('href')) {
       fetch(this.getAttribute('href'))
         .then(response => response.text())
-        .then((str)=> this.render(str))
+        .then((str) => this.render(str))
     } else if (this.getAttribute('html')) {
       this.render(this.getAttribute('html'))
     } else {
@@ -103,9 +103,10 @@ export default class RenderHTML extends HTMLElement {
     const templateWithProps = markupStr.replace(/\$\{.+?}/gim, s => {
       return template(s, props)
     }).replace(/<([\w-]+)(.*)\/\s*>/gim, '<$1$2></$1>')
-    const parsed = new DOMParser().parseFromString(templateWithProps, 'text/html'); 
+    const parsed = new DOMParser().parseFromString(templateWithProps, 'text/html');
     const elements = [...parsed.head.children, ...bindEvents(parsed.body, props).childNodes];
     elements.forEach(n => root.appendChild(n))
+    this.dispatchEvent(new CustomEvent('contentrendered', { detail: this }));
   }
 }
 
