@@ -131,12 +131,20 @@ export default class UITextInput extends HTMLElement {
   get inputWrapper() {
     return this.shadowRoot.querySelector('.ui-text-input-wrapper')
   }
-
-  handleInputChange({ target: { value } }) {
-    this.value = value
+  
+  get elevation() {
+    return this.getAttribute('elevation') || '1'
+  }
+  
+  handleInputChange(evt) {
+    this.value = evt.target.value;
+    this.dispatchEvent(new Event('change',  {relatedTarget: evt.target, bubbles: false}));
   }
 
   handleBlur() {
+    if (!this.value) {
+      this.inputWrapper.classList.remove('has-text')
+    }
     if (!this.hasAttribute('static-label') && !this.value) {
       // unfocus the element if we don't have value to let the animation reset.
       this.inputWrapper.classList.remove('focus')
@@ -145,6 +153,7 @@ export default class UITextInput extends HTMLElement {
   }
 
   handleFocus() {
+    this.inputWrapper.classList.add('has-text')
     this.inputWrapper.classList.add('focus')
   }
 

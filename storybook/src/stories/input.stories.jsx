@@ -1,5 +1,7 @@
 import React from 'react'
+import MagnifyIcon from '@icons/material/MagnifyIcon';
 
+import WebComponentWrapper from '@ornery/react-web-components'
 import '@ornery/ui-text-input'
 // import './input.stories.css'
 
@@ -9,7 +11,19 @@ export default {
 
 export const Text = () => (
   <div style={{ width: '360px', margin: '20px' }}>
-    <ui-text-input label="Some Label" />
+    <WebComponentWrapper 
+      tag="ui-text-input" 
+      label="Wrapoped Input Label" 
+      onChange={(evt)=> console.log("onChange", evt.target.value)} 
+      onBlur={(evt)=> console.log("onBlur", evt.target)} 
+      onFocus={(evt)=> console.log("onFocus", evt.target)}
+    >
+      <MagnifyIcon slot="icon" onClick={()=> console.log("I'm Searching!")} />
+    </WebComponentWrapper>
+    <ui-text-input label="Some Label" onChange={(evt)=> console.log(evt.target)}>
+      <MagnifyIcon slot="icon" onClick={()=> console.log("I'm Searching!")} />
+    </ui-text-input>
+
   </div>
 )
 export const InitialValue = () => (

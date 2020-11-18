@@ -18,6 +18,7 @@
     "url": "https://github.com/ornery/design-system/issues"
   },
   "scripts": {
+    "dev": "webpack --watch",
     "build": "webpack && yarn build:cdn",
     "build:cdn": "NODE_ENV=production webpack && cp -av ./dist ./storybook/public",
     "test": "NODE_ENV=test jest --runInBand",
