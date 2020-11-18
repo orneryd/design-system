@@ -1,6 +1,6 @@
 {
   "name": "@ornery/ui-text-input",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/ui-text-input.js",
   "scripts": {
