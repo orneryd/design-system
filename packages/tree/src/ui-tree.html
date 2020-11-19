@@ -1,0 +1,10 @@
+<link href="./ui-tree.scss" />
+<div class="ui-expand ${this.variant} ${this.expandClass}">
+  <div class="ui-expand-header-wrapper" onclick="${this.onHeaderClick}">
+    <svg class="ui-expand-header-icon ${this.arrowClass}">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+    <div name="expand-header" class="ui-expand-header">${this.title}</div>
+  </div>
+  <slot class="ui-expand-content"></slot>
+</div>

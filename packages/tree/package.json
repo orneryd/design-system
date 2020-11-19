@@ -1,0 +1,15 @@
+{
+  "name": "@ornery/ui-tree",
+  "version": "0.1.2",
+  "description": "",
+  "main": "dist/ui-tree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ornery/web-components": ">=1.1.5",
+    "@ornery/ui-core": ">=0.1.0"
+  }
+}

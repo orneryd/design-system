@@ -1,0 +1,54 @@
+{
+  "type": "version",
+  "title": "2020 R1",
+  "href": "vista/2020-r1",
+  "shortdesc": "",
+  "meta": [],
+  "externalLink": false,
+  "audienceContent": false,
+  "children": [
+    {
+      "type": "topichead",
+      "title": "What's New",
+      "href": "vista/2020-r1/whats-new/index.json",
+      "shortdesc": "",
+      "meta": [],
+      "externalLink": false,
+      "audienceContent": false,
+      "children": [],
+      "sys": { "uuid": "TOPIC_HEAD_ID__" },
+      "outputclasses": [""],
+      "topicId": "TOPIC_HEAD_ID__What's New"
+    },
+    {
+      "type": "topichead",
+      "title": "Videos",
+      "href": "vista/2020-r1/videos/index.json",
+      "shortdesc": "",
+      "meta": [],
+      "externalLink": false,
+      "audienceContent": false,
+      "children": [],
+      "sys": { "uuid": "TOPIC_HEAD_ID__" },
+      "outputclasses": [""],
+      "topicId": "TOPIC_HEAD_ID__Videos"
+    },
+    {
+      "type": "topichead",
+      "title": "Accounting",
+      "href": "vista/2020-r1/accounting/index.json",
+      "shortdesc": "",
+      "meta": [],
+      "externalLink": false,
+      "audienceContent": false,
+      "children": [],
+      "sys": { "uuid": "TOPIC_HEAD_ID__" },
+      "outputclasses": [""],
+      "topicId": "TOPIC_HEAD_ID__Accounting"
+    }
+  ],
+  "sys": { "uuid": "Vista_2020_R1" },
+  "outputclasses": [""],
+  "topicId": "Vista_2020_R12020 R1",
+  "id": "Vista_2020_R1"
+}

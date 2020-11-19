@@ -1,7 +1,9 @@
 import { Preview, Meta, Description } from '@storybook/addon-docs/blocks'
 import { withKnobs, number } from '@storybook/addon-knobs'
+import WebComponentWrapper from '@ornery/react-web-components'
 import '@ornery/ui-paper'
 import '@ornery/ui-accordion'
+import '@ornery/ui-tree'
 import README from '@ornery/ui-accordion-readme'
 const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -34,6 +36,7 @@ const groupId = 'ELEVATION'
 <Preview withToolbar>
   <Story name="Accordion">
     <div>
+    <link rel="stylesheet" type="text/css" href="/accordion.stories.css" />
     <ui-accordion
       elevation={number(label, defaultValue, options, groupId)}
       style={{ margin: '10px' }}
@@ -50,6 +53,23 @@ const groupId = 'ELEVATION'
       <div slot="accordion-header">Default collapse</div>
       <div slot="accordion-content">{loremIpsum}</div>
     </ui-accordion>
+    <div style={{ height: '500px', overflowY: "scroll", overflowX: "hidden", backgroundColor: 'skyblue', border: "2px inset rgba(0,0,0, 0.7)"}}>
+    <WebComponentWrapper onItemClick={({detail})=> console.log(detail)} tag="ui-tree" title="Site Structure" basepath="/structure" href="vista/2020-r1/index.json">
+      <ui-tree title="Level 2">
+          <ui-tree title="Level 3">
+              <ui-tree href="/structure/index.json" title="Level 4">
+                  <ui-tree title="Level 5">
+                    <ui-tree title="Level 6">
+                      <ui-tree title="Level 7">
+                        <div style={{fontStyle: "italics"}}>hello.</div>
+                      </ui-tree>
+                    </ui-tree>
+                  </ui-tree>
+              </ui-tree>
+          </ui-tree>
+      </ui-tree>
+    </WebComponentWrapper>
+    </div>
     </div>
   </Story>
 </Preview>

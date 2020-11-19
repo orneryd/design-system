@@ -1,0 +1,6 @@
+
+:root {
+  --uiTreeDisplay: flex;
+  --uiTreeAlignContent: center;
+  --uiTreeHeaderHeight: 2rem;
+}

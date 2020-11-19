@@ -1,0 +1,69 @@
+@import '../../core/src/core.scss';
+:host {
+  display: var(--uiTreeDisplay, block);
+  height: var(--uiTreeHeight, initial);
+  border: var(--uiTreeBorder, initial);
+  flex: var(--uiTreeFlex, initial);
+  align-items: var(--uiTreeAlignItems, initial);
+  align-content: var(--uiTreeAlignContent, initial);
+  flex: var(--uiTreeFlex, initial);
+  flex-direction: var(--uiTreeFlexDirection, initial);
+}
+.ui-expand-header-wrapper {
+  display: var(--uiTreeHeaderWrapperDisplay, flex);
+  align-content: center;
+  align-items: center;
+  cursor: var(--uiTreeHeaderWrapperCursor, pointer);
+  
+}
+.ui-expand-header {
+  display: var(--uiTreeHeaderDisplay, flex);
+  height: var(--uiTreeHeaderHeight, auto);
+  border: var(--uiTreeHeaderBorder, initial);
+  flex: var(--uiTreeHeaderFlex, 1);
+  align-items: var(--uiTreeHeaderAlignItems, center);
+  align-content: var(--uiTreeHeaderAlignContent, initial);
+  flex: var(--uiTreeHeaderFlex, initial);
+  flex-direction: var(--uiTreeHeaderFlexDirection, initial);
+  padding-left: var(--uiTreeHeaderPaddingLeft, initial);
+  // transition: height 0.1s;
+  overflow-y: var(--uiTreeHeaderOverflowY, initial);
+  overflow-x: var(--uiTreeHeaderOverflowx, initial);
+}
+.ui-expand-content {
+  display: var(--uiTreeContentDisplay, block);
+  height: 0;
+  border: var(--uiTreeContentBorder, initial);
+  flex: var(--uiTreeContentFlex, initial);
+  align-items: var(--uiTreeContentAlignItems, initial);
+  align-content: var(--uiTreeContentAlignContent, initial);
+  flex: var(--uiTreeContentFlex, initial);
+  flex-direction: var(--uiTreeContentFlexDirection, initial);
+  padding-left: var(--uiTreeContentPaddingLeft, 1rem);
+  // transition: height 0.1s;
+  overflow-y: var(--uiTreeContentOverflowY, hidden);
+  overflow-x: var(--uiTreeContentOverflowx, initial);
+}
+.ui-expand-header-icon {
+  fill: var(--uiAccordionIconColor, $mdsBlack);
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  user-select: none;
+  transform: rotate(90deg);
+  border-radius: 50%;
+  cursor: pointer;
+  // transition: 0.1s ease-in-out;
+  &.hidden {
+    opacity: 0;
+  }
+  &.expanded {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    background-color: var(--uiAccordionIconColorHover, $mdsBlackLightest);
+  }
+}
+

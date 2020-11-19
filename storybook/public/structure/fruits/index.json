@@ -1,0 +1,5 @@
+[
+    {"href": "/structure/fruits/apple/index.json", "title": "apples"},
+    {"href": "/structure/fruits/orange/index.json", "title": "oranges"},
+    {"href": "/structure/fruits/other/index.json", "title": "other"}
+]
