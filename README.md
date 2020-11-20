@@ -23,8 +23,7 @@ yarn add @ornery/design-system
 ```
 git clone git@github.com:ornery/design-system.git
 cd design-system
-yarn config set strict-ssl false
-yarn && yarn build && cd ./storybook && yarn && yarn storybook
+yarn && cd ./storybook && yarn && yarn dev
 ```
 The root build will compile all of the components under /packages as standard web-components. Each has its own unique package name under the @ornery scope in npm.
 
