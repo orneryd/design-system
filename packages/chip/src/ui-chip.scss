@@ -17,7 +17,7 @@
   display: inline-block;
   justify-content: center;
   align-content: center;
-  fill: var(--uiChipIconColor, $mdsBlackLight);
+  fill: var(--uiChipIconColor, $uiBlackLight);
   height: 22px;
   width: 22px;
   font-size: 1rem;
@@ -27,11 +27,11 @@
 }
 
 .ui-chip-remove:hover {
-  fill: var(--uiChipIconColorHover, $mdsBlack);
+  fill: var(--uiChipIconColorHover, $uiBlack);
 }
 
 .ui-chip-remove:active {
-  fill: var(--uiChipIconColorActive, $mdsBlack);
+  fill: var(--uiChipIconColorActive, $uiBlack);
 }
 
 *,

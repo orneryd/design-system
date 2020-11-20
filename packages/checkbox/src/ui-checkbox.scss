@@ -14,7 +14,7 @@
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
-    border: var(--uiCheckboxBorder, 3px inset $mdsPurple);
+    border: var(--uiCheckboxBorder, 3px inset $uiPurple);
     .ui-checkbox-circle {
       position: absolute;
       display: inline-block;
@@ -28,8 +28,8 @@
         transform: rotate(45deg) scale(1.4) translate(4px, -2px);
         height: 0.6rem;
         width: 0.25rem;
-        border-bottom: 3px solid var(--uiCheckboxColorChecked, $mdsGreen);
-        border-right: 3px solid var(--uiCheckboxColorChecked, $mdsGreen);
+        border-bottom: 3px solid var(--uiCheckboxColorChecked, $uiGreen);
+        border-right: 3px solid var(--uiCheckboxColorChecked, $uiGreen);
       }
     }
   }

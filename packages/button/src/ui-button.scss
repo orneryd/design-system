@@ -27,17 +27,17 @@
   }
 
   &.primary {
-    background-color: var(--uiButtonPrimaryColor, $mdsBlue);
+    background-color: var(--uiButtonPrimaryColor, $uiBlue);
 
     &:hover {
-      background-color:  var(--uiButtonPrimaryColorHover, $mdsBlueDark)
+      background-color:  var(--uiButtonPrimaryColorHover, $uiBlueDark)
     }
   }
   &.secondary,
   &.action {
-    background-color: var(--uiButtonSecondaryColor, $mdsOrange);
+    background-color: var(--uiButtonSecondaryColor, $uiOrange);
     &:hover {
-      background-color:  var(--uiButtonSecondaryColorHover, $mdsOrangeDark);
+      background-color:  var(--uiButtonSecondaryColorHover, $uiOrangeDark);
     }
   }
   &.disabled {
@@ -45,102 +45,102 @@
     opacity: 0.3;
   }
   &.success {
-    background-color: var(--uiButtonSuccessColor, $mdsGreen);
+    background-color: var(--uiButtonSuccessColor, $uiGreen);
     &:hover {
-      background-color: var(--uiButtonSuccessHoverColor, $mdsGreenDark);
+      background-color: var(--uiButtonSuccessHoverColor, $uiGreenDark);
     }
   }
   &.info {
-    background-color: var(--uiButtonInfoColor, $mdsBlueDark);
+    background-color: var(--uiButtonInfoColor, $uiBlueDark);
     &:hover {
-      background-color: var(--uiButtonInfoHoverColor, $mdsBlueDarker);
+      background-color: var(--uiButtonInfoHoverColor, $uiBlueDarker);
     } 
   }
   &.warning {
-    background-color: var(--uiButtonWarningColor, $mdsRust);
+    background-color: var(--uiButtonWarningColor, $uiRust);
     &:hover {
-      background-color: var(--uiButtonWarningHoverColor, $mdsRustDarker);
+      background-color: var(--uiButtonWarningHoverColor, $uiRustDarker);
     }
   }
   &.danger {
-    background-color: var(--uiButtonDangerColor, $mdsRedLight);
+    background-color: var(--uiButtonDangerColor, $uiRedLight);
     &:hover {
-      background-color: var(--uiButtonDangerHoverColor, $mdsRed);
+      background-color: var(--uiButtonDangerHoverColor, $uiRed);
     }
   }
 
   &.outlined,
   &.inverted {
     background-color: var(--uiButtonOutlinedBackgroundColor, transparent);
-    box-shadow: var(--uiButtonOutlinedBorder, inset 0px 0px 0px 2px $mdsPurple);
-    color: var(--uiButtonOutlinedColor, $mdsPurple);
+    box-shadow: var(--uiButtonOutlinedBorder, inset 0px 0px 0px 2px $uiPurple);
+    color: var(--uiButtonOutlinedColor, $uiPurple);
     &:hover {
-      background-color: var(--uiButtonOutlinedBackgroundColorHover, $mdsPurple);
+      background-color: var(--uiButtonOutlinedBackgroundColorHover, $uiPurple);
       box-shadow: var(--uiButtonOutlinedBorderHover, inherit);
-      color: var(--uiButtonOutlinedColorHover, $mdsWhite);
+      color: var(--uiButtonOutlinedColorHover, $uiWhite);
     }
     
     &.primary {
-      color: var(--uiButtonOutlinedColor, $mdsBlue);
-      box-shadow: var(--uiButtonOutlinedBorder, inset 0px 0px 0px 2px $mdsBlue);
+      color: var(--uiButtonOutlinedColor, $uiBlue);
+      box-shadow: var(--uiButtonOutlinedBorder, inset 0px 0px 0px 2px $uiBlue);
 
       &:hover {
-        background-color: var(--uiButtonOutlinedBackgroundColorHover, $mdsBlueDark);
-        box-shadow: var(--uiButtonOutlinedBorderHover, $mdsBlueDark);
-        color: var(--uiButtonOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonOutlinedBackgroundColorHover, $uiBlueDark);
+        box-shadow: var(--uiButtonOutlinedBorderHover, $uiBlueDark);
+        color: var(--uiButtonOutlinedColorHover, $uiWhite);
       }
     }
 
     &.secondary,
     &.action {
-      color: var(--uiButtonSecondaryOutlinedColor, $mdsOrange);
-      box-shadow: var(--uiButtonSecondaryOutlinedBorder, inset 0px 0px 0px 2px $mdsOrange);
+      color: var(--uiButtonSecondaryOutlinedColor, $uiOrange);
+      box-shadow: var(--uiButtonSecondaryOutlinedBorder, inset 0px 0px 0px 2px $uiOrange);
 
       &:hover {
-        background-color: var(--uiButtonSecondaryOutlinedBackgroundColorHover, $mdsOrangeDark);
-        box-shadow: var(--uiButtonSecondaryOutlinedBorderHover, $mdsOrangeDark);
-        color: var(--uiButtonSecondaryOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonSecondaryOutlinedBackgroundColorHover, $uiOrangeDark);
+        box-shadow: var(--uiButtonSecondaryOutlinedBorderHover, $uiOrangeDark);
+        color: var(--uiButtonSecondaryOutlinedColorHover, $uiWhite);
       }
     }
     &.success {
-      color: var(--uiButtonSuccessOutlinedColor, $mdsGreen);
-      box-shadow: var(--uiButtonSuccessOutlinedBorder, inset 0px 0px 0px 2px $mdsGreen);
+      color: var(--uiButtonSuccessOutlinedColor, $uiGreen);
+      box-shadow: var(--uiButtonSuccessOutlinedBorder, inset 0px 0px 0px 2px $uiGreen);
 
       &:hover {
-        background-color: var(--uiButtonSuccessOutlinedBackgroundColorHover, $mdsGreenDark);
-        box-shadow: var(--uiButtonSuccessOutlinedBorderHover, $mdsGreenDark);
-        color: var(--uiButtonSuccessOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonSuccessOutlinedBackgroundColorHover, $uiGreenDark);
+        box-shadow: var(--uiButtonSuccessOutlinedBorderHover, $uiGreenDark);
+        color: var(--uiButtonSuccessOutlinedColorHover, $uiWhite);
       }
     }
 
     &.info {
-      color: var(--uiButtonInfoOutlinedColor, $mdsBlueDark);
-      box-shadow: var(--uiButtonInfoOutlinedBorder, inset 0px 0px 0px 2px $mdsBlueDark);
+      color: var(--uiButtonInfoOutlinedColor, $uiBlueDark);
+      box-shadow: var(--uiButtonInfoOutlinedBorder, inset 0px 0px 0px 2px $uiBlueDark);
 
       &:hover {
-        background-color: var(--uiButtonInfoOutlinedBackgroundColorHover, $mdsBlueDarker);
-        box-shadow: var(--uiButtonInfoOutlinedBorderHover, $mdsBlueDarker);
-        color: var(--uiButtonInfoOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonInfoOutlinedBackgroundColorHover, $uiBlueDarker);
+        box-shadow: var(--uiButtonInfoOutlinedBorderHover, $uiBlueDarker);
+        color: var(--uiButtonInfoOutlinedColorHover, $uiWhite);
       }
     }
     &.warning {
-      color: var(--uiButtonWarningOutlinedColor, $mdsRust);
-      box-shadow: var(--uiButtonWarningOutlinedBorder, inset 0px 0px 0px 2px $mdsRust);
+      color: var(--uiButtonWarningOutlinedColor, $uiRust);
+      box-shadow: var(--uiButtonWarningOutlinedBorder, inset 0px 0px 0px 2px $uiRust);
 
       &:hover {
-        background-color: var(--uiButtonWarningOutlinedBackgroundColorHover, $mdsRustDarker);
-        box-shadow: var(--uiButtonWarningOutlinedBorderHover, $mdsRustDarker);
-        color: var(--uiButtonWarningOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonWarningOutlinedBackgroundColorHover, $uiRustDarker);
+        box-shadow: var(--uiButtonWarningOutlinedBorderHover, $uiRustDarker);
+        color: var(--uiButtonWarningOutlinedColorHover, $uiWhite);
       }
     }
     &.danger {
-      color: var(--uiButtonDangerOutlinedColor, $mdsRedLight);
-      box-shadow: var(--uiButtonDangerOutlinedBorder, inset 0px 0px 0px 2px $mdsRedLight);
+      color: var(--uiButtonDangerOutlinedColor, $uiRedLight);
+      box-shadow: var(--uiButtonDangerOutlinedBorder, inset 0px 0px 0px 2px $uiRedLight);
 
       &:hover {
-        background-color: var(--uiButtonDangerOutlinedBackgroundColorHover, $mdsRed);
-        box-shadow: var(--uiButtonDangerOutlinedBorderHover, $mdsRed);
-        color: var(--uiButtonDangerOutlinedColorHover, $mdsWhite);
+        background-color: var(--uiButtonDangerOutlinedBackgroundColorHover, $uiRed);
+        box-shadow: var(--uiButtonDangerOutlinedBorderHover, $uiRed);
+        color: var(--uiButtonDangerOutlinedColorHover, $uiWhite);
       }
     }
   }

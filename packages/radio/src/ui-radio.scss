@@ -14,7 +14,7 @@
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
-    border: var(--uiRadioBorder, 3px inset $mdsPurple);
+    border: var(--uiRadioBorder, 3px inset $uiPurple);
     .ui-radio-circle {
       position: absolute;
       display: inline-block;
@@ -24,9 +24,9 @@
       left: 3px;
       border-radius: 50%;
       &.checked {
-        background-color: var(--uiRadioColorChecked, $mdsPurple);
+        background-color: var(--uiRadioColorChecked, $uiPurple);
         &:hover {
-          background-color: var(--uiRadioColorChecked, $mdsPurpleDark);
+          background-color: var(--uiRadioColorChecked, $uiPurpleDark);
         }
       }
     }

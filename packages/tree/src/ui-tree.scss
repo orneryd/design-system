@@ -45,7 +45,7 @@
   overflow-x: var(--uiTreeContentOverflowx, initial);
 }
 .ui-expand-header-icon {
-  fill: var(--uiAccordionIconColor, $mdsBlack);
+  fill: var(--uiAccordionIconColor, $uiBlack);
   width: 1em;
   height: 1em;
   display: inline-block;
@@ -63,7 +63,7 @@
     transform: rotate(180deg);
   }
   &:hover {
-    background-color: var(--uiAccordionIconColorHover, $mdsBlackLightest);
+    background-color: var(--uiAccordionIconColorHover, $uiBlackLightest);
   }
 }
 

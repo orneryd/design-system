@@ -21,7 +21,7 @@
   &.invalid {
     box-shadow: var(--uiTextInputBoxShadowInvalid, none);
     border: var(--uiTextInputBorderInvalid, none);
-    // border: var(--uiTextInputBorderInvalid, 2px inset $mdsRedDark);
+    // border: var(--uiTextInputBorderInvalid, 2px inset $uiRedDark);
   }
 }
 
@@ -38,7 +38,7 @@
   position: var(--uiTextInputLabelPosition, relative);
   display: var(--uiTextInputLabelDisplay, flex);
   flex: var(--uiTextInputLabelFlex, 1);
-  color:  var(--uiTextInputLabelColor, $mdsBlackLight);
+  color:  var(--uiTextInputLabelColor, $uiBlackLight);
   opacity:  var(--uiTextInputLabelOpacity, 0.7);
   // transition: var(--uiTextInputLabelTransition, transform 0.2s ease-in-out);
   transition: var(--uiTextInputLabelTransition, all 0.2s ease-in-out);
@@ -58,7 +58,7 @@
 }
 
 .ui-text-input-wrapper.has-text .ui-text-input {
-  background-color: var(--uiTextInputDisplayFocused, $mdsBlueLightest);
+  background-color: var(--uiTextInputDisplayFocused, $uiBlueLightest);
   // transform: var(--uiTextInputLabelTransformFocused, scale(0.875) translate(0.325rem, 0));
   transform: var(--uiTextInputTransformFocused, none);
 }
