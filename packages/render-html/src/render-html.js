@@ -89,7 +89,7 @@ export default class RenderHTML extends HTMLElement {
       fetch(this.getAttribute('href'))
         .then(response => response.text())
         .then((str) => this.render(str))
-    } else if (this.getAttribute('html')) {
+    } else if (this.getAttribute('html') != null) {
       this.render(this.getAttribute('html'))
     } else {
       this.render(this.innerHTML);
