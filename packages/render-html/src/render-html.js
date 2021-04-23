@@ -1,4 +1,5 @@
 import { bindEvents, template } from '@ornery/web-components';
+import {registerComponent} from '../../core/src/ui-core'
 /**
 ## Installation
 
@@ -110,4 +111,4 @@ export default class RenderHTML extends HTMLElement {
   }
 }
 
-customElements.define('render-html', RenderHTML)
+registerComponent('render-html', RenderHTML)
